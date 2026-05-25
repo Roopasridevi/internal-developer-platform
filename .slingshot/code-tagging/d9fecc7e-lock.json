@@ -1,0 +1,900 @@
+{
+  "backend\\src\\services\\authService.js": {
+    "filename": "authService.js",
+    "path": "backend\\src\\services\\authService.js",
+    "version": "1.2",
+    "contextFile": "d9fecc7e-context.json",
+    "chunks": {
+      "03f582": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707781,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "86e3fee6",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:21 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "03f582",
+        "hash": "04472e75",
+        "encoded": "const%20bcrypt%20=%20require('bcryptjs');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "03f582",
+        "hash": "90dd9771",
+        "encoded": "const%20jwt%20=%20require('jsonwebtoken');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "03f582",
+        "hash": "3251dc19",
+        "encoded": "const%20%7B%20User%20%7D%20=%20require('../models');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "03f582",
+        "hash": "4190c669",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../utils/errors');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "03f582",
+        "hash": "c9c5fc71",
+        "encoded": "const%20config%20=%20require('../config');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "03f582",
+        "hash": "625d46d3",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "03f582",
+        "hash": "8c286f95",
+        "encoded": "class%20AuthService%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "03f582",
+        "hash": "e2541043",
+        "encoded": "async%20register(%7B%20email,%20password,%20name%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "03f582",
+        "hash": "62ef0bff",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "03f582",
+        "hash": "ffee252b",
+        "encoded": "const%20existingUser%20=%20await%20User.findOne(%7B%20where:%20%7B%20email%20%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "03f582",
+        "hash": "373f2681",
+        "encoded": "if%20(existingUser)%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "03f582",
+        "hash": "e92a9694",
+        "encoded": "throw%20new%20AppError('User%20already%20exists',%20400);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "03f582",
+        "hash": "e683dcf7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "03f582",
+        "hash": "5a261a7f",
+        "encoded": "const%20hashedPassword%20=%20await%20bcrypt.hash(password,%2012);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "03f582",
+        "hash": "82fe7387",
+        "encoded": "const%20user%20=%20await%20User.create(%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "03f582",
+        "hash": "ff354129",
+        "encoded": "email,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "03f582",
+        "hash": "2bf12ea2",
+        "encoded": "password:%20hashedPassword,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "03f582",
+        "hash": "636211bb",
+        "encoded": "name,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "03f582",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "03f582",
+        "hash": "47359e2a",
+        "encoded": "const%20tokens%20=%20this.generateTokens(user);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "03f582",
+        "hash": "ea78f2eb",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "03f582",
+        "hash": "6c2af182",
+        "encoded": "user:%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "03f582",
+        "hash": "35050510",
+        "encoded": "id:%20user.id,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "03f582",
+        "hash": "055d5c50",
+        "encoded": "email:%20user.email,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "03f582",
+        "hash": "7a1fa9cc",
+        "encoded": "name:%20user.name,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "03f582",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "03f582",
+        "hash": "1b987861",
+        "encoded": "...tokens,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "03f582",
+        "hash": "8080b9e9",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "03f582",
+        "hash": "d066233e",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "03f582",
+        "hash": "afec6ae9",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "03f582",
+        "hash": "ad72cf20",
+        "encoded": "logger.error('Error%20registering%20user:',%20error);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "03f582",
+        "hash": "e1eff11d",
+        "encoded": "throw%20new%20AppError('Failed%20to%20register%20user',%20500);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "03f582",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "03f582",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "03f582",
+        "hash": "6339af0a",
+        "encoded": "async%20login(%7B%20email,%20password%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "03f582",
+        "hash": "8f669c52",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "03f582",
+        "hash": "60284605",
+        "encoded": "const%20user%20=%20await%20User.findOne(%7B%20where:%20%7B%20email%20%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "03f582",
+        "hash": "2258e9a8",
+        "encoded": "if%20(!user)%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "03f582",
+        "hash": "ec1fd305",
+        "encoded": "throw%20new%20AppError('Invalid%20credentials',%20401);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "03f582",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "03f582",
+        "hash": "00537ea7",
+        "encoded": "const%20isPasswordValid%20=%20await%20bcrypt.compare(password,%20user.password);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "03f582",
+        "hash": "0dc44945",
+        "encoded": "if%20(!isPasswordValid)%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "03f582",
+        "hash": "3963e297",
+        "encoded": "throw%20new%20AppError('Invalid%20credentials',%20401);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "03f582",
+        "hash": "0b4804f7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "03f582",
+        "hash": "c8ec454d",
+        "encoded": "const%20tokens%20=%20this.generateTokens(user);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "03f582",
+        "hash": "e6866e23",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "03f582",
+        "hash": "49c10166",
+        "encoded": "user:%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "03f582",
+        "hash": "b7b0d002",
+        "encoded": "id:%20user.id,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "03f582",
+        "hash": "ce4f9b7a",
+        "encoded": "email:%20user.email,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "03f582",
+        "hash": "640fe6d3",
+        "encoded": "name:%20user.name,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "03f582",
+        "hash": "f31f7ed2",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "03f582",
+        "hash": "64976d4a",
+        "encoded": "...tokens,",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "03f582",
+        "hash": "cfd6d42d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "03f582",
+        "hash": "16523485",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "03f582",
+        "hash": "c9a6bc38",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "03f582",
+        "hash": "1a1fae0e",
+        "encoded": "logger.error('Error%20logging%20in:',%20error);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "03f582",
+        "hash": "7d55f69d",
+        "encoded": "throw%20new%20AppError('Failed%20to%20login',%20500);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "03f582",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "03f582",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "03f582",
+        "hash": "b398ed77",
+        "encoded": "async%20refreshToken(refreshToken)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "03f582",
+        "hash": "bb7fee13",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "03f582",
+        "hash": "36d27d0f",
+        "encoded": "const%20decoded%20=%20jwt.verify(refreshToken,%20config.jwt.refreshSecret);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "03f582",
+        "hash": "e2d4b52a",
+        "encoded": "const%20user%20=%20await%20User.findByPk(decoded.userId);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "03f582",
+        "hash": "1e1f33e0",
+        "encoded": "if%20(!user)%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "03f582",
+        "hash": "190e4c4e",
+        "encoded": "throw%20new%20AppError('Invalid%20refresh%20token',%20401);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "03f582",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "03f582",
+        "hash": "00e335bb",
+        "encoded": "const%20tokens%20=%20this.generateTokens(user);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "03f582",
+        "hash": "e9759f1a",
+        "encoded": "return%20tokens;",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "03f582",
+        "hash": "23441891",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "03f582",
+        "hash": "9a9e7371",
+        "encoded": "logger.error('Error%20refreshing%20token:',%20error);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "03f582",
+        "hash": "003c8138",
+        "encoded": "throw%20new%20AppError('Invalid%20refresh%20token',%20401);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "03f582",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "03f582",
+        "hash": "e4b921c6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "03f582",
+        "hash": "4d3290ae",
+        "encoded": "async%20logout(userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "03f582",
+        "hash": "8bfa8ecc",
+        "encoded": "//%20Implement%20token%20blacklisting%20if%20needed",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "03f582",
+        "hash": "5067ffe6",
+        "encoded": "logger.info(%60User%20logged%20out:%20$%7BuserId%7D%60);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "03f582",
+        "hash": "726efa75",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "03f582",
+        "hash": "43967b35",
+        "encoded": "async%20getCurrentUser(userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "03f582",
+        "hash": "b0474f3a",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "03f582",
+        "hash": "244ed078",
+        "encoded": "const%20user%20=%20await%20User.findByPk(userId,%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "03f582",
+        "hash": "d0e3589e",
+        "encoded": "attributes:%20%5B'id',%20'email',%20'name',%20'createdAt'%5D,",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "03f582",
+        "hash": "ac69e76f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "03f582",
+        "hash": "6542bfa8",
+        "encoded": "if%20(!user)%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "03f582",
+        "hash": "3e5f0d2c",
+        "encoded": "throw%20new%20AppError('User%20not%20found',%20404);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "03f582",
+        "hash": "998d938c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "03f582",
+        "hash": "8386aaf7",
+        "encoded": "return%20user;",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "03f582",
+        "hash": "ff2a0487",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "03f582",
+        "hash": "c931da39",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "03f582",
+        "hash": "64462e64",
+        "encoded": "logger.error('Error%20fetching%20user:',%20error);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "03f582",
+        "hash": "6a1fe24e",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20user',%20500);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "03f582",
+        "hash": "c251d1dd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "03f582",
+        "hash": "5a59cee7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "03f582",
+        "hash": "b139efbe",
+        "encoded": "async%20updateProfile(userId,%20data)%20%7B",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "03f582",
+        "hash": "d0b401fb",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "03f582",
+        "hash": "fc1a7a3a",
+        "encoded": "const%20user%20=%20await%20User.findByPk(userId);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "03f582",
+        "hash": "50aafbbf",
+        "encoded": "if%20(!user)%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "03f582",
+        "hash": "85ee93dd",
+        "encoded": "throw%20new%20AppError('User%20not%20found',%20404);",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "03f582",
+        "hash": "fd8e1155",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "03f582",
+        "hash": "11f51f95",
+        "encoded": "await%20user.update(%7B",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "03f582",
+        "hash": "4d877cbe",
+        "encoded": "name:%20data.name%20%7C%7C%20user.name,",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "03f582",
+        "hash": "23f7427f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "03f582",
+        "hash": "64946bbc",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "03f582",
+        "hash": "f906fb86",
+        "encoded": "id:%20user.id,",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "03f582",
+        "hash": "92acda90",
+        "encoded": "email:%20user.email,",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "03f582",
+        "hash": "82409839",
+        "encoded": "name:%20user.name,",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "03f582",
+        "hash": "d47294a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "03f582",
+        "hash": "64bab7fe",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "03f582",
+        "hash": "0687c169",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "03f582",
+        "hash": "f63ae227",
+        "encoded": "logger.error('Error%20updating%20profile:',%20error);",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "03f582",
+        "hash": "019ff5cb",
+        "encoded": "throw%20new%20AppError('Failed%20to%20update%20profile',%20500);",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "03f582",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "03f582",
+        "hash": "ff6991dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "03f582",
+        "hash": "0292c136",
+        "encoded": "async%20changePassword(userId,%20currentPassword,%20newPassword)%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "03f582",
+        "hash": "47faa365",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "03f582",
+        "hash": "4a799f0a",
+        "encoded": "const%20user%20=%20await%20User.findByPk(userId);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "03f582",
+        "hash": "415d97d3",
+        "encoded": "if%20(!user)%20%7B",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "03f582",
+        "hash": "0d0f2917",
+        "encoded": "throw%20new%20AppError('User%20not%20found',%20404);",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "03f582",
+        "hash": "dc65d51e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "03f582",
+        "hash": "610257c0",
+        "encoded": "const%20isPasswordValid%20=%20await%20bcrypt.compare(currentPassword,%20user.password);",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "03f582",
+        "hash": "23058b99",
+        "encoded": "if%20(!isPasswordValid)%20%7B",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "03f582",
+        "hash": "9cd62b78",
+        "encoded": "throw%20new%20AppError('Current%20password%20is%20incorrect',%20401);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "03f582",
+        "hash": "4e2389e2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "03f582",
+        "hash": "fdee916c",
+        "encoded": "const%20hashedPassword%20=%20await%20bcrypt.hash(newPassword,%2012);",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "03f582",
+        "hash": "64e6bd68",
+        "encoded": "await%20user.update(%7B%20password:%20hashedPassword%20%7D);",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "03f582",
+        "hash": "f650ffb9",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "03f582",
+        "hash": "21772de7",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "03f582",
+        "hash": "75e771aa",
+        "encoded": "logger.error('Error%20changing%20password:',%20error);",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "03f582",
+        "hash": "42faf671",
+        "encoded": "throw%20new%20AppError('Failed%20to%20change%20password',%20500);",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "03f582",
+        "hash": "44e12b83",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "03f582",
+        "hash": "e584d451",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "03f582",
+        "hash": "17f995f2",
+        "encoded": "generateTokens(user)%20%7B",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "03f582",
+        "hash": "52b1c03d",
+        "encoded": "const%20accessToken%20=%20jwt.sign(",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "03f582",
+        "hash": "e78873b0",
+        "encoded": "%7B%20userId:%20user.id,%20email:%20user.email%20%7D,",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "03f582",
+        "hash": "7efe22bb",
+        "encoded": "config.jwt.secret,",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "03f582",
+        "hash": "895a911d",
+        "encoded": "%7B%20expiresIn:%20config.jwt.expiresIn%20%7D",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "03f582",
+        "hash": "94966a2a",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "03f582",
+        "hash": "dec51f93",
+        "encoded": "const%20refreshToken%20=%20jwt.sign(",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "03f582",
+        "hash": "77038d0e",
+        "encoded": "%7B%20userId:%20user.id%20%7D,",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "03f582",
+        "hash": "1269f080",
+        "encoded": "config.jwt.refreshSecret,",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "03f582",
+        "hash": "d01fbce5",
+        "encoded": "%7B%20expiresIn:%20config.jwt.refreshExpiresIn%20%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "03f582",
+        "hash": "1d086e10",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "03f582",
+        "hash": "bcae2535",
+        "encoded": "return%20%7B%20accessToken,%20refreshToken%20%7D;",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "03f582",
+        "hash": "9fb02724",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "03f582",
+        "hash": "73b8c9b4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "03f582",
+        "hash": "213bd29f",
+        "encoded": "module.exports%20=%20new%20AuthService();",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

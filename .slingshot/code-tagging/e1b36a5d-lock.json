@@ -1,0 +1,1098 @@
+{
+  "docs\\architecture\\README.md": {
+    "filename": "README.md",
+    "path": "docs\\architecture\\README.md",
+    "version": "1.2",
+    "contextFile": "e1b36a5d-context.json",
+    "chunks": {
+      "3d693d": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708333,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "9e0934e1",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:33 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "3d693d",
+        "hash": "0a3ba8f3",
+        "encoded": "#%20Architecture%20Documentation",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "3d693d",
+        "hash": "5f85a89a",
+        "encoded": "##%20System%20Overview",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "3d693d",
+        "hash": "67a54faa",
+        "encoded": "The%20Internal%20Developer%20Platform%20(IDP)%20is%20a%20comprehensive%20solution%20for%20managing%20the%20entire%20software%20development%20lifecycle,%20from%20project%20creation%20to%20deployment%20and%20monitoring.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "3d693d",
+        "hash": "a94d65cd",
+        "encoded": "##%20High-Level%20Architecture",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "3d693d",
+        "hash": "1c9af50b",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "3d693d",
+        "hash": "2d0e4e61",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "3d693d",
+        "hash": "6de691a4",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Frontend%20(React)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "3d693d",
+        "hash": "ae8eac97",
+        "encoded": "%E2%94%82%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "3d693d",
+        "hash": "087dfd22",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20Projects%20%7C%20Pipelines%20%7C%20Deployments%20%7C%20Logs%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "3d693d",
+        "hash": "c05047b1",
+        "encoded": "%E2%94%82%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "3d693d",
+        "hash": "3dff35bb",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "3d693d",
+        "hash": "866fabad",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "3d693d",
+        "hash": "c1233d0a",
+        "encoded": "REST%20API",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "3d693d",
+        "hash": "25bed535",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "3d693d",
+        "hash": "6975e720",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "3d693d",
+        "hash": "c0d495c0",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Backend%20(Node.js/Express)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "3d693d",
+        "hash": "53863903",
+        "encoded": "%E2%94%82%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "3d693d",
+        "hash": "344f90d9",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20Controllers%20%E2%86%92%20Services%20%E2%86%92%20Models%20%E2%86%92%20DB%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "3d693d",
+        "hash": "97a4d20b",
+        "encoded": "%E2%94%82%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "3d693d",
+        "hash": "75bbe3be",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "3d693d",
+        "hash": "b5579053",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "3d693d",
+        "hash": "cfaca696",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%B4%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "3d693d",
+        "hash": "3581980a",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "3d693d",
+        "hash": "bd29c6f2",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%B4%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%B4%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "3d693d",
+        "hash": "944d4496",
+        "encoded": "%E2%94%82%20%20Database%20%20%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20External%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "3d693d",
+        "hash": "363e9a72",
+        "encoded": "%E2%94%82%20PostgreSQL%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20Services%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "3d693d",
+        "hash": "b0a4675c",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "3d693d",
+        "hash": "1acec35e",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "3d693d",
+        "hash": "e781ac13",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%B4%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "3d693d",
+        "hash": "ebb6316c",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "3d693d",
+        "hash": "8123aae6",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%B4%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%B4%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "3d693d",
+        "hash": "46b21954",
+        "encoded": "%E2%94%82%20%20%20Git%20%20%20%E2%94%82%20%20%E2%94%82%20K8s/CI%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "3d693d",
+        "hash": "a484a7d1",
+        "encoded": "%E2%94%82Provider%E2%94%82%20%20%E2%94%82%20Runner%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "3d693d",
+        "hash": "4dea477f",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "3d693d",
+        "hash": "89af75d2",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "3d693d",
+        "hash": "0e180a1e",
+        "encoded": "##%20Components",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "3d693d",
+        "hash": "129b38f7",
+        "encoded": "###%20Frontend%20Layer",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "3d693d",
+        "hash": "84979c47",
+        "encoded": "**Technology**:%20React%2018%20+%20Vite",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "3d693d",
+        "hash": "ee365eaa",
+        "encoded": "**Responsibilities**:",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "3d693d",
+        "hash": "139812e7",
+        "encoded": "-%20User%20interface%20rendering",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "3d693d",
+        "hash": "8e63fc94",
+        "encoded": "-%20State%20management%20(React%20Context%20+%20Hooks)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "3d693d",
+        "hash": "00493ae5",
+        "encoded": "-%20API%20communication",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "3d693d",
+        "hash": "a160b6bf",
+        "encoded": "-%20Client-side%20routing",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "3d693d",
+        "hash": "a72699c1",
+        "encoded": "**Key%20Features**:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "3d693d",
+        "hash": "72269b2c",
+        "encoded": "-%20Responsive%20design",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "3d693d",
+        "hash": "4eaf858c",
+        "encoded": "-%20Real-time%20updates%20(SSE%20for%20logs)",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "3d693d",
+        "hash": "71c43826",
+        "encoded": "-%20Optimistic%20UI%20updates",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "3d693d",
+        "hash": "105e496f",
+        "encoded": "-%20Code%20splitting%20and%20lazy%20loading",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "3d693d",
+        "hash": "c2864ffc",
+        "encoded": "###%20Backend%20Layer",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "3d693d",
+        "hash": "0f3bf18a",
+        "encoded": "**Technology**:%20Node.js%20+%20Express.js",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "3d693d",
+        "hash": "33633388",
+        "encoded": "**Architecture%20Pattern**:%20Layered%20Architecture",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "3d693d",
+        "hash": "e0cc2446",
+        "encoded": "**Layers**:",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "3d693d",
+        "hash": "59ce2788",
+        "encoded": "1.%20**Routes**:%20API%20endpoint%20definitions",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "3d693d",
+        "hash": "e7008e00",
+        "encoded": "2.%20**Controllers**:%20Request/response%20handling",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "3d693d",
+        "hash": "676bdd4e",
+        "encoded": "3.%20**Services**:%20Business%20logic",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "3d693d",
+        "hash": "77e8e5fc",
+        "encoded": "4.%20**Models**:%20Data%20access%20layer",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "3d693d",
+        "hash": "c2ad0e9c",
+        "encoded": "5.%20**Middleware**:%20Cross-cutting%20concerns",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "3d693d",
+        "hash": "c0688d7e",
+        "encoded": "**Key%20Features**:",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "3d693d",
+        "hash": "ef5a6d7d",
+        "encoded": "-%20JWT%20authentication",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "3d693d",
+        "hash": "5ffd181a",
+        "encoded": "-%20Role-based%20access%20control",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "3d693d",
+        "hash": "6da9a167",
+        "encoded": "-%20Request%20validation",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "3d693d",
+        "hash": "8c33970d",
+        "encoded": "-%20Error%20handling",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "3d693d",
+        "hash": "40afe375",
+        "encoded": "-%20Logging",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "3d693d",
+        "hash": "9d0bedee",
+        "encoded": "###%20Database%20Layer",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "3d693d",
+        "hash": "3eb5870a",
+        "encoded": "**Technology**:%20PostgreSQL%2014+",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "3d693d",
+        "hash": "9ba3a6af",
+        "encoded": "**ORM**:%20Sequelize",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "3d693d",
+        "hash": "2753d9e3",
+        "encoded": "**Schema**:",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "3d693d",
+        "hash": "72ae9950",
+        "encoded": "-%20Users",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "3d693d",
+        "hash": "5b9a8c3f",
+        "encoded": "-%20Projects",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "3d693d",
+        "hash": "1b1f640a",
+        "encoded": "-%20Project%20Members",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "3d693d",
+        "hash": "d9f26a4d",
+        "encoded": "-%20Pipelines",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "3d693d",
+        "hash": "393e157d",
+        "encoded": "-%20Pipeline%20Executions",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "3d693d",
+        "hash": "cd982729",
+        "encoded": "-%20Deployments",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "3d693d",
+        "hash": "851727cc",
+        "encoded": "-%20Environments",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "3d693d",
+        "hash": "41e46705",
+        "encoded": "-%20Logs",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "3d693d",
+        "hash": "ced7e440",
+        "encoded": "###%20External%20Services",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "3d693d",
+        "hash": "228e4451",
+        "encoded": "1.%20**Git%20Provider**%20(GitHub/GitLab)",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "3d693d",
+        "hash": "598cc864",
+        "encoded": "-%20Repository%20management",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "3d693d",
+        "hash": "33b10ced",
+        "encoded": "-%20Webhook%20integration",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "3d693d",
+        "hash": "9155a64e",
+        "encoded": "2.%20**CI%20Runner**",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "3d693d",
+        "hash": "ebe959fe",
+        "encoded": "-%20Pipeline%20execution",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "3d693d",
+        "hash": "4b93e244",
+        "encoded": "-%20Build%20automation",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "3d693d",
+        "hash": "05d2d317",
+        "encoded": "3.%20**Kubernetes**",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "3d693d",
+        "hash": "67dcbe6a",
+        "encoded": "-%20Container%20orchestration",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "3d693d",
+        "hash": "de6e4613",
+        "encoded": "-%20Deployment%20management",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "3d693d",
+        "hash": "1aaa9fa1",
+        "encoded": "##%20Data%20Flow",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "3d693d",
+        "hash": "4c0e5d33",
+        "encoded": "###%20Project%20Creation%20Flow",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "3d693d",
+        "hash": "2c0ea294",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "3d693d",
+        "hash": "960f472d",
+        "encoded": "User%20%E2%86%92%20Frontend%20%E2%86%92%20API%20%E2%86%92%20Controller%20%E2%86%92%20Service%20%E2%86%92%20Model%20%E2%86%92%20Database",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "3d693d",
+        "hash": "74619657",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "3d693d",
+        "hash": "876c851d",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "3d693d",
+        "hash": "b837a08a",
+        "encoded": "Git%20Provider%20API",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "3d693d",
+        "hash": "ffa9b2a8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "3d693d",
+        "hash": "523fe907",
+        "encoded": "###%20Pipeline%20Execution%20Flow",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "3d693d",
+        "hash": "15266480",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "3d693d",
+        "hash": "1be2eb48",
+        "encoded": "User%20%E2%86%92%20Frontend%20%E2%86%92%20API%20%E2%86%92%20Controller%20%E2%86%92%20Service%20%E2%86%92%20CI%20Runner",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "3d693d",
+        "hash": "7697b2ae",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "3d693d",
+        "hash": "83b232b1",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "3d693d",
+        "hash": "adc3cc15",
+        "encoded": "Database%20(Status)",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "3d693d",
+        "hash": "d30bbd95",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "3d693d",
+        "hash": "347272e6",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "3d693d",
+        "hash": "9c03016d",
+        "encoded": "Logs%20Collection",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "3d693d",
+        "hash": "54aeafe1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "3d693d",
+        "hash": "f4744901",
+        "encoded": "###%20Deployment%20Flow",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "3d693d",
+        "hash": "262a6d47",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "3d693d",
+        "hash": "13cbf44e",
+        "encoded": "User%20%E2%86%92%20Frontend%20%E2%86%92%20API%20%E2%86%92%20Controller%20%E2%86%92%20Service%20%E2%86%92%20Kubernetes%20API",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "3d693d",
+        "hash": "e3a89b84",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "3d693d",
+        "hash": "e74d78ac",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "3d693d",
+        "hash": "a6fff734",
+        "encoded": "Database%20(Status)",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "3d693d",
+        "hash": "126b6381",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "3d693d",
+        "hash": "aac86b72",
+        "encoded": "%E2%86%93",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "3d693d",
+        "hash": "ad229e7e",
+        "encoded": "Monitoring/Logs",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "3d693d",
+        "hash": "44b70e7b",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "3d693d",
+        "hash": "6a099f77",
+        "encoded": "##%20Security",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "3d693d",
+        "hash": "fe18e07f",
+        "encoded": "###%20Authentication",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "3d693d",
+        "hash": "e6ce554a",
+        "encoded": "-%20JWT-based%20authentication",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "3d693d",
+        "hash": "8caaa2e8",
+        "encoded": "-%20Access%20token%20(short-lived)",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "3d693d",
+        "hash": "8d6a143e",
+        "encoded": "-%20Refresh%20token%20(long-lived)",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "3d693d",
+        "hash": "5f86ea33",
+        "encoded": "-%20Token%20rotation",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "3d693d",
+        "hash": "b479ad63",
+        "encoded": "###%20Authorization",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "3d693d",
+        "hash": "4004c8f0",
+        "encoded": "-%20Role-based%20access%20control%20(RBAC)",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "3d693d",
+        "hash": "74da8b01",
+        "encoded": "-%20Resource-level%20permissions",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "3d693d",
+        "hash": "0b5139f5",
+        "encoded": "-%20Project%20membership%20validation",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "3d693d",
+        "hash": "0cecc629",
+        "encoded": "###%20API%20Security",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "3d693d",
+        "hash": "85cbf8e9",
+        "encoded": "-%20HTTPS%20only%20in%20production",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "3d693d",
+        "hash": "6dc56ec2",
+        "encoded": "-%20CORS%20configuration",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "3d693d",
+        "hash": "f0bdfd2d",
+        "encoded": "-%20Rate%20limiting",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "3d693d",
+        "hash": "7e7fd119",
+        "encoded": "-%20Input%20validation%20and%20sanitization",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "3d693d",
+        "hash": "bd76c8f7",
+        "encoded": "-%20SQL%20injection%20prevention%20(ORM)",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "3d693d",
+        "hash": "60e4c4db",
+        "encoded": "-%20XSS%20protection",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "3d693d",
+        "hash": "ccd3e821",
+        "encoded": "##%20Scalability",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "3d693d",
+        "hash": "c1cc4d14",
+        "encoded": "###%20Horizontal%20Scaling",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "3d693d",
+        "hash": "912c7967",
+        "encoded": "-%20Stateless%20backend%20servers",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "3d693d",
+        "hash": "6d68feea",
+        "encoded": "-%20Load%20balancer%20distribution",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "3d693d",
+        "hash": "de342e63",
+        "encoded": "-%20Database%20connection%20pooling",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "3d693d",
+        "hash": "ac890d0e",
+        "encoded": "###%20Caching%20Strategy",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "3d693d",
+        "hash": "efa92b9d",
+        "encoded": "-%20Client-side%20caching%20(React%20Query)",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "3d693d",
+        "hash": "4110faf9",
+        "encoded": "-%20API%20response%20caching",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "3d693d",
+        "hash": "1dcbd79a",
+        "encoded": "-%20Database%20query%20optimization",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "3d693d",
+        "hash": "d6c76d89",
+        "encoded": "###%20Performance%20Optimization",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "3d693d",
+        "hash": "7e5c49d0",
+        "encoded": "-%20Database%20indexing",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "3d693d",
+        "hash": "0b39ad79",
+        "encoded": "-%20Query%20optimization",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "3d693d",
+        "hash": "9416950a",
+        "encoded": "-%20Pagination",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "3d693d",
+        "hash": "4892d999",
+        "encoded": "-%20Lazy%20loading",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "3d693d",
+        "hash": "ac2ce5f5",
+        "encoded": "-%20Code%20splitting",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "3d693d",
+        "hash": "17b369f1",
+        "encoded": "##%20Monitoring%20and%20Observability",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "3d693d",
+        "hash": "e3f253ab",
+        "encoded": "###%20Metrics",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "3d693d",
+        "hash": "35190bbe",
+        "encoded": "-%20Application%20metrics%20(Prometheus)",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "3d693d",
+        "hash": "2f8dc7de",
+        "encoded": "-%20System%20metrics%20(CPU,%20Memory,%20Disk)",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "3d693d",
+        "hash": "560756de",
+        "encoded": "-%20Custom%20business%20metrics",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "3d693d",
+        "hash": "6682f165",
+        "encoded": "###%20Logging",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "3d693d",
+        "hash": "e7f1bb3f",
+        "encoded": "-%20Structured%20logging%20(Winston)",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "3d693d",
+        "hash": "60d41c8d",
+        "encoded": "-%20Log%20aggregation",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "3d693d",
+        "hash": "d200c3ec",
+        "encoded": "-%20Log%20levels%20(error,%20warn,%20info,%20debug)",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "3d693d",
+        "hash": "62ce3971",
+        "encoded": "###%20Tracing",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "3d693d",
+        "hash": "81cbdff7",
+        "encoded": "-%20Request%20tracing",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "3d693d",
+        "hash": "16668efd",
+        "encoded": "-%20Performance%20monitoring",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "3d693d",
+        "hash": "8deb2b63",
+        "encoded": "-%20Error%20tracking",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "3d693d",
+        "hash": "d8c7b48c",
+        "encoded": "##%20Deployment%20Architecture",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "3d693d",
+        "hash": "e0b85245",
+        "encoded": "###%20Environments",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "3d693d",
+        "hash": "c39b17a0",
+        "encoded": "1.%20**Development**:%20Local%20development",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "3d693d",
+        "hash": "57468460",
+        "encoded": "2.%20**Staging**:%20Pre-production%20testing",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "3d693d",
+        "hash": "e1a538f5",
+        "encoded": "3.%20**Production**:%20Live%20environment",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "3d693d",
+        "hash": "1a352a84",
+        "encoded": "###%20Infrastructure",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "3d693d",
+        "hash": "1420c721",
+        "encoded": "-%20Kubernetes%20cluster",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "3d693d",
+        "hash": "5851605f",
+        "encoded": "-%20PostgreSQL%20database",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "3d693d",
+        "hash": "27fdcf1d",
+        "encoded": "-%20Load%20balancer",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "3d693d",
+        "hash": "312d63c2",
+        "encoded": "-%20Container%20registry",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "3d693d",
+        "hash": "e229bd8f",
+        "encoded": "###%20CI/CD%20Pipeline",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "3d693d",
+        "hash": "0d81f1e7",
+        "encoded": "1.%20Code%20commit",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "3d693d",
+        "hash": "a5b33975",
+        "encoded": "2.%20Automated%20tests",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "3d693d",
+        "hash": "2871a4f4",
+        "encoded": "3.%20Quality%20checks",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "3d693d",
+        "hash": "0cf4ee2b",
+        "encoded": "4.%20Build%20Docker%20images",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "3d693d",
+        "hash": "67e7a41d",
+        "encoded": "5.%20Deploy%20to%20staging",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "3d693d",
+        "hash": "01d99158",
+        "encoded": "6.%20Manual%20approval",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "3d693d",
+        "hash": "189c66de",
+        "encoded": "7.%20Deploy%20to%20production",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "3d693d",
+        "hash": "6fd61984",
+        "encoded": "8.%20Smoke%20tests",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "3d693d",
+        "hash": "6b99155d",
+        "encoded": "9.%20Monitoring",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

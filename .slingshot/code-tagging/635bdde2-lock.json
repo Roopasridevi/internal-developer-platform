@@ -1,0 +1,324 @@
+{
+  "backend\\src\\utils\\helpers.js": {
+    "filename": "helpers.js",
+    "path": "backend\\src\\utils\\helpers.js",
+    "version": "1.2",
+    "contextFile": "635bdde2-context.json",
+    "chunks": {
+      "0d4718": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707867,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "c4b60f0c",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:47 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "0d4718",
+        "hash": "aaa5b4bf",
+        "encoded": "const%20crypto%20=%20require('crypto');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "0d4718",
+        "hash": "9fabb573",
+        "encoded": "const%20generateRandomString%20=%20(length%20=%2032)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "0d4718",
+        "hash": "7b69c911",
+        "encoded": "return%20crypto.randomBytes(length).toString('hex');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "0d4718",
+        "hash": "d4e267fb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "0d4718",
+        "hash": "bbfd31c2",
+        "encoded": "const%20slugify%20=%20(text)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "0d4718",
+        "hash": "25e39560",
+        "encoded": "return%20text",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "0d4718",
+        "hash": "9d317856",
+        "encoded": ".toString()",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "0d4718",
+        "hash": "4c01c1d2",
+        "encoded": ".toLowerCase()",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "0d4718",
+        "hash": "2e13bf5d",
+        "encoded": ".trim()",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "0d4718",
+        "hash": "b2ac3ed7",
+        "encoded": ".replace(/%5Cs+/g,%20'-')",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "0d4718",
+        "hash": "4404fad2",
+        "encoded": ".replace(/%5B%5E%5Cw%5C-%5D+/g,%20'')",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "0d4718",
+        "hash": "0ca2e633",
+        "encoded": ".replace(/%5C-%5C-+/g,%20'-');",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "0d4718",
+        "hash": "734baa97",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "0d4718",
+        "hash": "dd1db6d9",
+        "encoded": "const%20paginate%20=%20(page%20=%201,%20limit%20=%2010)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "0d4718",
+        "hash": "94fbc38c",
+        "encoded": "const%20offset%20=%20(page%20-%201)%20*%20limit;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "0d4718",
+        "hash": "08a391ca",
+        "encoded": "return%20%7B%20limit,%20offset%20%7D;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "0d4718",
+        "hash": "1c5cd165",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "0d4718",
+        "hash": "c3f68e57",
+        "encoded": "const%20formatPagination%20=%20(count,%20page,%20limit)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "0d4718",
+        "hash": "ac5a24b9",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "0d4718",
+        "hash": "22e5dc4e",
+        "encoded": "total:%20count,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "0d4718",
+        "hash": "51a1480e",
+        "encoded": "page,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "0d4718",
+        "hash": "9b6f2253",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "0d4718",
+        "hash": "45ef4766",
+        "encoded": "totalPages:%20Math.ceil(count%20/%20limit),",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "0d4718",
+        "hash": "65c6e9ab",
+        "encoded": "hasNext:%20page%20%3C%20Math.ceil(count%20/%20limit),",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "0d4718",
+        "hash": "351e0b7d",
+        "encoded": "hasPrev:%20page%20%3E%201,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "0d4718",
+        "hash": "19b7cad3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "0d4718",
+        "hash": "9e8c1e32",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "0d4718",
+        "hash": "2440fa7f",
+        "encoded": "const%20sanitizeObject%20=%20(obj,%20allowedFields)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "0d4718",
+        "hash": "3b4f87db",
+        "encoded": "const%20sanitized%20=%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "0d4718",
+        "hash": "07d8d1d4",
+        "encoded": "allowedFields.forEach((field)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "0d4718",
+        "hash": "0261c6ec",
+        "encoded": "if%20(obj%5Bfield%5D%20!==%20undefined)%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "0d4718",
+        "hash": "24df39ac",
+        "encoded": "sanitized%5Bfield%5D%20=%20obj%5Bfield%5D;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "0d4718",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "0d4718",
+        "hash": "3b202ec2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "0d4718",
+        "hash": "a51dfccb",
+        "encoded": "return%20sanitized;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "0d4718",
+        "hash": "c14374bb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "0d4718",
+        "hash": "0e449700",
+        "encoded": "const%20asyncHandler%20=%20(fn)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "0d4718",
+        "hash": "0d4b4790",
+        "encoded": "return%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "0d4718",
+        "hash": "74cac8ad",
+        "encoded": "Promise.resolve(fn(req,%20res,%20next)).catch(next);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "0d4718",
+        "hash": "d95efe69",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "0d4718",
+        "hash": "81b17229",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "0d4718",
+        "hash": "0b93b21a",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "0d4718",
+        "hash": "77c7c2d5",
+        "encoded": "generateRandomString,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "0d4718",
+        "hash": "4b4ff448",
+        "encoded": "slugify,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "0d4718",
+        "hash": "caf0ae9a",
+        "encoded": "paginate,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "0d4718",
+        "hash": "c85e9f13",
+        "encoded": "formatPagination,",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "0d4718",
+        "hash": "5746139c",
+        "encoded": "sanitizeObject,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "0d4718",
+        "hash": "1738d871",
+        "encoded": "asyncHandler,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "0d4718",
+        "hash": "8aa563ff",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "backend\\src\\routes\\deploymentRoutes.js": {
+    "filename": "deploymentRoutes.js",
+    "path": "backend\\src\\routes\\deploymentRoutes.js",
+    "version": "1.2",
+    "contextFile": "3d591a3d-context.json",
+    "chunks": {
+      "2f63a5": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707784,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "06fee1c8",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:24 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2f63a5",
+        "hash": "0329f9d1",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "2f63a5",
+        "hash": "de5ebe26",
+        "encoded": "const%20%7B%20body%20%7D%20=%20require('express-validator');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2f63a5",
+        "hash": "2a7c560a",
+        "encoded": "const%20deploymentController%20=%20require('../controllers/deploymentController');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "2f63a5",
+        "hash": "1e7ed5ba",
+        "encoded": "const%20authenticate%20=%20require('../middleware/authenticate');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2f63a5",
+        "hash": "df21e85c",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "2f63a5",
+        "hash": "f485d2b4",
+        "encoded": "router.use(authenticate);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2f63a5",
+        "hash": "403bd677",
+        "encoded": "router.post(",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2f63a5",
+        "hash": "56c0ea63",
+        "encoded": "'/',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2f63a5",
+        "hash": "2cf4eafd",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2f63a5",
+        "hash": "14ff041f",
+        "encoded": "body('projectId').notEmpty().isUUID().withMessage('Valid%20project%20ID%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2f63a5",
+        "hash": "1eafe660",
+        "encoded": "body('environment').notEmpty().trim().withMessage('Environment%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2f63a5",
+        "hash": "d698902c",
+        "encoded": "body('version').notEmpty().trim().withMessage('Version%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2f63a5",
+        "hash": "9c7c7256",
+        "encoded": "body('imageUrl').optional().isURL().withMessage('Invalid%20image%20URL'),",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2f63a5",
+        "hash": "8d0f862f",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2f63a5",
+        "hash": "a4a1fe72",
+        "encoded": "deploymentController.createDeployment",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2f63a5",
+        "hash": "8ce10b4c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2f63a5",
+        "hash": "13532eca",
+        "encoded": "router.get('/',%20deploymentController.getDeployments);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2f63a5",
+        "hash": "1fee80c2",
+        "encoded": "router.get('/:id',%20deploymentController.getDeploymentById);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2f63a5",
+        "hash": "39ffa92c",
+        "encoded": "router.post('/:id/rollback',%20deploymentController.rollbackDeployment);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2f63a5",
+        "hash": "a565609d",
+        "encoded": "router.get('/:id/status',%20deploymentController.getDeploymentStatus);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2f63a5",
+        "hash": "177875fb",
+        "encoded": "router.get('/projects/:projectId/environments',%20deploymentController.getEnvironments);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2f63a5",
+        "hash": "45065621",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

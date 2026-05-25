@@ -1,0 +1,102 @@
+{
+  "backend\\src\\middleware\\authorize.js": {
+    "filename": "authorize.js",
+    "path": "backend\\src\\middleware\\authorize.js",
+    "version": "1.2",
+    "contextFile": "b24eb427-context.json",
+    "chunks": {
+      "dc8296": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707865,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "fa0e4998",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:45 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "dc8296",
+        "hash": "4fa450ef",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../utils/errors');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "dc8296",
+        "hash": "acb20a08",
+        "encoded": "module.exports%20=%20(...roles)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "dc8296",
+        "hash": "c2d857a0",
+        "encoded": "return%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "dc8296",
+        "hash": "2ae72ef9",
+        "encoded": "if%20(!req.user)%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "dc8296",
+        "hash": "234bef08",
+        "encoded": "return%20next(new%20AppError('Authentication%20required',%20401));",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "dc8296",
+        "hash": "03469704",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "dc8296",
+        "hash": "4c269f38",
+        "encoded": "if%20(!roles.includes(req.user.role))%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "dc8296",
+        "hash": "c73cca58",
+        "encoded": "return%20next(new%20AppError('Insufficient%20permissions',%20403));",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "dc8296",
+        "hash": "c2f1edd6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "dc8296",
+        "hash": "21fcd0c7",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "dc8296",
+        "hash": "67a86cab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "dc8296",
+        "hash": "734baa97",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

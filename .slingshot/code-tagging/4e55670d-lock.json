@@ -1,0 +1,192 @@
+{
+  "frontend\\src\\services\\deploymentService.js": {
+    "filename": "deploymentService.js",
+    "path": "frontend\\src\\services\\deploymentService.js",
+    "version": "1.2",
+    "contextFile": "4e55670d-context.json",
+    "chunks": {
+      "7764e3": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708090,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "fc0426f2",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:30 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7764e3",
+        "hash": "a53ca53a",
+        "encoded": "import%20api%20from%20'./api';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7764e3",
+        "hash": "7db562a0",
+        "encoded": "export%20const%20deploymentService%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7764e3",
+        "hash": "c8deaaae",
+        "encoded": "async%20getDeployments(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7764e3",
+        "hash": "84eae69b",
+        "encoded": "const%20response%20=%20await%20api.get('/deployments',%20%7B%20params%20%7D);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7764e3",
+        "hash": "f69a0f09",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7764e3",
+        "hash": "4401be13",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "7764e3",
+        "hash": "afe35224",
+        "encoded": "async%20getDeploymentById(id)%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "7764e3",
+        "hash": "935ab70f",
+        "encoded": "const%20response%20=%20await%20api.get(%60/deployments/$%7Bid%7D%60);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7764e3",
+        "hash": "229d8636",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7764e3",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "7764e3",
+        "hash": "639fc430",
+        "encoded": "async%20createDeployment(data)%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7764e3",
+        "hash": "0c9b8545",
+        "encoded": "const%20response%20=%20await%20api.post('/deployments',%20data);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "7764e3",
+        "hash": "8542e594",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7764e3",
+        "hash": "e0024018",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7764e3",
+        "hash": "a5b1ff0f",
+        "encoded": "async%20rollbackDeployment(id)%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "7764e3",
+        "hash": "98928057",
+        "encoded": "const%20response%20=%20await%20api.post(%60/deployments/$%7Bid%7D/rollback%60);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "7764e3",
+        "hash": "bd7e8d6e",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7764e3",
+        "hash": "044c21b3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7764e3",
+        "hash": "e368932b",
+        "encoded": "async%20getDeploymentStatus(id)%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7764e3",
+        "hash": "2fe6cfc4",
+        "encoded": "const%20response%20=%20await%20api.get(%60/deployments/$%7Bid%7D/status%60);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "7764e3",
+        "hash": "f995bfb9",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "7764e3",
+        "hash": "0b87a378",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "7764e3",
+        "hash": "10c45a20",
+        "encoded": "async%20getEnvironments(projectId)%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "7764e3",
+        "hash": "f5da3a74",
+        "encoded": "const%20response%20=%20await%20api.get(%60/deployments/projects/$%7BprojectId%7D/environments%60);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "7764e3",
+        "hash": "2488f3d3",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "7764e3",
+        "hash": "2f2e8934",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "7764e3",
+        "hash": "252f0ed4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

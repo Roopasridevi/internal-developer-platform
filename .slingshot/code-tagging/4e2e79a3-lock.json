@@ -1,0 +1,102 @@
+{
+  "backend\\src\\middleware\\validateRequest.js": {
+    "filename": "validateRequest.js",
+    "path": "backend\\src\\middleware\\validateRequest.js",
+    "version": "1.2",
+    "contextFile": "4e2e79a3-context.json",
+    "chunks": {
+      "a35a2e": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707865,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "be72888a",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:45 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a35a2e",
+        "hash": "cb5c0c0c",
+        "encoded": "const%20%7B%20validationResult%20%7D%20=%20require('express-validator');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "a35a2e",
+        "hash": "475880d7",
+        "encoded": "module.exports%20=%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "a35a2e",
+        "hash": "4fe91720",
+        "encoded": "const%20errors%20=%20validationResult(req);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "a35a2e",
+        "hash": "c9142980",
+        "encoded": "if%20(!errors.isEmpty())%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a35a2e",
+        "hash": "e7f1ebba",
+        "encoded": "return%20res.status(400).json(%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "a35a2e",
+        "hash": "ff69235f",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a35a2e",
+        "hash": "8daba2ac",
+        "encoded": "message:%20'Validation%20failed',",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "a35a2e",
+        "hash": "dcb6867c",
+        "encoded": "errors:%20errors.array(),",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "a35a2e",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "a35a2e",
+        "hash": "e9a9f96c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "a35a2e",
+        "hash": "b95fc8f5",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "a35a2e",
+        "hash": "734baa97",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

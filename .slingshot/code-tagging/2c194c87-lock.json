@@ -1,0 +1,582 @@
+{
+  "backend\\src\\utils\\kubernetesClient.js": {
+    "filename": "kubernetesClient.js",
+    "path": "backend\\src\\utils\\kubernetesClient.js",
+    "version": "1.2",
+    "contextFile": "2c194c87-context.json",
+    "chunks": {
+      "cb8d06": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707867,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "5db0c5dc",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:47 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "cb8d06",
+        "hash": "8769cfb2",
+        "encoded": "const%20axios%20=%20require('axios');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "cb8d06",
+        "hash": "45544a57",
+        "encoded": "const%20config%20=%20require('../config');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "cb8d06",
+        "hash": "67c3ae13",
+        "encoded": "const%20logger%20=%20require('./logger');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "cb8d06",
+        "hash": "9c1171c1",
+        "encoded": "class%20KubernetesClient%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "cb8d06",
+        "hash": "c404ac67",
+        "encoded": "constructor()%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "cb8d06",
+        "hash": "7b58758c",
+        "encoded": "this.client%20=%20axios.create(%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "cb8d06",
+        "hash": "f20d1e60",
+        "encoded": "baseURL:%20config.externalServices.kubernetes.apiUrl,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "cb8d06",
+        "hash": "f4069d81",
+        "encoded": "headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "cb8d06",
+        "hash": "e85edbf0",
+        "encoded": "'Authorization':%20%60Bearer%20$%7Bconfig.externalServices.kubernetes.token%7D%60,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "cb8d06",
+        "hash": "3c1a5dd2",
+        "encoded": "'Content-Type':%20'application/json',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "cb8d06",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "cb8d06",
+        "hash": "d173081a",
+        "encoded": "timeout:%2030000,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "cb8d06",
+        "hash": "b83e12be",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "cb8d06",
+        "hash": "ac702853",
+        "encoded": "this.namespace%20=%20config.externalServices.kubernetes.namespace;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "cb8d06",
+        "hash": "c8f9d1c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "cb8d06",
+        "hash": "ff1f0709",
+        "encoded": "async%20deploy(%7B%20name,%20namespace,%20image,%20version,%20replicas,%20envVars%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "cb8d06",
+        "hash": "2d6382cd",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "cb8d06",
+        "hash": "0f3d9ecc",
+        "encoded": "const%20deploymentManifest%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "cb8d06",
+        "hash": "73751a17",
+        "encoded": "apiVersion:%20'apps/v1',",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "cb8d06",
+        "hash": "9318cef7",
+        "encoded": "kind:%20'Deployment',",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "cb8d06",
+        "hash": "c13a87e6",
+        "encoded": "metadata:%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "cb8d06",
+        "hash": "52a20197",
+        "encoded": "name,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "cb8d06",
+        "hash": "d17edae7",
+        "encoded": "namespace:%20namespace%20%7C%7C%20this.namespace,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "cb8d06",
+        "hash": "3e0e7015",
+        "encoded": "labels:%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "cb8d06",
+        "hash": "583010b8",
+        "encoded": "app:%20name,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "cb8d06",
+        "hash": "e034c22e",
+        "encoded": "version,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "cb8d06",
+        "hash": "da01a3bd",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "cb8d06",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "cb8d06",
+        "hash": "7c3a1ba0",
+        "encoded": "spec:%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "cb8d06",
+        "hash": "410a67f1",
+        "encoded": "replicas,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "cb8d06",
+        "hash": "12dad886",
+        "encoded": "selector:%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "cb8d06",
+        "hash": "3472ba84",
+        "encoded": "matchLabels:%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "cb8d06",
+        "hash": "79b01dc7",
+        "encoded": "app:%20name,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "cb8d06",
+        "hash": "da1b69e9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "cb8d06",
+        "hash": "6bb93cd8",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "cb8d06",
+        "hash": "841dee21",
+        "encoded": "template:%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "cb8d06",
+        "hash": "4f4c0736",
+        "encoded": "metadata:%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "cb8d06",
+        "hash": "4af3fab0",
+        "encoded": "labels:%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "cb8d06",
+        "hash": "018ea469",
+        "encoded": "app:%20name,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "cb8d06",
+        "hash": "7ac06de1",
+        "encoded": "version,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "cb8d06",
+        "hash": "81d4c2f1",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "cb8d06",
+        "hash": "ea89afce",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "cb8d06",
+        "hash": "b410f71a",
+        "encoded": "spec:%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "cb8d06",
+        "hash": "00c4bb7f",
+        "encoded": "containers:%20%5B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "cb8d06",
+        "hash": "dce7bfad",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "cb8d06",
+        "hash": "50bc4243",
+        "encoded": "name,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "cb8d06",
+        "hash": "68e479f8",
+        "encoded": "image:%20%60$%7Bimage%7D:$%7Bversion%7D%60,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "cb8d06",
+        "hash": "816f7fd4",
+        "encoded": "env:%20Object.entries(envVars%20%7C%7C%20%7B%7D).map((%5Bkey,%20value%5D)%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "cb8d06",
+        "hash": "fe010837",
+        "encoded": "name:%20key,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "cb8d06",
+        "hash": "2e738d68",
+        "encoded": "value:%20String(value),",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "cb8d06",
+        "hash": "1d8df787",
+        "encoded": "%7D)),",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "cb8d06",
+        "hash": "0cbb9f72",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "cb8d06",
+        "hash": "8b2475d7",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "cb8d06",
+        "hash": "1c27ad0f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "cb8d06",
+        "hash": "ad50244c",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "cb8d06",
+        "hash": "a56419ed",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "cb8d06",
+        "hash": "d6071797",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "cb8d06",
+        "hash": "f0614703",
+        "encoded": "const%20response%20=%20await%20this.client.post(",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "cb8d06",
+        "hash": "fcea8e10",
+        "encoded": "%60/apis/apps/v1/namespaces/$%7Bnamespace%20%7C%7C%20this.namespace%7D/deployments%60,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "cb8d06",
+        "hash": "208f5461",
+        "encoded": "deploymentManifest",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "cb8d06",
+        "hash": "4cd38286",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "cb8d06",
+        "hash": "9ebd4273",
+        "encoded": "logger.info(%60Deployment%20created:%20$%7Bname%7D%60);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "cb8d06",
+        "hash": "935afe60",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "cb8d06",
+        "hash": "53e0bcf0",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "cb8d06",
+        "hash": "25432870",
+        "encoded": "logger.error('Error%20creating%20deployment:',%20error);",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "cb8d06",
+        "hash": "3820c128",
+        "encoded": "throw%20new%20Error('Failed%20to%20create%20deployment');",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "cb8d06",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "cb8d06",
+        "hash": "f064f9d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "cb8d06",
+        "hash": "28b8f9ad",
+        "encoded": "async%20getDeploymentStatus(deploymentName)%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "cb8d06",
+        "hash": "a85282e6",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "cb8d06",
+        "hash": "b96f0b19",
+        "encoded": "const%20response%20=%20await%20this.client.get(",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "cb8d06",
+        "hash": "4f3949c8",
+        "encoded": "%60/apis/apps/v1/namespaces/$%7Bthis.namespace%7D/deployments/$%7BdeploymentName%7D%60",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "cb8d06",
+        "hash": "0afea6a9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "cb8d06",
+        "hash": "564e2c5f",
+        "encoded": "return%20response.data.status;",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "cb8d06",
+        "hash": "23441891",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "cb8d06",
+        "hash": "fdc2c9bb",
+        "encoded": "logger.error('Error%20fetching%20deployment%20status:',%20error);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "cb8d06",
+        "hash": "01643070",
+        "encoded": "throw%20new%20Error('Failed%20to%20fetch%20deployment%20status');",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "cb8d06",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "cb8d06",
+        "hash": "e4b921c6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "cb8d06",
+        "hash": "5b0814b2",
+        "encoded": "async%20deleteDeployment(deploymentName)%20%7B",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "cb8d06",
+        "hash": "bcaa890c",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "cb8d06",
+        "hash": "8d711a14",
+        "encoded": "await%20this.client.delete(",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "cb8d06",
+        "hash": "c8a05c38",
+        "encoded": "%60/apis/apps/v1/namespaces/$%7Bthis.namespace%7D/deployments/$%7BdeploymentName%7D%60",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "cb8d06",
+        "hash": "45c51dc4",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "cb8d06",
+        "hash": "8d5f1243",
+        "encoded": "logger.info(%60Deployment%20deleted:%20$%7BdeploymentName%7D%60);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "cb8d06",
+        "hash": "ccd9e11c",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "cb8d06",
+        "hash": "d534eb1d",
+        "encoded": "logger.error('Error%20deleting%20deployment:',%20error);",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "cb8d06",
+        "hash": "e3502c62",
+        "encoded": "throw%20new%20Error('Failed%20to%20delete%20deployment');",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "cb8d06",
+        "hash": "db89230b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "cb8d06",
+        "hash": "4cb4c387",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "cb8d06",
+        "hash": "eb084e75",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "cb8d06",
+        "hash": "5f4604e2",
+        "encoded": "module.exports%20=%20new%20KubernetesClient();",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

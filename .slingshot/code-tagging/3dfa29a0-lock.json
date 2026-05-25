@@ -1,0 +1,294 @@
+{
+  "frontend\\src\\pages\\Dashboard.jsx": {
+    "filename": "Dashboard.jsx",
+    "path": "frontend\\src\\pages\\Dashboard.jsx",
+    "version": "1.2",
+    "contextFile": "3dfa29a0-context.json",
+    "chunks": {
+      "5e1fb5": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708334,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "27d5c166",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:34 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5e1fb5",
+        "hash": "6842b926",
+        "encoded": "import%20%7B%20useQuery%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5e1fb5",
+        "hash": "3c2923bd",
+        "encoded": "import%20%7B%20projectService%20%7D%20from%20'../services/projectService';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5e1fb5",
+        "hash": "e55ff406",
+        "encoded": "import%20%7B%20deploymentService%20%7D%20from%20'../services/deploymentService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5e1fb5",
+        "hash": "b66057d5",
+        "encoded": "import%20'./Dashboard.css';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5e1fb5",
+        "hash": "14abdde1",
+        "encoded": "const%20Dashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5e1fb5",
+        "hash": "75e1a030",
+        "encoded": "const%20%7B%20data:%20projects%20%7D%20=%20useQuery('projects',%20()%20=%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5e1fb5",
+        "hash": "7a13780c",
+        "encoded": "projectService.getProjects(%7B%20limit:%205%20%7D)",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5e1fb5",
+        "hash": "f4ae6b5b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5e1fb5",
+        "hash": "355d38e0",
+        "encoded": "const%20%7B%20data:%20deployments%20%7D%20=%20useQuery('recent-deployments',%20()%20=%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5e1fb5",
+        "hash": "c44cadf8",
+        "encoded": "deploymentService.getDeployments(%7B%20limit:%205%20%7D)",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5e1fb5",
+        "hash": "5d262367",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "5e1fb5",
+        "hash": "d4d8b398",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5e1fb5",
+        "hash": "bddc134a",
+        "encoded": "%3Cdiv%20className=%22dashboard%22%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "5e1fb5",
+        "hash": "771d08a9",
+        "encoded": "%3Ch1%3EDashboard%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5e1fb5",
+        "hash": "f56a7c24",
+        "encoded": "%3Cdiv%20className=%22dashboard-grid%22%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "5e1fb5",
+        "hash": "beb11a95",
+        "encoded": "%3Cdiv%20className=%22card%22%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "5e1fb5",
+        "hash": "48c24809",
+        "encoded": "%3Ch2%3ERecent%20Projects%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "5e1fb5",
+        "hash": "92c74848",
+        "encoded": "%3Cdiv%20className=%22list%22%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5e1fb5",
+        "hash": "841ecf39",
+        "encoded": "%7Bprojects?.data?.projects?.map((project)%20=%3E%20(",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "5e1fb5",
+        "hash": "f1ed339b",
+        "encoded": "%3Cdiv%20key=%7Bproject.id%7D%20className=%22list-item%22%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5e1fb5",
+        "hash": "88bfa89f",
+        "encoded": "%3Ch3%3E%7Bproject.name%7D%3C/h3%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "5e1fb5",
+        "hash": "7acb5039",
+        "encoded": "%3Cp%3E%7Bproject.description%7D%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "5e1fb5",
+        "hash": "4bb6e66f",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5e1fb5",
+        "hash": "003126ac",
+        "encoded": "))%7D",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "5e1fb5",
+        "hash": "bcfb8570",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "5e1fb5",
+        "hash": "2b48c446",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5e1fb5",
+        "hash": "e70d1865",
+        "encoded": "%3Cdiv%20className=%22card%22%3E",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "5e1fb5",
+        "hash": "64bf0f44",
+        "encoded": "%3Ch2%3ERecent%20Deployments%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "5e1fb5",
+        "hash": "acbc90bb",
+        "encoded": "%3Cdiv%20className=%22list%22%3E",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "5e1fb5",
+        "hash": "4a4a64f5",
+        "encoded": "%7Bdeployments?.data?.deployments?.map((deployment)%20=%3E%20(",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "5e1fb5",
+        "hash": "97f6f837",
+        "encoded": "%3Cdiv%20key=%7Bdeployment.id%7D%20className=%22list-item%22%3E",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "5e1fb5",
+        "hash": "9d9617d0",
+        "encoded": "%3Ch3%3E%7Bdeployment.environment%7D%3C/h3%3E",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "5e1fb5",
+        "hash": "f9c13eba",
+        "encoded": "%3Cspan%20className=%7B%60status-badge%20$%7Bdeployment.status%7D%60%7D%3E",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "5e1fb5",
+        "hash": "58a5d6fb",
+        "encoded": "%7Bdeployment.status%7D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "5e1fb5",
+        "hash": "7e0cd9f9",
+        "encoded": "%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "5e1fb5",
+        "hash": "a053ed0d",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "5e1fb5",
+        "hash": "3b194c89",
+        "encoded": "))%7D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "5e1fb5",
+        "hash": "6dec5460",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "5e1fb5",
+        "hash": "a9c8c8e2",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "5e1fb5",
+        "hash": "be7aac31",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "5e1fb5",
+        "hash": "39e57557",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "5e1fb5",
+        "hash": "fe26fe6b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "5e1fb5",
+        "hash": "6fab5950",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "5e1fb5",
+        "hash": "4f3989f1",
+        "encoded": "export%20default%20Dashboard;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

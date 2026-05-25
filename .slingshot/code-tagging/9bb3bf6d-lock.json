@@ -1,0 +1,744 @@
+{
+  "pipelines\\test.yml": {
+    "filename": "test.yml",
+    "path": "pipelines\\test.yml",
+    "version": "1.2",
+    "contextFile": "9bb3bf6d-context.json",
+    "chunks": {
+      "fc384b": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708331,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "a343d132",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:31 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "fc384b",
+        "hash": "77ec8708",
+        "encoded": "name:%20Test%20Pipeline",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "fc384b",
+        "hash": "8b0cac53",
+        "encoded": "on:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "fc384b",
+        "hash": "2964a980",
+        "encoded": "push:",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "fc384b",
+        "hash": "53e0edbb",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "fc384b",
+        "hash": "943101cb",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "fc384b",
+        "hash": "8145c774",
+        "encoded": "-%20develop",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "fc384b",
+        "hash": "6cd945e5",
+        "encoded": "pull_request:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "fc384b",
+        "hash": "2bb8c225",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "fc384b",
+        "hash": "030ca835",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "fc384b",
+        "hash": "e71c60c5",
+        "encoded": "-%20develop",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "fc384b",
+        "hash": "9007ec2e",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "fc384b",
+        "hash": "2a792b12",
+        "encoded": "NODE_VERSION:%20'18'",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "fc384b",
+        "hash": "ac409e36",
+        "encoded": "jobs:",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "fc384b",
+        "hash": "aa6c88b5",
+        "encoded": "test-backend:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "fc384b",
+        "hash": "d55f2988",
+        "encoded": "name:%20Backend%20Tests",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "fc384b",
+        "hash": "5f89f4a5",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "fc384b",
+        "hash": "a3176ff7",
+        "encoded": "services:",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "fc384b",
+        "hash": "b69314b6",
+        "encoded": "postgres:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "fc384b",
+        "hash": "ae103056",
+        "encoded": "image:%20postgres:14",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "fc384b",
+        "hash": "665ee35e",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "fc384b",
+        "hash": "92a68c7c",
+        "encoded": "POSTGRES_USER:%20postgres",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fc384b",
+        "hash": "e589922a",
+        "encoded": "POSTGRES_PASSWORD:%20postgres",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "fc384b",
+        "hash": "59f407ea",
+        "encoded": "POSTGRES_DB:%20idp_test",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "fc384b",
+        "hash": "aaf6e1ca",
+        "encoded": "options:%20%3E-",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "fc384b",
+        "hash": "c7218db2",
+        "encoded": "--health-cmd%20pg_isready",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "fc384b",
+        "hash": "a5d9a23a",
+        "encoded": "--health-interval%2010s",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "fc384b",
+        "hash": "22d23b58",
+        "encoded": "--health-timeout%205s",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "fc384b",
+        "hash": "98342642",
+        "encoded": "--health-retries%205",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "fc384b",
+        "hash": "9b602dc5",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "fc384b",
+        "hash": "f06c1a17",
+        "encoded": "-%205432:5432",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "fc384b",
+        "hash": "2c1ce425",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "fc384b",
+        "hash": "9fccf22f",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "fc384b",
+        "hash": "14f62abc",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "fc384b",
+        "hash": "cb513378",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "fc384b",
+        "hash": "58df9c3f",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "fc384b",
+        "hash": "d1b5f158",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "fc384b",
+        "hash": "bdfa2855",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "fc384b",
+        "hash": "76e41c8d",
+        "encoded": "cache:%20'npm'",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "fc384b",
+        "hash": "a470b97f",
+        "encoded": "cache-dependency-path:%20backend/package-lock.json",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "fc384b",
+        "hash": "97c5419e",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "fc384b",
+        "hash": "fa448b03",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "fc384b",
+        "hash": "c2ae7184",
+        "encoded": "run:%20npm%20ci",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "fc384b",
+        "hash": "a46550b6",
+        "encoded": "-%20name:%20Run%20unit%20tests",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "fc384b",
+        "hash": "9ef84590",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "fc384b",
+        "hash": "2c79826c",
+        "encoded": "run:%20npm%20run%20test:unit",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "fc384b",
+        "hash": "9e9ba8e6",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "fc384b",
+        "hash": "1863b33d",
+        "encoded": "NODE_ENV:%20test",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "fc384b",
+        "hash": "7ee42e4d",
+        "encoded": "DB_HOST:%20localhost",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "fc384b",
+        "hash": "350cd25d",
+        "encoded": "DB_PORT:%205432",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "fc384b",
+        "hash": "9ae62c56",
+        "encoded": "DB_NAME:%20idp_test",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "fc384b",
+        "hash": "115df5e3",
+        "encoded": "DB_USER:%20postgres",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "fc384b",
+        "hash": "3ca9fdb4",
+        "encoded": "DB_PASSWORD:%20postgres",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "fc384b",
+        "hash": "2da44605",
+        "encoded": "-%20name:%20Run%20integration%20tests",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "fc384b",
+        "hash": "d45c0316",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "fc384b",
+        "hash": "1110c95c",
+        "encoded": "run:%20npm%20run%20test:integration",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "fc384b",
+        "hash": "7f25e5b0",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "fc384b",
+        "hash": "f3100c51",
+        "encoded": "NODE_ENV:%20test",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "fc384b",
+        "hash": "3510f6a6",
+        "encoded": "DB_HOST:%20localhost",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "fc384b",
+        "hash": "0b12d894",
+        "encoded": "DB_PORT:%205432",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "fc384b",
+        "hash": "93df0d5e",
+        "encoded": "DB_NAME:%20idp_test",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "fc384b",
+        "hash": "daeaef81",
+        "encoded": "DB_USER:%20postgres",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "fc384b",
+        "hash": "7d53184a",
+        "encoded": "DB_PASSWORD:%20postgres",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "fc384b",
+        "hash": "e00d9b01",
+        "encoded": "-%20name:%20Generate%20coverage%20report",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "fc384b",
+        "hash": "ebfd797a",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "fc384b",
+        "hash": "96afcd83",
+        "encoded": "run:%20npm%20test%20--%20--coverage",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "fc384b",
+        "hash": "15278a76",
+        "encoded": "-%20name:%20Upload%20coverage%20to%20Codecov",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "fc384b",
+        "hash": "db5c9027",
+        "encoded": "uses:%20codecov/codecov-action@v3",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "fc384b",
+        "hash": "68cbbba8",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "fc384b",
+        "hash": "08bca627",
+        "encoded": "files:%20./backend/coverage/lcov.info",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "fc384b",
+        "hash": "2bff63ed",
+        "encoded": "flags:%20backend",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "fc384b",
+        "hash": "7777f5fd",
+        "encoded": "name:%20backend-coverage",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "fc384b",
+        "hash": "fd227c54",
+        "encoded": "test-frontend:",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "fc384b",
+        "hash": "568628d4",
+        "encoded": "name:%20Frontend%20Tests",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "fc384b",
+        "hash": "2ec048ee",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "fc384b",
+        "hash": "7d42f2fb",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "fc384b",
+        "hash": "a7be45cf",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "fc384b",
+        "hash": "2ab4b2db",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "fc384b",
+        "hash": "fc7891e5",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "fc384b",
+        "hash": "6ba2af17",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "fc384b",
+        "hash": "31b929aa",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "fc384b",
+        "hash": "07ada34f",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "fc384b",
+        "hash": "082f10fa",
+        "encoded": "cache:%20'npm'",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "fc384b",
+        "hash": "bc16e08e",
+        "encoded": "cache-dependency-path:%20frontend/package-lock.json",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "fc384b",
+        "hash": "43dc5d10",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "fc384b",
+        "hash": "a548e870",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "fc384b",
+        "hash": "575787de",
+        "encoded": "run:%20npm%20ci",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "fc384b",
+        "hash": "78e425c2",
+        "encoded": "-%20name:%20Run%20tests",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "fc384b",
+        "hash": "81da7d44",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "fc384b",
+        "hash": "31190d3f",
+        "encoded": "run:%20npm%20test",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "fc384b",
+        "hash": "1d903cbe",
+        "encoded": "-%20name:%20Generate%20coverage%20report",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "fc384b",
+        "hash": "27116d36",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "fc384b",
+        "hash": "ffb79a45",
+        "encoded": "run:%20npm%20run%20test:coverage",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "fc384b",
+        "hash": "e9809c8a",
+        "encoded": "-%20name:%20Upload%20coverage%20to%20Codecov",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "fc384b",
+        "hash": "498c4479",
+        "encoded": "uses:%20codecov/codecov-action@v3",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "fc384b",
+        "hash": "8a888c31",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "fc384b",
+        "hash": "a5aa7452",
+        "encoded": "files:%20./frontend/coverage/lcov.info",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "fc384b",
+        "hash": "3dab364f",
+        "encoded": "flags:%20frontend",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "fc384b",
+        "hash": "0d5f6431",
+        "encoded": "name:%20frontend-coverage",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "fc384b",
+        "hash": "b4c3a261",
+        "encoded": "e2e-tests:",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "fc384b",
+        "hash": "5e662cc7",
+        "encoded": "name:%20End-to-End%20Tests",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "fc384b",
+        "hash": "1c65164c",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "fc384b",
+        "hash": "8b09bcd1",
+        "encoded": "needs:%20%5Btest-backend,%20test-frontend%5D",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "fc384b",
+        "hash": "836f7b77",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "fc384b",
+        "hash": "a88a9388",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "fc384b",
+        "hash": "93d8f451",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "fc384b",
+        "hash": "9c1747b7",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "fc384b",
+        "hash": "395121e5",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "fc384b",
+        "hash": "61235de0",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "fc384b",
+        "hash": "0ced94e4",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "fc384b",
+        "hash": "87ca821c",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "fc384b",
+        "hash": "7e9d9cf6",
+        "encoded": "run:%20npm%20install",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "fc384b",
+        "hash": "711d012e",
+        "encoded": "-%20name:%20Run%20E2E%20tests",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "fc384b",
+        "hash": "34c56dcf",
+        "encoded": "run:%20npm%20run%20test:e2e",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "fc384b",
+        "hash": "61eb1217",
+        "encoded": "-%20name:%20Upload%20test%20results",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "fc384b",
+        "hash": "9a7175d4",
+        "encoded": "if:%20always()",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "fc384b",
+        "hash": "93d9343b",
+        "encoded": "uses:%20actions/upload-artifact@v3",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "fc384b",
+        "hash": "ace27915",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "fc384b",
+        "hash": "2ec820ee",
+        "encoded": "name:%20e2e-results",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "fc384b",
+        "hash": "77091f93",
+        "encoded": "path:%20e2e/results",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

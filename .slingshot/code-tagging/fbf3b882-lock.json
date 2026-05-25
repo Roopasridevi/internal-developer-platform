@@ -1,0 +1,96 @@
+{
+  ".prettierignore": {
+    "filename": ".prettierignore",
+    "path": ".prettierignore",
+    "version": "1.2",
+    "contextFile": "fbf3b882-context.json",
+    "chunks": {
+      "5df7cf": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707694,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "d9da6dba",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:54 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5df7cf",
+        "hash": "81a85385",
+        "encoded": "node_modules",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5df7cf",
+        "hash": "bdb100ed",
+        "encoded": "build",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5df7cf",
+        "hash": "bf41bb46",
+        "encoded": "dist",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5df7cf",
+        "hash": "aaabe85f",
+        "encoded": "coverage",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "5df7cf",
+        "hash": "fbbb55fc",
+        "encoded": ".next",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5df7cf",
+        "hash": "a479a303",
+        "encoded": "out",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5df7cf",
+        "hash": "34142eb7",
+        "encoded": "*.min.js",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5df7cf",
+        "hash": "3735d1c9",
+        "encoded": "*.min.css",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5df7cf",
+        "hash": "604ae410",
+        "encoded": "package-lock.json",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5df7cf",
+        "hash": "4d3b4e11",
+        "encoded": "yarn.lock",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5df7cf",
+        "hash": "837a4870",
+        "encoded": "pnpm-lock.yaml",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

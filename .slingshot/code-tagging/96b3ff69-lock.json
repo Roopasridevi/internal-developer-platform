@@ -1,0 +1,204 @@
+{
+  "backend\\src\\models\\index.js": {
+    "filename": "index.js",
+    "path": "backend\\src\\models\\index.js",
+    "version": "1.2",
+    "contextFile": "96b3ff69-context.json",
+    "chunks": {
+      "599a04": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707781,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "f5c23189",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:21 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "599a04",
+        "hash": "8bf183d4",
+        "encoded": "const%20%7B%20Sequelize%20%7D%20=%20require('sequelize');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "599a04",
+        "hash": "b5a985ef",
+        "encoded": "const%20config%20=%20require('../config/database');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "599a04",
+        "hash": "984111b4",
+        "encoded": "const%20env%20=%20process.env.NODE_ENV%20%7C%7C%20'development';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "599a04",
+        "hash": "fd78cbc7",
+        "encoded": "const%20dbConfig%20=%20config%5Benv%5D;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "599a04",
+        "hash": "3583eee1",
+        "encoded": "const%20sequelize%20=%20new%20Sequelize(",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "599a04",
+        "hash": "b0ec9af9",
+        "encoded": "dbConfig.database,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "599a04",
+        "hash": "4129527c",
+        "encoded": "dbConfig.username,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "599a04",
+        "hash": "97ca725f",
+        "encoded": "dbConfig.password,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "599a04",
+        "hash": "8fc3fde7",
+        "encoded": "dbConfig",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "599a04",
+        "hash": "0adc91c5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "599a04",
+        "hash": "0e8ca645",
+        "encoded": "const%20db%20=%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "599a04",
+        "hash": "f2ac0201",
+        "encoded": "db.Sequelize%20=%20Sequelize;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "599a04",
+        "hash": "68519161",
+        "encoded": "db.sequelize%20=%20sequelize;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "599a04",
+        "hash": "a62f53a5",
+        "encoded": "//%20Import%20models",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "599a04",
+        "hash": "94887476",
+        "encoded": "db.User%20=%20require('./User')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "599a04",
+        "hash": "bad6239a",
+        "encoded": "db.Project%20=%20require('./Project')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "599a04",
+        "hash": "55a0f84b",
+        "encoded": "db.ProjectMember%20=%20require('./ProjectMember')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "599a04",
+        "hash": "12b138c8",
+        "encoded": "db.Pipeline%20=%20require('./Pipeline')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "599a04",
+        "hash": "01967b69",
+        "encoded": "db.PipelineExecution%20=%20require('./PipelineExecution')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "599a04",
+        "hash": "4c3bf667",
+        "encoded": "db.Deployment%20=%20require('./Deployment')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "599a04",
+        "hash": "a7229fc6",
+        "encoded": "db.Environment%20=%20require('./Environment')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "599a04",
+        "hash": "64afe858",
+        "encoded": "db.Log%20=%20require('./Log')(sequelize,%20Sequelize.DataTypes);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "599a04",
+        "hash": "7e061666",
+        "encoded": "//%20Define%20associations",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "599a04",
+        "hash": "8b142373",
+        "encoded": "Object.keys(db).forEach((modelName)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "599a04",
+        "hash": "e579a499",
+        "encoded": "if%20(db%5BmodelName%5D.associate)%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "599a04",
+        "hash": "6bf5bea8",
+        "encoded": "db%5BmodelName%5D.associate(db);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "599a04",
+        "hash": "699fd80f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "599a04",
+        "hash": "84faadb9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "599a04",
+        "hash": "6c1d476e",
+        "encoded": "module.exports%20=%20db;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

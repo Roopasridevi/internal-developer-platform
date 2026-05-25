@@ -1,0 +1,15 @@
+{
+  "filename": "Layout.jsx",
+  "path": "frontend\\src\\components\\layout\\Layout.jsx",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "2806e598": {
+      "value": "\"Act as a senior DevOps platform engineer.\n\nBuild an internal developer platform.\n\nStack:\n- Backend: Node.js\n- Frontend: React\n- CI/CD: YAML pipeline configs\n\nModules:\n1. Project management\n2. CI pipeline creation\n3. Deployment system\n4. Logs dashboard\n\nDeep Thinking Instructions:\n- Break into independent scopes\n- Generate 50+ files\n- Simulate multiple sub-agents (code, test, PR)\n\nAdvanced:\n- Add linting and quality checks\n- Generate CI/CD configs\n- Simulate PR creation process\n\nOutput:\n- Projec"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

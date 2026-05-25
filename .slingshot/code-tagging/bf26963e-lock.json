@@ -1,0 +1,354 @@
+{
+  "frontend\\src\\pages\\auth\\Auth.css": {
+    "filename": "Auth.css",
+    "path": "frontend\\src\\pages\\auth\\Auth.css",
+    "version": "1.2",
+    "contextFile": "bf26963e-context.json",
+    "chunks": {
+      "c86cf5": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708337,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "465c051d",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:37 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c86cf5",
+        "hash": "0bd99167",
+        "encoded": ".auth-container%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "c86cf5",
+        "hash": "07ca6fd4",
+        "encoded": "display:%20flex;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c86cf5",
+        "hash": "98efe7d1",
+        "encoded": "justify-content:%20center;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c86cf5",
+        "hash": "3638e817",
+        "encoded": "align-items:%20center;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "c86cf5",
+        "hash": "3c3f31c7",
+        "encoded": "min-height:%20100vh;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c86cf5",
+        "hash": "5f8b4982",
+        "encoded": "background:%20linear-gradient(135deg,%20var(--color-primary)%200%25,%20var(--color-primary-dark)%20100%25);",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c86cf5",
+        "hash": "03469704",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c86cf5",
+        "hash": "d692c255",
+        "encoded": ".auth-card%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "c86cf5",
+        "hash": "9b9cf575",
+        "encoded": "background-color:%20var(--color-bg);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c86cf5",
+        "hash": "79d8d107",
+        "encoded": "padding:%20var(--spacing-2xl);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c86cf5",
+        "hash": "7ab67893",
+        "encoded": "border-radius:%20var(--border-radius-xl);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c86cf5",
+        "hash": "cd82df37",
+        "encoded": "box-shadow:%20var(--shadow-xl);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c86cf5",
+        "hash": "c16ec575",
+        "encoded": "width:%20100%25;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c86cf5",
+        "hash": "edaaeb59",
+        "encoded": "max-width:%20400px;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "c86cf5",
+        "hash": "c8f9d1c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c86cf5",
+        "hash": "ec1af496",
+        "encoded": ".auth-card%20h1%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c86cf5",
+        "hash": "5f664a1d",
+        "encoded": "text-align:%20center;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c86cf5",
+        "hash": "1f3ebdba",
+        "encoded": "margin-bottom:%20var(--spacing-xl);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "c86cf5",
+        "hash": "53d56899",
+        "encoded": "color:%20var(--color-text);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c86cf5",
+        "hash": "4b5cc20d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "c86cf5",
+        "hash": "8b63a060",
+        "encoded": ".form-group%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "c86cf5",
+        "hash": "ce10e344",
+        "encoded": "margin-bottom:%20var(--spacing-lg);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "c86cf5",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "c86cf5",
+        "hash": "d9ed2367",
+        "encoded": ".form-group%20label%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "c86cf5",
+        "hash": "60b3ecfd",
+        "encoded": "display:%20block;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "c86cf5",
+        "hash": "dcd9bf05",
+        "encoded": "margin-bottom:%20var(--spacing-xs);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "c86cf5",
+        "hash": "5e032e3f",
+        "encoded": "font-weight:%20500;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "c86cf5",
+        "hash": "bc64c345",
+        "encoded": "color:%20var(--color-text);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "c86cf5",
+        "hash": "699fd80f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "c86cf5",
+        "hash": "ad735341",
+        "encoded": ".form-group%20input%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "c86cf5",
+        "hash": "bd40edf9",
+        "encoded": "width:%20100%25;",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "c86cf5",
+        "hash": "8d313e85",
+        "encoded": "padding:%20var(--spacing-sm)%20var(--spacing-md);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "c86cf5",
+        "hash": "5e449194",
+        "encoded": "border:%201px%20solid%20var(--color-border);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "c86cf5",
+        "hash": "7d6d6c37",
+        "encoded": "border-radius:%20var(--border-radius-md);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "c86cf5",
+        "hash": "1c13016f",
+        "encoded": "font-size:%201rem;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "c86cf5",
+        "hash": "8f521fef",
+        "encoded": "transition:%20border-color%20var(--transition-fast);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c86cf5",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "c86cf5",
+        "hash": "953eaa1b",
+        "encoded": ".form-group%20input:focus%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "c86cf5",
+        "hash": "d53f19fa",
+        "encoded": "outline:%20none;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c86cf5",
+        "hash": "ba7e114d",
+        "encoded": "border-color:%20var(--color-primary);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c86cf5",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c86cf5",
+        "hash": "cc95bdf6",
+        "encoded": ".auth-card%20button%5Btype=%22submit%22%5D%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c86cf5",
+        "hash": "2f9a2648",
+        "encoded": "width:%20100%25;",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c86cf5",
+        "hash": "1908d903",
+        "encoded": "margin-top:%20var(--spacing-md);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c86cf5",
+        "hash": "38b604dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c86cf5",
+        "hash": "d6c9e953",
+        "encoded": ".auth-card%20p%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "c86cf5",
+        "hash": "d64c656e",
+        "encoded": "text-align:%20center;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "c86cf5",
+        "hash": "471b0bfd",
+        "encoded": "margin-top:%20var(--spacing-lg);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "c86cf5",
+        "hash": "a098750e",
+        "encoded": "color:%20var(--color-text-secondary);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c86cf5",
+        "hash": "17837346",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "c86cf5",
+        "hash": "2a813157",
+        "encoded": ".auth-card%20a%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c86cf5",
+        "hash": "dcf138f0",
+        "encoded": "color:%20var(--color-primary);",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "c86cf5",
+        "hash": "42168640",
+        "encoded": "font-weight:%20600;",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c86cf5",
+        "hash": "646a8e84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "backend\\src\\middleware\\errorHandler.js": {
+    "filename": "errorHandler.js",
+    "path": "backend\\src\\middleware\\errorHandler.js",
+    "version": "1.2",
+    "contextFile": "733822a4-context.json",
+    "chunks": {
+      "3e782e": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707865,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "a754773f",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:45 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "3e782e",
+        "hash": "38ce1f81",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "3e782e",
+        "hash": "7e72567d",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../utils/errors');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "3e782e",
+        "hash": "3429a772",
+        "encoded": "module.exports%20=%20(err,%20req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "3e782e",
+        "hash": "a56d8ea6",
+        "encoded": "let%20error%20=%20err;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "3e782e",
+        "hash": "df21340f",
+        "encoded": "//%20Log%20error",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "3e782e",
+        "hash": "172b05c8",
+        "encoded": "logger.error('Error:',%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "3e782e",
+        "hash": "819621e9",
+        "encoded": "message:%20err.message,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "3e782e",
+        "hash": "8745f469",
+        "encoded": "stack:%20err.stack,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "3e782e",
+        "hash": "46f08e16",
+        "encoded": "url:%20req.url,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "3e782e",
+        "hash": "c81f72ec",
+        "encoded": "method:%20req.method,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "3e782e",
+        "hash": "70287d6a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "3e782e",
+        "hash": "38b72d59",
+        "encoded": "//%20Handle%20known%20errors",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "3e782e",
+        "hash": "778128eb",
+        "encoded": "if%20(err%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "3e782e",
+        "hash": "1617da7d",
+        "encoded": "return%20res.status(err.statusCode).json(%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "3e782e",
+        "hash": "9678a05c",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "3e782e",
+        "hash": "b7488510",
+        "encoded": "message:%20err.message,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "3e782e",
+        "hash": "4acbba19",
+        "encoded": "...(process.env.NODE_ENV%20===%20'development'%20&&%20%7B%20stack:%20err.stack%20%7D),",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "3e782e",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "3e782e",
+        "hash": "4b5cc20d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "3e782e",
+        "hash": "1d8dfa49",
+        "encoded": "//%20Handle%20Sequelize%20validation%20errors",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "3e782e",
+        "hash": "e1b18f57",
+        "encoded": "if%20(err.name%20===%20'SequelizeValidationError')%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "3e782e",
+        "hash": "3bcb47d0",
+        "encoded": "return%20res.status(400).json(%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "3e782e",
+        "hash": "78ffe734",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "3e782e",
+        "hash": "65c287e4",
+        "encoded": "message:%20'Validation%20error',",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "3e782e",
+        "hash": "a1c001ed",
+        "encoded": "errors:%20err.errors.map((e)%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "3e782e",
+        "hash": "bfb06ed5",
+        "encoded": "field:%20e.path,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "3e782e",
+        "hash": "186ed513",
+        "encoded": "message:%20e.message,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "3e782e",
+        "hash": "24aa7285",
+        "encoded": "%7D)),",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "3e782e",
+        "hash": "25c863d9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "3e782e",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "3e782e",
+        "hash": "cd0f6411",
+        "encoded": "//%20Handle%20Sequelize%20unique%20constraint%20errors",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "3e782e",
+        "hash": "318cb15c",
+        "encoded": "if%20(err.name%20===%20'SequelizeUniqueConstraintError')%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "3e782e",
+        "hash": "6f696e84",
+        "encoded": "return%20res.status(409).json(%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "3e782e",
+        "hash": "be14fcca",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "3e782e",
+        "hash": "8ac8bed5",
+        "encoded": "message:%20'Resource%20already%20exists',",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "3e782e",
+        "hash": "f7bb67ad",
+        "encoded": "errors:%20err.errors.map((e)%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "3e782e",
+        "hash": "ff6ea385",
+        "encoded": "field:%20e.path,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "3e782e",
+        "hash": "be9f9cab",
+        "encoded": "message:%20e.message,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "3e782e",
+        "hash": "fbdde90a",
+        "encoded": "%7D)),",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "3e782e",
+        "hash": "39fe36a7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "3e782e",
+        "hash": "8b687a61",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "3e782e",
+        "hash": "88d98c61",
+        "encoded": "//%20Handle%20JWT%20errors",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "3e782e",
+        "hash": "633693d8",
+        "encoded": "if%20(err.name%20===%20'JsonWebTokenError')%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "3e782e",
+        "hash": "e298189c",
+        "encoded": "return%20res.status(401).json(%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "3e782e",
+        "hash": "4494e201",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "3e782e",
+        "hash": "40372e25",
+        "encoded": "message:%20'Invalid%20token',",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "3e782e",
+        "hash": "cd261499",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "3e782e",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "3e782e",
+        "hash": "100c526b",
+        "encoded": "if%20(err.name%20===%20'TokenExpiredError')%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "3e782e",
+        "hash": "b4c6e67a",
+        "encoded": "return%20res.status(401).json(%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "3e782e",
+        "hash": "ef991402",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "3e782e",
+        "hash": "80821443",
+        "encoded": "message:%20'Token%20expired',",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "3e782e",
+        "hash": "22ea84c9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "3e782e",
+        "hash": "42f7c135",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "3e782e",
+        "hash": "5219adfd",
+        "encoded": "//%20Default%20error%20response",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "3e782e",
+        "hash": "a4149fb1",
+        "encoded": "res.status(500).json(%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "3e782e",
+        "hash": "50d24b4e",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "3e782e",
+        "hash": "17fe9536",
+        "encoded": "message:%20'Internal%20server%20error',",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "3e782e",
+        "hash": "f1d4252c",
+        "encoded": "...(process.env.NODE_ENV%20===%20'development'%20&&%20%7B",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "3e782e",
+        "hash": "d9c1d52e",
+        "encoded": "error:%20err.message,",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "3e782e",
+        "hash": "c2e0ed6c",
+        "encoded": "stack:%20err.stack,",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "3e782e",
+        "hash": "4eedfc2e",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "3e782e",
+        "hash": "ebaf9923",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "3e782e",
+        "hash": "ea435f95",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

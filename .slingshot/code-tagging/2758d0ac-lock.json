@@ -1,0 +1,318 @@
+{
+  "frontend\\src\\contexts\\NotificationContext.jsx": {
+    "filename": "NotificationContext.jsx",
+    "path": "frontend\\src\\contexts\\NotificationContext.jsx",
+    "version": "1.2",
+    "contextFile": "2758d0ac-context.json",
+    "chunks": {
+      "49d8ee": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708089,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "a7b096e9",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:29 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "49d8ee",
+        "hash": "0ceaeff5",
+        "encoded": "import%20%7B%20createContext,%20useContext,%20useState,%20useCallback%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "49d8ee",
+        "hash": "64255e3d",
+        "encoded": "const%20NotificationContext%20=%20createContext(null);",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "49d8ee",
+        "hash": "543c03c1",
+        "encoded": "export%20const%20useNotification%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "49d8ee",
+        "hash": "f28e1eed",
+        "encoded": "const%20context%20=%20useContext(NotificationContext);",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "49d8ee",
+        "hash": "0699e6b6",
+        "encoded": "if%20(!context)%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "49d8ee",
+        "hash": "f2f8a6b6",
+        "encoded": "throw%20new%20Error('useNotification%20must%20be%20used%20within%20NotificationProvider');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "49d8ee",
+        "hash": "1c082ee4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "49d8ee",
+        "hash": "2dc4a39b",
+        "encoded": "return%20context;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "49d8ee",
+        "hash": "483280e4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "49d8ee",
+        "hash": "b43b7da9",
+        "encoded": "export%20const%20NotificationProvider%20=%20(%7B%20children%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "49d8ee",
+        "hash": "9a31f0b2",
+        "encoded": "const%20%5Bnotifications,%20setNotifications%5D%20=%20useState(%5B%5D);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "49d8ee",
+        "hash": "dcd79d65",
+        "encoded": "const%20addNotification%20=%20useCallback((message,%20type%20=%20'info',%20duration%20=%205000)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "49d8ee",
+        "hash": "c777773f",
+        "encoded": "const%20id%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "49d8ee",
+        "hash": "f61a156c",
+        "encoded": "const%20notification%20=%20%7B%20id,%20message,%20type%20%7D;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "49d8ee",
+        "hash": "5a224b43",
+        "encoded": "setNotifications((prev)%20=%3E%20%5B...prev,%20notification%5D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "49d8ee",
+        "hash": "48b2925f",
+        "encoded": "if%20(duration%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "49d8ee",
+        "hash": "40e359e2",
+        "encoded": "setTimeout(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "49d8ee",
+        "hash": "7ff9a791",
+        "encoded": "removeNotification(id);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "49d8ee",
+        "hash": "443af1a9",
+        "encoded": "%7D,%20duration);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "49d8ee",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "49d8ee",
+        "hash": "9fdc29eb",
+        "encoded": "return%20id;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "49d8ee",
+        "hash": "54b4d9de",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "49d8ee",
+        "hash": "7a4eaa6a",
+        "encoded": "const%20removeNotification%20=%20useCallback((id)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "49d8ee",
+        "hash": "1201aa3e",
+        "encoded": "setNotifications((prev)%20=%3E%20prev.filter((n)%20=%3E%20n.id%20!==%20id));",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "49d8ee",
+        "hash": "fef569fd",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "49d8ee",
+        "hash": "3ebc50cc",
+        "encoded": "const%20success%20=%20useCallback((message,%20duration)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "49d8ee",
+        "hash": "dc98311f",
+        "encoded": "return%20addNotification(message,%20'success',%20duration);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "49d8ee",
+        "hash": "bd714ac0",
+        "encoded": "%7D,%20%5BaddNotification%5D);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "49d8ee",
+        "hash": "f3377c6e",
+        "encoded": "const%20error%20=%20useCallback((message,%20duration)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "49d8ee",
+        "hash": "07368ba2",
+        "encoded": "return%20addNotification(message,%20'error',%20duration);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "49d8ee",
+        "hash": "6ea22169",
+        "encoded": "%7D,%20%5BaddNotification%5D);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "49d8ee",
+        "hash": "0b3c4454",
+        "encoded": "const%20warning%20=%20useCallback((message,%20duration)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "49d8ee",
+        "hash": "1d94652b",
+        "encoded": "return%20addNotification(message,%20'warning',%20duration);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "49d8ee",
+        "hash": "73522a8e",
+        "encoded": "%7D,%20%5BaddNotification%5D);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "49d8ee",
+        "hash": "88629273",
+        "encoded": "const%20info%20=%20useCallback((message,%20duration)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "49d8ee",
+        "hash": "d517984a",
+        "encoded": "return%20addNotification(message,%20'info',%20duration);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "49d8ee",
+        "hash": "acc221fb",
+        "encoded": "%7D,%20%5BaddNotification%5D);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "49d8ee",
+        "hash": "eac9a26f",
+        "encoded": "const%20value%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "49d8ee",
+        "hash": "af6f3cb1",
+        "encoded": "notifications,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "49d8ee",
+        "hash": "78107c21",
+        "encoded": "addNotification,",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "49d8ee",
+        "hash": "d47dc06d",
+        "encoded": "removeNotification,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "49d8ee",
+        "hash": "81b275ea",
+        "encoded": "success,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "49d8ee",
+        "hash": "edc88254",
+        "encoded": "error,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "49d8ee",
+        "hash": "5e4e7cd7",
+        "encoded": "warning,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "49d8ee",
+        "hash": "d186c389",
+        "encoded": "info,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "49d8ee",
+        "hash": "d6071797",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "49d8ee",
+        "hash": "daeca077",
+        "encoded": "return%20%3CNotificationContext.Provider%20value=%7Bvalue%7D%3E%7Bchildren%7D%3C/NotificationContext.Provider%3E;",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "49d8ee",
+        "hash": "c5158462",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

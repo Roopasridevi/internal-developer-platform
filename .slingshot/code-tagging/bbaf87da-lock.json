@@ -1,0 +1,384 @@
+{
+  "frontend\\src\\pages\\auth\\Login.jsx": {
+    "filename": "Login.jsx",
+    "path": "frontend\\src\\pages\\auth\\Login.jsx",
+    "version": "1.2",
+    "contextFile": "bbaf87da-context.json",
+    "chunks": {
+      "7dfb1a": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708334,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "ddd76316",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:34 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7dfb1a",
+        "hash": "c9be6c9c",
+        "encoded": "import%20%7B%20useState%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "7dfb1a",
+        "hash": "7e481e73",
+        "encoded": "import%20%7B%20useNavigate,%20Link%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7dfb1a",
+        "hash": "eaa1f1d2",
+        "encoded": "import%20%7B%20useAuth%20%7D%20from%20'../../contexts/AuthContext';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7dfb1a",
+        "hash": "055a060c",
+        "encoded": "import%20%7B%20useNotification%20%7D%20from%20'../../contexts/NotificationContext';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7dfb1a",
+        "hash": "dcc000eb",
+        "encoded": "import%20'./Auth.css';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7dfb1a",
+        "hash": "0cf97bf7",
+        "encoded": "const%20Login%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7dfb1a",
+        "hash": "144c3c75",
+        "encoded": "const%20%5BformData,%20setFormData%5D%20=%20useState(%7B%20email:%20'',%20password:%20''%20%7D);",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "7dfb1a",
+        "hash": "359a8a2d",
+        "encoded": "const%20%5BisLoading,%20setIsLoading%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "7dfb1a",
+        "hash": "27c5c022",
+        "encoded": "const%20%7B%20login%20%7D%20=%20useAuth();",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7dfb1a",
+        "hash": "e81cc09f",
+        "encoded": "const%20%7B%20error:%20showError,%20success%20%7D%20=%20useNotification();",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7dfb1a",
+        "hash": "430c283f",
+        "encoded": "const%20navigate%20=%20useNavigate();",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "7dfb1a",
+        "hash": "27b4430b",
+        "encoded": "const%20handleSubmit%20=%20async%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7dfb1a",
+        "hash": "b1619fcb",
+        "encoded": "e.preventDefault();",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "7dfb1a",
+        "hash": "e4d3cce7",
+        "encoded": "setIsLoading(true);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "7dfb1a",
+        "hash": "1b96609b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7dfb1a",
+        "hash": "9f5ad6b6",
+        "encoded": "await%20login(formData);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "7dfb1a",
+        "hash": "fd986a1b",
+        "encoded": "success('Login%20successful!');",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "7dfb1a",
+        "hash": "20f1d5a6",
+        "encoded": "navigate('/');",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7dfb1a",
+        "hash": "a1f6d048",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "7dfb1a",
+        "hash": "fb0ffc4d",
+        "encoded": "showError(err.response?.data?.message%20%7C%7C%20'Login%20failed');",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7dfb1a",
+        "hash": "18ccf89e",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7dfb1a",
+        "hash": "e830e7df",
+        "encoded": "setIsLoading(false);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "7dfb1a",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "7dfb1a",
+        "hash": "3a997202",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "7dfb1a",
+        "hash": "40850e0b",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "7dfb1a",
+        "hash": "229a8f18",
+        "encoded": "%3Cdiv%20className=%22auth-container%22%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "7dfb1a",
+        "hash": "5928400f",
+        "encoded": "%3Cdiv%20className=%22auth-card%22%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "7dfb1a",
+        "hash": "ad595d00",
+        "encoded": "%3Ch1%3ELogin%20to%20IDP%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "7dfb1a",
+        "hash": "6a96def9",
+        "encoded": "%3Cform%20onSubmit=%7BhandleSubmit%7D%3E",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "7dfb1a",
+        "hash": "1c9687d4",
+        "encoded": "%3Cdiv%20className=%22form-group%22%3E",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "7dfb1a",
+        "hash": "f2bd6aaa",
+        "encoded": "%3Clabel%3EEmail%3C/label%3E",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "7dfb1a",
+        "hash": "c7038bab",
+        "encoded": "%3Cinput",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "7dfb1a",
+        "hash": "ca9331a1",
+        "encoded": "type=%22email%22",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "7dfb1a",
+        "hash": "db20c30a",
+        "encoded": "value=%7BformData.email%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "7dfb1a",
+        "hash": "a52611d7",
+        "encoded": "onChange=%7B(e)%20=%3E%20setFormData(%7B%20...formData,%20email:%20e.target.value%20%7D)%7D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "7dfb1a",
+        "hash": "a8b1a9a3",
+        "encoded": "required",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "7dfb1a",
+        "hash": "b5bef31b",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "7dfb1a",
+        "hash": "6d9ef6e1",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "7dfb1a",
+        "hash": "ddb1c48b",
+        "encoded": "%3Cdiv%20className=%22form-group%22%3E",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "7dfb1a",
+        "hash": "c45f5876",
+        "encoded": "%3Clabel%3EPassword%3C/label%3E",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "7dfb1a",
+        "hash": "181401c6",
+        "encoded": "%3Cinput",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "7dfb1a",
+        "hash": "1f031150",
+        "encoded": "type=%22password%22",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "7dfb1a",
+        "hash": "39f61ab5",
+        "encoded": "value=%7BformData.password%7D",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "7dfb1a",
+        "hash": "e08abf96",
+        "encoded": "onChange=%7B(e)%20=%3E%20setFormData(%7B%20...formData,%20password:%20e.target.value%20%7D)%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "7dfb1a",
+        "hash": "6f8cb946",
+        "encoded": "required",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "7dfb1a",
+        "hash": "02e81f0f",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "7dfb1a",
+        "hash": "0915f7af",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "7dfb1a",
+        "hash": "8d752b5d",
+        "encoded": "%3Cbutton%20type=%22submit%22%20className=%22btn-primary%22%20disabled=%7BisLoading%7D%3E",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "7dfb1a",
+        "hash": "ae5a36f3",
+        "encoded": "%7BisLoading%20?%20'Logging%20in...'%20:%20'Login'%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "7dfb1a",
+        "hash": "742da5a9",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "7dfb1a",
+        "hash": "5217e74e",
+        "encoded": "%3C/form%3E",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "7dfb1a",
+        "hash": "5ba38b19",
+        "encoded": "%3Cp%3E",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "7dfb1a",
+        "hash": "2a453d34",
+        "encoded": "Don't%20have%20an%20account?%20%3CLink%20to=%22/register%22%3ERegister%3C/Link%3E",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "7dfb1a",
+        "hash": "0e4949d2",
+        "encoded": "%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "7dfb1a",
+        "hash": "14e2ba9d",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "7dfb1a",
+        "hash": "dd4b8b3b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "7dfb1a",
+        "hash": "ea593236",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "7dfb1a",
+        "hash": "c5158462",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "7dfb1a",
+        "hash": "55aca979",
+        "encoded": "export%20default%20Login;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "backend\\src\\config\\database.js": {
+    "filename": "database.js",
+    "path": "backend\\src\\config\\database.js",
+    "version": "1.2",
+    "contextFile": "730355fa-context.json",
+    "chunks": {
+      "1ade74": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707697,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "f9049a99",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:57 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "1ade74",
+        "hash": "5bdcb3d1",
+        "encoded": "require('dotenv').config();",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "1ade74",
+        "hash": "376b48f2",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "1ade74",
+        "hash": "e92ed8b4",
+        "encoded": "development:%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "1ade74",
+        "hash": "87ba5155",
+        "encoded": "username:%20process.env.DB_USER%20%7C%7C%20'postgres',",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "1ade74",
+        "hash": "97b40570",
+        "encoded": "password:%20process.env.DB_PASSWORD%20%7C%7C%20'postgres',",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "1ade74",
+        "hash": "0471b849",
+        "encoded": "database:%20process.env.DB_NAME%20%7C%7C%20'idp_platform_dev',",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "1ade74",
+        "hash": "8048a13c",
+        "encoded": "host:%20process.env.DB_HOST%20%7C%7C%20'localhost',",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "1ade74",
+        "hash": "ebc0be0d",
+        "encoded": "port:%20process.env.DB_PORT%20%7C%7C%205432,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "1ade74",
+        "hash": "3ab4bf37",
+        "encoded": "dialect:%20'postgres',",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "1ade74",
+        "hash": "b298c559",
+        "encoded": "logging:%20console.log,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "1ade74",
+        "hash": "3d2bce53",
+        "encoded": "pool:%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "1ade74",
+        "hash": "8251c53c",
+        "encoded": "max:%205,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "1ade74",
+        "hash": "50fff58b",
+        "encoded": "min:%200,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "1ade74",
+        "hash": "c907b178",
+        "encoded": "acquire:%2030000,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "1ade74",
+        "hash": "e53961fb",
+        "encoded": "idle:%2010000,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "1ade74",
+        "hash": "e0024018",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "1ade74",
+        "hash": "220c9b6d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "1ade74",
+        "hash": "88ebfd30",
+        "encoded": "test:%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "1ade74",
+        "hash": "9fa9d7ec",
+        "encoded": "username:%20process.env.DB_USER%20%7C%7C%20'postgres',",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "1ade74",
+        "hash": "a9024522",
+        "encoded": "password:%20process.env.DB_PASSWORD%20%7C%7C%20'postgres',",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "1ade74",
+        "hash": "1d3211be",
+        "encoded": "database:%20process.env.DB_NAME%20%7C%7C%20'idp_platform_test',",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "1ade74",
+        "hash": "af5f8bc1",
+        "encoded": "host:%20process.env.DB_HOST%20%7C%7C%20'localhost',",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "1ade74",
+        "hash": "6e182d11",
+        "encoded": "port:%20process.env.DB_PORT%20%7C%7C%205432,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "1ade74",
+        "hash": "2c777722",
+        "encoded": "dialect:%20'postgres',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "1ade74",
+        "hash": "c53e1574",
+        "encoded": "logging:%20false,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "1ade74",
+        "hash": "0b87a378",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "1ade74",
+        "hash": "9bc1ec0b",
+        "encoded": "production:%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "1ade74",
+        "hash": "06750536",
+        "encoded": "username:%20process.env.DB_USER,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "1ade74",
+        "hash": "e299e6c2",
+        "encoded": "password:%20process.env.DB_PASSWORD,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "1ade74",
+        "hash": "73a82be8",
+        "encoded": "database:%20process.env.DB_NAME,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "1ade74",
+        "hash": "60af26e6",
+        "encoded": "host:%20process.env.DB_HOST,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "1ade74",
+        "hash": "a3d38ae8",
+        "encoded": "port:%20process.env.DB_PORT%20%7C%7C%205432,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "1ade74",
+        "hash": "1c7bc778",
+        "encoded": "dialect:%20'postgres',",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "1ade74",
+        "hash": "f3032a0f",
+        "encoded": "logging:%20false,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "1ade74",
+        "hash": "9952ed00",
+        "encoded": "pool:%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "1ade74",
+        "hash": "81d29023",
+        "encoded": "max:%2020,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "1ade74",
+        "hash": "a2d66873",
+        "encoded": "min:%205,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "1ade74",
+        "hash": "af1dd8f7",
+        "encoded": "acquire:%2030000,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "1ade74",
+        "hash": "b0ad3abe",
+        "encoded": "idle:%2010000,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "1ade74",
+        "hash": "a2f87705",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "1ade74",
+        "hash": "aaf0cc90",
+        "encoded": "dialectOptions:%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "1ade74",
+        "hash": "f6adc349",
+        "encoded": "ssl:%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "1ade74",
+        "hash": "f7757e23",
+        "encoded": "require:%20true,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "1ade74",
+        "hash": "def055ee",
+        "encoded": "rejectUnauthorized:%20false,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "1ade74",
+        "hash": "0f7a0d79",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "1ade74",
+        "hash": "59282b78",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "1ade74",
+        "hash": "951483ff",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "1ade74",
+        "hash": "e88aa46e",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

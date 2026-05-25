@@ -1,0 +1,156 @@
+{
+  "frontend\\src\\hooks\\usePipelines.js": {
+    "filename": "usePipelines.js",
+    "path": "frontend\\src\\hooks\\usePipelines.js",
+    "version": "1.2",
+    "contextFile": "e574100d-context.json",
+    "chunks": {
+      "56c7a6": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708338,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "eedaf361",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:38 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "56c7a6",
+        "hash": "d152b66b",
+        "encoded": "import%20%7B%20useQuery,%20useMutation,%20useQueryClient%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "56c7a6",
+        "hash": "b8397faa",
+        "encoded": "import%20%7B%20pipelineService%20%7D%20from%20'../services/pipelineService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "56c7a6",
+        "hash": "6ac6ee74",
+        "encoded": "export%20const%20usePipelines%20=%20(params%20=%20%7B%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "56c7a6",
+        "hash": "fbc798e5",
+        "encoded": "return%20useQuery(%5B'pipelines',%20params%5D,%20()%20=%3E%20pipelineService.getPipelines(params));",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "56c7a6",
+        "hash": "61e6c260",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "56c7a6",
+        "hash": "de5ceae2",
+        "encoded": "export%20const%20usePipeline%20=%20(id)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "56c7a6",
+        "hash": "8a8f034c",
+        "encoded": "return%20useQuery(%5B'pipeline',%20id%5D,%20()%20=%3E%20pipelineService.getPipelineById(id),%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "56c7a6",
+        "hash": "355bc5e5",
+        "encoded": "enabled:%20!!id,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "56c7a6",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "56c7a6",
+        "hash": "9658cd33",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "56c7a6",
+        "hash": "558ab542",
+        "encoded": "export%20const%20useExecutePipeline%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "56c7a6",
+        "hash": "66b1c918",
+        "encoded": "const%20queryClient%20=%20useQueryClient();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "56c7a6",
+        "hash": "b4aa9cd7",
+        "encoded": "return%20useMutation(",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "56c7a6",
+        "hash": "40fe4c14",
+        "encoded": "(%7B%20id,%20params%20%7D)%20=%3E%20pipelineService.executePipeline(id,%20params),",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "56c7a6",
+        "hash": "c9d2c854",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "56c7a6",
+        "hash": "7ad770a1",
+        "encoded": "onSuccess:%20(_,%20variables)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "56c7a6",
+        "hash": "a3b5a69a",
+        "encoded": "queryClient.invalidateQueries(%5B'pipeline',%20variables.id%5D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "56c7a6",
+        "hash": "044c21b3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "56c7a6",
+        "hash": "4c3814eb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "56c7a6",
+        "hash": "d4cda3e6",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "56c7a6",
+        "hash": "9eb29d7f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

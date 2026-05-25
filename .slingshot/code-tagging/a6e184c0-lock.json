@@ -1,0 +1,168 @@
+{
+  "frontend\\src\\services\\logsService.js": {
+    "filename": "logsService.js",
+    "path": "frontend\\src\\services\\logsService.js",
+    "version": "1.2",
+    "contextFile": "a6e184c0-context.json",
+    "chunks": {
+      "bdde8d": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708090,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "432aff51",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:30 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "bdde8d",
+        "hash": "a53ca53a",
+        "encoded": "import%20api%20from%20'./api';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "bdde8d",
+        "hash": "30a08972",
+        "encoded": "export%20const%20logsService%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "bdde8d",
+        "hash": "6e38d1cc",
+        "encoded": "async%20getLogs(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "bdde8d",
+        "hash": "89f034ff",
+        "encoded": "const%20response%20=%20await%20api.get('/logs',%20%7B%20params%20%7D);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "bdde8d",
+        "hash": "f69a0f09",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "bdde8d",
+        "hash": "4401be13",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "bdde8d",
+        "hash": "8650ae76",
+        "encoded": "async%20getLogStats(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "bdde8d",
+        "hash": "2735b00f",
+        "encoded": "const%20response%20=%20await%20api.get('/logs/stats',%20%7B%20params%20%7D);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "bdde8d",
+        "hash": "229d8636",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "bdde8d",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "bdde8d",
+        "hash": "941f7487",
+        "encoded": "async%20exportLogs(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "bdde8d",
+        "hash": "d59896e3",
+        "encoded": "const%20response%20=%20await%20api.get('/logs/export',%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "bdde8d",
+        "hash": "649c8838",
+        "encoded": "params,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "bdde8d",
+        "hash": "9e01f4b2",
+        "encoded": "responseType:%20'blob',",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "bdde8d",
+        "hash": "2dbc7cf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "bdde8d",
+        "hash": "6e29578a",
+        "encoded": "return%20response;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "bdde8d",
+        "hash": "0b42153b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "bdde8d",
+        "hash": "72e77f51",
+        "encoded": "streamLogs(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "bdde8d",
+        "hash": "e2e07a1a",
+        "encoded": "const%20url%20=%20new%20URL(%60$%7Bimport.meta.env.VITE_API_URL%7D/logs/stream%60);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "bdde8d",
+        "hash": "dc57eadc",
+        "encoded": "Object.keys(params).forEach((key)%20=%3E%20url.searchParams.append(key,%20params%5Bkey%5D));",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "bdde8d",
+        "hash": "568e4950",
+        "encoded": "return%20new%20EventSource(url.toString());",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "bdde8d",
+        "hash": "642c1a07",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "bdde8d",
+        "hash": "3a997202",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

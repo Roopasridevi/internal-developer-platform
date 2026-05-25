@@ -1,0 +1,108 @@
+{
+  "frontend\\src\\pages\\NotFound.jsx": {
+    "filename": "NotFound.jsx",
+    "path": "frontend\\src\\pages\\NotFound.jsx",
+    "version": "1.2",
+    "contextFile": "a8c78382-context.json",
+    "chunks": {
+      "c2919c": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708336,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "5b021475",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:36 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c2919c",
+        "hash": "2f56b8eb",
+        "encoded": "import%20%7B%20Link%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c2919c",
+        "hash": "0d942ebe",
+        "encoded": "const%20NotFound%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c2919c",
+        "hash": "2d3cc1df",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "c2919c",
+        "hash": "c04bf04e",
+        "encoded": "%3Cdiv%20style=%7B%7B%20textAlign:%20'center',%20padding:%20'50px'%20%7D%7D%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c2919c",
+        "hash": "175a3c9e",
+        "encoded": "%3Ch1%3E404%20-%20Page%20Not%20Found%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c2919c",
+        "hash": "9ef7fd32",
+        "encoded": "%3Cp%3EThe%20page%20you%20are%20looking%20for%20does%20not%20exist.%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c2919c",
+        "hash": "48bc235e",
+        "encoded": "%3CLink%20to=%22/%22%20className=%22btn-primary%22%3E",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c2919c",
+        "hash": "93327d13",
+        "encoded": "Go%20to%20Dashboard",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "c2919c",
+        "hash": "53a6eced",
+        "encoded": "%3C/Link%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c2919c",
+        "hash": "6c0801f0",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c2919c",
+        "hash": "0adc91c5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c2919c",
+        "hash": "088615cc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c2919c",
+        "hash": "4e4d9ee1",
+        "encoded": "export%20default%20NotFound;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "backend\\tests\\unit\\services\\project.test.js": {
+    "filename": "project.test.js",
+    "path": "backend\\tests\\unit\\services\\project.test.js",
+    "version": "1.2",
+    "contextFile": "7359c45a-context.json",
+    "chunks": {
+      "3c29cc": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708085,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "794817b3",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:25 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "3c29cc",
+        "hash": "1da65127",
+        "encoded": "const%20projectService%20=%20require('../../../src/services/projectService');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "3c29cc",
+        "hash": "9acd162d",
+        "encoded": "const%20%7B%20Project,%20ProjectMember%20%7D%20=%20require('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "3c29cc",
+        "hash": "1f41bd32",
+        "encoded": "jest.mock('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "3c29cc",
+        "hash": "bafe5454",
+        "encoded": "describe('ProjectService',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "3c29cc",
+        "hash": "b8f7dc38",
+        "encoded": "describe('createProject',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "3c29cc",
+        "hash": "1c4f72af",
+        "encoded": "it('should%20create%20a%20project%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "3c29cc",
+        "hash": "97bb8fa3",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "3c29cc",
+        "hash": "ef9caea7",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "3c29cc",
+        "hash": "72fb597b",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "3c29cc",
+        "hash": "faa5c6a0",
+        "encoded": "ownerId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "3c29cc",
+        "hash": "088615cc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "3c29cc",
+        "hash": "f225a1a9",
+        "encoded": "Project.create%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "3c29cc",
+        "hash": "6ffae963",
+        "encoded": "ProjectMember.create%20=%20jest.fn().mockResolvedValue(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "3c29cc",
+        "hash": "e2e68518",
+        "encoded": "const%20result%20=%20await%20projectService.createProject(",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "3c29cc",
+        "hash": "94c6dd42",
+        "encoded": "%7B%20name:%20'Test%20Project'%20%7D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "3c29cc",
+        "hash": "20cc876a",
+        "encoded": "'user-123'",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "3c29cc",
+        "hash": "88ea356e",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "3c29cc",
+        "hash": "b877169c",
+        "encoded": "expect(result).toEqual(mockProject);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "3c29cc",
+        "hash": "5f178e07",
+        "encoded": "expect(Project.create).toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "3c29cc",
+        "hash": "3824bef5",
+        "encoded": "expect(ProjectMember.create).toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "3c29cc",
+        "hash": "6b97514d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "3c29cc",
+        "hash": "1ca2ca1b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "3c29cc",
+        "hash": "6e3edb2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

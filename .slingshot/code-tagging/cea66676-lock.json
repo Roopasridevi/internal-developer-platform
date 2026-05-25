@@ -1,0 +1,630 @@
+{
+  "pipelines\\deploy.yml": {
+    "filename": "deploy.yml",
+    "path": "pipelines\\deploy.yml",
+    "version": "1.2",
+    "contextFile": "cea66676-context.json",
+    "chunks": {
+      "7fb2ff": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708332,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "a6ff1b81",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:32 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7fb2ff",
+        "hash": "23951006",
+        "encoded": "name:%20Deployment%20Pipeline",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7fb2ff",
+        "hash": "8b0cac53",
+        "encoded": "on:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7fb2ff",
+        "hash": "bc82148a",
+        "encoded": "workflow_run:",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7fb2ff",
+        "hash": "80c4b2fb",
+        "encoded": "workflows:%20%5B%22Build%20Pipeline%22,%20%22Test%20Pipeline%22,%20%22Quality%20Gate%22%5D",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7fb2ff",
+        "hash": "5d3de7b6",
+        "encoded": "types:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7fb2ff",
+        "hash": "09072a51",
+        "encoded": "-%20completed",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7fb2ff",
+        "hash": "416a64d5",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "7fb2ff",
+        "hash": "6fe278d5",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7fb2ff",
+        "hash": "e8f1c2ee",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7fb2ff",
+        "hash": "7335ce5b",
+        "encoded": "REGISTRY:%20ghcr.io",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "7fb2ff",
+        "hash": "03d87141",
+        "encoded": "IMAGE_NAME:%20$%7B%7B%20github.repository%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7fb2ff",
+        "hash": "a40e6ffb",
+        "encoded": "jobs:",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "7fb2ff",
+        "hash": "5e7e8520",
+        "encoded": "deploy-staging:",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7fb2ff",
+        "hash": "717d92a4",
+        "encoded": "name:%20Deploy%20to%20Staging",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "7fb2ff",
+        "hash": "e4efc014",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7fb2ff",
+        "hash": "c49af863",
+        "encoded": "if:%20github.event.workflow_run.conclusion%20==%20'success'%20&&%20github.ref%20==%20'refs/heads/develop'",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "7fb2ff",
+        "hash": "7a0d5aae",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "7fb2ff",
+        "hash": "437f14b5",
+        "encoded": "name:%20staging",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7fb2ff",
+        "hash": "1fb4bf64",
+        "encoded": "url:%20https://staging.idp.example.com",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7fb2ff",
+        "hash": "6893a9bc",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7fb2ff",
+        "hash": "92b4dafb",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "7fb2ff",
+        "hash": "2ba09b43",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "7fb2ff",
+        "hash": "05b881a4",
+        "encoded": "-%20name:%20Setup%20kubectl",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "7fb2ff",
+        "hash": "9f5de094",
+        "encoded": "uses:%20azure/setup-kubectl@v3",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "7fb2ff",
+        "hash": "8ba5d3fb",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "7fb2ff",
+        "hash": "b72dd1d3",
+        "encoded": "version:%20'latest'",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "7fb2ff",
+        "hash": "ca40a4d3",
+        "encoded": "-%20name:%20Configure%20kubectl",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "7fb2ff",
+        "hash": "c39e904a",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "7fb2ff",
+        "hash": "818ffc25",
+        "encoded": "echo%20%22$%7B%7B%20secrets.KUBE_CONFIG_STAGING%20%7D%7D%22%20%7C%20base64%20-d%20%3E%20kubeconfig",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "7fb2ff",
+        "hash": "44979933",
+        "encoded": "export%20KUBECONFIG=kubeconfig",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "7fb2ff",
+        "hash": "b7264443",
+        "encoded": "-%20name:%20Deploy%20backend%20to%20staging",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "7fb2ff",
+        "hash": "9178dece",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "7fb2ff",
+        "hash": "f4508a68",
+        "encoded": "kubectl%20set%20image%20deployment/idp-backend%20%5C",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "7fb2ff",
+        "hash": "5983735a",
+        "encoded": "idp-backend=$%7B%7B%20env.REGISTRY%20%7D%7D/$%7B%7B%20env.IMAGE_NAME%20%7D%7D-backend:$%7B%7B%20github.sha%20%7D%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "7fb2ff",
+        "hash": "beaed43d",
+        "encoded": "-n%20staging",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "7fb2ff",
+        "hash": "3bd3e0b7",
+        "encoded": "kubectl%20rollout%20status%20deployment/idp-backend%20-n%20staging",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "7fb2ff",
+        "hash": "54290790",
+        "encoded": "-%20name:%20Deploy%20frontend%20to%20staging",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "7fb2ff",
+        "hash": "e134ecee",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "7fb2ff",
+        "hash": "1f7aafe1",
+        "encoded": "kubectl%20set%20image%20deployment/idp-frontend%20%5C",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "7fb2ff",
+        "hash": "85562515",
+        "encoded": "idp-frontend=$%7B%7B%20env.REGISTRY%20%7D%7D/$%7B%7B%20env.IMAGE_NAME%20%7D%7D-frontend:$%7B%7B%20github.sha%20%7D%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "7fb2ff",
+        "hash": "628981d9",
+        "encoded": "-n%20staging",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "7fb2ff",
+        "hash": "e3c19e00",
+        "encoded": "kubectl%20rollout%20status%20deployment/idp-frontend%20-n%20staging",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "7fb2ff",
+        "hash": "a0e09269",
+        "encoded": "-%20name:%20Run%20smoke%20tests",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "7fb2ff",
+        "hash": "e942f796",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "7fb2ff",
+        "hash": "9fa94097",
+        "encoded": "npm%20run%20test:smoke%20--%20--env=staging",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "7fb2ff",
+        "hash": "756be4bd",
+        "encoded": "deploy-production:",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "7fb2ff",
+        "hash": "058285d3",
+        "encoded": "name:%20Deploy%20to%20Production",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "7fb2ff",
+        "hash": "18babfe2",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "7fb2ff",
+        "hash": "f2c556c8",
+        "encoded": "if:%20github.event.workflow_run.conclusion%20==%20'success'%20&&%20github.ref%20==%20'refs/heads/main'",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "7fb2ff",
+        "hash": "cc631872",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "7fb2ff",
+        "hash": "a976c421",
+        "encoded": "name:%20production",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "7fb2ff",
+        "hash": "fdde5891",
+        "encoded": "url:%20https://idp.example.com",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "7fb2ff",
+        "hash": "1baa49f5",
+        "encoded": "needs:%20%5B%5D",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "7fb2ff",
+        "hash": "664c43c5",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "7fb2ff",
+        "hash": "138f8597",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "7fb2ff",
+        "hash": "1bff459a",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "7fb2ff",
+        "hash": "35e36de4",
+        "encoded": "-%20name:%20Setup%20kubectl",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "7fb2ff",
+        "hash": "672e2570",
+        "encoded": "uses:%20azure/setup-kubectl@v3",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "7fb2ff",
+        "hash": "054a6d70",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "7fb2ff",
+        "hash": "08cbf1f8",
+        "encoded": "version:%20'latest'",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "7fb2ff",
+        "hash": "7dcd7819",
+        "encoded": "-%20name:%20Configure%20kubectl",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "7fb2ff",
+        "hash": "f50d4826",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "7fb2ff",
+        "hash": "6e36d0cd",
+        "encoded": "echo%20%22$%7B%7B%20secrets.KUBE_CONFIG_PRODUCTION%20%7D%7D%22%20%7C%20base64%20-d%20%3E%20kubeconfig",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "7fb2ff",
+        "hash": "15996666",
+        "encoded": "export%20KUBECONFIG=kubeconfig",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "7fb2ff",
+        "hash": "b8890382",
+        "encoded": "-%20name:%20Create%20backup",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "7fb2ff",
+        "hash": "3668f607",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "7fb2ff",
+        "hash": "e753e46b",
+        "encoded": "kubectl%20get%20deployment%20idp-backend%20-n%20production%20-o%20yaml%20%3E%20backup-backend.yaml",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "7fb2ff",
+        "hash": "82e9dfce",
+        "encoded": "kubectl%20get%20deployment%20idp-frontend%20-n%20production%20-o%20yaml%20%3E%20backup-frontend.yaml",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "7fb2ff",
+        "hash": "093a315d",
+        "encoded": "-%20name:%20Deploy%20backend%20to%20production",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "7fb2ff",
+        "hash": "ac58c215",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "7fb2ff",
+        "hash": "a407fb1f",
+        "encoded": "kubectl%20set%20image%20deployment/idp-backend%20%5C",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "7fb2ff",
+        "hash": "895315b8",
+        "encoded": "idp-backend=$%7B%7B%20env.REGISTRY%20%7D%7D/$%7B%7B%20env.IMAGE_NAME%20%7D%7D-backend:$%7B%7B%20github.sha%20%7D%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "7fb2ff",
+        "hash": "7e50af5d",
+        "encoded": "-n%20production",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "7fb2ff",
+        "hash": "a087ab07",
+        "encoded": "kubectl%20rollout%20status%20deployment/idp-backend%20-n%20production%20--timeout=10m",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "7fb2ff",
+        "hash": "7374b274",
+        "encoded": "-%20name:%20Deploy%20frontend%20to%20production",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "7fb2ff",
+        "hash": "d9c8aaec",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "7fb2ff",
+        "hash": "97316781",
+        "encoded": "kubectl%20set%20image%20deployment/idp-frontend%20%5C",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "7fb2ff",
+        "hash": "5bc881b7",
+        "encoded": "idp-frontend=$%7B%7B%20env.REGISTRY%20%7D%7D/$%7B%7B%20env.IMAGE_NAME%20%7D%7D-frontend:$%7B%7B%20github.sha%20%7D%7D%20%5C",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "7fb2ff",
+        "hash": "7e1bcfdd",
+        "encoded": "-n%20production",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "7fb2ff",
+        "hash": "01aec6a7",
+        "encoded": "kubectl%20rollout%20status%20deployment/idp-frontend%20-n%20production%20--timeout=10m",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "7fb2ff",
+        "hash": "87d06c8c",
+        "encoded": "-%20name:%20Run%20smoke%20tests",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "7fb2ff",
+        "hash": "86f7d1e8",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "7fb2ff",
+        "hash": "3a468f71",
+        "encoded": "npm%20run%20test:smoke%20--%20--env=production",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "7fb2ff",
+        "hash": "d4bc4677",
+        "encoded": "-%20name:%20Notify%20deployment",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "7fb2ff",
+        "hash": "647ee662",
+        "encoded": "if:%20success()",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "7fb2ff",
+        "hash": "41a3d185",
+        "encoded": "uses:%20slackapi/slack-github-action@v1",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "7fb2ff",
+        "hash": "e3e046ae",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "7fb2ff",
+        "hash": "2d2760a1",
+        "encoded": "payload:%20%7C",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "7fb2ff",
+        "hash": "caa9b968",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "7fb2ff",
+        "hash": "c7d66a67",
+        "encoded": "%22text%22:%20%22Production%20deployment%20successful:%20$%7B%7B%20github.sha%20%7D%7D%22",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "7fb2ff",
+        "hash": "c146bd79",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "7fb2ff",
+        "hash": "a0229716",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "7fb2ff",
+        "hash": "7fe22f75",
+        "encoded": "SLACK_WEBHOOK_URL:%20$%7B%7B%20secrets.SLACK_WEBHOOK_URL%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "7fb2ff",
+        "hash": "570cb2a0",
+        "encoded": "-%20name:%20Rollback%20on%20failure",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "7fb2ff",
+        "hash": "4173e4fe",
+        "encoded": "if:%20failure()",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "7fb2ff",
+        "hash": "83186d79",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "7fb2ff",
+        "hash": "63a7a8c1",
+        "encoded": "kubectl%20apply%20-f%20backup-backend.yaml",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "7fb2ff",
+        "hash": "69119859",
+        "encoded": "kubectl%20apply%20-f%20backup-frontend.yaml",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "7fb2ff",
+        "hash": "82c52956",
+        "encoded": "kubectl%20rollout%20status%20deployment/idp-backend%20-n%20production",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "7fb2ff",
+        "hash": "397fbc5e",
+        "encoded": "kubectl%20rollout%20status%20deployment/idp-frontend%20-n%20production",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

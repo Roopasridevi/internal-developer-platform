@@ -1,0 +1,240 @@
+{
+  "frontend\\.eslintrc.json": {
+    "filename": ".eslintrc.json",
+    "path": "frontend\\.eslintrc.json",
+    "version": "1.2",
+    "contextFile": "36e85cad-context.json",
+    "chunks": {
+      "2335dd": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708087,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "89c1c1f5",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:27 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2335dd",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "2335dd",
+        "hash": "92574f4c",
+        "encoded": "%22env%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2335dd",
+        "hash": "48d2e707",
+        "encoded": "%22browser%22:%20true,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "2335dd",
+        "hash": "1eb30e7c",
+        "encoded": "%22es2021%22:%20true,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "2335dd",
+        "hash": "28e79c95",
+        "encoded": "%22node%22:%20true",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2335dd",
+        "hash": "ad84ff3b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "2335dd",
+        "hash": "0c9013d3",
+        "encoded": "%22extends%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "2335dd",
+        "hash": "849088d6",
+        "encoded": "%22eslint:recommended%22,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "2335dd",
+        "hash": "15ddfefa",
+        "encoded": "%22plugin:react/recommended%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2335dd",
+        "hash": "c6c099dc",
+        "encoded": "%22plugin:react/jsx-runtime%22,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2335dd",
+        "hash": "08bed41d",
+        "encoded": "%22plugin:react-hooks/recommended%22",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2335dd",
+        "hash": "fe6dcf4a",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2335dd",
+        "hash": "646df5cd",
+        "encoded": "%22parserOptions%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2335dd",
+        "hash": "34071762",
+        "encoded": "%22ecmaVersion%22:%20%22latest%22,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2335dd",
+        "hash": "4339683d",
+        "encoded": "%22sourceType%22:%20%22module%22,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2335dd",
+        "hash": "87d6709a",
+        "encoded": "%22ecmaFeatures%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2335dd",
+        "hash": "4c14cd7c",
+        "encoded": "%22jsx%22:%20true",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2335dd",
+        "hash": "76477189",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2335dd",
+        "hash": "1cba0cb6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2335dd",
+        "hash": "9fc6fd8d",
+        "encoded": "%22plugins%22:%20%5B%22react%22,%20%22react-hooks%22,%20%22react-refresh%22%5D,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2335dd",
+        "hash": "fa1072bd",
+        "encoded": "%22rules%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2335dd",
+        "hash": "988a36b8",
+        "encoded": "%22react/prop-types%22:%20%22off%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2335dd",
+        "hash": "29df1390",
+        "encoded": "%22react/react-in-jsx-scope%22:%20%22off%22,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2335dd",
+        "hash": "e5d49d34",
+        "encoded": "%22react-hooks/rules-of-hooks%22:%20%22error%22,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2335dd",
+        "hash": "001f54b4",
+        "encoded": "%22react-hooks/exhaustive-deps%22:%20%22warn%22,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "2335dd",
+        "hash": "e7c97058",
+        "encoded": "%22react-refresh/only-export-components%22:%20%22warn%22,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2335dd",
+        "hash": "1b95ebba",
+        "encoded": "%22no-unused-vars%22:%20%5B%22error%22,%20%7B%20%22argsIgnorePattern%22:%20%22%5E_%22%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "2335dd",
+        "hash": "4fba5ffe",
+        "encoded": "%22no-console%22:%20%5B%22warn%22,%20%7B%20%22allow%22:%20%5B%22warn%22,%20%22error%22%5D%20%7D%5D",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2335dd",
+        "hash": "da01a3bd",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "2335dd",
+        "hash": "2374fcbb",
+        "encoded": "%22settings%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2335dd",
+        "hash": "aabaafe7",
+        "encoded": "%22react%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "2335dd",
+        "hash": "d5e72456",
+        "encoded": "%22version%22:%20%22detect%22",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "2335dd",
+        "hash": "699fd80f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "2335dd",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "2335dd",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

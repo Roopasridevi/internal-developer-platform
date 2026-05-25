@@ -1,0 +1,276 @@
+{
+  "backend\\src\\utils\\errors.js": {
+    "filename": "errors.js",
+    "path": "backend\\src\\utils\\errors.js",
+    "version": "1.2",
+    "contextFile": "c3b6d0f9-context.json",
+    "chunks": {
+      "7af225": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "97cb3836",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:46 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7af225",
+        "hash": "1f570efe",
+        "encoded": "class%20AppError%20extends%20Error%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "7af225",
+        "hash": "8acd1e1f",
+        "encoded": "constructor(message,%20statusCode)%20%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7af225",
+        "hash": "6b8de61f",
+        "encoded": "super(message);",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7af225",
+        "hash": "42109f82",
+        "encoded": "this.statusCode%20=%20statusCode;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "7af225",
+        "hash": "2c0ba813",
+        "encoded": "this.isOperational%20=%20true;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7af225",
+        "hash": "c547ab5a",
+        "encoded": "Error.captureStackTrace(this,%20this.constructor);",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7af225",
+        "hash": "03469704",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7af225",
+        "hash": "102658a5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "7af225",
+        "hash": "e4efedb1",
+        "encoded": "class%20ValidationError%20extends%20AppError%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7af225",
+        "hash": "628ea2c3",
+        "encoded": "constructor(message)%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7af225",
+        "hash": "04893591",
+        "encoded": "super(message,%20400);",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "7af225",
+        "hash": "6a3f2143",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "7af225",
+        "hash": "e683dcf7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "7af225",
+        "hash": "27fef04f",
+        "encoded": "class%20UnauthorizedError%20extends%20AppError%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7af225",
+        "hash": "c2c64f64",
+        "encoded": "constructor(message%20=%20'Unauthorized')%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "7af225",
+        "hash": "120ea2b1",
+        "encoded": "super(message,%20401);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7af225",
+        "hash": "ee20bc2a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "7af225",
+        "hash": "ee39c532",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7af225",
+        "hash": "537bee41",
+        "encoded": "class%20ForbiddenError%20extends%20AppError%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "7af225",
+        "hash": "c88b1b9b",
+        "encoded": "constructor(message%20=%20'Forbidden')%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7af225",
+        "hash": "72b6fe28",
+        "encoded": "super(message,%20403);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7af225",
+        "hash": "71870443",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "7af225",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "7af225",
+        "hash": "54de3420",
+        "encoded": "class%20NotFoundError%20extends%20AppError%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "7af225",
+        "hash": "9879e1e1",
+        "encoded": "constructor(message%20=%20'Resource%20not%20found')%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "7af225",
+        "hash": "e5ee83ab",
+        "encoded": "super(message,%20404);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "7af225",
+        "hash": "cfdac52c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "7af225",
+        "hash": "43353d17",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "7af225",
+        "hash": "3a39a709",
+        "encoded": "class%20ConflictError%20extends%20AppError%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "7af225",
+        "hash": "59841982",
+        "encoded": "constructor(message%20=%20'Resource%20conflict')%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "7af225",
+        "hash": "da6a4154",
+        "encoded": "super(message,%20409);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "7af225",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "7af225",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "7af225",
+        "hash": "a5f7908b",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "7af225",
+        "hash": "3ddcea1c",
+        "encoded": "AppError,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "7af225",
+        "hash": "ceacfd21",
+        "encoded": "ValidationError,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "7af225",
+        "hash": "52435431",
+        "encoded": "UnauthorizedError,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "7af225",
+        "hash": "70056aa1",
+        "encoded": "ForbiddenError,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "7af225",
+        "hash": "5ff58a70",
+        "encoded": "NotFoundError,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "7af225",
+        "hash": "c1efcac2",
+        "encoded": "ConflictError,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "7af225",
+        "hash": "81b17229",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

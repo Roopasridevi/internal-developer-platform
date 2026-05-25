@@ -1,0 +1,156 @@
+{
+  "backend\\src\\middleware\\authenticate.js": {
+    "filename": "authenticate.js",
+    "path": "backend\\src\\middleware\\authenticate.js",
+    "version": "1.2",
+    "contextFile": "4e08e4d4-context.json",
+    "chunks": {
+      "2a3097": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707864,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "6a9eaccb",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:44 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2a3097",
+        "hash": "4cac946e",
+        "encoded": "const%20jwt%20=%20require('jsonwebtoken');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "2a3097",
+        "hash": "45544a57",
+        "encoded": "const%20config%20=%20require('../config');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2a3097",
+        "hash": "ab0783f4",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../utils/errors');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "2a3097",
+        "hash": "f85010f9",
+        "encoded": "module.exports%20=%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2a3097",
+        "hash": "bbe34ec7",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "2a3097",
+        "hash": "1697bef7",
+        "encoded": "const%20authHeader%20=%20req.headers.authorization;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "2a3097",
+        "hash": "dc9d9045",
+        "encoded": "if%20(!authHeader%20%7C%7C%20!authHeader.startsWith('Bearer%20'))%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2a3097",
+        "hash": "7504fdf3",
+        "encoded": "throw%20new%20AppError('No%20token%20provided',%20401);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2a3097",
+        "hash": "c2f1edd6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2a3097",
+        "hash": "6e75822a",
+        "encoded": "const%20token%20=%20authHeader.split('%20')%5B1%5D;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2a3097",
+        "hash": "f929f293",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2a3097",
+        "hash": "38607de7",
+        "encoded": "const%20decoded%20=%20jwt.verify(token,%20config.jwt.secret);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2a3097",
+        "hash": "3a65580f",
+        "encoded": "req.user%20=%20decoded;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2a3097",
+        "hash": "060ed3dd",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2a3097",
+        "hash": "840be02f",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2a3097",
+        "hash": "b47824a3",
+        "encoded": "throw%20new%20AppError('Invalid%20or%20expired%20token',%20401);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2a3097",
+        "hash": "acbf036f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2a3097",
+        "hash": "746bc183",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2a3097",
+        "hash": "adb4442c",
+        "encoded": "next(error);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2a3097",
+        "hash": "7b3531ab",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2a3097",
+        "hash": "9eb29d7f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

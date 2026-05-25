@@ -1,0 +1,396 @@
+{
+  "frontend\\src\\contexts\\AuthContext.jsx": {
+    "filename": "AuthContext.jsx",
+    "path": "frontend\\src\\contexts\\AuthContext.jsx",
+    "version": "1.2",
+    "contextFile": "a1e865a4-context.json",
+    "chunks": {
+      "108a74": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708089,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "c9130f8d",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:29 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "108a74",
+        "hash": "4008bf0c",
+        "encoded": "import%20%7B%20createContext,%20useContext,%20useState,%20useEffect%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "108a74",
+        "hash": "4b8bfe01",
+        "encoded": "import%20%7B%20authService%20%7D%20from%20'../services/authService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "108a74",
+        "hash": "97a33a53",
+        "encoded": "const%20AuthContext%20=%20createContext(null);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "108a74",
+        "hash": "a604587d",
+        "encoded": "export%20const%20useAuth%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "108a74",
+        "hash": "2a9a9d5c",
+        "encoded": "const%20context%20=%20useContext(AuthContext);",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "108a74",
+        "hash": "2c1ec81f",
+        "encoded": "if%20(!context)%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "108a74",
+        "hash": "f8e8042a",
+        "encoded": "throw%20new%20Error('useAuth%20must%20be%20used%20within%20AuthProvider');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "108a74",
+        "hash": "2ce165fa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "108a74",
+        "hash": "242994b1",
+        "encoded": "return%20context;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "108a74",
+        "hash": "9658cd33",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "108a74",
+        "hash": "54cc1db1",
+        "encoded": "export%20const%20AuthProvider%20=%20(%7B%20children%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "108a74",
+        "hash": "c7ff0b02",
+        "encoded": "const%20%5Buser,%20setUser%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "108a74",
+        "hash": "016bccc9",
+        "encoded": "const%20%5BisAuthenticated,%20setIsAuthenticated%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "108a74",
+        "hash": "8fafec54",
+        "encoded": "const%20%5BisLoading,%20setIsLoading%5D%20=%20useState(true);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "108a74",
+        "hash": "e22c6916",
+        "encoded": "useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "108a74",
+        "hash": "92cafd1e",
+        "encoded": "checkAuth();",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "108a74",
+        "hash": "5e099095",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "108a74",
+        "hash": "0efb1fb5",
+        "encoded": "const%20checkAuth%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "108a74",
+        "hash": "ed34a8fb",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "108a74",
+        "hash": "5c813f59",
+        "encoded": "const%20token%20=%20localStorage.getItem('accessToken');",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "108a74",
+        "hash": "5c89c6c4",
+        "encoded": "if%20(token)%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "108a74",
+        "hash": "e4412909",
+        "encoded": "const%20userData%20=%20await%20authService.getCurrentUser();",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "108a74",
+        "hash": "49b43d92",
+        "encoded": "setUser(userData);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "108a74",
+        "hash": "85ffd42c",
+        "encoded": "setIsAuthenticated(true);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "108a74",
+        "hash": "7721e417",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "108a74",
+        "hash": "6214a602",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "108a74",
+        "hash": "dc376a5a",
+        "encoded": "logout();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "108a74",
+        "hash": "64f0d032",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "108a74",
+        "hash": "b5478388",
+        "encoded": "setIsLoading(false);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "108a74",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "108a74",
+        "hash": "ba0e82eb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "108a74",
+        "hash": "9325991c",
+        "encoded": "const%20login%20=%20async%20(credentials)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "108a74",
+        "hash": "aa4231be",
+        "encoded": "const%20%7B%20user:%20userData,%20accessToken,%20refreshToken%20%7D%20=%20await%20authService.login(credentials);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "108a74",
+        "hash": "e594013d",
+        "encoded": "localStorage.setItem('accessToken',%20accessToken);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "108a74",
+        "hash": "0eef7b2f",
+        "encoded": "localStorage.setItem('refreshToken',%20refreshToken);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "108a74",
+        "hash": "51c4d162",
+        "encoded": "setUser(userData);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "108a74",
+        "hash": "662a9f38",
+        "encoded": "setIsAuthenticated(true);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "108a74",
+        "hash": "ebf5e4a4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "108a74",
+        "hash": "641baf1b",
+        "encoded": "const%20register%20=%20async%20(data)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "108a74",
+        "hash": "b54afc24",
+        "encoded": "const%20%7B%20user:%20userData,%20accessToken,%20refreshToken%20%7D%20=%20await%20authService.register(data);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "108a74",
+        "hash": "49e7efcf",
+        "encoded": "localStorage.setItem('accessToken',%20accessToken);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "108a74",
+        "hash": "4b7c2d85",
+        "encoded": "localStorage.setItem('refreshToken',%20refreshToken);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "108a74",
+        "hash": "17875c7e",
+        "encoded": "setUser(userData);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "108a74",
+        "hash": "14d34659",
+        "encoded": "setIsAuthenticated(true);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "108a74",
+        "hash": "a50e1a88",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "108a74",
+        "hash": "4c57b6b4",
+        "encoded": "const%20logout%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "108a74",
+        "hash": "48fbc523",
+        "encoded": "localStorage.removeItem('accessToken');",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "108a74",
+        "hash": "325e7b89",
+        "encoded": "localStorage.removeItem('refreshToken');",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "108a74",
+        "hash": "7b94f060",
+        "encoded": "setUser(null);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "108a74",
+        "hash": "91b0d280",
+        "encoded": "setIsAuthenticated(false);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "108a74",
+        "hash": "d6071797",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "108a74",
+        "hash": "bf972e46",
+        "encoded": "const%20value%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "108a74",
+        "hash": "036d1d34",
+        "encoded": "user,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "108a74",
+        "hash": "57de4bb5",
+        "encoded": "isAuthenticated,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "108a74",
+        "hash": "f8091f1e",
+        "encoded": "isLoading,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "108a74",
+        "hash": "ea37ee5d",
+        "encoded": "login,",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "108a74",
+        "hash": "5d319398",
+        "encoded": "register,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "108a74",
+        "hash": "841995b8",
+        "encoded": "logout,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "108a74",
+        "hash": "f74f24ea",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "108a74",
+        "hash": "cacbffb7",
+        "encoded": "return%20%3CAuthContext.Provider%20value=%7Bvalue%7D%3E%7Bchildren%7D%3C/AuthContext.Provider%3E;",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "108a74",
+        "hash": "97ddb42a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

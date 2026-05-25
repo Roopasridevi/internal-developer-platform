@@ -1,0 +1,348 @@
+{
+  "backend\\src\\models\\Project.js": {
+    "filename": "Project.js",
+    "path": "backend\\src\\models\\Project.js",
+    "version": "1.2",
+    "contextFile": "04fc758e-context.json",
+    "chunks": {
+      "993c1c": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707782,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "40f2017a",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:22 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "993c1c",
+        "hash": "5961e53f",
+        "encoded": "module.exports%20=%20(sequelize,%20DataTypes)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "993c1c",
+        "hash": "2fe4633b",
+        "encoded": "const%20Project%20=%20sequelize.define('Project',%20%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "993c1c",
+        "hash": "2314dffd",
+        "encoded": "id:%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "993c1c",
+        "hash": "2f3801f3",
+        "encoded": "type:%20DataTypes.UUID,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "993c1c",
+        "hash": "8a005a3c",
+        "encoded": "defaultValue:%20DataTypes.UUIDV4,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "993c1c",
+        "hash": "e1ba023a",
+        "encoded": "primaryKey:%20true,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "993c1c",
+        "hash": "4401be13",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "993c1c",
+        "hash": "5a8159ba",
+        "encoded": "name:%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "993c1c",
+        "hash": "140f5535",
+        "encoded": "type:%20DataTypes.STRING,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "993c1c",
+        "hash": "6ec3da42",
+        "encoded": "allowNull:%20false,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "993c1c",
+        "hash": "edd993f3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "993c1c",
+        "hash": "50f0a6d7",
+        "encoded": "description:%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "993c1c",
+        "hash": "bd463200",
+        "encoded": "type:%20DataTypes.TEXT,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "993c1c",
+        "hash": "c162cffc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "993c1c",
+        "hash": "43969b44",
+        "encoded": "repositoryUrl:%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "993c1c",
+        "hash": "1b75b02b",
+        "encoded": "type:%20DataTypes.STRING,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "993c1c",
+        "hash": "e0024018",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "993c1c",
+        "hash": "b9def56a",
+        "encoded": "status:%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "993c1c",
+        "hash": "7f466985",
+        "encoded": "type:%20DataTypes.ENUM('active',%20'inactive',%20'archived'),",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "993c1c",
+        "hash": "9076ebfa",
+        "encoded": "defaultValue:%20'active',",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "993c1c",
+        "hash": "7ce81970",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "993c1c",
+        "hash": "a8c52814",
+        "encoded": "ownerId:%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "993c1c",
+        "hash": "4c2d80a1",
+        "encoded": "type:%20DataTypes.UUID,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "993c1c",
+        "hash": "964fe263",
+        "encoded": "allowNull:%20false,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "993c1c",
+        "hash": "daa73354",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "993c1c",
+        "hash": "7e1b1763",
+        "encoded": "settings:%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "993c1c",
+        "hash": "6925899e",
+        "encoded": "type:%20DataTypes.JSONB,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "993c1c",
+        "hash": "d1bdedca",
+        "encoded": "defaultValue:%20%7B%7D,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "993c1c",
+        "hash": "da01a3bd",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "993c1c",
+        "hash": "aae513ef",
+        "encoded": "%7D,%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "993c1c",
+        "hash": "ec3ac165",
+        "encoded": "tableName:%20'projects',",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "993c1c",
+        "hash": "9c59d1a3",
+        "encoded": "timestamps:%20true,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "993c1c",
+        "hash": "25c863d9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "993c1c",
+        "hash": "0158cfeb",
+        "encoded": "Project.associate%20=%20(models)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "993c1c",
+        "hash": "ede4d8d9",
+        "encoded": "Project.belongsTo(models.User,%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "993c1c",
+        "hash": "8f09b32f",
+        "encoded": "foreignKey:%20'ownerId',",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "993c1c",
+        "hash": "a45ab6a6",
+        "encoded": "as:%20'owner',",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "993c1c",
+        "hash": "3b202ec2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "993c1c",
+        "hash": "bcfbfc46",
+        "encoded": "Project.hasMany(models.ProjectMember,%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "993c1c",
+        "hash": "24ca06fc",
+        "encoded": "foreignKey:%20'projectId',",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "993c1c",
+        "hash": "8636d221",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "993c1c",
+        "hash": "2f418287",
+        "encoded": "Project.hasMany(models.Pipeline,%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "993c1c",
+        "hash": "e74cff2c",
+        "encoded": "foreignKey:%20'projectId',",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "993c1c",
+        "hash": "39fe36a7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "993c1c",
+        "hash": "e32164de",
+        "encoded": "Project.hasMany(models.Deployment,%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "993c1c",
+        "hash": "1fc7aa02",
+        "encoded": "foreignKey:%20'projectId',",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "993c1c",
+        "hash": "6c3f165a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "993c1c",
+        "hash": "e926322e",
+        "encoded": "Project.hasMany(models.Environment,%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "993c1c",
+        "hash": "6bde7d16",
+        "encoded": "foreignKey:%20'projectId',",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "993c1c",
+        "hash": "d4fc8746",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "993c1c",
+        "hash": "a50e1a88",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "993c1c",
+        "hash": "1e8c6b1e",
+        "encoded": "return%20Project;",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "993c1c",
+        "hash": "60ce3341",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

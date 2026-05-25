@@ -1,0 +1,210 @@
+{
+  "frontend\\src\\components\\layout\\Sidebar.jsx": {
+    "filename": "Sidebar.jsx",
+    "path": "frontend\\src\\components\\layout\\Sidebar.jsx",
+    "version": "1.2",
+    "contextFile": "22b4c936-context.json",
+    "chunks": {
+      "bdca1b": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708334,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "aea9ec34",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:34 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "bdca1b",
+        "hash": "f3b62c69",
+        "encoded": "import%20%7B%20NavLink%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "bdca1b",
+        "hash": "a5067721",
+        "encoded": "import%20'./Sidebar.css';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "bdca1b",
+        "hash": "a1df4ba4",
+        "encoded": "const%20Sidebar%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "bdca1b",
+        "hash": "e521f367",
+        "encoded": "const%20navItems%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "bdca1b",
+        "hash": "eba8b739",
+        "encoded": "%7B%20path:%20'/',%20label:%20'Dashboard',%20icon:%20'%F0%9F%8F%A0'%20%7D,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "bdca1b",
+        "hash": "7ddc6094",
+        "encoded": "%7B%20path:%20'/projects',%20label:%20'Projects',%20icon:%20'%F0%9F%93%81'%20%7D,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "bdca1b",
+        "hash": "aad88acb",
+        "encoded": "%7B%20path:%20'/pipelines',%20label:%20'Pipelines',%20icon:%20'%E2%9A%99%EF%B8%8F'%20%7D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "bdca1b",
+        "hash": "3016853c",
+        "encoded": "%7B%20path:%20'/deployments',%20label:%20'Deployments',%20icon:%20'%F0%9F%9A%80'%20%7D,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "bdca1b",
+        "hash": "8336d1f7",
+        "encoded": "%7B%20path:%20'/logs',%20label:%20'Logs',%20icon:%20'%F0%9F%93%84'%20%7D,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "bdca1b",
+        "hash": "d048eb5f",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "bdca1b",
+        "hash": "ad52ceed",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "bdca1b",
+        "hash": "bb7a92a1",
+        "encoded": "%3Caside%20className=%22sidebar%22%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "bdca1b",
+        "hash": "8cbb5bc8",
+        "encoded": "%3Cnav%20className=%22sidebar-nav%22%3E",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "bdca1b",
+        "hash": "f78a0f03",
+        "encoded": "%7BnavItems.map((item)%20=%3E%20(",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "bdca1b",
+        "hash": "341a3c6a",
+        "encoded": "%3CNavLink",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "bdca1b",
+        "hash": "b48f8438",
+        "encoded": "key=%7Bitem.path%7D",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "bdca1b",
+        "hash": "f8cf2ba9",
+        "encoded": "to=%7Bitem.path%7D",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "bdca1b",
+        "hash": "13814e09",
+        "encoded": "className=%7B(%7B%20isActive%20%7D)%20=%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "bdca1b",
+        "hash": "816f38f2",
+        "encoded": "isActive%20?%20'sidebar-link%20active'%20:%20'sidebar-link'",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "bdca1b",
+        "hash": "4b5cc20d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "bdca1b",
+        "hash": "cfd0f4ad",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "bdca1b",
+        "hash": "51122997",
+        "encoded": "%3Cspan%20className=%22sidebar-icon%22%3E%7Bitem.icon%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "bdca1b",
+        "hash": "bf53ec00",
+        "encoded": "%3Cspan%20className=%22sidebar-label%22%3E%7Bitem.label%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "bdca1b",
+        "hash": "3787dd1e",
+        "encoded": "%3C/NavLink%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "bdca1b",
+        "hash": "8e809732",
+        "encoded": "))%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "bdca1b",
+        "hash": "73361926",
+        "encoded": "%3C/nav%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "bdca1b",
+        "hash": "b75388f5",
+        "encoded": "%3C/aside%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "bdca1b",
+        "hash": "4bce4871",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "bdca1b",
+        "hash": "9e8c1e32",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "bdca1b",
+        "hash": "ddfacd9c",
+        "encoded": "export%20default%20Sidebar;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

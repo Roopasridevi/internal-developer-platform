@@ -1,0 +1,828 @@
+{
+  "backend\\src\\services\\projectService.js": {
+    "filename": "projectService.js",
+    "path": "backend\\src\\services\\projectService.js",
+    "version": "1.2",
+    "contextFile": "4e213e86-context.json",
+    "chunks": {
+      "fc2cb9": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707699,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "2ea9c06b",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:59 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "fc2cb9",
+        "hash": "e33028a9",
+        "encoded": "const%20%7B%20Project,%20User,%20ProjectMember%20%7D%20=%20require('../models');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "fc2cb9",
+        "hash": "7e72567d",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../utils/errors');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "fc2cb9",
+        "hash": "bfb36d91",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "fc2cb9",
+        "hash": "e9371ae7",
+        "encoded": "class%20ProjectService%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "fc2cb9",
+        "hash": "4bfad65c",
+        "encoded": "async%20createProject(data,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "fc2cb9",
+        "hash": "0f79b52a",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "fc2cb9",
+        "hash": "4e77cce4",
+        "encoded": "const%20project%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "fc2cb9",
+        "hash": "73290c54",
+        "encoded": "...data,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "fc2cb9",
+        "hash": "344c7750",
+        "encoded": "ownerId:%20userId,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "fc2cb9",
+        "hash": "f0e2ff42",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "fc2cb9",
+        "hash": "c484fef0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "fc2cb9",
+        "hash": "cfa71110",
+        "encoded": "//%20Add%20creator%20as%20project%20owner",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "fc2cb9",
+        "hash": "e2d495a6",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "fc2cb9",
+        "hash": "e3057db8",
+        "encoded": "projectId:%20project.id,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "fc2cb9",
+        "hash": "d38bfe84",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "fc2cb9",
+        "hash": "54179402",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "fc2cb9",
+        "hash": "ff07c7b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "fc2cb9",
+        "hash": "97e2481c",
+        "encoded": "return%20project;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "fc2cb9",
+        "hash": "746bc183",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "fc2cb9",
+        "hash": "56adff9c",
+        "encoded": "logger.error('Error%20creating%20project:',%20error);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "fc2cb9",
+        "hash": "fb693207",
+        "encoded": "throw%20new%20AppError('Failed%20to%20create%20project',%20500);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "fc2cb9",
+        "hash": "71870443",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fc2cb9",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "fc2cb9",
+        "hash": "d1218973",
+        "encoded": "async%20getProjects(%7B%20page,%20limit,%20search,%20status,%20userId%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "fc2cb9",
+        "hash": "574b7e96",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "fc2cb9",
+        "hash": "48ac9d6e",
+        "encoded": "const%20offset%20=%20(page%20-%201)%20*%20limit;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "fc2cb9",
+        "hash": "9f873891",
+        "encoded": "const%20where%20=%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "fc2cb9",
+        "hash": "2af32ea3",
+        "encoded": "if%20(search)%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "fc2cb9",
+        "hash": "7be58df5",
+        "encoded": "where.name%20=%20%7B%20%5BOp.iLike%5D:%20%60%25$%7Bsearch%7D%25%60%20%7D;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "fc2cb9",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "fc2cb9",
+        "hash": "9185af4c",
+        "encoded": "if%20(status)%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "fc2cb9",
+        "hash": "32884be9",
+        "encoded": "where.status%20=%20status;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "fc2cb9",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "fc2cb9",
+        "hash": "2ba73bcb",
+        "encoded": "const%20%7B%20rows,%20count%20%7D%20=%20await%20Project.findAndCountAll(%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "fc2cb9",
+        "hash": "6d791cb4",
+        "encoded": "where,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "fc2cb9",
+        "hash": "6199285d",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "fc2cb9",
+        "hash": "7abe7e86",
+        "encoded": "offset,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "fc2cb9",
+        "hash": "be03db76",
+        "encoded": "include:%20%5B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "fc2cb9",
+        "hash": "6a4cf6ce",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "fc2cb9",
+        "hash": "b22c182f",
+        "encoded": "model:%20ProjectMember,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "fc2cb9",
+        "hash": "a5737619",
+        "encoded": "where:%20%7B%20userId%20%7D,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "fc2cb9",
+        "hash": "62cadf9b",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "fc2cb9",
+        "hash": "0b2d8d38",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "fc2cb9",
+        "hash": "9ac3c306",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "fc2cb9",
+        "hash": "77cb438f",
+        "encoded": "order:%20%5B%5B'createdAt',%20'DESC'%5D%5D,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "fc2cb9",
+        "hash": "b6499095",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "fc2cb9",
+        "hash": "e6866e23",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "fc2cb9",
+        "hash": "8fd244cd",
+        "encoded": "projects:%20rows,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "fc2cb9",
+        "hash": "28f23b23",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "fc2cb9",
+        "hash": "2ab7085a",
+        "encoded": "total:%20count,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "fc2cb9",
+        "hash": "01ca48a7",
+        "encoded": "page,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "fc2cb9",
+        "hash": "27234436",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "fc2cb9",
+        "hash": "64054866",
+        "encoded": "totalPages:%20Math.ceil(count%20/%20limit),",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "fc2cb9",
+        "hash": "ee9d8206",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "fc2cb9",
+        "hash": "c5158462",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "fc2cb9",
+        "hash": "b1876b93",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "fc2cb9",
+        "hash": "6810f3d3",
+        "encoded": "logger.error('Error%20fetching%20projects:',%20error);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "fc2cb9",
+        "hash": "689adaba",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20projects',%20500);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "fc2cb9",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "fc2cb9",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "fc2cb9",
+        "hash": "c1edbb95",
+        "encoded": "async%20getProjectById(projectId,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "fc2cb9",
+        "hash": "bb7fee13",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "fc2cb9",
+        "hash": "883f1e3c",
+        "encoded": "const%20project%20=%20await%20Project.findOne(%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "fc2cb9",
+        "hash": "8c2acf19",
+        "encoded": "where:%20%7B%20id:%20projectId%20%7D,",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "fc2cb9",
+        "hash": "b990fa8c",
+        "encoded": "include:%20%5B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "fc2cb9",
+        "hash": "757e09bb",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "fc2cb9",
+        "hash": "7704ced3",
+        "encoded": "model:%20ProjectMember,",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "fc2cb9",
+        "hash": "81941734",
+        "encoded": "where:%20%7B%20userId%20%7D,",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "fc2cb9",
+        "hash": "9d5d9d6a",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "fc2cb9",
+        "hash": "2c3e2788",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "fc2cb9",
+        "hash": "661b1a1f",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "fc2cb9",
+        "hash": "8d10f9ca",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "fc2cb9",
+        "hash": "61e59191",
+        "encoded": "if%20(!project)%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "fc2cb9",
+        "hash": "2b919a00",
+        "encoded": "throw%20new%20AppError('Project%20not%20found%20or%20access%20denied',%20404);",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "fc2cb9",
+        "hash": "e4b921c6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "fc2cb9",
+        "hash": "59bde833",
+        "encoded": "return%20project;",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "fc2cb9",
+        "hash": "8f30106f",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "fc2cb9",
+        "hash": "3fb7264e",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "fc2cb9",
+        "hash": "54f6943e",
+        "encoded": "logger.error('Error%20fetching%20project:',%20error);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "fc2cb9",
+        "hash": "222b43d4",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20project',%20500);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "fc2cb9",
+        "hash": "1a9d363f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "fc2cb9",
+        "hash": "70416dc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "fc2cb9",
+        "hash": "700d04d2",
+        "encoded": "async%20updateProject(projectId,%20data,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "fc2cb9",
+        "hash": "c1b873e0",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "fc2cb9",
+        "hash": "5eaebba8",
+        "encoded": "const%20project%20=%20await%20this.getProjectById(projectId,%20userId);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "fc2cb9",
+        "hash": "2ac8f202",
+        "encoded": "await%20project.update(data);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "fc2cb9",
+        "hash": "d0bf227f",
+        "encoded": "return%20project;",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "fc2cb9",
+        "hash": "1b69989c",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "fc2cb9",
+        "hash": "c586fc85",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "fc2cb9",
+        "hash": "6763f181",
+        "encoded": "logger.error('Error%20updating%20project:',%20error);",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "fc2cb9",
+        "hash": "748f2eba",
+        "encoded": "throw%20new%20AppError('Failed%20to%20update%20project',%20500);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "fc2cb9",
+        "hash": "79409de0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "fc2cb9",
+        "hash": "34001782",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "fc2cb9",
+        "hash": "0cd6d0ea",
+        "encoded": "async%20deleteProject(projectId,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "fc2cb9",
+        "hash": "e7b6faf6",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "fc2cb9",
+        "hash": "95d93780",
+        "encoded": "const%20project%20=%20await%20this.getProjectById(projectId,%20userId);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "fc2cb9",
+        "hash": "7dcc8464",
+        "encoded": "await%20project.destroy();",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "fc2cb9",
+        "hash": "0b057f3c",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "fc2cb9",
+        "hash": "ae2d70f7",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "fc2cb9",
+        "hash": "864a170f",
+        "encoded": "logger.error('Error%20deleting%20project:',%20error);",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "fc2cb9",
+        "hash": "7d3d7a6d",
+        "encoded": "throw%20new%20AppError('Failed%20to%20delete%20project',%20500);",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "fc2cb9",
+        "hash": "fd8e1155",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "fc2cb9",
+        "hash": "d750d26f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "fc2cb9",
+        "hash": "cf3ea960",
+        "encoded": "async%20getProjectMembers(projectId,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "fc2cb9",
+        "hash": "fb338532",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "fc2cb9",
+        "hash": "650f8a78",
+        "encoded": "await%20this.getProjectById(projectId,%20userId);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "fc2cb9",
+        "hash": "2f9dc916",
+        "encoded": "const%20members%20=%20await%20ProjectMember.findAll(%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "fc2cb9",
+        "hash": "1f89de83",
+        "encoded": "where:%20%7B%20projectId%20%7D,",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "fc2cb9",
+        "hash": "87f73af7",
+        "encoded": "include:%20%5B%7B%20model:%20User,%20attributes:%20%5B'id',%20'name',%20'email'%5D%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "fc2cb9",
+        "hash": "67470cbd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "fc2cb9",
+        "hash": "2d9ed1c7",
+        "encoded": "return%20members;",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "fc2cb9",
+        "hash": "64bab7fe",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "fc2cb9",
+        "hash": "0687c169",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "fc2cb9",
+        "hash": "4a4bd3c2",
+        "encoded": "logger.error('Error%20fetching%20project%20members:',%20error);",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "fc2cb9",
+        "hash": "59f29e56",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20project%20members',%20500);",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "fc2cb9",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "fc2cb9",
+        "hash": "ff6991dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "fc2cb9",
+        "hash": "d2220f62",
+        "encoded": "async%20addProjectMember(projectId,%20newUserId,%20role,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "fc2cb9",
+        "hash": "47faa365",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "fc2cb9",
+        "hash": "54e90fff",
+        "encoded": "await%20this.getProjectById(projectId,%20userId);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "fc2cb9",
+        "hash": "c59d3ceb",
+        "encoded": "const%20member%20=%20await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "fc2cb9",
+        "hash": "a1a71994",
+        "encoded": "projectId,",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "fc2cb9",
+        "hash": "402540be",
+        "encoded": "userId:%20newUserId,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "fc2cb9",
+        "hash": "1643a289",
+        "encoded": "role,",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "fc2cb9",
+        "hash": "3e28129b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "fc2cb9",
+        "hash": "f18c5e5f",
+        "encoded": "return%20member;",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "fc2cb9",
+        "hash": "2a8776aa",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "fc2cb9",
+        "hash": "7091c00e",
+        "encoded": "logger.error('Error%20adding%20project%20member:',%20error);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "fc2cb9",
+        "hash": "c8d78390",
+        "encoded": "throw%20new%20AppError('Failed%20to%20add%20project%20member',%20500);",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "fc2cb9",
+        "hash": "52c5d6be",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "fc2cb9",
+        "hash": "546cf1de",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "fc2cb9",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "fc2cb9",
+        "hash": "983bfe51",
+        "encoded": "module.exports%20=%20new%20ProjectService();",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

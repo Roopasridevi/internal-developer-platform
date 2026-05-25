@@ -1,0 +1,180 @@
+{
+  "frontend\\src\\services\\authService.js": {
+    "filename": "authService.js",
+    "path": "frontend\\src\\services\\authService.js",
+    "version": "1.2",
+    "contextFile": "8f297acb-context.json",
+    "chunks": {
+      "23c839": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708089,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "cf304906",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:29 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "23c839",
+        "hash": "a53ca53a",
+        "encoded": "import%20api%20from%20'./api';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "23c839",
+        "hash": "27a99633",
+        "encoded": "export%20const%20authService%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "23c839",
+        "hash": "6ed3502c",
+        "encoded": "async%20login(credentials)%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "23c839",
+        "hash": "e160990f",
+        "encoded": "const%20response%20=%20await%20api.post('/auth/login',%20credentials);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "23c839",
+        "hash": "f69a0f09",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "23c839",
+        "hash": "4401be13",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "23c839",
+        "hash": "8f9de2cb",
+        "encoded": "async%20register(data)%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "23c839",
+        "hash": "b81ff994",
+        "encoded": "const%20response%20=%20await%20api.post('/auth/register',%20data);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "23c839",
+        "hash": "229d8636",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "23c839",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "23c839",
+        "hash": "0426598f",
+        "encoded": "async%20logout()%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "23c839",
+        "hash": "35fcc64a",
+        "encoded": "await%20api.post('/auth/logout');",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "23c839",
+        "hash": "e682a066",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "23c839",
+        "hash": "be25d33b",
+        "encoded": "async%20getCurrentUser()%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "23c839",
+        "hash": "cb67a996",
+        "encoded": "const%20response%20=%20await%20api.get('/auth/me');",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "23c839",
+        "hash": "0d89ce3d",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "23c839",
+        "hash": "7ce81970",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "23c839",
+        "hash": "ed1e10e1",
+        "encoded": "async%20updateProfile(data)%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "23c839",
+        "hash": "a8fb97a0",
+        "encoded": "const%20response%20=%20await%20api.put('/auth/profile',%20data);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "23c839",
+        "hash": "e85f68d7",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "23c839",
+        "hash": "642c1a07",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "23c839",
+        "hash": "9f9d7df3",
+        "encoded": "async%20changePassword(data)%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "23c839",
+        "hash": "a7822a76",
+        "encoded": "await%20api.put('/auth/change-password',%20data);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "23c839",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "23c839",
+        "hash": "9e8c1e32",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

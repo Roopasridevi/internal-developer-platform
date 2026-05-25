@@ -1,0 +1,186 @@
+{
+  "frontend\\src\\pages\\projects\\ProjectDetailPage.jsx": {
+    "filename": "ProjectDetailPage.jsx",
+    "path": "frontend\\src\\pages\\projects\\ProjectDetailPage.jsx",
+    "version": "1.2",
+    "contextFile": "57ac8afc-context.json",
+    "chunks": {
+      "dfcb46": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708335,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "267004f8",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:35 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "dfcb46",
+        "hash": "b8e70183",
+        "encoded": "import%20%7B%20useParams%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "dfcb46",
+        "hash": "61219fab",
+        "encoded": "import%20%7B%20useQuery%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "dfcb46",
+        "hash": "fce96b2b",
+        "encoded": "import%20%7B%20projectService%20%7D%20from%20'../../services/projectService';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "dfcb46",
+        "hash": "23409b36",
+        "encoded": "const%20ProjectDetailPage%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "dfcb46",
+        "hash": "b0270722",
+        "encoded": "const%20%7B%20id%20%7D%20=%20useParams();",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "dfcb46",
+        "hash": "1b5184c7",
+        "encoded": "const%20%7B%20data,%20isLoading%20%7D%20=%20useQuery(%5B'project',%20id%5D,%20()%20=%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "dfcb46",
+        "hash": "802ab7be",
+        "encoded": "projectService.getProjectById(id)",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "dfcb46",
+        "hash": "f4ae6b5b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "dfcb46",
+        "hash": "5f574ba2",
+        "encoded": "if%20(isLoading)%20return%20%3Cdiv%3ELoading...%3C/div%3E;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "dfcb46",
+        "hash": "1d3ad1d4",
+        "encoded": "const%20project%20=%20data?.data;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "dfcb46",
+        "hash": "d4d8b398",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "dfcb46",
+        "hash": "d50f1ec5",
+        "encoded": "%3Cdiv%20className=%22project-detail%22%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "dfcb46",
+        "hash": "7673e01a",
+        "encoded": "%3Ch1%3E%7Bproject?.name%7D%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "dfcb46",
+        "hash": "a1444305",
+        "encoded": "%3Cp%3E%7Bproject?.description%7D%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "dfcb46",
+        "hash": "41bca4a1",
+        "encoded": "%3Cdiv%20className=%22project-info%22%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "dfcb46",
+        "hash": "05aef51d",
+        "encoded": "%3Cdiv%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "dfcb46",
+        "hash": "302db5eb",
+        "encoded": "%3Cstrong%3EStatus:%3C/strong%3E%20%7Bproject?.status%7D",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "dfcb46",
+        "hash": "42876b59",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "dfcb46",
+        "hash": "dc678056",
+        "encoded": "%3Cdiv%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "dfcb46",
+        "hash": "cddcd999",
+        "encoded": "%3Cstrong%3ERepository:%3C/strong%3E%20%7Bproject?.repositoryUrl%7D",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "dfcb46",
+        "hash": "d3c1c8f1",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "dfcb46",
+        "hash": "bcfcd878",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "dfcb46",
+        "hash": "4bb6e66f",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "dfcb46",
+        "hash": "38c6736a",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "dfcb46",
+        "hash": "a107343b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "dfcb46",
+        "hash": "894d17dc",
+        "encoded": "export%20default%20ProjectDetailPage;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

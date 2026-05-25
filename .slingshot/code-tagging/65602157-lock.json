@@ -1,0 +1,126 @@
+{
+  "frontend\\src\\components\\layout\\Layout.css": {
+    "filename": "Layout.css",
+    "path": "frontend\\src\\components\\layout\\Layout.css",
+    "version": "1.2",
+    "contextFile": "65602157-context.json",
+    "chunks": {
+      "e97438": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708336,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "d5e881e8",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:36 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e97438",
+        "hash": "4029827e",
+        "encoded": ".layout%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e97438",
+        "hash": "07ca6fd4",
+        "encoded": "display:%20flex;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e97438",
+        "hash": "0c62a2b6",
+        "encoded": "flex-direction:%20column;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e97438",
+        "hash": "2025935d",
+        "encoded": "height:%20100vh;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e97438",
+        "hash": "22b977f0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "e97438",
+        "hash": "44e5f15f",
+        "encoded": ".layout-container%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e97438",
+        "hash": "01281d58",
+        "encoded": "display:%20flex;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "e97438",
+        "hash": "f4c9f1dc",
+        "encoded": "flex:%201;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "e97438",
+        "hash": "996d6da9",
+        "encoded": "overflow:%20hidden;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e97438",
+        "hash": "c2f1edd6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "e97438",
+        "hash": "fc357162",
+        "encoded": ".layout-content%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "e97438",
+        "hash": "495fb826",
+        "encoded": "flex:%201;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "e97438",
+        "hash": "5a422e95",
+        "encoded": "padding:%20var(--spacing-xl);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "e97438",
+        "hash": "41625008",
+        "encoded": "overflow-y:%20auto;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "e97438",
+        "hash": "5091cd03",
+        "encoded": "background-color:%20var(--color-bg-secondary);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "e97438",
+        "hash": "76477189",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

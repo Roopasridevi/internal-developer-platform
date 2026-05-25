@@ -1,0 +1,174 @@
+{
+  "backend\\jest.config.js": {
+    "filename": "jest.config.js",
+    "path": "backend\\jest.config.js",
+    "version": "1.2",
+    "contextFile": "00d5ca8e-context.json",
+    "chunks": {
+      "27fb51": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707696,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "afbb7778",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:56 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "27fb51",
+        "hash": "37fae63c",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "27fb51",
+        "hash": "2438a70c",
+        "encoded": "testEnvironment:%20'node',",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "27fb51",
+        "hash": "9e9aded6",
+        "encoded": "coverageDirectory:%20'coverage',",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "27fb51",
+        "hash": "9872cc30",
+        "encoded": "collectCoverageFrom:%20%5B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "27fb51",
+        "hash": "29c35436",
+        "encoded": "'src/**/*.js',",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "27fb51",
+        "hash": "93d71cd6",
+        "encoded": "'!src/app.js',",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "27fb51",
+        "hash": "f3221512",
+        "encoded": "'!src/config/**',",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "27fb51",
+        "hash": "c391b260",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "27fb51",
+        "hash": "dfdc40a1",
+        "encoded": "coverageThreshold:%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "27fb51",
+        "hash": "d3c3bec4",
+        "encoded": "global:%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "27fb51",
+        "hash": "099473ff",
+        "encoded": "branches:%2070,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "27fb51",
+        "hash": "71ae1a4c",
+        "encoded": "functions:%2070,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "27fb51",
+        "hash": "49ddaa30",
+        "encoded": "lines:%2070,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "27fb51",
+        "hash": "8884a39a",
+        "encoded": "statements:%2070,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "27fb51",
+        "hash": "aaa19923",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "27fb51",
+        "hash": "e682a066",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "27fb51",
+        "hash": "c00c453f",
+        "encoded": "testMatch:%20%5B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "27fb51",
+        "hash": "530f8a54",
+        "encoded": "'**/tests/**/*.test.js',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "27fb51",
+        "hash": "8a242ec8",
+        "encoded": "'**/tests/**/*.spec.js',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "27fb51",
+        "hash": "11e6529f",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "27fb51",
+        "hash": "04549ae2",
+        "encoded": "setupFilesAfterEnv:%20%5B'%3CrootDir%3E/tests/setup.js'%5D,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "27fb51",
+        "hash": "3e142098",
+        "encoded": "verbose:%20true,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "27fb51",
+        "hash": "1eff0012",
+        "encoded": "testTimeout:%2010000,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "27fb51",
+        "hash": "388e60ac",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

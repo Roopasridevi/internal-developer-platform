@@ -1,0 +1,756 @@
+{
+  "pipelines\\build.yml": {
+    "filename": "build.yml",
+    "path": "pipelines\\build.yml",
+    "version": "1.2",
+    "contextFile": "225252c9-context.json",
+    "chunks": {
+      "0f59ba": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708331,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "1bfd6a89",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:31 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "0f59ba",
+        "hash": "bb25d4aa",
+        "encoded": "name:%20Build%20Pipeline",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "0f59ba",
+        "hash": "8b0cac53",
+        "encoded": "on:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "0f59ba",
+        "hash": "2964a980",
+        "encoded": "push:",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "0f59ba",
+        "hash": "53e0edbb",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "0f59ba",
+        "hash": "943101cb",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "0f59ba",
+        "hash": "8145c774",
+        "encoded": "-%20develop",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "0f59ba",
+        "hash": "6cd945e5",
+        "encoded": "pull_request:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "0f59ba",
+        "hash": "2bb8c225",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "0f59ba",
+        "hash": "030ca835",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "0f59ba",
+        "hash": "e71c60c5",
+        "encoded": "-%20develop",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "0f59ba",
+        "hash": "9007ec2e",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "0f59ba",
+        "hash": "2a792b12",
+        "encoded": "NODE_VERSION:%20'18'",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "0f59ba",
+        "hash": "607c69b7",
+        "encoded": "REGISTRY:%20ghcr.io",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "0f59ba",
+        "hash": "651f3b0e",
+        "encoded": "IMAGE_NAME:%20$%7B%7B%20github.repository%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "0f59ba",
+        "hash": "eba3939a",
+        "encoded": "jobs:",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "0f59ba",
+        "hash": "34f8da14",
+        "encoded": "build-backend:",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "0f59ba",
+        "hash": "67f9342c",
+        "encoded": "name:%20Build%20Backend",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "0f59ba",
+        "hash": "531d3c8f",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "0f59ba",
+        "hash": "94f9a667",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "0f59ba",
+        "hash": "4fe35a37",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "0f59ba",
+        "hash": "8c589f96",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "0f59ba",
+        "hash": "f546493e",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "0f59ba",
+        "hash": "15dfc092",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "0f59ba",
+        "hash": "bb413224",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "0f59ba",
+        "hash": "10577ed8",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "0f59ba",
+        "hash": "0eed99f0",
+        "encoded": "cache:%20'npm'",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "0f59ba",
+        "hash": "bc1d2f31",
+        "encoded": "cache-dependency-path:%20backend/package-lock.json",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "0f59ba",
+        "hash": "c4b57b60",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "0f59ba",
+        "hash": "ea932ba5",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "0f59ba",
+        "hash": "14ebbde4",
+        "encoded": "run:%20npm%20ci",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "0f59ba",
+        "hash": "bb14de63",
+        "encoded": "-%20name:%20Build%20backend",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "0f59ba",
+        "hash": "443f4a6e",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "0f59ba",
+        "hash": "4b4e9007",
+        "encoded": "run:%20npm%20run%20build",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "0f59ba",
+        "hash": "4f2e41d1",
+        "encoded": "-%20name:%20Upload%20backend%20artifacts",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "0f59ba",
+        "hash": "af80be38",
+        "encoded": "uses:%20actions/upload-artifact@v3",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "0f59ba",
+        "hash": "7d27b3ea",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "0f59ba",
+        "hash": "60aa9462",
+        "encoded": "name:%20backend-build",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "0f59ba",
+        "hash": "09f93d74",
+        "encoded": "path:%20backend/dist",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "0f59ba",
+        "hash": "3b9246bb",
+        "encoded": "retention-days:%207",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "0f59ba",
+        "hash": "773daf91",
+        "encoded": "build-frontend:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "0f59ba",
+        "hash": "64ea6310",
+        "encoded": "name:%20Build%20Frontend",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "0f59ba",
+        "hash": "98276bfd",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "0f59ba",
+        "hash": "85608011",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "0f59ba",
+        "hash": "4ebd0faa",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "0f59ba",
+        "hash": "42e768bf",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "0f59ba",
+        "hash": "c78c3de4",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "0f59ba",
+        "hash": "aa6e8a64",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "0f59ba",
+        "hash": "5426f3b1",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "0f59ba",
+        "hash": "260b7342",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "0f59ba",
+        "hash": "820aaed5",
+        "encoded": "cache:%20'npm'",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "0f59ba",
+        "hash": "d8522cd6",
+        "encoded": "cache-dependency-path:%20frontend/package-lock.json",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "0f59ba",
+        "hash": "ddace5c3",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "0f59ba",
+        "hash": "f8746141",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "0f59ba",
+        "hash": "a0fa63ad",
+        "encoded": "run:%20npm%20ci",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "0f59ba",
+        "hash": "7ab6b5de",
+        "encoded": "-%20name:%20Build%20frontend",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "0f59ba",
+        "hash": "d9740b48",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "0f59ba",
+        "hash": "b7e0e77d",
+        "encoded": "run:%20npm%20run%20build",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "0f59ba",
+        "hash": "ebe9a0d9",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "0f59ba",
+        "hash": "22d2d6f0",
+        "encoded": "VITE_API_URL:%20$%7B%7B%20secrets.VITE_API_URL%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "0f59ba",
+        "hash": "8189ad7a",
+        "encoded": "-%20name:%20Upload%20frontend%20artifacts",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "0f59ba",
+        "hash": "efa70385",
+        "encoded": "uses:%20actions/upload-artifact@v3",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "0f59ba",
+        "hash": "bdb169c9",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "0f59ba",
+        "hash": "0af82e34",
+        "encoded": "name:%20frontend-build",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "0f59ba",
+        "hash": "37d9b19c",
+        "encoded": "path:%20frontend/dist",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "0f59ba",
+        "hash": "baea5a20",
+        "encoded": "retention-days:%207",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "0f59ba",
+        "hash": "d43fe5b7",
+        "encoded": "build-docker:",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "0f59ba",
+        "hash": "07a1f47b",
+        "encoded": "name:%20Build%20Docker%20Images",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "0f59ba",
+        "hash": "022c2ce4",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "0f59ba",
+        "hash": "8c333bf6",
+        "encoded": "needs:%20%5Bbuild-backend,%20build-frontend%5D",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "0f59ba",
+        "hash": "c91faa68",
+        "encoded": "permissions:",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "0f59ba",
+        "hash": "2d354af1",
+        "encoded": "contents:%20read",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "0f59ba",
+        "hash": "ebd9d450",
+        "encoded": "packages:%20write",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "0f59ba",
+        "hash": "d80e7292",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "0f59ba",
+        "hash": "42a56a10",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "0f59ba",
+        "hash": "5c676934",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "0f59ba",
+        "hash": "b1258ed5",
+        "encoded": "-%20name:%20Set%20up%20Docker%20Buildx",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "0f59ba",
+        "hash": "35bc710a",
+        "encoded": "uses:%20docker/setup-buildx-action@v3",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "0f59ba",
+        "hash": "57eb12a1",
+        "encoded": "-%20name:%20Log%20in%20to%20Container%20Registry",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "0f59ba",
+        "hash": "e622d10a",
+        "encoded": "uses:%20docker/login-action@v3",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "0f59ba",
+        "hash": "2834f7b5",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "0f59ba",
+        "hash": "825134ff",
+        "encoded": "registry:%20$%7B%7B%20env.REGISTRY%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "0f59ba",
+        "hash": "a7788217",
+        "encoded": "username:%20$%7B%7B%20github.actor%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "0f59ba",
+        "hash": "32043390",
+        "encoded": "password:%20$%7B%7B%20secrets.GITHUB_TOKEN%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "0f59ba",
+        "hash": "ca625654",
+        "encoded": "-%20name:%20Extract%20metadata%20for%20backend",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "0f59ba",
+        "hash": "de0e4086",
+        "encoded": "id:%20meta-backend",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "0f59ba",
+        "hash": "1684729d",
+        "encoded": "uses:%20docker/metadata-action@v5",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "0f59ba",
+        "hash": "107026fd",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "0f59ba",
+        "hash": "0dc82b4c",
+        "encoded": "images:%20$%7B%7B%20env.REGISTRY%20%7D%7D/$%7B%7B%20env.IMAGE_NAME%20%7D%7D-backend",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "0f59ba",
+        "hash": "c2419ab4",
+        "encoded": "tags:%20%7C",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "0f59ba",
+        "hash": "eaa41fb9",
+        "encoded": "type=ref,event=branch",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "0f59ba",
+        "hash": "85f79983",
+        "encoded": "type=ref,event=pr",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "0f59ba",
+        "hash": "ed0e98d1",
+        "encoded": "type=semver,pattern=%7B%7Bversion%7D%7D",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "0f59ba",
+        "hash": "2a6eb1ee",
+        "encoded": "type=sha",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "0f59ba",
+        "hash": "554c069c",
+        "encoded": "-%20name:%20Build%20and%20push%20backend%20image",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "0f59ba",
+        "hash": "b48fbdf7",
+        "encoded": "uses:%20docker/build-push-action@v5",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "0f59ba",
+        "hash": "523fe684",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "0f59ba",
+        "hash": "b820681a",
+        "encoded": "context:%20./backend",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "0f59ba",
+        "hash": "e908c2a3",
+        "encoded": "push:%20true",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "0f59ba",
+        "hash": "dfea0892",
+        "encoded": "tags:%20$%7B%7B%20steps.meta-backend.outputs.tags%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "0f59ba",
+        "hash": "74b9d902",
+        "encoded": "labels:%20$%7B%7B%20steps.meta-backend.outputs.labels%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "0f59ba",
+        "hash": "4261d734",
+        "encoded": "cache-from:%20type=gha",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "0f59ba",
+        "hash": "5b2fcf2c",
+        "encoded": "cache-to:%20type=gha,mode=max",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "0f59ba",
+        "hash": "9dc54514",
+        "encoded": "-%20name:%20Extract%20metadata%20for%20frontend",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "0f59ba",
+        "hash": "7aa73443",
+        "encoded": "id:%20meta-frontend",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "0f59ba",
+        "hash": "32ed14de",
+        "encoded": "uses:%20docker/metadata-action@v5",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "0f59ba",
+        "hash": "04e7da67",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "0f59ba",
+        "hash": "346985a2",
+        "encoded": "images:%20$%7B%7B%20env.REGISTRY%20%7D%7D/$%7B%7B%20env.IMAGE_NAME%20%7D%7D-frontend",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "0f59ba",
+        "hash": "cd67ce0a",
+        "encoded": "tags:%20%7C",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "0f59ba",
+        "hash": "4ba5c7ff",
+        "encoded": "type=ref,event=branch",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "0f59ba",
+        "hash": "54bb76a9",
+        "encoded": "type=ref,event=pr",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "0f59ba",
+        "hash": "b8a07cea",
+        "encoded": "type=semver,pattern=%7B%7Bversion%7D%7D",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "0f59ba",
+        "hash": "fc968094",
+        "encoded": "type=sha",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "0f59ba",
+        "hash": "b58f41cb",
+        "encoded": "-%20name:%20Build%20and%20push%20frontend%20image",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "0f59ba",
+        "hash": "bf0296b9",
+        "encoded": "uses:%20docker/build-push-action@v5",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "0f59ba",
+        "hash": "caebb707",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "0f59ba",
+        "hash": "7a68a923",
+        "encoded": "context:%20./frontend",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "0f59ba",
+        "hash": "cff226a4",
+        "encoded": "push:%20true",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "0f59ba",
+        "hash": "1e6c1015",
+        "encoded": "tags:%20$%7B%7B%20steps.meta-frontend.outputs.tags%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "0f59ba",
+        "hash": "472b7ddd",
+        "encoded": "labels:%20$%7B%7B%20steps.meta-frontend.outputs.labels%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "0f59ba",
+        "hash": "e9b3b80d",
+        "encoded": "cache-from:%20type=gha",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "0f59ba",
+        "hash": "3c5457db",
+        "encoded": "cache-to:%20type=gha,mode=max",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

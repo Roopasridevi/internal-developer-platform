@@ -1,0 +1,210 @@
+{
+  "frontend\\src\\services\\pipelineService.js": {
+    "filename": "pipelineService.js",
+    "path": "frontend\\src\\services\\pipelineService.js",
+    "version": "1.2",
+    "contextFile": "4b3d5d38-context.json",
+    "chunks": {
+      "8edba9": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708090,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "1ee304ac",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:30 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8edba9",
+        "hash": "a53ca53a",
+        "encoded": "import%20api%20from%20'./api';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8edba9",
+        "hash": "a5de13ec",
+        "encoded": "export%20const%20pipelineService%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8edba9",
+        "hash": "3c3157bd",
+        "encoded": "async%20getPipelines(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8edba9",
+        "hash": "87125f5b",
+        "encoded": "const%20response%20=%20await%20api.get('/pipelines',%20%7B%20params%20%7D);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8edba9",
+        "hash": "f69a0f09",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8edba9",
+        "hash": "4401be13",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8edba9",
+        "hash": "1a015101",
+        "encoded": "async%20getPipelineById(id)%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8edba9",
+        "hash": "ad2156f7",
+        "encoded": "const%20response%20=%20await%20api.get(%60/pipelines/$%7Bid%7D%60);",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8edba9",
+        "hash": "229d8636",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8edba9",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8edba9",
+        "hash": "1d7c25f5",
+        "encoded": "async%20createPipeline(data)%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8edba9",
+        "hash": "70f4cf81",
+        "encoded": "const%20response%20=%20await%20api.post('/pipelines',%20data);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8edba9",
+        "hash": "8542e594",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8edba9",
+        "hash": "e0024018",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8edba9",
+        "hash": "a64c4505",
+        "encoded": "async%20updatePipeline(id,%20data)%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8edba9",
+        "hash": "4534c54c",
+        "encoded": "const%20response%20=%20await%20api.put(%60/pipelines/$%7Bid%7D%60,%20data);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8edba9",
+        "hash": "bd7e8d6e",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "8edba9",
+        "hash": "044c21b3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8edba9",
+        "hash": "e775fdd6",
+        "encoded": "async%20deletePipeline(id)%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8edba9",
+        "hash": "b670b265",
+        "encoded": "await%20api.delete(%60/pipelines/$%7Bid%7D%60);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "8edba9",
+        "hash": "642c1a07",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8edba9",
+        "hash": "29cec19d",
+        "encoded": "async%20executePipeline(id,%20params)%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "8edba9",
+        "hash": "100e35d5",
+        "encoded": "const%20response%20=%20await%20api.post(%60/pipelines/$%7Bid%7D/execute%60,%20params);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "8edba9",
+        "hash": "8fdc592b",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "8edba9",
+        "hash": "f8124d3b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "8edba9",
+        "hash": "44ae13c5",
+        "encoded": "async%20getPipelineExecutions(id,%20params)%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "8edba9",
+        "hash": "568adc2e",
+        "encoded": "const%20response%20=%20await%20api.get(%60/pipelines/$%7Bid%7D/executions%60,%20%7B%20params%20%7D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "8edba9",
+        "hash": "3be330dd",
+        "encoded": "return%20response.data;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "8edba9",
+        "hash": "da1b69e9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "8edba9",
+        "hash": "a48ff7d1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,2113 @@
+{
+  "frontend\\src\\tests\\ProjectsPage.test.jsx": {
+    "filename": "ProjectsPage.test.jsx",
+    "path": "frontend\\src\\tests\\ProjectsPage.test.jsx",
+    "version": "1.2",
+    "contextFile": "c60545d8-context.json",
+    "chunks": {
+      "ff06a1": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710020,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "c0ee2680",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:23:40 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "a00f27": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710518,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "958f433d",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:31:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "fda9f5": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710518,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "166e6c66",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:31:58 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ff06a1",
+        "hash": "0884c150",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi,%20beforeEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "ff06a1",
+        "hash": "654365ac",
+        "encoded": "import%20%7B%20render,%20screen,%20waitFor%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ff06a1",
+        "hash": "ebac6c92",
+        "encoded": "import%20%7B%20QueryClient,%20QueryClientProvider%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ff06a1",
+        "hash": "15cbde14",
+        "encoded": "import%20%7B%20BrowserRouter%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ff06a1",
+        "hash": "33bce178",
+        "encoded": "import%20userEvent%20from%20'@testing-library/user-event';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ff06a1",
+        "hash": "1ba958c4",
+        "encoded": "import%20ProjectsPage%20from%20'../pages/projects/ProjectsPage';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ff06a1",
+        "hash": "448700b9",
+        "encoded": "import%20%7B%20projectService%20%7D%20from%20'../services/projectService';",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ff06a1",
+        "hash": "eece6ce2",
+        "encoded": "//%20Mock%20the%20project%20service",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ff06a1",
+        "hash": "7c38eb9e",
+        "encoded": "vi.mock('../services/projectService',%20()%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ff06a1",
+        "hash": "af6f0256",
+        "encoded": "projectService:%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ff06a1",
+        "hash": "ca97311c",
+        "encoded": "getProjects:%20vi.fn(),",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ff06a1",
+        "hash": "2af362fb",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ff06a1",
+        "hash": "8125b6a2",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ff06a1",
+        "hash": "3258b882",
+        "encoded": "//%20Helper%20function%20to%20render%20component%20with%20providers",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "ff06a1",
+        "hash": "139106ed",
+        "encoded": "const%20renderWithProviders%20=%20(component)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ff06a1",
+        "hash": "17e3ab2f",
+        "encoded": "const%20queryClient%20=%20new%20QueryClient(%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ff06a1",
+        "hash": "ba23bb23",
+        "encoded": "defaultOptions:%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ff06a1",
+        "hash": "7ac1c500",
+        "encoded": "queries:%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ff06a1",
+        "hash": "2ac31b33",
+        "encoded": "retry:%20false,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ff06a1",
+        "hash": "044c21b3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ff06a1",
+        "hash": "6d666e52",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ff06a1",
+        "hash": "98201597",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "ff06a1",
+        "hash": "a1276cc1",
+        "encoded": "return%20render(",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ff06a1",
+        "hash": "6fd668b6",
+        "encoded": "%3CQueryClientProvider%20client=%7BqueryClient%7D%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "ff06a1",
+        "hash": "b0082050",
+        "encoded": "%3CBrowserRouter%3E%7Bcomponent%7D%3C/BrowserRouter%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ff06a1",
+        "hash": "2d3b35cc",
+        "encoded": "%3C/QueryClientProvider%3E",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "ff06a1",
+        "hash": "4bce4871",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ff06a1",
+        "hash": "9e8c1e32",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ff06a1",
+        "hash": "d2dd4fc1",
+        "encoded": "describe('ProjectsPage%20Component',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ff06a1",
+        "hash": "c464cf79",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "ff06a1",
+        "hash": "c52a769a",
+        "encoded": "vi.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ff06a1",
+        "hash": "8c01c10e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ff06a1",
+        "hash": "be8af006",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ff06a1",
+        "hash": "e8e44d1d",
+        "encoded": "*%20Test:%20Should%20display%20loading%20state%20while%20fetching%20projects",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "ff06a1",
+        "hash": "ce660640",
+        "encoded": "*%20Scenario:%20Component%20is%20mounted%20and%20data%20is%20being%20fetched",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ff06a1",
+        "hash": "ecb46e05",
+        "encoded": "*%20Expected:%20Loading%20indicator%20should%20be%20visible",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ff06a1",
+        "hash": "ac7fba9c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ff06a1",
+        "hash": "080e4e57",
+        "encoded": "it('should%20display%20loading%20state%20while%20fetching%20projects',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "ff06a1",
+        "hash": "4afc8e71",
+        "encoded": "projectService.getProjects.mockImplementation(",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ff06a1",
+        "hash": "f44d7387",
+        "encoded": "()%20=%3E%20new%20Promise(()%20=%3E%20%7B%7D)%20//%20Never%20resolves",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ff06a1",
+        "hash": "433d5806",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ff06a1",
+        "hash": "49d9fb27",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ff06a1",
+        "hash": "9e966489",
+        "encoded": "expect(screen.getByText('Loading...')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "ff06a1",
+        "hash": "d4fc8746",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "ff06a1",
+        "hash": "e47331a7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "ff06a1",
+        "hash": "e06fce08",
+        "encoded": "*%20Test:%20Should%20render%20projects%20list%20successfully",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "ff06a1",
+        "hash": "5ea6aec5",
+        "encoded": "*%20Scenario:%20API%20returns%20a%20list%20of%20projects",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "ff06a1",
+        "hash": "8bfaf97d",
+        "encoded": "*%20Expected:%20All%20projects%20should%20be%20displayed%20with%20correct%20information",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "ff06a1",
+        "hash": "d877908f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "ff06a1",
+        "hash": "fa52f818",
+        "encoded": "it('should%20render%20projects%20list%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "ff06a1",
+        "hash": "4edd39f2",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "ff06a1",
+        "hash": "3a3c93d1",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "ff06a1",
+        "hash": "ee0db688",
+        "encoded": "projects:%20%5B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "ff06a1",
+        "hash": "7783a16a",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "ff06a1",
+        "hash": "e7623ba1",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "ff06a1",
+        "hash": "14c32197",
+        "encoded": "name:%20'Project%20Alpha',",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "ff06a1",
+        "hash": "459cdffc",
+        "encoded": "description:%20'First%20project',",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "ff06a1",
+        "hash": "797cf055",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "ff06a1",
+        "hash": "7b88621a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "ff06a1",
+        "hash": "9b51db6a",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "ff06a1",
+        "hash": "a65b558d",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "ff06a1",
+        "hash": "616709e1",
+        "encoded": "name:%20'Project%20Beta',",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "ff06a1",
+        "hash": "64a82548",
+        "encoded": "description:%20'Second%20project',",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "ff06a1",
+        "hash": "3f9625ea",
+        "encoded": "status:%20'inactive',",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "ff06a1",
+        "hash": "3c632b8b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "ff06a1",
+        "hash": "ddd0f2e7",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "ff06a1",
+        "hash": "d427286f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "ff06a1",
+        "hash": "04c8973c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "ff06a1",
+        "hash": "caff3555",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "ff06a1",
+        "hash": "71cd32fb",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "ff06a1",
+        "hash": "b84aea91",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "ff06a1",
+        "hash": "a2b52269",
+        "encoded": "expect(screen.getByText('Project%20Alpha')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "ff06a1",
+        "hash": "ce4190e7",
+        "encoded": "expect(screen.getByText('First%20project')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "ff06a1",
+        "hash": "93c8d840",
+        "encoded": "expect(screen.getByText('Project%20Beta')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "ff06a1",
+        "hash": "d73b6eb6",
+        "encoded": "expect(screen.getByText('Second%20project')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "ff06a1",
+        "hash": "82716009",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "ff06a1",
+        "hash": "aa5a1e4d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "fda9f5",
+        "hash": "10209776",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "fda9f5",
+        "hash": "6700913b",
+        "encoded": "*%20Test:%20Should%20display%20project%20status%20badges%20correctly",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "fda9f5",
+        "hash": "6e078064",
+        "encoded": "*%20Scenario:%20Projects%20have%20different%20status%20values",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "fda9f5",
+        "hash": "199fa52b",
+        "encoded": "*%20Expected:%20Status%20badges%20should%20be%20rendered%20with%20correct%20classes",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "fda9f5",
+        "hash": "804c941f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "fda9f5",
+        "hash": "67356376",
+        "encoded": "it('should%20display%20project%20status%20badges%20correctly',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "fda9f5",
+        "hash": "5d999d68",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "fda9f5",
+        "hash": "58372e05",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "fda9f5",
+        "hash": "dd7aead9",
+        "encoded": "projects:%20%5B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "fda9f5",
+        "hash": "e71d0c9d",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "fda9f5",
+        "hash": "3ab9eeb2",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "fda9f5",
+        "hash": "c652be0b",
+        "encoded": "name:%20'Active%20Project',",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "fda9f5",
+        "hash": "b2c9ea78",
+        "encoded": "description:%20'Active%20project%20description',",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "fda9f5",
+        "hash": "706572fe",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "fda9f5",
+        "hash": "1ce6891a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "fda9f5",
+        "hash": "33fc84d6",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "fda9f5",
+        "hash": "15aa4faa",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "fda9f5",
+        "hash": "bdc9ae77",
+        "encoded": "name:%20'Inactive%20Project',",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "fda9f5",
+        "hash": "e75ab1ea",
+        "encoded": "description:%20'Inactive%20project%20description',",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "fda9f5",
+        "hash": "65236888",
+        "encoded": "status:%20'inactive',",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "fda9f5",
+        "hash": "8f9a04e1",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "fda9f5",
+        "hash": "fa1faf95",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "fda9f5",
+        "hash": "88250a73",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "fda9f5",
+        "hash": "8668adab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "fda9f5",
+        "hash": "9dab26eb",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "fda9f5",
+        "hash": "f59d25e9",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "fda9f5",
+        "hash": "9803fab1",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "fda9f5",
+        "hash": "8e7c6782",
+        "encoded": "const%20statusBadges%20=%20container.querySelectorAll('.status-badge');",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "fda9f5",
+        "hash": "981bbb61",
+        "encoded": "expect(statusBadges).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "fda9f5",
+        "hash": "75fd6ddf",
+        "encoded": "expect(statusBadges%5B0%5D).toHaveClass('status-badge',%20'active');",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "fda9f5",
+        "hash": "96e6d27d",
+        "encoded": "expect(statusBadges%5B1%5D).toHaveClass('status-badge',%20'inactive');",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "fda9f5",
+        "hash": "ac2debc4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "fda9f5",
+        "hash": "96abd65f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "ff06a1",
+        "hash": "f136d5a2",
+        "encoded": "*%20Test:%20Should%20display%20project%20status%20badges%20correctly",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "ff06a1",
+        "hash": "8651b6c5",
+        "encoded": "*%20Scenario:%20Projects%20have%20different%20status%20values",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "ff06a1",
+        "hash": "a3798f8c",
+        "encoded": "*%20Expected:%20Status%20badges%20should%20be%20rendered%20with%20correct%20classes",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "ff06a1",
+        "hash": "5b8799a3",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "ff06a1",
+        "hash": "db8c281f",
+        "encoded": "it('should%20display%20project%20status%20badges%20correctly',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "ff06a1",
+        "hash": "b026603e",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "ff06a1",
+        "hash": "d2ba17b5",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "ff06a1",
+        "hash": "d22013d6",
+        "encoded": "projects:%20%5B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "ff06a1",
+        "hash": "9b94dbd8",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "ff06a1",
+        "hash": "3514341d",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "ff06a1",
+        "hash": "806007f1",
+        "encoded": "name:%20'Active%20Project',",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "ff06a1",
+        "hash": "18a8bcf4",
+        "encoded": "description:%20'Active%20project%20description',",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "ff06a1",
+        "hash": "eeab2a4b",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "ff06a1",
+        "hash": "795e3853",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "ff06a1",
+        "hash": "d63f75cd",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "ff06a1",
+        "hash": "af28116a",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "ff06a1",
+        "hash": "109a33a7",
+        "encoded": "name:%20'Inactive%20Project',",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "ff06a1",
+        "hash": "bac0ce15",
+        "encoded": "description:%20'Inactive%20project%20description',",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "ff06a1",
+        "hash": "f831e93b",
+        "encoded": "status:%20'inactive',",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "ff06a1",
+        "hash": "74c6d0ff",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "ff06a1",
+        "hash": "24c893f9",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "ff06a1",
+        "hash": "4a142f72",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "ff06a1",
+        "hash": "43989cf0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "ff06a1",
+        "hash": "4d1898d6",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "ff06a1",
+        "hash": "e4a5f314",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "ff06a1",
+        "hash": "706c3b14",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "ff06a1",
+        "hash": "33cd590c",
+        "encoded": "const%20statusBadges%20=%20screen.getAllByText(/active%7Cinactive/);",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "ff06a1",
+        "hash": "b62fdf93",
+        "encoded": "expect(statusBadges).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "ff06a1",
+        "hash": "b83dbca1",
+        "encoded": "expect(statusBadges%5B0%5D).toHaveClass('status-badge',%20'active');",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "ff06a1",
+        "hash": "c564e4c3",
+        "encoded": "expect(statusBadges%5B1%5D).toHaveClass('status-badge',%20'inactive');",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "ff06a1",
+        "hash": "6b2ec66b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "ff06a1",
+        "hash": "38fe35ae",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "ff06a1",
+        "hash": "5f1c78c3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "ff06a1",
+        "hash": "98469d61",
+        "encoded": "*%20Test:%20Should%20render%20%22Create%20Project%22%20button",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "ff06a1",
+        "hash": "811b8dab",
+        "encoded": "*%20Scenario:%20Page%20is%20loaded%20successfully",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "ff06a1",
+        "hash": "3e3f6a55",
+        "encoded": "*%20Expected:%20Create%20Project%20button%20should%20be%20visible%20and%20link%20to%20correct%20route",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "ff06a1",
+        "hash": "905321a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "ff06a1",
+        "hash": "9623dc63",
+        "encoded": "it('should%20render%20%22Create%20Project%22%20button',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "ff06a1",
+        "hash": "9781a577",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "ff06a1",
+        "hash": "cf6e4bbc",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "ff06a1",
+        "hash": "eadb2d73",
+        "encoded": "projects:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "ff06a1",
+        "hash": "fa5cfb08",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "ff06a1",
+        "hash": "10254b7d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "ff06a1",
+        "hash": "b56b17bb",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "ff06a1",
+        "hash": "452c536d",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "ff06a1",
+        "hash": "a8a35b4c",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "ff06a1",
+        "hash": "de41e9f8",
+        "encoded": "const%20createButton%20=%20screen.getByText('Create%20Project');",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "ff06a1",
+        "hash": "15e8371c",
+        "encoded": "expect(createButton).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "ff06a1",
+        "hash": "e11da5e4",
+        "encoded": "expect(createButton).toHaveAttribute('href',%20'/projects/new');",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "ff06a1",
+        "hash": "c9587b39",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "ff06a1",
+        "hash": "37fd27eb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "ff06a1",
+        "hash": "62214b41",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "ff06a1",
+        "hash": "bd1df4c8",
+        "encoded": "*%20Test:%20Should%20render%20page%20header%20with%20title",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "ff06a1",
+        "hash": "d0538088",
+        "encoded": "*%20Scenario:%20Component%20is%20rendered",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "ff06a1",
+        "hash": "eb6220a9",
+        "encoded": "*%20Expected:%20Page%20header%20should%20display%20%22Projects%22%20title",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "ff06a1",
+        "hash": "14a0b2ec",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "ff06a1",
+        "hash": "277fd5a8",
+        "encoded": "it('should%20render%20page%20header%20with%20title',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "ff06a1",
+        "hash": "847e2421",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "ff06a1",
+        "hash": "0eace203",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "ff06a1",
+        "hash": "7647c569",
+        "encoded": "projects:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "ff06a1",
+        "hash": "5cf52c81",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "ff06a1",
+        "hash": "cdebdfed",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "ff06a1",
+        "hash": "9f42bcee",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "ff06a1",
+        "hash": "c19451ce",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "ff06a1",
+        "hash": "c2cf6715",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "ff06a1",
+        "hash": "47728ff3",
+        "encoded": "expect(screen.getByRole('heading',%20%7B%20name:%20'Projects'%20%7D)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "ff06a1",
+        "hash": "0a41df0e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "ff06a1",
+        "hash": "34afd92a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "a00f27",
+        "hash": "a4ec22d9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "a00f27",
+        "hash": "09bbd218",
+        "encoded": "*%20Test:%20Should%20render%20empty%20state%20when%20no%20projects%20exist",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "a00f27",
+        "hash": "88d84571",
+        "encoded": "*%20Scenario:%20API%20returns%20empty%20projects%20array",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "a00f27",
+        "hash": "d00ad881",
+        "encoded": "*%20Expected:%20No%20project%20cards%20should%20be%20rendered",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "a00f27",
+        "hash": "be394072",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "a00f27",
+        "hash": "8a40b088",
+        "encoded": "it('should%20render%20empty%20state%20when%20no%20projects%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "a00f27",
+        "hash": "1c64a4a6",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "a00f27",
+        "hash": "d0ffb8d7",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "a00f27",
+        "hash": "fe558a86",
+        "encoded": "projects:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "a00f27",
+        "hash": "fa25b17c",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "a00f27",
+        "hash": "91fe1886",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "a00f27",
+        "hash": "6553c799",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "a00f27",
+        "hash": "c8e70511",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "a00f27",
+        "hash": "65a23e7b",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "a00f27",
+        "hash": "30295841",
+        "encoded": "const%20projectCards%20=%20container.querySelectorAll('.project-card');",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "a00f27",
+        "hash": "1600fdaf",
+        "encoded": "expect(projectCards).toHaveLength(0);",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "a00f27",
+        "hash": "f698b7ce",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "a00f27",
+        "hash": "6f608546",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "ff06a1",
+        "hash": "4f9a732c",
+        "encoded": "*%20Test:%20Should%20render%20empty%20state%20when%20no%20projects%20exist",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "ff06a1",
+        "hash": "c1c46503",
+        "encoded": "*%20Scenario:%20API%20returns%20empty%20projects%20array",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "ff06a1",
+        "hash": "e9bcf2c6",
+        "encoded": "*%20Expected:%20No%20project%20cards%20should%20be%20rendered",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "ff06a1",
+        "hash": "ca715e38",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "ff06a1",
+        "hash": "500525ed",
+        "encoded": "it('should%20render%20empty%20state%20when%20no%20projects%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "ff06a1",
+        "hash": "e90040d8",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "ff06a1",
+        "hash": "a29cf380",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "ff06a1",
+        "hash": "5c73a454",
+        "encoded": "projects:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "ff06a1",
+        "hash": "38b23f83",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "ff06a1",
+        "hash": "d11ea3fb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "ff06a1",
+        "hash": "b4489ac5",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "ff06a1",
+        "hash": "91d201c4",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "ff06a1",
+        "hash": "8d31a0a8",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "ff06a1",
+        "hash": "0692328d",
+        "encoded": "expect(screen.queryByClassName('project-card')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "ff06a1",
+        "hash": "74cca6a4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "ff06a1",
+        "hash": "a5fb1411",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "ff06a1",
+        "hash": "f5e9d70e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "ff06a1",
+        "hash": "18329423",
+        "encoded": "*%20Test:%20Should%20call%20getProjects%20API%20on%20component%20mount",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "ff06a1",
+        "hash": "ff61737d",
+        "encoded": "*%20Scenario:%20Component%20is%20mounted",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "ff06a1",
+        "hash": "967ed1a7",
+        "encoded": "*%20Expected:%20projectService.getProjects%20should%20be%20called%20with%20empty%20params",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "ff06a1",
+        "hash": "53033082",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "ff06a1",
+        "hash": "82f6ad08",
+        "encoded": "it('should%20call%20getProjects%20API%20on%20component%20mount',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "ff06a1",
+        "hash": "b31cd550",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "ff06a1",
+        "hash": "1940d181",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "ff06a1",
+        "hash": "33a432be",
+        "encoded": "projects:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "ff06a1",
+        "hash": "ce291506",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "ff06a1",
+        "hash": "b4bb1184",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "ff06a1",
+        "hash": "73b1dcaa",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "ff06a1",
+        "hash": "a43cd5e6",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "ff06a1",
+        "hash": "6b8e8925",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "ff06a1",
+        "hash": "4b1687b8",
+        "encoded": "expect(projectService.getProjects).toHaveBeenCalledWith(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "ff06a1",
+        "hash": "2bc4d611",
+        "encoded": "expect(projectService.getProjects).toHaveBeenCalledTimes(1);",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "ff06a1",
+        "hash": "63ae0137",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "ff06a1",
+        "hash": "e654b523",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "ff06a1",
+        "hash": "5e612f57",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "ff06a1",
+        "hash": "7d10d249",
+        "encoded": "*%20Test:%20Should%20render%20project%20cards%20as%20links%20to%20detail%20pages",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "ff06a1",
+        "hash": "6fbd8bae",
+        "encoded": "*%20Scenario:%20Projects%20are%20rendered",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "ff06a1",
+        "hash": "2016e0ac",
+        "encoded": "*%20Expected:%20Each%20project%20card%20should%20be%20a%20link%20to%20the%20project%20detail%20page",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "ff06a1",
+        "hash": "c43106d8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "ff06a1",
+        "hash": "cd25c0ab",
+        "encoded": "it('should%20render%20project%20cards%20as%20links%20to%20detail%20pages',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "ff06a1",
+        "hash": "1f9d6dc4",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "ff06a1",
+        "hash": "5efb5242",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "ff06a1",
+        "hash": "ca880734",
+        "encoded": "projects:%20%5B",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "ff06a1",
+        "hash": "c2005d98",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "ff06a1",
+        "hash": "d8e5bed2",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "ff06a1",
+        "hash": "7517a902",
+        "encoded": "name:%20'Project%20One',",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "ff06a1",
+        "hash": "a45206d9",
+        "encoded": "description:%20'Description%20one',",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "ff06a1",
+        "hash": "0ebab93a",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "ff06a1",
+        "hash": "82931b93",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "ff06a1",
+        "hash": "0b1e0b83",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "ff06a1",
+        "hash": "4ef0aea9",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "ff06a1",
+        "hash": "161398c3",
+        "encoded": "name:%20'Project%20Two',",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "ff06a1",
+        "hash": "c9e64d2c",
+        "encoded": "description:%20'Description%20two',",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "ff06a1",
+        "hash": "5d2ba817",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "ff06a1",
+        "hash": "e63d42db",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "ff06a1",
+        "hash": "1996afa5",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "ff06a1",
+        "hash": "4571235b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "ff06a1",
+        "hash": "d4b3b1a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "ff06a1",
+        "hash": "bdd8ff2c",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "ff06a1",
+        "hash": "d5fad57a",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "ff06a1",
+        "hash": "be773f73",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "ff06a1",
+        "hash": "65e587d0",
+        "encoded": "const%20projectLinks%20=%20screen.getAllByRole('link').filter(link%20=%3E",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "ff06a1",
+        "hash": "c891e088",
+        "encoded": "link.getAttribute('href')?.startsWith('/projects/')%20&&",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "ff06a1",
+        "hash": "aa3dd463",
+        "encoded": "link.getAttribute('href')%20!==%20'/projects/new'",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "ff06a1",
+        "hash": "cf987bc0",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "ff06a1",
+        "hash": "907d5945",
+        "encoded": "expect(projectLinks).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "ff06a1",
+        "hash": "751fa41d",
+        "encoded": "expect(projectLinks%5B0%5D).toHaveAttribute('href',%20'/projects/1');",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "ff06a1",
+        "hash": "6d2ca021",
+        "encoded": "expect(projectLinks%5B1%5D).toHaveAttribute('href',%20'/projects/2');",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "ff06a1",
+        "hash": "38400a4d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "ff06a1",
+        "hash": "b96bdf42",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "ff06a1",
+        "hash": "85c02487",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "ff06a1",
+        "hash": "2ed47d95",
+        "encoded": "*%20Test:%20Should%20handle%20API%20error%20gracefully",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "ff06a1",
+        "hash": "89c0c661",
+        "encoded": "*%20Scenario:%20API%20call%20fails%20with%20an%20error",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "ff06a1",
+        "hash": "e5c8258e",
+        "encoded": "*%20Expected:%20Component%20should%20not%20crash%20and%20error%20should%20be%20handled",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "ff06a1",
+        "hash": "33ddf581",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "ff06a1",
+        "hash": "e6ef5f56",
+        "encoded": "it('should%20handle%20API%20error%20gracefully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "ff06a1",
+        "hash": "65cc6930",
+        "encoded": "const%20consoleErrorSpy%20=%20vi.spyOn(console,%20'error').mockImplementation(()%20=%3E%20%7B%7D);",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "ff06a1",
+        "hash": "250332dd",
+        "encoded": "projectService.getProjects.mockRejectedValue(new%20Error('API%20Error'));",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "ff06a1",
+        "hash": "54628910",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "ff06a1",
+        "hash": "b8477b40",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "ff06a1",
+        "hash": "31ce5fc0",
+        "encoded": "//%20Component%20should%20not%20crash",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "ff06a1",
+        "hash": "43e0df91",
+        "encoded": "expect(screen.queryByText('Loading...')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "ff06a1",
+        "hash": "b03b9cb8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "ff06a1",
+        "hash": "b95c4f22",
+        "encoded": "consoleErrorSpy.mockRestore();",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "ff06a1",
+        "hash": "cdbc14c4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "ff06a1",
+        "hash": "1825f18d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "ff06a1",
+        "hash": "fb532a28",
+        "encoded": "*%20Test:%20Should%20render%20multiple%20projects%20in%20grid%20layout",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "ff06a1",
+        "hash": "65a0c6a6",
+        "encoded": "*%20Scenario:%20API%20returns%20multiple%20projects",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "ff06a1",
+        "hash": "80a92b21",
+        "encoded": "*%20Expected:%20All%20projects%20should%20be%20rendered%20within%20projects-grid%20container",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "ff06a1",
+        "hash": "aa188ccb",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "ff06a1",
+        "hash": "6ae6509a",
+        "encoded": "it('should%20render%20multiple%20projects%20in%20grid%20layout',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "ff06a1",
+        "hash": "be400b4f",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "ff06a1",
+        "hash": "09e1e703",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "ff06a1",
+        "hash": "8ff3edf2",
+        "encoded": "projects:%20%5B",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "ff06a1",
+        "hash": "d1420ac1",
+        "encoded": "%7B%20id:%201,%20name:%20'Project%201',%20description:%20'Desc%201',%20status:%20'active'%20%7D,",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "ff06a1",
+        "hash": "ec6b8186",
+        "encoded": "%7B%20id:%202,%20name:%20'Project%202',%20description:%20'Desc%202',%20status:%20'active'%20%7D,",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "ff06a1",
+        "hash": "88c79225",
+        "encoded": "%7B%20id:%203,%20name:%20'Project%203',%20description:%20'Desc%203',%20status:%20'inactive'%20%7D,",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "ff06a1",
+        "hash": "438087d5",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "ff06a1",
+        "hash": "f994fa4d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "ff06a1",
+        "hash": "3565926f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "ff06a1",
+        "hash": "cdaf61e7",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "ff06a1",
+        "hash": "2c4707d0",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "ff06a1",
+        "hash": "d8967e86",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "ff06a1",
+        "hash": "ebdc427a",
+        "encoded": "const%20projectsGrid%20=%20container.querySelector('.projects-grid');",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "ff06a1",
+        "hash": "d7441e79",
+        "encoded": "expect(projectsGrid).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "ff06a1",
+        "hash": "7ecd2b01",
+        "encoded": "expect(projectsGrid.children).toHaveLength(3);",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "ff06a1",
+        "hash": "32b18531",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "ff06a1",
+        "hash": "144f5825",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "ff06a1",
+        "hash": "ef026204",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "ff06a1",
+        "hash": "e1e19c72",
+        "encoded": "*%20Test:%20Should%20handle%20undefined%20or%20null%20data%20gracefully",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "ff06a1",
+        "hash": "c28faad0",
+        "encoded": "*%20Scenario:%20API%20returns%20undefined%20or%20null%20data",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "ff06a1",
+        "hash": "6e76141a",
+        "encoded": "*%20Expected:%20Component%20should%20not%20crash",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "ff06a1",
+        "hash": "7df3137f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "ff06a1",
+        "hash": "4cb46352",
+        "encoded": "it('should%20handle%20undefined%20or%20null%20data%20gracefully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "ff06a1",
+        "hash": "290a9572",
+        "encoded": "projectService.getProjects.mockResolvedValue(%7B%20data:%20null%20%7D);",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "ff06a1",
+        "hash": "1c90e1f6",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "ff06a1",
+        "hash": "bd8cecae",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "ff06a1",
+        "hash": "889d5c42",
+        "encoded": "expect(screen.queryByText('Loading...')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "ff06a1",
+        "hash": "85d7b277",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "ff06a1",
+        "hash": "38624ae8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "ff06a1",
+        "hash": "ca2406a7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "ff06a1",
+        "hash": "5bbcb89a",
+        "encoded": "*%20Test:%20Should%20render%20project%20descriptions%20correctly",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "ff06a1",
+        "hash": "23c79c93",
+        "encoded": "*%20Scenario:%20Projects%20have%20description%20text",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "ff06a1",
+        "hash": "2f28bb5b",
+        "encoded": "*%20Expected:%20Each%20project%20description%20should%20be%20displayed",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "ff06a1",
+        "hash": "cad1dbc3",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "ff06a1",
+        "hash": "d6bb9ae3",
+        "encoded": "it('should%20render%20project%20descriptions%20correctly',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "ff06a1",
+        "hash": "d63c8a86",
+        "encoded": "const%20mockProjects%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "ff06a1",
+        "hash": "2f85b5ac",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "ff06a1",
+        "hash": "9a1e7f66",
+        "encoded": "projects:%20%5B",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "ff06a1",
+        "hash": "ee860fe7",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "ff06a1",
+        "hash": "af50ea96",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "ff06a1",
+        "hash": "6c463dfc",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "ff06a1",
+        "hash": "37a4ccd2",
+        "encoded": "description:%20'This%20is%20a%20test%20project%20description',",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "ff06a1",
+        "hash": "3e1a6622",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "ff06a1",
+        "hash": "6c0a36d7",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "ff06a1",
+        "hash": "511d5956",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "ff06a1",
+        "hash": "220284c9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "ff06a1",
+        "hash": "78d040fb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "ff06a1",
+        "hash": "2997c060",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "ff06a1",
+        "hash": "52d922f8",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "ff06a1",
+        "hash": "d3ab70a9",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "ff06a1",
+        "hash": "74d0dc5e",
+        "encoded": "expect(screen.getByText('This%20is%20a%20test%20project%20description')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "ff06a1",
+        "hash": "35c1a298",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "ff06a1",
+        "hash": "4d7b3551",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "ff06a1",
+        "hash": "180ce5da",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 345
+  }
+}

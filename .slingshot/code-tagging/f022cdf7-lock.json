@@ -1,0 +1,2574 @@
+{
+  "backend\\tests\\unit\\services\\projectService.test.js": {
+    "filename": "projectService.test.js",
+    "path": "backend\\tests\\unit\\services\\projectService.test.js",
+    "version": "1.2",
+    "contextFile": "f022cdf7-context.json",
+    "chunks": {
+      "b70ae0": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708825,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "1e26977d",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:03:45 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "b70ae0",
+        "hash": "1da65127",
+        "encoded": "const%20projectService%20=%20require('../../../src/services/projectService');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "b70ae0",
+        "hash": "0190c9d6",
+        "encoded": "const%20%7B%20Project,%20User,%20ProjectMember%20%7D%20=%20require('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "b70ae0",
+        "hash": "ab1cf49c",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../../../src/utils/errors');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "b70ae0",
+        "hash": "c18f35c3",
+        "encoded": "const%20%7B%20Op%20%7D%20=%20require('sequelize');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "b70ae0",
+        "hash": "59aabc4e",
+        "encoded": "jest.mock('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "b70ae0",
+        "hash": "1610901e",
+        "encoded": "jest.mock('../../../src/utils/logger');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "b70ae0",
+        "hash": "86ac8697",
+        "encoded": "describe('ProjectService',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "b70ae0",
+        "hash": "093ad379",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "b70ae0",
+        "hash": "852d7ceb",
+        "encoded": "jest.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "b70ae0",
+        "hash": "c484fef0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "b70ae0",
+        "hash": "2639c195",
+        "encoded": "describe('createProject',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "b70ae0",
+        "hash": "f847a38b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "b70ae0",
+        "hash": "c0ff327f",
+        "encoded": "*%20Test:%20Should%20successfully%20create%20a%20project%20with%20valid%20data",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "b70ae0",
+        "hash": "cb03c75e",
+        "encoded": "*%20Scenario:%20User%20provides%20valid%20project%20data",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "b70ae0",
+        "hash": "0188eb13",
+        "encoded": "*%20Expected:%20Project%20is%20created%20and%20user%20is%20added%20as%20owner",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "b70ae0",
+        "hash": "f12acb0c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "b70ae0",
+        "hash": "f45ffa34",
+        "encoded": "it('should%20create%20a%20project%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "b70ae0",
+        "hash": "8f358a56",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "b70ae0",
+        "hash": "cc033880",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "b70ae0",
+        "hash": "869ded21",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "b70ae0",
+        "hash": "32efbc4e",
+        "encoded": "description:%20'Test%20Description',",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "b70ae0",
+        "hash": "be38e565",
+        "encoded": "ownerId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "b70ae0",
+        "hash": "4f937279",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "b70ae0",
+        "hash": "3a997202",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "b70ae0",
+        "hash": "7d733af3",
+        "encoded": "const%20projectData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "b70ae0",
+        "hash": "61fa4cd3",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "b70ae0",
+        "hash": "983f9097",
+        "encoded": "description:%20'Test%20Description',",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "b70ae0",
+        "hash": "8080b9e9",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "b70ae0",
+        "hash": "2dd6aa4d",
+        "encoded": "Project.create%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "b70ae0",
+        "hash": "e9d5facd",
+        "encoded": "ProjectMember.create%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "b70ae0",
+        "hash": "214853e9",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "b70ae0",
+        "hash": "303a8117",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "b70ae0",
+        "hash": "7c773f6c",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "b70ae0",
+        "hash": "3b202ec2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "b70ae0",
+        "hash": "227cb4db",
+        "encoded": "const%20result%20=%20await%20projectService.createProject(projectData,%20'user-123');",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "b70ae0",
+        "hash": "d4392b45",
+        "encoded": "expect(result).toEqual(mockProject);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "b70ae0",
+        "hash": "21835879",
+        "encoded": "expect(Project.create).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "b70ae0",
+        "hash": "e85093e5",
+        "encoded": "...projectData,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "b70ae0",
+        "hash": "b8ba4d43",
+        "encoded": "ownerId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "b70ae0",
+        "hash": "74f3a7cc",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "b70ae0",
+        "hash": "6c3f165a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "b70ae0",
+        "hash": "dc684d4f",
+        "encoded": "expect(ProjectMember.create).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "b70ae0",
+        "hash": "b2d8748c",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "b70ae0",
+        "hash": "f3bb9e7c",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "b70ae0",
+        "hash": "385b698a",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "b70ae0",
+        "hash": "cd261499",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "b70ae0",
+        "hash": "3287ea85",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "b70ae0",
+        "hash": "0941b36b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "b70ae0",
+        "hash": "e666ee06",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20during%20project%20creation",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "b70ae0",
+        "hash": "8f92f3db",
+        "encoded": "*%20Scenario:%20Database%20throws%20an%20error",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "b70ae0",
+        "hash": "bde1a551",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown%20with%20appropriate%20message",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "b70ae0",
+        "hash": "1c9b97a2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "b70ae0",
+        "hash": "99fb47d2",
+        "encoded": "it('should%20throw%20AppError%20when%20project%20creation%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "b70ae0",
+        "hash": "5b7e7124",
+        "encoded": "Project.create%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "b70ae0",
+        "hash": "d14bf534",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "b70ae0",
+        "hash": "324d73bd",
+        "encoded": "projectService.createProject(%7B%20name:%20'Test'%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "b70ae0",
+        "hash": "8bc8b9e9",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "b70ae0",
+        "hash": "93183b94",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "b70ae0",
+        "hash": "cdbc9670",
+        "encoded": "projectService.createProject(%7B%20name:%20'Test'%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "b70ae0",
+        "hash": "98d1eec8",
+        "encoded": ").rejects.toThrow('Failed%20to%20create%20project');",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "b70ae0",
+        "hash": "abd57649",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "b70ae0",
+        "hash": "c462b373",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "b70ae0",
+        "hash": "6d3b9fb6",
+        "encoded": "*%20Test:%20Should%20create%20project%20with%20all%20optional%20fields",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "b70ae0",
+        "hash": "ef0561b7",
+        "encoded": "*%20Scenario:%20User%20provides%20all%20possible%20project%20fields",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "b70ae0",
+        "hash": "ed5d26ec",
+        "encoded": "*%20Expected:%20Project%20is%20created%20with%20all%20fields",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "b70ae0",
+        "hash": "9cb1108f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "b70ae0",
+        "hash": "5a7db91f",
+        "encoded": "it('should%20create%20project%20with%20all%20optional%20fields',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "b70ae0",
+        "hash": "017677f6",
+        "encoded": "const%20projectData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "b70ae0",
+        "hash": "1eb78e26",
+        "encoded": "name:%20'Full%20Project',",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "b70ae0",
+        "hash": "1a68eea6",
+        "encoded": "description:%20'Full%20Description',",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "b70ae0",
+        "hash": "404e9d81",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "b70ae0",
+        "hash": "d987033a",
+        "encoded": "settings:%20%7B%20theme:%20'dark'%20%7D,",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "b70ae0",
+        "hash": "0fb1d46d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "b70ae0",
+        "hash": "fe3209fe",
+        "encoded": "const%20mockProject%20=%20%7B%20id:%20'project-456',%20...projectData,%20ownerId:%20'user-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "b70ae0",
+        "hash": "9c18a236",
+        "encoded": "Project.create%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "b70ae0",
+        "hash": "bbfa5dd1",
+        "encoded": "ProjectMember.create%20=%20jest.fn().mockResolvedValue(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "b70ae0",
+        "hash": "81cd0cda",
+        "encoded": "const%20result%20=%20await%20projectService.createProject(projectData,%20'user-123');",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "b70ae0",
+        "hash": "da92d8d0",
+        "encoded": "expect(result).toEqual(mockProject);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "b70ae0",
+        "hash": "3a99ed00",
+        "encoded": "expect(Project.create).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "b70ae0",
+        "hash": "2534b7c7",
+        "encoded": "...projectData,",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "b70ae0",
+        "hash": "b87fca0b",
+        "encoded": "ownerId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "b70ae0",
+        "hash": "6840ba9c",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "b70ae0",
+        "hash": "98569f06",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "b70ae0",
+        "hash": "904a972c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "b70ae0",
+        "hash": "e3b88b3c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "b70ae0",
+        "hash": "5d6041f6",
+        "encoded": "describe('getProjects',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "b70ae0",
+        "hash": "cd2f86a0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "b70ae0",
+        "hash": "59f485ba",
+        "encoded": "*%20Test:%20Should%20retrieve%20paginated%20projects%20for%20a%20user",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "b70ae0",
+        "hash": "3680cfd5",
+        "encoded": "*%20Scenario:%20User%20requests%20their%20projects%20with%20pagination",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "b70ae0",
+        "hash": "650404c4",
+        "encoded": "*%20Expected:%20Returns%20projects%20with%20pagination%20metadata",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "b70ae0",
+        "hash": "2e5893ac",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "b70ae0",
+        "hash": "49c7f7b9",
+        "encoded": "it('should%20get%20projects%20with%20pagination',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "b70ae0",
+        "hash": "da38a223",
+        "encoded": "const%20mockProjects%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "b70ae0",
+        "hash": "6b6511ce",
+        "encoded": "%7B%20id:%20'project-1',%20name:%20'Project%201'%20%7D,",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "b70ae0",
+        "hash": "4738e8a1",
+        "encoded": "%7B%20id:%20'project-2',%20name:%20'Project%202'%20%7D,",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "b70ae0",
+        "hash": "0fb24171",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "b70ae0",
+        "hash": "fc34c55d",
+        "encoded": "Project.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "b70ae0",
+        "hash": "15d64fce",
+        "encoded": "rows:%20mockProjects,",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "b70ae0",
+        "hash": "6f616bd7",
+        "encoded": "count:%202,",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "b70ae0",
+        "hash": "f825b8cd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "b70ae0",
+        "hash": "fd819cfd",
+        "encoded": "const%20result%20=%20await%20projectService.getProjects(%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "b70ae0",
+        "hash": "aef640ab",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "b70ae0",
+        "hash": "cc35a07d",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "b70ae0",
+        "hash": "787ea418",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "b70ae0",
+        "hash": "da448ba5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "b70ae0",
+        "hash": "ef806b0b",
+        "encoded": "expect(result).toEqual(%7B",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "b70ae0",
+        "hash": "eac1597e",
+        "encoded": "projects:%20mockProjects,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "b70ae0",
+        "hash": "4d63d489",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "b70ae0",
+        "hash": "6eeca912",
+        "encoded": "total:%202,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "b70ae0",
+        "hash": "ef1a58e2",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "b70ae0",
+        "hash": "b76892ab",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "b70ae0",
+        "hash": "ab78d141",
+        "encoded": "totalPages:%201,",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "b70ae0",
+        "hash": "5df36d4f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "b70ae0",
+        "hash": "f9d6f133",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "b70ae0",
+        "hash": "ed4ca5df",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "b70ae0",
+        "hash": "49dce303",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "b70ae0",
+        "hash": "1a478b59",
+        "encoded": "*%20Test:%20Should%20filter%20projects%20by%20search%20term",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "b70ae0",
+        "hash": "ad29f158",
+        "encoded": "*%20Scenario:%20User%20searches%20for%20projects%20by%20name",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "b70ae0",
+        "hash": "6c66ed86",
+        "encoded": "*%20Expected:%20Returns%20filtered%20projects%20matching%20search%20term",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "b70ae0",
+        "hash": "2d7cb1a0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "b70ae0",
+        "hash": "5e03838f",
+        "encoded": "it('should%20filter%20projects%20by%20search%20term',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "b70ae0",
+        "hash": "fb3e08e1",
+        "encoded": "const%20mockProjects%20=%20%5B%7B%20id:%20'project-1',%20name:%20'Test%20Project'%20%7D%5D;",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "b70ae0",
+        "hash": "d388e588",
+        "encoded": "Project.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "b70ae0",
+        "hash": "e1541766",
+        "encoded": "rows:%20mockProjects,",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "b70ae0",
+        "hash": "72010cd2",
+        "encoded": "count:%201,",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "b70ae0",
+        "hash": "8fee1500",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "b70ae0",
+        "hash": "862369d8",
+        "encoded": "await%20projectService.getProjects(%7B",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "b70ae0",
+        "hash": "7cfa83ee",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "b70ae0",
+        "hash": "6816815c",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "b70ae0",
+        "hash": "761ffba6",
+        "encoded": "search:%20'Test',",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "b70ae0",
+        "hash": "1039d472",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "b70ae0",
+        "hash": "e7e1c8d1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "b70ae0",
+        "hash": "de3b4af1",
+        "encoded": "expect(Project.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "b70ae0",
+        "hash": "58122af7",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "b70ae0",
+        "hash": "b9441e01",
+        "encoded": "where:%20expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "b70ae0",
+        "hash": "0791367a",
+        "encoded": "name:%20%7B%20%5BOp.iLike%5D:%20'%25Test%25'%20%7D,",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "b70ae0",
+        "hash": "2eb563f2",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "b70ae0",
+        "hash": "39a3bca9",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "b70ae0",
+        "hash": "32524354",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "b70ae0",
+        "hash": "6171d7e0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "b70ae0",
+        "hash": "bb035687",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "b70ae0",
+        "hash": "4d851956",
+        "encoded": "*%20Test:%20Should%20filter%20projects%20by%20status",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "b70ae0",
+        "hash": "2ebf8778",
+        "encoded": "*%20Scenario:%20User%20filters%20projects%20by%20active%20status",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "b70ae0",
+        "hash": "5f8c40c2",
+        "encoded": "*%20Expected:%20Returns%20only%20active%20projects",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "b70ae0",
+        "hash": "d57e8703",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "b70ae0",
+        "hash": "4c5348cf",
+        "encoded": "it('should%20filter%20projects%20by%20status',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "b70ae0",
+        "hash": "2b54805c",
+        "encoded": "Project.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "b70ae0",
+        "hash": "8379abff",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "b70ae0",
+        "hash": "3c87f33d",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "b70ae0",
+        "hash": "67f8879c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "b70ae0",
+        "hash": "715d53b7",
+        "encoded": "await%20projectService.getProjects(%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "b70ae0",
+        "hash": "64523839",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "b70ae0",
+        "hash": "93767295",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "b70ae0",
+        "hash": "4599d53f",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "b70ae0",
+        "hash": "efc855dc",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "b70ae0",
+        "hash": "4a31b4ef",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "b70ae0",
+        "hash": "9c163f7a",
+        "encoded": "expect(Project.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "b70ae0",
+        "hash": "9fee4451",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "b70ae0",
+        "hash": "ff997284",
+        "encoded": "where:%20expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "b70ae0",
+        "hash": "074265dd",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "b70ae0",
+        "hash": "7e3e14a0",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "b70ae0",
+        "hash": "3f9673b1",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "b70ae0",
+        "hash": "5ade0f40",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "b70ae0",
+        "hash": "5076128d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "b70ae0",
+        "hash": "8b34b2b9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "b70ae0",
+        "hash": "8280f4e2",
+        "encoded": "*%20Test:%20Should%20calculate%20correct%20pagination%20for%20multiple%20pages",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "b70ae0",
+        "hash": "6d19aa6d",
+        "encoded": "*%20Scenario:%20User%20requests%20page%202%20with%2010%20items%20per%20page%20from%2025%20total",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "b70ae0",
+        "hash": "904f0124",
+        "encoded": "*%20Expected:%20Returns%20correct%20pagination%20metadata",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "b70ae0",
+        "hash": "95879fec",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "b70ae0",
+        "hash": "5fcca31b",
+        "encoded": "it('should%20calculate%20correct%20pagination%20metadata',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "b70ae0",
+        "hash": "59434895",
+        "encoded": "Project.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "b70ae0",
+        "hash": "069cf33a",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "b70ae0",
+        "hash": "40b1b001",
+        "encoded": "count:%2025,",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "b70ae0",
+        "hash": "9450ab8d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "b70ae0",
+        "hash": "136b8875",
+        "encoded": "const%20result%20=%20await%20projectService.getProjects(%7B",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "b70ae0",
+        "hash": "d94cdb3f",
+        "encoded": "page:%202,",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "b70ae0",
+        "hash": "a9122493",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "b70ae0",
+        "hash": "c7a60dcb",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "b70ae0",
+        "hash": "fd2fe27f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "b70ae0",
+        "hash": "10cd8eb3",
+        "encoded": "expect(result.pagination).toEqual(%7B",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "b70ae0",
+        "hash": "2aab7d8e",
+        "encoded": "total:%2025,",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "b70ae0",
+        "hash": "8ec0b0f7",
+        "encoded": "page:%202,",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "b70ae0",
+        "hash": "909a67ff",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "b70ae0",
+        "hash": "b7b73c1e",
+        "encoded": "totalPages:%203,",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "b70ae0",
+        "hash": "0fb6c9cb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "b70ae0",
+        "hash": "09766c03",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "b70ae0",
+        "hash": "c46c00ca",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "b70ae0",
+        "hash": "1900637a",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20fetching%20projects",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "b70ae0",
+        "hash": "50a2f890",
+        "encoded": "*%20Scenario:%20Database%20query%20fails",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "b70ae0",
+        "hash": "b30dfe44",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "b70ae0",
+        "hash": "262ce696",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "b70ae0",
+        "hash": "36ef4be9",
+        "encoded": "it('should%20throw%20AppError%20when%20fetching%20projects%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "b70ae0",
+        "hash": "b36e8926",
+        "encoded": "Project.findAndCountAll%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "b70ae0",
+        "hash": "dd2592e1",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "b70ae0",
+        "hash": "64def95b",
+        "encoded": "projectService.getProjects(%7B%20page:%201,%20limit:%2010,%20userId:%20'user-123'%20%7D)",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "b70ae0",
+        "hash": "9ab872f6",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "b70ae0",
+        "hash": "6f608546",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "b70ae0",
+        "hash": "e3f2467f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "b70ae0",
+        "hash": "8834bd3e",
+        "encoded": "describe('getProjectById',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "b70ae0",
+        "hash": "124e8f08",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "b70ae0",
+        "hash": "56062424",
+        "encoded": "*%20Test:%20Should%20retrieve%20a%20project%20by%20ID%20for%20authorized%20user",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "b70ae0",
+        "hash": "0acb8799",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20project%20they%20have%20access%20to",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "b70ae0",
+        "hash": "a8db400e",
+        "encoded": "*%20Expected:%20Returns%20the%20project%20details",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "b70ae0",
+        "hash": "dd6c3a25",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "b70ae0",
+        "hash": "d23d1b1b",
+        "encoded": "it('should%20get%20project%20by%20id%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "b70ae0",
+        "hash": "036b3219",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "b70ae0",
+        "hash": "b87c0647",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "b70ae0",
+        "hash": "4a066f33",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "b70ae0",
+        "hash": "fdefd33a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "b70ae0",
+        "hash": "3001fe4d",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "b70ae0",
+        "hash": "2d374f12",
+        "encoded": "const%20result%20=%20await%20projectService.getProjectById('project-123',%20'user-123');",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "b70ae0",
+        "hash": "e7846161",
+        "encoded": "expect(result).toEqual(mockProject);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "b70ae0",
+        "hash": "db15d55a",
+        "encoded": "expect(Project.findOne).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "b70ae0",
+        "hash": "12b6be6d",
+        "encoded": "where:%20%7B%20id:%20'project-123'%20%7D,",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "b70ae0",
+        "hash": "b17eabb5",
+        "encoded": "include:%20%5B",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "b70ae0",
+        "hash": "0cfce90b",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "b70ae0",
+        "hash": "291c78d7",
+        "encoded": "model:%20ProjectMember,",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "b70ae0",
+        "hash": "aa5f7aec",
+        "encoded": "where:%20%7B%20userId:%20'user-123'%20%7D,",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "b70ae0",
+        "hash": "6c9cf33c",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "b70ae0",
+        "hash": "ad6d6ede",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "b70ae0",
+        "hash": "749aa6e4",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "b70ae0",
+        "hash": "29576acb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "b70ae0",
+        "hash": "1058813a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "b70ae0",
+        "hash": "856d2a64",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "b70ae0",
+        "hash": "ab1de601",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20project%20not%20found",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "b70ae0",
+        "hash": "3bf0153a",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "b70ae0",
+        "hash": "6a67344c",
+        "encoded": "*%20Expected:%20AppError%20with%20404%20status%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "b70ae0",
+        "hash": "6c8caf0e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "b70ae0",
+        "hash": "d1b4bba6",
+        "encoded": "it('should%20throw%20AppError%20when%20project%20not%20found',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "b70ae0",
+        "hash": "d423e9c3",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "b70ae0",
+        "hash": "938be2af",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "b70ae0",
+        "hash": "0f873ef1",
+        "encoded": "projectService.getProjectById('project-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "b70ae0",
+        "hash": "1a962521",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "b70ae0",
+        "hash": "dd4cc8ca",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "b70ae0",
+        "hash": "c6f1fc64",
+        "encoded": "projectService.getProjectById('project-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "b70ae0",
+        "hash": "7ec9a0fb",
+        "encoded": ").rejects.toThrow('Project%20not%20found%20or%20access%20denied');",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "b70ae0",
+        "hash": "36cccec1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "b70ae0",
+        "hash": "bdac8d01",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "b70ae0",
+        "hash": "c7c5c66d",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20user%20lacks%20access",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "b70ae0",
+        "hash": "323f7abc",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20project%20they%20don't%20have%20access%20to",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "b70ae0",
+        "hash": "9eecbd54",
+        "encoded": "*%20Expected:%20AppError%20with%20404%20status%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "b70ae0",
+        "hash": "2e8daa88",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "b70ae0",
+        "hash": "f7b71b53",
+        "encoded": "it('should%20throw%20error%20when%20user%20has%20no%20access%20to%20project',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "b70ae0",
+        "hash": "52ec7fcf",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "b70ae0",
+        "hash": "0fccf3c0",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "b70ae0",
+        "hash": "a9010416",
+        "encoded": "projectService.getProjectById('project-123',%20'unauthorized-user')",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "b70ae0",
+        "hash": "4e0cc455",
+        "encoded": ").rejects.toThrow('Project%20not%20found%20or%20access%20denied');",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "b70ae0",
+        "hash": "ce2db8ab",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "b70ae0",
+        "hash": "45cc4ddb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "b70ae0",
+        "hash": "07d16685",
+        "encoded": "describe('updateProject',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "b70ae0",
+        "hash": "552df73f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "b70ae0",
+        "hash": "f004f241",
+        "encoded": "*%20Test:%20Should%20successfully%20update%20a%20project",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "b70ae0",
+        "hash": "271630b1",
+        "encoded": "*%20Scenario:%20User%20updates%20project%20with%20valid%20data",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "b70ae0",
+        "hash": "48bf028c",
+        "encoded": "*%20Expected:%20Project%20is%20updated%20and%20returned",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "b70ae0",
+        "hash": "2296cf11",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "b70ae0",
+        "hash": "c603b08b",
+        "encoded": "it('should%20update%20project%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "b70ae0",
+        "hash": "a2679eb5",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "b70ae0",
+        "hash": "645807a1",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "b70ae0",
+        "hash": "c84b2ff4",
+        "encoded": "name:%20'Old%20Name',",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "b70ae0",
+        "hash": "ecbf74d0",
+        "encoded": "update:%20jest.fn().mockResolvedValue(true),",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "b70ae0",
+        "hash": "0c131c68",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "b70ae0",
+        "hash": "9962294a",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "b70ae0",
+        "hash": "6b552f56",
+        "encoded": "const%20updateData%20=%20%7B%20name:%20'New%20Name',%20description:%20'Updated'%20%7D;",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "b70ae0",
+        "hash": "1daf9802",
+        "encoded": "const%20result%20=%20await%20projectService.updateProject('project-123',%20updateData,%20'user-123');",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "b70ae0",
+        "hash": "70c94a19",
+        "encoded": "expect(mockProject.update).toHaveBeenCalledWith(updateData);",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "b70ae0",
+        "hash": "39493c0c",
+        "encoded": "expect(result).toEqual(mockProject);",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "b70ae0",
+        "hash": "b96bdf42",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "b70ae0",
+        "hash": "85c02487",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "b70ae0",
+        "hash": "831966ca",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20updating%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "b70ae0",
+        "hash": "81f65c94",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20update%20a%20project%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "b70ae0",
+        "hash": "cba3c75c",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "b70ae0",
+        "hash": "33ddf581",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "b70ae0",
+        "hash": "3366f32b",
+        "encoded": "it('should%20throw%20error%20when%20project%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "b70ae0",
+        "hash": "52af56dd",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "b70ae0",
+        "hash": "62cffd94",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "b70ae0",
+        "hash": "bae05a30",
+        "encoded": "projectService.updateProject('project-999',%20%7B%20name:%20'New'%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "b70ae0",
+        "hash": "53e5374c",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "b70ae0",
+        "hash": "2cd5f06d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "b70ae0",
+        "hash": "81de08b7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "b70ae0",
+        "hash": "80ad7879",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20during%20update",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "b70ae0",
+        "hash": "d5c063b3",
+        "encoded": "*%20Scenario:%20Database%20update%20operation%20fails",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "b70ae0",
+        "hash": "4cc1277b",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "b70ae0",
+        "hash": "65a208bf",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "b70ae0",
+        "hash": "ad34ab50",
+        "encoded": "it('should%20handle%20update%20errors',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "b70ae0",
+        "hash": "35f605fc",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "b70ae0",
+        "hash": "37c13c9d",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "b70ae0",
+        "hash": "742ca8e8",
+        "encoded": "update:%20jest.fn().mockRejectedValue(new%20Error('Update%20failed')),",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "b70ae0",
+        "hash": "4cb52072",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "b70ae0",
+        "hash": "2d1b8acf",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "b70ae0",
+        "hash": "76c70b55",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "b70ae0",
+        "hash": "645d5d4f",
+        "encoded": "projectService.updateProject('project-123',%20%7B%20name:%20'New'%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "b70ae0",
+        "hash": "f6928e38",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "b70ae0",
+        "hash": "fd410a32",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "b70ae0",
+        "hash": "274207e0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "b70ae0",
+        "hash": "940df6f6",
+        "encoded": "describe('deleteProject',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "b70ae0",
+        "hash": "886d4578",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "b70ae0",
+        "hash": "3c3a3833",
+        "encoded": "*%20Test:%20Should%20successfully%20delete%20a%20project",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "b70ae0",
+        "hash": "f8a1ba8f",
+        "encoded": "*%20Scenario:%20User%20deletes%20their%20project",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "b70ae0",
+        "hash": "d75493ac",
+        "encoded": "*%20Expected:%20Project%20is%20deleted%20from%20database",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "b70ae0",
+        "hash": "5dea9b89",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "b70ae0",
+        "hash": "23765a7e",
+        "encoded": "it('should%20delete%20project%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "b70ae0",
+        "hash": "c1198d00",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "b70ae0",
+        "hash": "50819603",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "b70ae0",
+        "hash": "4de38401",
+        "encoded": "destroy:%20jest.fn().mockResolvedValue(true),",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "b70ae0",
+        "hash": "6e8c8202",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "b70ae0",
+        "hash": "3cc1163d",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "b70ae0",
+        "hash": "26221d73",
+        "encoded": "await%20projectService.deleteProject('project-123',%20'user-123');",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "b70ae0",
+        "hash": "e51a2d65",
+        "encoded": "expect(mockProject.destroy).toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "b70ae0",
+        "hash": "358cb5d4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "b70ae0",
+        "hash": "ed8820e0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "b70ae0",
+        "hash": "04dcd4b9",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20deleting%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "b70ae0",
+        "hash": "5d82e3eb",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20delete%20a%20project%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "b70ae0",
+        "hash": "9f753fad",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "b70ae0",
+        "hash": "54047ad9",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "b70ae0",
+        "hash": "ad7c8afe",
+        "encoded": "it('should%20throw%20error%20when%20project%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "b70ae0",
+        "hash": "6c4a5ca5",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "b70ae0",
+        "hash": "a9274f5b",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "b70ae0",
+        "hash": "bfb35e31",
+        "encoded": "projectService.deleteProject('project-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "b70ae0",
+        "hash": "beefede8",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "b70ae0",
+        "hash": "64846b0f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "b70ae0",
+        "hash": "11b53231",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "b70ae0",
+        "hash": "cba61aa9",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20during%20deletion",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "b70ae0",
+        "hash": "c23b3a10",
+        "encoded": "*%20Scenario:%20Database%20delete%20operation%20fails",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "b70ae0",
+        "hash": "b792c247",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "b70ae0",
+        "hash": "2316cdaa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "b70ae0",
+        "hash": "73cb2316",
+        "encoded": "it('should%20handle%20deletion%20errors',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "b70ae0",
+        "hash": "e4ce6f64",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "b70ae0",
+        "hash": "0eb289fb",
+        "encoded": "id:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "b70ae0",
+        "hash": "9f40d3a9",
+        "encoded": "destroy:%20jest.fn().mockRejectedValue(new%20Error('Delete%20failed')),",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "b70ae0",
+        "hash": "d3682ee8",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "b70ae0",
+        "hash": "9cb7eeaa",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "b70ae0",
+        "hash": "10ecf531",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "b70ae0",
+        "hash": "2c22ac86",
+        "encoded": "projectService.deleteProject('project-123',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "b70ae0",
+        "hash": "3a5dd83a",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "b70ae0",
+        "hash": "0cf7dda5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "b70ae0",
+        "hash": "4b9a15f0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "b70ae0",
+        "hash": "00212ce9",
+        "encoded": "describe('getProjectMembers',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "b70ae0",
+        "hash": "8a6a935c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "b70ae0",
+        "hash": "a551b8c8",
+        "encoded": "*%20Test:%20Should%20retrieve%20all%20project%20members",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "b70ae0",
+        "hash": "d9e500d9",
+        "encoded": "*%20Scenario:%20User%20requests%20list%20of%20project%20members",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "b70ae0",
+        "hash": "6276a9fa",
+        "encoded": "*%20Expected:%20Returns%20array%20of%20members%20with%20user%20details",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "b70ae0",
+        "hash": "bf3d8048",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "b70ae0",
+        "hash": "bff08018",
+        "encoded": "it('should%20get%20project%20members%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "b70ae0",
+        "hash": "b591dbf7",
+        "encoded": "const%20mockProject%20=%20%7B%20id:%20'project-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "b70ae0",
+        "hash": "b47aad61",
+        "encoded": "const%20mockMembers%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "b70ae0",
+        "hash": "7b71e301",
+        "encoded": "%7B%20id:%20'member-1',%20userId:%20'user-1',%20role:%20'owner'%20%7D,",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "b70ae0",
+        "hash": "cd7d0afa",
+        "encoded": "%7B%20id:%20'member-2',%20userId:%20'user-2',%20role:%20'developer'%20%7D,",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "b70ae0",
+        "hash": "78dbe41e",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "b70ae0",
+        "hash": "27d7271e",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "b70ae0",
+        "hash": "872f03c7",
+        "encoded": "ProjectMember.findAll%20=%20jest.fn().mockResolvedValue(mockMembers);",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "b70ae0",
+        "hash": "ee9a5b16",
+        "encoded": "const%20result%20=%20await%20projectService.getProjectMembers('project-123',%20'user-123');",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "b70ae0",
+        "hash": "e222c775",
+        "encoded": "expect(result).toEqual(mockMembers);",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "b70ae0",
+        "hash": "3a14c18b",
+        "encoded": "expect(ProjectMember.findAll).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "b70ae0",
+        "hash": "196d352d",
+        "encoded": "where:%20%7B%20projectId:%20'project-123'%20%7D,",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "b70ae0",
+        "hash": "4445c880",
+        "encoded": "include:%20%5B%7B%20model:%20User,%20attributes:%20%5B'id',%20'name',%20'email'%5D%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "b70ae0",
+        "hash": "df65b9e6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "b70ae0",
+        "hash": "723d6da0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "b70ae0",
+        "hash": "9f559690",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "b70ae0",
+        "hash": "fe8bd846",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20project%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "b70ae0",
+        "hash": "bbae377e",
+        "encoded": "*%20Scenario:%20User%20requests%20members%20of%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "b70ae0",
+        "hash": "cbdcab03",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "b70ae0",
+        "hash": "0e086cbb",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "b70ae0",
+        "hash": "60b1b6de",
+        "encoded": "it('should%20throw%20error%20when%20project%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "b70ae0",
+        "hash": "772c8a00",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "b70ae0",
+        "hash": "80dcacb5",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "b70ae0",
+        "hash": "1db6c745",
+        "encoded": "projectService.getProjectMembers('project-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "b70ae0",
+        "hash": "4f9e6fc4",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "b70ae0",
+        "hash": "49cb4715",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "b70ae0",
+        "hash": "6e12b9cc",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "b70ae0",
+        "hash": "71a688f0",
+        "encoded": "describe('addProjectMember',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "b70ae0",
+        "hash": "b14b4ce5",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "b70ae0",
+        "hash": "af80b304",
+        "encoded": "*%20Test:%20Should%20successfully%20add%20a%20member%20to%20project",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "b70ae0",
+        "hash": "8de3b252",
+        "encoded": "*%20Scenario:%20Owner%20adds%20a%20new%20member%20to%20the%20project",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "b70ae0",
+        "hash": "f7c9f368",
+        "encoded": "*%20Expected:%20Member%20is%20added%20with%20specified%20role",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "b70ae0",
+        "hash": "590a0cbd",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "b70ae0",
+        "hash": "51420841",
+        "encoded": "it('should%20add%20project%20member%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "b70ae0",
+        "hash": "09d0ff09",
+        "encoded": "const%20mockProject%20=%20%7B%20id:%20'project-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "b70ae0",
+        "hash": "7c79a66b",
+        "encoded": "const%20mockMember%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "b70ae0",
+        "hash": "52fb3c34",
+        "encoded": "id:%20'member-123',",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "b70ae0",
+        "hash": "c402ddb4",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "b70ae0",
+        "hash": "edb60160",
+        "encoded": "userId:%20'user-456',",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "b70ae0",
+        "hash": "7e06505e",
+        "encoded": "role:%20'developer',",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "b70ae0",
+        "hash": "e2eecc5b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "b70ae0",
+        "hash": "20050afe",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "b70ae0",
+        "hash": "1ba39277",
+        "encoded": "ProjectMember.create%20=%20jest.fn().mockResolvedValue(mockMember);",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "b70ae0",
+        "hash": "2852e80d",
+        "encoded": "const%20result%20=%20await%20projectService.addProjectMember(",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "b70ae0",
+        "hash": "8fc90eeb",
+        "encoded": "'project-123',",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "b70ae0",
+        "hash": "c6ce8e18",
+        "encoded": "'user-456',",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "b70ae0",
+        "hash": "3bb9d8d0",
+        "encoded": "'developer',",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "b70ae0",
+        "hash": "f9210454",
+        "encoded": "'user-123'",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "b70ae0",
+        "hash": "96e686e2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "b70ae0",
+        "hash": "6581c8c2",
+        "encoded": "expect(result).toEqual(mockMember);",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "b70ae0",
+        "hash": "751c6d04",
+        "encoded": "expect(ProjectMember.create).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "b70ae0",
+        "hash": "1c017594",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "b70ae0",
+        "hash": "db76a69a",
+        "encoded": "userId:%20'user-456',",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "b70ae0",
+        "hash": "719598d7",
+        "encoded": "role:%20'developer',",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "b70ae0",
+        "hash": "b3c8d205",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "b70ae0",
+        "hash": "95029804",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "b70ae0",
+        "hash": "aee934f6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "b70ae0",
+        "hash": "388542d3",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20project%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "b70ae0",
+        "hash": "2b855532",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20add%20member%20to%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "b70ae0",
+        "hash": "99d4567f",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "b70ae0",
+        "hash": "be755fb1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "b70ae0",
+        "hash": "4dc6c53d",
+        "encoded": "it('should%20throw%20error%20when%20project%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "b70ae0",
+        "hash": "0f5e56ff",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "b70ae0",
+        "hash": "6c4a7e35",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "b70ae0",
+        "hash": "0ef56410",
+        "encoded": "projectService.addProjectMember('project-999',%20'user-456',%20'developer',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "b70ae0",
+        "hash": "a1ac016e",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "b70ae0",
+        "hash": "1970b9e1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "b70ae0",
+        "hash": "57e55955",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "b70ae0",
+        "hash": "e6bdc13e",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20adding%20member",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "b70ae0",
+        "hash": "e98418b7",
+        "encoded": "*%20Scenario:%20Database%20operation%20fails",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "b70ae0",
+        "hash": "192153aa",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "b70ae0",
+        "hash": "21a1805a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "b70ae0",
+        "hash": "5d3974c8",
+        "encoded": "it('should%20handle%20errors%20when%20adding%20member',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "b70ae0",
+        "hash": "f5d47e32",
+        "encoded": "const%20mockProject%20=%20%7B%20id:%20'project-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "b70ae0",
+        "hash": "d4700a2e",
+        "encoded": "Project.findOne%20=%20jest.fn().mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "b70ae0",
+        "hash": "58919fa5",
+        "encoded": "ProjectMember.create%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "b70ae0",
+        "hash": "ed04e1c2",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "b70ae0",
+        "hash": "d0738064",
+        "encoded": "projectService.addProjectMember('project-123',%20'user-456',%20'developer',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "b70ae0",
+        "hash": "66616460",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "b70ae0",
+        "hash": "bda68ef3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "b70ae0",
+        "hash": "0aa2e7d6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "b70ae0",
+        "hash": "fef59608",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

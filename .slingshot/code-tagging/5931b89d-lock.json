@@ -1,0 +1,108 @@
+{
+  ".prettierrc": {
+    "filename": ".prettierrc",
+    "path": ".prettierrc",
+    "version": "1.2",
+    "contextFile": "5931b89d-context.json",
+    "chunks": {
+      "6bf131": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707694,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "59915368",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:54 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6bf131",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "6bf131",
+        "hash": "4fb9e37e",
+        "encoded": "%22semi%22:%20true,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "6bf131",
+        "hash": "44f52860",
+        "encoded": "%22trailingComma%22:%20%22es5%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "6bf131",
+        "hash": "fd8068e2",
+        "encoded": "%22singleQuote%22:%20true,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "6bf131",
+        "hash": "5a0afd5c",
+        "encoded": "%22printWidth%22:%20100,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "6bf131",
+        "hash": "73378913",
+        "encoded": "%22tabWidth%22:%202,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "6bf131",
+        "hash": "f39690df",
+        "encoded": "%22useTabs%22:%20false,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "6bf131",
+        "hash": "c8849405",
+        "encoded": "%22arrowParens%22:%20%22always%22,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "6bf131",
+        "hash": "71ae268e",
+        "encoded": "%22endOfLine%22:%20%22lf%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "6bf131",
+        "hash": "9c645215",
+        "encoded": "%22bracketSpacing%22:%20true,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "6bf131",
+        "hash": "9e8c942f",
+        "encoded": "%22jsxSingleQuote%22:%20false,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "6bf131",
+        "hash": "efa1a70b",
+        "encoded": "%22jsxBracketSameLine%22:%20false",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "6bf131",
+        "hash": "6a3f2143",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

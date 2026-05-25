@@ -1,0 +1,120 @@
+{
+  "backend\\tests\\setup.js": {
+    "filename": "setup.js",
+    "path": "backend\\tests\\setup.js",
+    "version": "1.2",
+    "contextFile": "b7168a86-context.json",
+    "chunks": {
+      "c0422b": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708085,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "61e48e95",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:25 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c0422b",
+        "hash": "cf32f166",
+        "encoded": "//%20Global%20test%20setup",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "c0422b",
+        "hash": "0e23f909",
+        "encoded": "process.env.NODE_ENV%20=%20'test';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c0422b",
+        "hash": "44fb2cd3",
+        "encoded": "//%20Mock%20external%20services",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "c0422b",
+        "hash": "4f8b30bb",
+        "encoded": "jest.mock('../src/utils/ciRunnerClient');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c0422b",
+        "hash": "3c2df559",
+        "encoded": "jest.mock('../src/utils/kubernetesClient');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c0422b",
+        "hash": "150dcf1b",
+        "encoded": "beforeAll(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c0422b",
+        "hash": "e7f23303",
+        "encoded": "//%20Setup%20test%20database",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "c0422b",
+        "hash": "a0290d90",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c0422b",
+        "hash": "de418407",
+        "encoded": "afterAll(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c0422b",
+        "hash": "c8e91269",
+        "encoded": "//%20Cleanup%20test%20database",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c0422b",
+        "hash": "b83e12be",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "c0422b",
+        "hash": "46c571fc",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c0422b",
+        "hash": "744953cc",
+        "encoded": "//%20Reset%20mocks%20before%20each%20test",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c0422b",
+        "hash": "a1559c3d",
+        "encoded": "jest.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c0422b",
+        "hash": "ff07c7b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

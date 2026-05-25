@@ -1,0 +1,186 @@
+{
+  "frontend\\src\\components\\layout\\Header.jsx": {
+    "filename": "Header.jsx",
+    "path": "frontend\\src\\components\\layout\\Header.jsx",
+    "version": "1.2",
+    "contextFile": "46d04c7c-context.json",
+    "chunks": {
+      "b0ba66": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708333,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "12183e15",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:33 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "b0ba66",
+        "hash": "1f4b38d1",
+        "encoded": "import%20%7B%20useAuth%20%7D%20from%20'../../contexts/AuthContext';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "b0ba66",
+        "hash": "76a6cf57",
+        "encoded": "import%20%7B%20useTheme%20%7D%20from%20'../../contexts/ThemeContext';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "b0ba66",
+        "hash": "8d099c9e",
+        "encoded": "import%20'./Header.css';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "b0ba66",
+        "hash": "5db39741",
+        "encoded": "const%20Header%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "b0ba66",
+        "hash": "356df1c8",
+        "encoded": "const%20%7B%20user,%20logout%20%7D%20=%20useAuth();",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "b0ba66",
+        "hash": "caeb9ea1",
+        "encoded": "const%20%7B%20theme,%20toggleTheme%20%7D%20=%20useTheme();",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "b0ba66",
+        "hash": "ec217d37",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "b0ba66",
+        "hash": "4863b1d4",
+        "encoded": "%3Cheader%20className=%22header%22%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "b0ba66",
+        "hash": "1bdc3715",
+        "encoded": "%3Cdiv%20className=%22header-left%22%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "b0ba66",
+        "hash": "b5a00f42",
+        "encoded": "%3Ch1%20className=%22header-logo%22%3EIDP%20Platform%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "b0ba66",
+        "hash": "0f7cef31",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "b0ba66",
+        "hash": "1d18348b",
+        "encoded": "%3Cdiv%20className=%22header-right%22%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "b0ba66",
+        "hash": "354dadb5",
+        "encoded": "%3Cbutton%20onClick=%7BtoggleTheme%7D%20className=%22btn-icon%22%3E",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "b0ba66",
+        "hash": "951af14a",
+        "encoded": "%7Btheme%20===%20'light'%20?%20'%F0%9F%8C%99'%20:%20'%E2%98%80%EF%B8%8F'%7D",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "b0ba66",
+        "hash": "93c8751c",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "b0ba66",
+        "hash": "5f2bcb80",
+        "encoded": "%3Cdiv%20className=%22user-menu%22%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "b0ba66",
+        "hash": "d5a48a89",
+        "encoded": "%3Cspan%3E%7Buser?.name%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "b0ba66",
+        "hash": "6e4581cc",
+        "encoded": "%3Cbutton%20onClick=%7Blogout%7D%20className=%22btn-secondary%22%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "b0ba66",
+        "hash": "bedd7142",
+        "encoded": "Logout",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "b0ba66",
+        "hash": "8c3cbd1a",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "b0ba66",
+        "hash": "9351f2ae",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "b0ba66",
+        "hash": "c102ccac",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "b0ba66",
+        "hash": "7583b3a8",
+        "encoded": "%3C/header%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "b0ba66",
+        "hash": "aaa8e9f9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "b0ba66",
+        "hash": "3a997202",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "b0ba66",
+        "hash": "ec227ad6",
+        "encoded": "export%20default%20Header;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

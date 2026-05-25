@@ -1,0 +1,2388 @@
+{
+  "backend\\tests\\integration\\projectRoutes.integration.test.js": {
+    "filename": "projectRoutes.integration.test.js",
+    "path": "backend\\tests\\integration\\projectRoutes.integration.test.js",
+    "version": "1.2",
+    "contextFile": "8bb41442-context.json",
+    "chunks": {
+      "c7bdbb": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710016,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "a9c4d226",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:23:36 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c7bdbb",
+        "hash": "6cffc3b4",
+        "encoded": "const%20request%20=%20require('supertest');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "c7bdbb",
+        "hash": "f7180b0b",
+        "encoded": "const%20app%20=%20require('../../src/app');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c7bdbb",
+        "hash": "480917f5",
+        "encoded": "const%20%7B%20sequelize,%20Project,%20ProjectMember,%20User%20%7D%20=%20require('../../src/models');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c7bdbb",
+        "hash": "276655c5",
+        "encoded": "const%20jwt%20=%20require('jsonwebtoken');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c7bdbb",
+        "hash": "9db47133",
+        "encoded": "describe('Project%20Routes%20Integration%20Tests',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c7bdbb",
+        "hash": "ef779baa",
+        "encoded": "let%20authToken;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c7bdbb",
+        "hash": "cfce8722",
+        "encoded": "let%20testUser;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c7bdbb",
+        "hash": "4c8e8333",
+        "encoded": "let%20testProject;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c7bdbb",
+        "hash": "fc6d83e8",
+        "encoded": "beforeAll(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c7bdbb",
+        "hash": "8b626b74",
+        "encoded": "await%20sequelize.sync(%7B%20force:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c7bdbb",
+        "hash": "5be09fa8",
+        "encoded": "//%20Create%20test%20user",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c7bdbb",
+        "hash": "08d55d21",
+        "encoded": "testUser%20=%20await%20User.create(%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "c7bdbb",
+        "hash": "25e3959c",
+        "encoded": "id:%20'test-user-123',",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c7bdbb",
+        "hash": "4a288f8d",
+        "encoded": "name:%20'Test%20User',",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c7bdbb",
+        "hash": "26eb72e7",
+        "encoded": "email:%20'test@example.com',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c7bdbb",
+        "hash": "af086d4d",
+        "encoded": "password:%20'hashedpassword',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c7bdbb",
+        "hash": "1b686da9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c7bdbb",
+        "hash": "5551d12a",
+        "encoded": "//%20Generate%20auth%20token",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "c7bdbb",
+        "hash": "53d60ff6",
+        "encoded": "authToken%20=%20jwt.sign(",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "c7bdbb",
+        "hash": "f76912d9",
+        "encoded": "%7B%20id:%20testUser.id,%20email:%20testUser.email%20%7D,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "c7bdbb",
+        "hash": "75518783",
+        "encoded": "process.env.JWT_SECRET%20%7C%7C%20'test-secret',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "c7bdbb",
+        "hash": "29ed5035",
+        "encoded": "%7B%20expiresIn:%20'1h'%20%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "c7bdbb",
+        "hash": "5a1b898d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "c7bdbb",
+        "hash": "6e3edb2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "c7bdbb",
+        "hash": "2c5e9ef6",
+        "encoded": "afterAll(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "c7bdbb",
+        "hash": "ba0a4025",
+        "encoded": "await%20sequelize.close();",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "c7bdbb",
+        "hash": "0322bb6d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "c7bdbb",
+        "hash": "1eaf899d",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "c7bdbb",
+        "hash": "9245768b",
+        "encoded": "//%20Clean%20up%20projects%20before%20each%20test",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "c7bdbb",
+        "hash": "331dd259",
+        "encoded": "await%20Project.destroy(%7B%20where:%20%7B%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "c7bdbb",
+        "hash": "a757692b",
+        "encoded": "await%20ProjectMember.destroy(%7B%20where:%20%7B%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "c7bdbb",
+        "hash": "8e8ca0f5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "c7bdbb",
+        "hash": "20bfc29f",
+        "encoded": "describe('POST%20/api/projects',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "c7bdbb",
+        "hash": "cf970820",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c7bdbb",
+        "hash": "307509b1",
+        "encoded": "*%20Test:%20Should%20successfully%20create%20a%20new%20project",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "c7bdbb",
+        "hash": "ab7e1a99",
+        "encoded": "*%20Scenario:%20Authenticated%20user%20creates%20a%20project%20with%20valid%20data",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "c7bdbb",
+        "hash": "9c21e362",
+        "encoded": "*%20Expected:%20Returns%20201%20status%20with%20created%20project",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "c7bdbb",
+        "hash": "2a068bde",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c7bdbb",
+        "hash": "3f2aa330",
+        "encoded": "it('should%20create%20a%20new%20project',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c7bdbb",
+        "hash": "524cf136",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "c7bdbb",
+        "hash": "b80bacf7",
+        "encoded": ".post('/api/projects')",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c7bdbb",
+        "hash": "d866afeb",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c7bdbb",
+        "hash": "4e7125d9",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c7bdbb",
+        "hash": "dd1e6166",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c7bdbb",
+        "hash": "99d16c94",
+        "encoded": "description:%20'Test%20Description',",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "c7bdbb",
+        "hash": "bdc9f01b",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c7bdbb",
+        "hash": "3287ea85",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "c7bdbb",
+        "hash": "6543080e",
+        "encoded": "expect(response.status).toBe(201);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "c7bdbb",
+        "hash": "4b2e2005",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c7bdbb",
+        "hash": "f2525a8a",
+        "encoded": "expect(response.body.data).toHaveProperty('id');",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "c7bdbb",
+        "hash": "4dfb9c57",
+        "encoded": "expect(response.body.data.name).toBe('Test%20Project');",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "c7bdbb",
+        "hash": "82d4c011",
+        "encoded": "expect(response.body.data.ownerId).toBe(testUser.id);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c7bdbb",
+        "hash": "3b735f84",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c7bdbb",
+        "hash": "78315c35",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "c7bdbb",
+        "hash": "2241d419",
+        "encoded": "*%20Test:%20Should%20return%20400%20for%20invalid%20data",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "c7bdbb",
+        "hash": "cff5373b",
+        "encoded": "*%20Scenario:%20User%20submits%20incomplete%20project%20data",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "c7bdbb",
+        "hash": "ee8ba551",
+        "encoded": "*%20Expected:%20Returns%20400%20with%20validation%20errors",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "c7bdbb",
+        "hash": "49629ea6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "c7bdbb",
+        "hash": "9d89732a",
+        "encoded": "it('should%20return%20400%20for%20invalid%20data',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "c7bdbb",
+        "hash": "39150509",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "c7bdbb",
+        "hash": "3d459d1d",
+        "encoded": ".post('/api/projects')",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "c7bdbb",
+        "hash": "6b66b2b8",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "c7bdbb",
+        "hash": "e2ff0343",
+        "encoded": ".send(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "c7bdbb",
+        "hash": "2470638b",
+        "encoded": "expect(response.status).toBe(400);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "c7bdbb",
+        "hash": "dff700d5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "c7bdbb",
+        "hash": "b4c7ed37",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "c7bdbb",
+        "hash": "3ffa6018",
+        "encoded": "*%20Test:%20Should%20return%20401%20without%20authentication",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "c7bdbb",
+        "hash": "25c221a3",
+        "encoded": "*%20Scenario:%20Unauthenticated%20request%20to%20create%20project",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "c7bdbb",
+        "hash": "119ec3c8",
+        "encoded": "*%20Expected:%20Returns%20401%20unauthorized",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "c7bdbb",
+        "hash": "b56624f8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "c7bdbb",
+        "hash": "50046ed4",
+        "encoded": "it('should%20return%20401%20without%20authentication',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "c7bdbb",
+        "hash": "6c416e80",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "c7bdbb",
+        "hash": "499b7c80",
+        "encoded": ".post('/api/projects')",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "c7bdbb",
+        "hash": "b126fb53",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "c7bdbb",
+        "hash": "4873ff91",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "c7bdbb",
+        "hash": "08554359",
+        "encoded": "description:%20'Test%20Description',",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "c7bdbb",
+        "hash": "aa5a1e4d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "c7bdbb",
+        "hash": "6059456d",
+        "encoded": "expect(response.status).toBe(401);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "c7bdbb",
+        "hash": "79e71f8b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "c7bdbb",
+        "hash": "b2e2c31b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "c7bdbb",
+        "hash": "f0f746d1",
+        "encoded": "*%20Test:%20Should%20create%20project%20with%20minimal%20required%20fields",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "c7bdbb",
+        "hash": "e0951fad",
+        "encoded": "*%20Scenario:%20User%20creates%20project%20with%20only%20required%20fields",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "c7bdbb",
+        "hash": "3c98e7d4",
+        "encoded": "*%20Expected:%20Returns%20201%20with%20project%20having%20default%20values",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "c7bdbb",
+        "hash": "3e120fb1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "c7bdbb",
+        "hash": "7c3853d3",
+        "encoded": "it('should%20create%20project%20with%20minimal%20required%20fields',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "c7bdbb",
+        "hash": "9b704286",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "c7bdbb",
+        "hash": "113e8b5a",
+        "encoded": ".post('/api/projects')",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "c7bdbb",
+        "hash": "833c8de8",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "c7bdbb",
+        "hash": "2cff1b5c",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "c7bdbb",
+        "hash": "35cc3168",
+        "encoded": "name:%20'Minimal%20Project',",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "c7bdbb",
+        "hash": "6df62075",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "c7bdbb",
+        "hash": "9e180930",
+        "encoded": "expect(response.status).toBe(201);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "c7bdbb",
+        "hash": "e5a34cd3",
+        "encoded": "expect(response.body.data.name).toBe('Minimal%20Project');",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "c7bdbb",
+        "hash": "4ad97935",
+        "encoded": "expect(response.body.data.status).toBe('active');",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "c7bdbb",
+        "hash": "85a98f91",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "c7bdbb",
+        "hash": "0bf9a8ad",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "c7bdbb",
+        "hash": "89f683c3",
+        "encoded": "describe('GET%20/api/projects',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "c7bdbb",
+        "hash": "13372b07",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "c7bdbb",
+        "hash": "15ea3425",
+        "encoded": "//%20Create%20test%20projects",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "c7bdbb",
+        "hash": "f4189f8f",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "c7bdbb",
+        "hash": "a5db54c0",
+        "encoded": "name:%20'Project%201',",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "c7bdbb",
+        "hash": "0f537d4d",
+        "encoded": "description:%20'Description%201',",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "c7bdbb",
+        "hash": "4c596bd5",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "c7bdbb",
+        "hash": "cec3bab3",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "c7bdbb",
+        "hash": "3b7ac76c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "c7bdbb",
+        "hash": "bbd0da35",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "c7bdbb",
+        "hash": "00c9652f",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "c7bdbb",
+        "hash": "334a4d0a",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "c7bdbb",
+        "hash": "8a7fbd9c",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "c7bdbb",
+        "hash": "0e3ba760",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "c7bdbb",
+        "hash": "a2f9936c",
+        "encoded": "const%20project2%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "c7bdbb",
+        "hash": "29946780",
+        "encoded": "name:%20'Project%202',",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "c7bdbb",
+        "hash": "a5c6faa7",
+        "encoded": "description:%20'Description%202',",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "c7bdbb",
+        "hash": "bc966e87",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "c7bdbb",
+        "hash": "66d38119",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "c7bdbb",
+        "hash": "0901f992",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "c7bdbb",
+        "hash": "cac8182f",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "c7bdbb",
+        "hash": "32492bb1",
+        "encoded": "projectId:%20project2.id,",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "c7bdbb",
+        "hash": "5fc12089",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "c7bdbb",
+        "hash": "2c8a47b4",
+        "encoded": "role:%20'developer',",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "c7bdbb",
+        "hash": "3e28129b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "c7bdbb",
+        "hash": "2be22c18",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "c7bdbb",
+        "hash": "33f06cc6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "c7bdbb",
+        "hash": "d2520801",
+        "encoded": "*%20Test:%20Should%20retrieve%20all%20user%20projects",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "c7bdbb",
+        "hash": "68aa0a0a",
+        "encoded": "*%20Scenario:%20User%20requests%20their%20projects",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "c7bdbb",
+        "hash": "6d1b6168",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20list%20of%20projects",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "c7bdbb",
+        "hash": "81323f47",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "c7bdbb",
+        "hash": "ea55ae24",
+        "encoded": "it('should%20get%20all%20user%20projects',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "c7bdbb",
+        "hash": "32fbaaaf",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "c7bdbb",
+        "hash": "e6766b3c",
+        "encoded": ".get('/api/projects')",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "c7bdbb",
+        "hash": "de3c3794",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "c7bdbb",
+        "hash": "da02aa7b",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "c7bdbb",
+        "hash": "fa1c4a52",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "c7bdbb",
+        "hash": "97afda2e",
+        "encoded": "expect(response.body.data.projects).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "c7bdbb",
+        "hash": "ca027513",
+        "encoded": "expect(response.body.data.pagination).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "c7bdbb",
+        "hash": "194f3827",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "c7bdbb",
+        "hash": "de6eaf4a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "c7bdbb",
+        "hash": "f155ca7b",
+        "encoded": "*%20Test:%20Should%20support%20pagination",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "c7bdbb",
+        "hash": "260f5b85",
+        "encoded": "*%20Scenario:%20User%20requests%20projects%20with%20pagination%20parameters",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "c7bdbb",
+        "hash": "430128d4",
+        "encoded": "*%20Expected:%20Returns%20paginated%20results",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "c7bdbb",
+        "hash": "235a7f6d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "c7bdbb",
+        "hash": "9953a52d",
+        "encoded": "it('should%20support%20pagination',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "c7bdbb",
+        "hash": "9c7f36ec",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "c7bdbb",
+        "hash": "a0ed5725",
+        "encoded": ".get('/api/projects?page=1&limit=1')",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "c7bdbb",
+        "hash": "4bb62f27",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "c7bdbb",
+        "hash": "456d97af",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "c7bdbb",
+        "hash": "52a66e4f",
+        "encoded": "expect(response.body.data.projects).toHaveLength(1);",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "c7bdbb",
+        "hash": "933f5352",
+        "encoded": "expect(response.body.data.pagination.page).toBe(1);",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "c7bdbb",
+        "hash": "32d8959d",
+        "encoded": "expect(response.body.data.pagination.limit).toBe(1);",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "c7bdbb",
+        "hash": "67f8879c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "c7bdbb",
+        "hash": "1853885c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "c7bdbb",
+        "hash": "a6615f18",
+        "encoded": "*%20Test:%20Should%20filter%20projects%20by%20search%20term",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "c7bdbb",
+        "hash": "f60eeec9",
+        "encoded": "*%20Scenario:%20User%20searches%20for%20projects%20by%20name",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "c7bdbb",
+        "hash": "bfce4bdf",
+        "encoded": "*%20Expected:%20Returns%20only%20matching%20projects",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "c7bdbb",
+        "hash": "c46a5480",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "c7bdbb",
+        "hash": "54156150",
+        "encoded": "it('should%20filter%20projects%20by%20search%20term',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "c7bdbb",
+        "hash": "0259bbf5",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "c7bdbb",
+        "hash": "560dccf8",
+        "encoded": ".get('/api/projects?search=Project%201')",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "c7bdbb",
+        "hash": "53de4eed",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "c7bdbb",
+        "hash": "8fd94c7a",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "c7bdbb",
+        "hash": "de764125",
+        "encoded": "expect(response.body.data.projects.length).toBeGreaterThan(0);",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "c7bdbb",
+        "hash": "74e4a0a3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "c7bdbb",
+        "hash": "433f3905",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "c7bdbb",
+        "hash": "05cf4d69",
+        "encoded": "*%20Test:%20Should%20filter%20projects%20by%20status",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "c7bdbb",
+        "hash": "a2638e39",
+        "encoded": "*%20Scenario:%20User%20filters%20projects%20by%20active%20status",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "c7bdbb",
+        "hash": "f6c8d210",
+        "encoded": "*%20Expected:%20Returns%20only%20active%20projects",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "c7bdbb",
+        "hash": "c28912ce",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "c7bdbb",
+        "hash": "ec1ad1c1",
+        "encoded": "it('should%20filter%20projects%20by%20status',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "c7bdbb",
+        "hash": "87cf45fe",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "c7bdbb",
+        "hash": "8a74b3dc",
+        "encoded": ".get('/api/projects?status=active')",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "c7bdbb",
+        "hash": "4e2a6f1f",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "c7bdbb",
+        "hash": "0049463c",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "c7bdbb",
+        "hash": "35d2b5f8",
+        "encoded": "expect(response.body.data.projects.every(p%20=%3E%20p.status%20===%20'active')).toBe(true);",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "c7bdbb",
+        "hash": "37555f08",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "c7bdbb",
+        "hash": "ad4c4656",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "c7bdbb",
+        "hash": "efb77a0d",
+        "encoded": "describe('GET%20/api/projects/:id',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "c7bdbb",
+        "hash": "40c60eec",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "c7bdbb",
+        "hash": "e01df6e8",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "c7bdbb",
+        "hash": "b442fcd8",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "c7bdbb",
+        "hash": "eb45b4a7",
+        "encoded": "description:%20'Test%20Description',",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "c7bdbb",
+        "hash": "00887ac7",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "c7bdbb",
+        "hash": "9cf60465",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "c7bdbb",
+        "hash": "a6eb8933",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "c7bdbb",
+        "hash": "18820c8e",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "c7bdbb",
+        "hash": "b2c815f5",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "c7bdbb",
+        "hash": "b36a77ce",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "c7bdbb",
+        "hash": "a7cd5066",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "c7bdbb",
+        "hash": "410012af",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "c7bdbb",
+        "hash": "0da6a98d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "c7bdbb",
+        "hash": "a0b42310",
+        "encoded": "*%20Test:%20Should%20retrieve%20project%20by%20ID",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "c7bdbb",
+        "hash": "e2586981",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20specific%20project",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "c7bdbb",
+        "hash": "dc9d5521",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20project%20details",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "c7bdbb",
+        "hash": "3e3b1a5c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "c7bdbb",
+        "hash": "a071efcc",
+        "encoded": "it('should%20get%20project%20by%20id',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "c7bdbb",
+        "hash": "9e5b6e26",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "c7bdbb",
+        "hash": "6e821019",
+        "encoded": ".get(%60/api/projects/$%7BtestProject.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "c7bdbb",
+        "hash": "63dbea26",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "c7bdbb",
+        "hash": "0deade30",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "c7bdbb",
+        "hash": "25c54cb9",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "c7bdbb",
+        "hash": "957a6e3e",
+        "encoded": "expect(response.body.data.id).toBe(testProject.id);",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "c7bdbb",
+        "hash": "d322a037",
+        "encoded": "expect(response.body.data.name).toBe('Test%20Project');",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "c7bdbb",
+        "hash": "e5825e4f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "c7bdbb",
+        "hash": "c110fd36",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "c7bdbb",
+        "hash": "80a7ae7e",
+        "encoded": "*%20Test:%20Should%20return%20404%20for%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "c7bdbb",
+        "hash": "b48c6477",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20project%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "c7bdbb",
+        "hash": "5e717b7d",
+        "encoded": "*%20Expected:%20Returns%20404",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "c7bdbb",
+        "hash": "39dd783a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "c7bdbb",
+        "hash": "cf1a6a8c",
+        "encoded": "it('should%20return%20404%20for%20non-existent%20project',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "c7bdbb",
+        "hash": "1cbb6699",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "c7bdbb",
+        "hash": "cb54a6fb",
+        "encoded": ".get('/api/projects/non-existent-id')",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "c7bdbb",
+        "hash": "755b9d4a",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "c7bdbb",
+        "hash": "0d906085",
+        "encoded": "expect(response.status).toBe(404);",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "c7bdbb",
+        "hash": "74cca6a4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "c7bdbb",
+        "hash": "a5fb1411",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "c7bdbb",
+        "hash": "9b000ee1",
+        "encoded": "describe('PUT%20/api/projects/:id',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "c7bdbb",
+        "hash": "3b609637",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "c7bdbb",
+        "hash": "18264805",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "c7bdbb",
+        "hash": "b77ac2e4",
+        "encoded": "name:%20'Original%20Name',",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "c7bdbb",
+        "hash": "f76f9fa4",
+        "encoded": "description:%20'Original%20Description',",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "c7bdbb",
+        "hash": "83c246dc",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "c7bdbb",
+        "hash": "467d72a4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "c7bdbb",
+        "hash": "ab4bacdf",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "c7bdbb",
+        "hash": "a71eb010",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "c7bdbb",
+        "hash": "662dbf9c",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "c7bdbb",
+        "hash": "e3f49986",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "c7bdbb",
+        "hash": "4b271ca1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "c7bdbb",
+        "hash": "fad2d580",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "c7bdbb",
+        "hash": "be0295ab",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "c7bdbb",
+        "hash": "a37ca4cb",
+        "encoded": "*%20Test:%20Should%20update%20project%20successfully",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "c7bdbb",
+        "hash": "5437cf8d",
+        "encoded": "*%20Scenario:%20User%20updates%20project%20details",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "c7bdbb",
+        "hash": "5ad7f139",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20updated%20project",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "c7bdbb",
+        "hash": "74cbc455",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "c7bdbb",
+        "hash": "e2d08311",
+        "encoded": "it('should%20update%20project%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "c7bdbb",
+        "hash": "dc4a7c9b",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "c7bdbb",
+        "hash": "245d2387",
+        "encoded": ".put(%60/api/projects/$%7BtestProject.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "c7bdbb",
+        "hash": "19f59c9d",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "c7bdbb",
+        "hash": "2cf48474",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "c7bdbb",
+        "hash": "ac665a3a",
+        "encoded": "name:%20'Updated%20Name',",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "c7bdbb",
+        "hash": "aa12829f",
+        "encoded": "description:%20'Updated%20Description',",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "c7bdbb",
+        "hash": "4e315c35",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "c7bdbb",
+        "hash": "3bd0ef1d",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "c7bdbb",
+        "hash": "f6046339",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "c7bdbb",
+        "hash": "921e9c8d",
+        "encoded": "expect(response.body.data.name).toBe('Updated%20Name');",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "c7bdbb",
+        "hash": "0b58ffd9",
+        "encoded": "expect(response.body.data.description).toBe('Updated%20Description');",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "c7bdbb",
+        "hash": "3d104f42",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "c7bdbb",
+        "hash": "b707ad6a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "c7bdbb",
+        "hash": "ed186c6b",
+        "encoded": "*%20Test:%20Should%20return%20404%20when%20updating%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "c7bdbb",
+        "hash": "453cabff",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20update%20a%20project%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "c7bdbb",
+        "hash": "fe0f3cdb",
+        "encoded": "*%20Expected:%20Returns%20404",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "c7bdbb",
+        "hash": "25cca91a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "c7bdbb",
+        "hash": "9762789e",
+        "encoded": "it('should%20return%20404%20for%20non-existent%20project',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "c7bdbb",
+        "hash": "d875dcbc",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "c7bdbb",
+        "hash": "0019fe4c",
+        "encoded": ".put('/api/projects/non-existent-id')",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "c7bdbb",
+        "hash": "144546b7",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "c7bdbb",
+        "hash": "95f4cda6",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "c7bdbb",
+        "hash": "a91186d6",
+        "encoded": "name:%20'Updated%20Name',",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "c7bdbb",
+        "hash": "41e4390c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "c7bdbb",
+        "hash": "7e524a33",
+        "encoded": "expect(response.status).toBe(404);",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "c7bdbb",
+        "hash": "72ca0ddf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "c7bdbb",
+        "hash": "1b44b2f3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "c7bdbb",
+        "hash": "5f641739",
+        "encoded": "*%20Test:%20Should%20validate%20update%20data",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "c7bdbb",
+        "hash": "4889c8d1",
+        "encoded": "*%20Scenario:%20User%20sends%20invalid%20update%20data",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "c7bdbb",
+        "hash": "bc52d189",
+        "encoded": "*%20Expected:%20Returns%20400%20with%20validation%20errors",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "c7bdbb",
+        "hash": "b28beefd",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "c7bdbb",
+        "hash": "acb7a91a",
+        "encoded": "it('should%20validate%20update%20data',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "c7bdbb",
+        "hash": "4e008f48",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "c7bdbb",
+        "hash": "79cc2222",
+        "encoded": ".put(%60/api/projects/$%7BtestProject.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "c7bdbb",
+        "hash": "b901d614",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "c7bdbb",
+        "hash": "ef8a208e",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "c7bdbb",
+        "hash": "7caf73c0",
+        "encoded": "name:%20'',%20//%20Invalid%20empty%20name",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "c7bdbb",
+        "hash": "40f1136a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "c7bdbb",
+        "hash": "9704074d",
+        "encoded": "expect(response.status).toBe(400);",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "c7bdbb",
+        "hash": "944d59f9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "c7bdbb",
+        "hash": "3513e85a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "c7bdbb",
+        "hash": "ad084a30",
+        "encoded": "describe('DELETE%20/api/projects/:id',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "c7bdbb",
+        "hash": "3c6c76b8",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "c7bdbb",
+        "hash": "f3a150af",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "c7bdbb",
+        "hash": "b57e8de0",
+        "encoded": "name:%20'Project%20to%20Delete',",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "c7bdbb",
+        "hash": "830bca70",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "c7bdbb",
+        "hash": "2cd5f06d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "c7bdbb",
+        "hash": "1706b39c",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "c7bdbb",
+        "hash": "42275548",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "c7bdbb",
+        "hash": "4fcf4ee9",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "c7bdbb",
+        "hash": "abf139ed",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "c7bdbb",
+        "hash": "86180112",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "c7bdbb",
+        "hash": "cdbc14c4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "c7bdbb",
+        "hash": "1825f18d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "c7bdbb",
+        "hash": "4c7ff611",
+        "encoded": "*%20Test:%20Should%20delete%20project%20successfully",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "c7bdbb",
+        "hash": "1000839a",
+        "encoded": "*%20Scenario:%20User%20deletes%20their%20project",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "c7bdbb",
+        "hash": "94ca9b1c",
+        "encoded": "*%20Expected:%20Returns%20200%20and%20project%20is%20removed%20from%20database",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "c7bdbb",
+        "hash": "aa188ccb",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "c7bdbb",
+        "hash": "dc054ee2",
+        "encoded": "it('should%20delete%20project%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "c7bdbb",
+        "hash": "f5252f9a",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "c7bdbb",
+        "hash": "4c32583f",
+        "encoded": ".delete(%60/api/projects/$%7BtestProject.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "c7bdbb",
+        "hash": "6e41f563",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "c7bdbb",
+        "hash": "0dff075a",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "c7bdbb",
+        "hash": "406bf023",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "c7bdbb",
+        "hash": "ad2579ce",
+        "encoded": "//%20Verify%20project%20is%20deleted",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "c7bdbb",
+        "hash": "3e099ed7",
+        "encoded": "const%20deletedProject%20=%20await%20Project.findByPk(testProject.id);",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "c7bdbb",
+        "hash": "34070813",
+        "encoded": "expect(deletedProject).toBeNull();",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "c7bdbb",
+        "hash": "4cda76c2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "c7bdbb",
+        "hash": "09bad70c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "c7bdbb",
+        "hash": "31fce3bb",
+        "encoded": "*%20Test:%20Should%20return%20404%20when%20deleting%20non-existent%20project",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "c7bdbb",
+        "hash": "714a3e7d",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20delete%20a%20project%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "c7bdbb",
+        "hash": "eaaaad93",
+        "encoded": "*%20Expected:%20Returns%20404",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "c7bdbb",
+        "hash": "2f6f7633",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "c7bdbb",
+        "hash": "3c3a5368",
+        "encoded": "it('should%20return%20404%20for%20non-existent%20project',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "c7bdbb",
+        "hash": "35b620fe",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "c7bdbb",
+        "hash": "6b23bb12",
+        "encoded": ".delete('/api/projects/non-existent-id')",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "c7bdbb",
+        "hash": "c1baf938",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "c7bdbb",
+        "hash": "2125fd29",
+        "encoded": "expect(response.status).toBe(404);",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "c7bdbb",
+        "hash": "358cb5d4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "c7bdbb",
+        "hash": "f22e0357",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "c7bdbb",
+        "hash": "e7cfd5e9",
+        "encoded": "describe('GET%20/api/projects/:id/members',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "c7bdbb",
+        "hash": "b0c454b5",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "c7bdbb",
+        "hash": "0b837bc8",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "c7bdbb",
+        "hash": "b1d094a2",
+        "encoded": "name:%20'Team%20Project',",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "c7bdbb",
+        "hash": "dcf53ebf",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "c7bdbb",
+        "hash": "f2793953",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "c7bdbb",
+        "hash": "82ea3094",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "c7bdbb",
+        "hash": "f1d3ba36",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "c7bdbb",
+        "hash": "bd2867a5",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "c7bdbb",
+        "hash": "76e243e7",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "c7bdbb",
+        "hash": "f6261752",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "c7bdbb",
+        "hash": "2cc7cea3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "c7bdbb",
+        "hash": "b1d57e76",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "c7bdbb",
+        "hash": "731a9bad",
+        "encoded": "*%20Test:%20Should%20retrieve%20project%20members",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "c7bdbb",
+        "hash": "d0d6eb79",
+        "encoded": "*%20Scenario:%20User%20requests%20list%20of%20project%20members",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "c7bdbb",
+        "hash": "3e09d769",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20members%20list",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "c7bdbb",
+        "hash": "016ff6d4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "c7bdbb",
+        "hash": "b89446d9",
+        "encoded": "it('should%20get%20project%20members',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "c7bdbb",
+        "hash": "726b3540",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "c7bdbb",
+        "hash": "02bb06dd",
+        "encoded": ".get(%60/api/projects/$%7BtestProject.id%7D/members%60)",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "c7bdbb",
+        "hash": "244d65c5",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "c7bdbb",
+        "hash": "312fca6d",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "c7bdbb",
+        "hash": "93b44179",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "c7bdbb",
+        "hash": "17f53fd5",
+        "encoded": "expect(Array.isArray(response.body.data)).toBe(true);",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "c7bdbb",
+        "hash": "37dbc86e",
+        "encoded": "expect(response.body.data.length).toBeGreaterThan(0);",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "c7bdbb",
+        "hash": "0cf7dda5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "c7bdbb",
+        "hash": "4b9a15f0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "c7bdbb",
+        "hash": "d55c2f0f",
+        "encoded": "describe('POST%20/api/projects/:id/members',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "c7bdbb",
+        "hash": "090c70e4",
+        "encoded": "let%20anotherUser;",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "c7bdbb",
+        "hash": "28d6031b",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "c7bdbb",
+        "hash": "6339f1c9",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "c7bdbb",
+        "hash": "87a3fb07",
+        "encoded": "name:%20'Team%20Project',",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "c7bdbb",
+        "hash": "2c7d3068",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "c7bdbb",
+        "hash": "f37631ef",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "c7bdbb",
+        "hash": "fa4e953b",
+        "encoded": "await%20ProjectMember.create(%7B",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "c7bdbb",
+        "hash": "58dd99e3",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "c7bdbb",
+        "hash": "d4910619",
+        "encoded": "userId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "c7bdbb",
+        "hash": "e2370a7e",
+        "encoded": "role:%20'owner',",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "c7bdbb",
+        "hash": "813e48de",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "c7bdbb",
+        "hash": "ba610a63",
+        "encoded": "anotherUser%20=%20await%20User.create(%7B",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "c7bdbb",
+        "hash": "80a02ba8",
+        "encoded": "id:%20'another-user-123',",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "c7bdbb",
+        "hash": "d155dd35",
+        "encoded": "name:%20'Another%20User',",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "c7bdbb",
+        "hash": "36ace2d6",
+        "encoded": "email:%20'another@example.com',",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "c7bdbb",
+        "hash": "723be204",
+        "encoded": "password:%20'hashedpassword',",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "c7bdbb",
+        "hash": "7675a516",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "c7bdbb",
+        "hash": "c223827c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "c7bdbb",
+        "hash": "f6e1cd55",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "c7bdbb",
+        "hash": "d3a56f23",
+        "encoded": "*%20Test:%20Should%20add%20member%20to%20project",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "c7bdbb",
+        "hash": "7bccd34c",
+        "encoded": "*%20Scenario:%20Owner%20adds%20a%20new%20member%20to%20the%20project",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "c7bdbb",
+        "hash": "63fa1cf1",
+        "encoded": "*%20Expected:%20Returns%20201%20with%20member%20details",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "c7bdbb",
+        "hash": "61767409",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "c7bdbb",
+        "hash": "f2756d1e",
+        "encoded": "it('should%20add%20member%20to%20project',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "c7bdbb",
+        "hash": "31b9c75e",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "c7bdbb",
+        "hash": "70bbf00d",
+        "encoded": ".post(%60/api/projects/$%7BtestProject.id%7D/members%60)",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "c7bdbb",
+        "hash": "69af1eea",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "c7bdbb",
+        "hash": "b7f0ce55",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "c7bdbb",
+        "hash": "dab9d7a2",
+        "encoded": "userId:%20anotherUser.id,",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "c7bdbb",
+        "hash": "e9d35814",
+        "encoded": "role:%20'developer',",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "c7bdbb",
+        "hash": "23549d12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "c7bdbb",
+        "hash": "9058d9a3",
+        "encoded": "expect(response.status).toBe(201);",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "c7bdbb",
+        "hash": "aac0adca",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "c7bdbb",
+        "hash": "8107caad",
+        "encoded": "expect(response.body.data.userId).toBe(anotherUser.id);",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "c7bdbb",
+        "hash": "f53a1a5a",
+        "encoded": "expect(response.body.data.role).toBe('developer');",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "c7bdbb",
+        "hash": "116fe2fd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "c7bdbb",
+        "hash": "ba33630e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "c7bdbb",
+        "hash": "63de07fd",
+        "encoded": "*%20Test:%20Should%20validate%20member%20data",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "c7bdbb",
+        "hash": "d531d1a8",
+        "encoded": "*%20Scenario:%20User%20sends%20invalid%20member%20data",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "c7bdbb",
+        "hash": "a4fff0df",
+        "encoded": "*%20Expected:%20Returns%20400%20with%20validation%20errors",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "c7bdbb",
+        "hash": "9b6fc8e2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "c7bdbb",
+        "hash": "c7931b76",
+        "encoded": "it('should%20validate%20member%20data',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "c7bdbb",
+        "hash": "a4e34a75",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "c7bdbb",
+        "hash": "50fb6066",
+        "encoded": ".post(%60/api/projects/$%7BtestProject.id%7D/members%60)",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "c7bdbb",
+        "hash": "67fb1f40",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "c7bdbb",
+        "hash": "7c5c5055",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "c7bdbb",
+        "hash": "80352b27",
+        "encoded": "//%20Missing%20userId%20and%20role",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "c7bdbb",
+        "hash": "db1bbf2e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "c7bdbb",
+        "hash": "260f6635",
+        "encoded": "expect(response.status).toBe(400);",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "c7bdbb",
+        "hash": "d33772da",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "c7bdbb",
+        "hash": "465755f0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "c7bdbb",
+        "hash": "b0455ce9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

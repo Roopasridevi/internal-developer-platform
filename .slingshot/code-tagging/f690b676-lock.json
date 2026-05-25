@@ -1,0 +1,252 @@
+{
+  "backend\\src\\routes\\projectRoutes.js": {
+    "filename": "projectRoutes.js",
+    "path": "backend\\src\\routes\\projectRoutes.js",
+    "version": "1.2",
+    "contextFile": "f690b676-context.json",
+    "chunks": {
+      "2aa9e8": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707784,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "258ee706",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:24 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2aa9e8",
+        "hash": "0329f9d1",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "2aa9e8",
+        "hash": "de5ebe26",
+        "encoded": "const%20%7B%20body%20%7D%20=%20require('express-validator');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2aa9e8",
+        "hash": "c44f3105",
+        "encoded": "const%20projectController%20=%20require('../controllers/projectController');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "2aa9e8",
+        "hash": "1e7ed5ba",
+        "encoded": "const%20authenticate%20=%20require('../middleware/authenticate');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2aa9e8",
+        "hash": "df21e85c",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "2aa9e8",
+        "hash": "f485d2b4",
+        "encoded": "router.use(authenticate);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2aa9e8",
+        "hash": "403bd677",
+        "encoded": "router.post(",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2aa9e8",
+        "hash": "56c0ea63",
+        "encoded": "'/',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2aa9e8",
+        "hash": "2cf4eafd",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2aa9e8",
+        "hash": "194c72cd",
+        "encoded": "body('name').notEmpty().trim().withMessage('Project%20name%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2aa9e8",
+        "hash": "94e9fa66",
+        "encoded": "body('description').optional().trim(),",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2aa9e8",
+        "hash": "7c9b6ae4",
+        "encoded": "body('repositoryUrl').optional().isURL().withMessage('Invalid%20repository%20URL'),",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2aa9e8",
+        "hash": "af9eeae9",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2aa9e8",
+        "hash": "3dfe9809",
+        "encoded": "projectController.createProject",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2aa9e8",
+        "hash": "dfc04fa8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2aa9e8",
+        "hash": "2b28176a",
+        "encoded": "router.get('/',%20projectController.getProjects);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2aa9e8",
+        "hash": "7bfbe6ce",
+        "encoded": "router.get('/:id',%20projectController.getProjectById);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2aa9e8",
+        "hash": "fa6868a4",
+        "encoded": "router.put(",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2aa9e8",
+        "hash": "1ae40b9d",
+        "encoded": "'/:id',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "2aa9e8",
+        "hash": "7eba141b",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2aa9e8",
+        "hash": "39730953",
+        "encoded": "body('name').optional().notEmpty().trim(),",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "2aa9e8",
+        "hash": "cbcb713e",
+        "encoded": "body('description').optional().trim(),",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2aa9e8",
+        "hash": "d116e064",
+        "encoded": "body('status').optional().isIn(%5B'active',%20'inactive',%20'archived'%5D),",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "2aa9e8",
+        "hash": "a0328829",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2aa9e8",
+        "hash": "0fce67b2",
+        "encoded": "projectController.updateProject",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "2aa9e8",
+        "hash": "070912cb",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "2aa9e8",
+        "hash": "1ef14efb",
+        "encoded": "router.delete('/:id',%20projectController.deleteProject);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "2aa9e8",
+        "hash": "cb2c15bd",
+        "encoded": "router.get('/:id/members',%20projectController.getProjectMembers);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "2aa9e8",
+        "hash": "53aaf4d6",
+        "encoded": "router.post(",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "2aa9e8",
+        "hash": "11832767",
+        "encoded": "'/:id/members',",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "2aa9e8",
+        "hash": "38e6f085",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "2aa9e8",
+        "hash": "133ba48f",
+        "encoded": "body('userId').notEmpty().isUUID().withMessage('Valid%20user%20ID%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "2aa9e8",
+        "hash": "d4a9b16d",
+        "encoded": "body('role').isIn(%5B'admin',%20'developer',%20'viewer'%5D).withMessage('Invalid%20role'),",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "2aa9e8",
+        "hash": "0868211c",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "2aa9e8",
+        "hash": "18d38e2d",
+        "encoded": "projectController.addProjectMember",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "2aa9e8",
+        "hash": "15b81b0c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "2aa9e8",
+        "hash": "9f646b98",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

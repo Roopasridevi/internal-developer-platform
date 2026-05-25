@@ -1,0 +1,2196 @@
+{
+  "frontend\\src\\tests\\FRONTEND_TEST_SUITE_SUMMARY.md": {
+    "filename": "FRONTEND_TEST_SUITE_SUMMARY.md",
+    "path": "frontend\\src\\tests\\FRONTEND_TEST_SUITE_SUMMARY.md",
+    "version": "1.2",
+    "contextFile": "1019b2cb-context.json",
+    "chunks": {
+      "ed9b67": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710517,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "5342b892",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:31:57 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ed9b67",
+        "hash": "7454e724",
+        "encoded": "#%20Frontend%20UI%20Test%20Suite%20Summary%20-%20Internal%20Developer%20Platform",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ed9b67",
+        "hash": "5ac33061",
+        "encoded": "##%20Overview",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ed9b67",
+        "hash": "20b791e3",
+        "encoded": "Comprehensive%20test%20suites%20have%20been%20created%20for%20all%20four%20frontend%20UI%20modules%20of%20the%20Internal%20Developer%20Platform%20using%20Vitest%20and%20React%20Testing%20Library.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ed9b67",
+        "hash": "f1c2edca",
+        "encoded": "##%20Test%20Coverage",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ed9b67",
+        "hash": "160d41c5",
+        "encoded": "###%20Total%20Test%20Statistics",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ed9b67",
+        "hash": "ff3e85f6",
+        "encoded": "-%20**Total%20Test%20Files**:%207",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ed9b67",
+        "hash": "b10f2414",
+        "encoded": "-%20**Total%20Test%20Cases**:%20137",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ed9b67",
+        "hash": "9bb11188",
+        "encoded": "-%20**Testing%20Framework**:%20Vitest%20+%20React%20Testing%20Library",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ed9b67",
+        "hash": "a067e5ad",
+        "encoded": "-%20**Mocking%20Strategy**:%20Service%20layer%20mocks%20with%20React%20Query",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ed9b67",
+        "hash": "c7d2bd71",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ed9b67",
+        "hash": "28a3464c",
+        "encoded": "##%20Module%20Test%20Breakdown",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ed9b67",
+        "hash": "651f378c",
+        "encoded": "###%201.%20Project%20Management%20Module%20UI",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ed9b67",
+        "hash": "4ad8fcb1",
+        "encoded": "####%20ProjectsPage%20Component",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ed9b67",
+        "hash": "9fc54144",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/ProjectsPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ed9b67",
+        "hash": "ee950499",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/projects/ProjectsPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ed9b67",
+        "hash": "4e964e54",
+        "encoded": "-%20**Tests**:%2013%20test%20cases",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ed9b67",
+        "hash": "0c827a73",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "ed9b67",
+        "hash": "f784c846",
+        "encoded": "-%20%E2%9C%85%20Loading%20state%20display",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ed9b67",
+        "hash": "5f8a9537",
+        "encoded": "-%20%E2%9C%85%20Projects%20list%20rendering%20with%20multiple%20projects",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "ed9b67",
+        "hash": "c2a00665",
+        "encoded": "-%20%E2%9C%85%20Project%20status%20badges%20(active,%20inactive)",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ed9b67",
+        "hash": "b9f94153",
+        "encoded": "-%20%E2%9C%85%20%22Create%20Project%22%20button%20rendering%20and%20navigation",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "ed9b67",
+        "hash": "9c383554",
+        "encoded": "-%20%E2%9C%85%20Page%20header%20with%20title",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ed9b67",
+        "hash": "51c2d4a3",
+        "encoded": "-%20%E2%9C%85%20Empty%20state%20handling",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "ed9b67",
+        "hash": "dbea1852",
+        "encoded": "-%20%E2%9C%85%20API%20call%20on%20component%20mount",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ed9b67",
+        "hash": "0aa6fd82",
+        "encoded": "-%20%E2%9C%85%20Project%20cards%20as%20navigation%20links",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ed9b67",
+        "hash": "1a4d5e23",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "ed9b67",
+        "hash": "3d0c7814",
+        "encoded": "-%20%E2%9C%85%20Grid%20layout%20rendering",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ed9b67",
+        "hash": "b921b6c1",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ed9b67",
+        "hash": "426f09c6",
+        "encoded": "-%20%E2%9C%85%20Project%20descriptions%20rendering",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ed9b67",
+        "hash": "0c18a1ce",
+        "encoded": "-%20%E2%9C%85%20Multiple%20projects%20in%20grid",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "ed9b67",
+        "hash": "ea7c686e",
+        "encoded": "####%20ProjectDetailPage%20Component",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ed9b67",
+        "hash": "840faa99",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/ProjectDetailPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ed9b67",
+        "hash": "2625a739",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/projects/ProjectDetailPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ed9b67",
+        "hash": "5138ecbf",
+        "encoded": "-%20**Tests**:%2013%20test%20cases",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ed9b67",
+        "hash": "ada4ca63",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ed9b67",
+        "hash": "dd78f790",
+        "encoded": "-%20%E2%9C%85%20Loading%20state%20display",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "ed9b67",
+        "hash": "a66e5f9b",
+        "encoded": "-%20%E2%9C%85%20Project%20details%20rendering%20(name,%20description,%20status,%20repository%20URL)",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ed9b67",
+        "hash": "28c3624e",
+        "encoded": "-%20%E2%9C%85%20API%20call%20with%20correct%20project%20ID%20from%20URL%20params",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "ed9b67",
+        "hash": "e23cab06",
+        "encoded": "-%20%E2%9C%85%20Project%20status%20display%20in%20info%20section",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ed9b67",
+        "hash": "5893922b",
+        "encoded": "-%20%E2%9C%85%20Repository%20URL%20display%20in%20info%20section",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "ed9b67",
+        "hash": "63be5410",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "ed9b67",
+        "hash": "a5cdec11",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "ed9b67",
+        "hash": "7e3e8ab0",
+        "encoded": "-%20%E2%9C%85%20Project%20info%20container%20rendering",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "ed9b67",
+        "hash": "dbd1ec03",
+        "encoded": "-%20%E2%9C%85%20Project%20heading%20rendering",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "ed9b67",
+        "hash": "9fa3b157",
+        "encoded": "-%20%E2%9C%85%20Missing%20optional%20fields%20handling",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "ed9b67",
+        "hash": "02e37be2",
+        "encoded": "-%20%E2%9C%85%20Route%20parameter%20change%20handling",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "ed9b67",
+        "hash": "65011760",
+        "encoded": "-%20%E2%9C%85%20Container%20class%20verification",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "ed9b67",
+        "hash": "223f7291",
+        "encoded": "**Total%20Project%20Module%20Tests**:%2026",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "ed9b67",
+        "hash": "dbd54100",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "ed9b67",
+        "hash": "75ddc3fc",
+        "encoded": "###%202.%20CI%20Pipeline%20Creation%20Module%20UI",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "ed9b67",
+        "hash": "23cc1216",
+        "encoded": "####%20PipelinesPage%20Component",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "ed9b67",
+        "hash": "03c19d0b",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/PipelinesPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "ed9b67",
+        "hash": "65e09486",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/pipelines/PipelinesPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "ed9b67",
+        "hash": "f8bc9134",
+        "encoded": "-%20**Tests**:%2016%20test%20cases",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "ed9b67",
+        "hash": "fee99bb4",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "ed9b67",
+        "hash": "bfb289d8",
+        "encoded": "-%20%E2%9C%85%20Loading%20state%20display",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "ed9b67",
+        "hash": "31e8adf3",
+        "encoded": "-%20%E2%9C%85%20Pipelines%20list%20rendering%20with%20multiple%20pipelines",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "ed9b67",
+        "hash": "fcb7772c",
+        "encoded": "-%20%E2%9C%85%20Page%20heading%20(%22CI/CD%20Pipelines%22)",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "ed9b67",
+        "hash": "c7aa6dc2",
+        "encoded": "-%20%E2%9C%85%20API%20call%20on%20component%20mount",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "ed9b67",
+        "hash": "b04ba79c",
+        "encoded": "-%20%E2%9C%85%20Empty%20state%20handling",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "ed9b67",
+        "hash": "8afa5008",
+        "encoded": "-%20%E2%9C%85%20Multiple%20pipelines%20rendering",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "ed9b67",
+        "hash": "c6796193",
+        "encoded": "-%20%E2%9C%85%20Pipeline%20names%20rendering%20in%20h3%20headings",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "ed9b67",
+        "hash": "10bea13e",
+        "encoded": "-%20%E2%9C%85%20Pipeline%20descriptions%20rendering",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "ed9b67",
+        "hash": "647ec698",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "ed9b67",
+        "hash": "7c56db8b",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "ed9b67",
+        "hash": "4284bf75",
+        "encoded": "-%20%E2%9C%85%20Container%20class%20verification%20(pipelines-page)",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "ed9b67",
+        "hash": "d6cedd37",
+        "encoded": "-%20%E2%9C%85%20List%20container%20verification%20(pipelines-list)",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "ed9b67",
+        "hash": "0c9e2027",
+        "encoded": "-%20%E2%9C%85%20Pipeline%20cards%20with%20unique%20keys",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "ed9b67",
+        "hash": "f4ab24fc",
+        "encoded": "-%20%E2%9C%85%20Missing%20descriptions%20handling",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "ed9b67",
+        "hash": "572988fe",
+        "encoded": "-%20%E2%9C%85%20Pipelines%20rendering%20in%20correct%20order",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "ed9b67",
+        "hash": "0f4b1689",
+        "encoded": "####%20PipelineDetailPage%20Component",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "ed9b67",
+        "hash": "41edabf4",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/PipelineDetailPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "ed9b67",
+        "hash": "f446117f",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/pipelines/PipelineDetailPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "ed9b67",
+        "hash": "d851ae17",
+        "encoded": "-%20**Tests**:%2013%20test%20cases",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "ed9b67",
+        "hash": "8c4b315d",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "ed9b67",
+        "hash": "9661d832",
+        "encoded": "-%20%E2%9C%85%20Pipeline%20details%20rendering%20(name,%20description)",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "ed9b67",
+        "hash": "cc12000c",
+        "encoded": "-%20%E2%9C%85%20API%20call%20with%20correct%20pipeline%20ID%20from%20URL%20params",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "ed9b67",
+        "hash": "04ef80eb",
+        "encoded": "-%20%E2%9C%85%20Pipeline%20heading%20rendering",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "ed9b67",
+        "hash": "74d562d2",
+        "encoded": "-%20%E2%9C%85%20Pipeline%20description%20rendering",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "ed9b67",
+        "hash": "c3b0ef9a",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "ed9b67",
+        "hash": "62248e7d",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "ed9b67",
+        "hash": "91707420",
+        "encoded": "-%20%E2%9C%85%20Container%20class%20verification%20(pipeline-detail)",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "ed9b67",
+        "hash": "5bbe1d2c",
+        "encoded": "-%20%E2%9C%85%20Route%20parameter%20change%20handling",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "ed9b67",
+        "hash": "8bc998e9",
+        "encoded": "-%20%E2%9C%85%20Missing%20description%20handling",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "ed9b67",
+        "hash": "9b012c27",
+        "encoded": "-%20%E2%9C%85%20Different%20pipeline%20IDs%20handling",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "ed9b67",
+        "hash": "f820b4e2",
+        "encoded": "-%20%E2%9C%85%20Empty%20string%20values%20handling",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "ed9b67",
+        "hash": "573489ea",
+        "encoded": "-%20%E2%9C%85%20Long%20names%20and%20descriptions%20handling",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "ed9b67",
+        "hash": "cdb6cb42",
+        "encoded": "**Total%20Pipeline%20Module%20Tests**:%2029",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "ed9b67",
+        "hash": "e646eb99",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "ed9b67",
+        "hash": "bf66107b",
+        "encoded": "###%203.%20Deployment%20System%20Module%20UI",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "ed9b67",
+        "hash": "1ffc3f6c",
+        "encoded": "####%20DeploymentsPage%20Component",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "ed9b67",
+        "hash": "60e779c1",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/DeploymentsPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "ed9b67",
+        "hash": "e21b775b",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/deployments/DeploymentsPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "ed9b67",
+        "hash": "b176cf9f",
+        "encoded": "-%20**Tests**:%2017%20test%20cases",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "ed9b67",
+        "hash": "423c8c99",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "ed9b67",
+        "hash": "e3d4b9bd",
+        "encoded": "-%20%E2%9C%85%20Loading%20state%20display",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "ed9b67",
+        "hash": "766a31a0",
+        "encoded": "-%20%E2%9C%85%20Deployments%20list%20rendering%20with%20multiple%20deployments",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "ed9b67",
+        "hash": "6ba191a2",
+        "encoded": "-%20%E2%9C%85%20Page%20heading%20(%22Deployments%22)",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "ed9b67",
+        "hash": "9dcefb84",
+        "encoded": "-%20%E2%9C%85%20Deployment%20status%20badges%20(success,%20pending,%20failed)",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "ed9b67",
+        "hash": "bc5beb20",
+        "encoded": "-%20%E2%9C%85%20API%20call%20on%20component%20mount",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "ed9b67",
+        "hash": "712bea79",
+        "encoded": "-%20%E2%9C%85%20Empty%20state%20handling",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "ed9b67",
+        "hash": "e79b99a0",
+        "encoded": "-%20%E2%9C%85%20Multiple%20deployments%20rendering",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "ed9b67",
+        "hash": "d84bfe33",
+        "encoded": "-%20%E2%9C%85%20Environment%20names%20rendering%20in%20h3%20headings",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "ed9b67",
+        "hash": "93446582",
+        "encoded": "-%20%E2%9C%85%20Version%20information%20rendering%20(%22Version:%20vX.X.X%22)",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "ed9b67",
+        "hash": "3478d77f",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "ed9b67",
+        "hash": "0b3125bd",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "ed9b67",
+        "hash": "2a575132",
+        "encoded": "-%20%E2%9C%85%20Container%20class%20verification%20(deployments-page)",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "ed9b67",
+        "hash": "bf5fbe11",
+        "encoded": "-%20%E2%9C%85%20List%20container%20verification%20(deployments-list)",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "ed9b67",
+        "hash": "2302c456",
+        "encoded": "-%20%E2%9C%85%20Different%20deployment%20statuses%20rendering",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "ed9b67",
+        "hash": "61dadf16",
+        "encoded": "-%20%E2%9C%85%20Deployments%20rendering%20in%20correct%20order",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "ed9b67",
+        "hash": "a43f8ce1",
+        "encoded": "-%20%E2%9C%85%20Missing%20fields%20handling",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "ed9b67",
+        "hash": "365968bb",
+        "encoded": "####%20DeploymentDetailPage%20Component",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "ed9b67",
+        "hash": "e0025e89",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/DeploymentDetailPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "ed9b67",
+        "hash": "5e596a0c",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/deployments/DeploymentDetailPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "ed9b67",
+        "hash": "630a9235",
+        "encoded": "-%20**Tests**:%2013%20test%20cases",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "ed9b67",
+        "hash": "623420bc",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "ed9b67",
+        "hash": "d975af4c",
+        "encoded": "-%20%E2%9C%85%20Deployment%20details%20rendering%20(environment,%20version,%20status)",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "ed9b67",
+        "hash": "0eb7bd6b",
+        "encoded": "-%20%E2%9C%85%20API%20call%20with%20correct%20deployment%20ID%20from%20URL%20params",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "ed9b67",
+        "hash": "e2c5a48f",
+        "encoded": "-%20%E2%9C%85%20Deployment%20heading%20rendering%20(%22Deployment:%20%7Benvironment%7D%22)",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "ed9b67",
+        "hash": "59164871",
+        "encoded": "-%20%E2%9C%85%20Version%20information%20display",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "ed9b67",
+        "hash": "bfc2b328",
+        "encoded": "-%20%E2%9C%85%20Status%20information%20display",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "ed9b67",
+        "hash": "41fa71d0",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "ed9b67",
+        "hash": "0b2cb297",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "ed9b67",
+        "hash": "b882332e",
+        "encoded": "-%20%E2%9C%85%20Container%20class%20verification%20(deployment-detail)",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "ed9b67",
+        "hash": "7b7fa0dc",
+        "encoded": "-%20%E2%9C%85%20Route%20parameter%20change%20handling",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "ed9b67",
+        "hash": "29769e81",
+        "encoded": "-%20%E2%9C%85%20Missing%20optional%20fields%20handling",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "ed9b67",
+        "hash": "c2d28835",
+        "encoded": "-%20%E2%9C%85%20Different%20deployment%20IDs%20handling",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "ed9b67",
+        "hash": "68d4ede4",
+        "encoded": "-%20%E2%9C%85%20Different%20status%20values%20display",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "ed9b67",
+        "hash": "778de8e1",
+        "encoded": "-%20%E2%9C%85%20Empty%20string%20values%20handling",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "ed9b67",
+        "hash": "2a46cc1d",
+        "encoded": "**Total%20Deployment%20Module%20Tests**:%2030",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "ed9b67",
+        "hash": "559f4a99",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "ed9b67",
+        "hash": "22e111e7",
+        "encoded": "###%204.%20Logs%20Dashboard%20Module%20UI",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "ed9b67",
+        "hash": "ba64490a",
+        "encoded": "####%20LogsPage%20Component",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "ed9b67",
+        "hash": "bbbd7b99",
+        "encoded": "-%20**File**:%20%60frontend/src/tests/LogsPage.test.jsx%60",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "ed9b67",
+        "hash": "5228cfea",
+        "encoded": "-%20**Component**:%20%60frontend/src/pages/logs/LogsPage.jsx%60",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "ed9b67",
+        "hash": "bf84d4bf",
+        "encoded": "-%20**Tests**:%2026%20test%20cases",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "ed9b67",
+        "hash": "3ae25a28",
+        "encoded": "**Coverage**:",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "ed9b67",
+        "hash": "2cfd2de6",
+        "encoded": "-%20%E2%9C%85%20Page%20heading%20(%22Logs%20Dashboard%22)",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "ed9b67",
+        "hash": "7ad36b2a",
+        "encoded": "-%20%E2%9C%85%20Filter%20controls%20rendering%20(level%20dropdown,%20search%20input)",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "ed9b67",
+        "hash": "a23dc749",
+        "encoded": "-%20%E2%9C%85%20Loading%20state%20display",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "ed9b67",
+        "hash": "1245a989",
+        "encoded": "-%20%E2%9C%85%20Logs%20list%20rendering%20with%20multiple%20logs",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "ed9b67",
+        "hash": "c99da54b",
+        "encoded": "-%20%E2%9C%85%20API%20call%20on%20component%20mount%20with%20default%20filters",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "ed9b67",
+        "hash": "4aeb7b25",
+        "encoded": "-%20%E2%9C%85%20Level%20filter%20dropdown%20change%20handling",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "ed9b67",
+        "hash": "e4dbfd5f",
+        "encoded": "-%20%E2%9C%85%20Search%20input%20change%20handling",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "ed9b67",
+        "hash": "a780467f",
+        "encoded": "-%20%E2%9C%85%20All%20level%20filter%20options%20rendering%20(All%20Levels,%20Info,%20Warning,%20Error)",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "ed9b67",
+        "hash": "6e121baf",
+        "encoded": "-%20%E2%9C%85%20Log%20entries%20with%20correct%20CSS%20classes%20(info,%20warn,%20error)",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "ed9b67",
+        "hash": "34e7b313",
+        "encoded": "-%20%E2%9C%85%20Log%20timestamps%20rendering",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "ed9b67",
+        "hash": "6de4feae",
+        "encoded": "-%20%E2%9C%85%20Empty%20state%20handling",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "ed9b67",
+        "hash": "cc932467",
+        "encoded": "-%20%E2%9C%85%20API%20error%20handling",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "ed9b67",
+        "hash": "0d639368",
+        "encoded": "-%20%E2%9C%85%20Undefined/null%20data%20handling",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "ed9b67",
+        "hash": "23209f6e",
+        "encoded": "-%20%E2%9C%85%20Container%20class%20verification%20(logs-page)",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "ed9b67",
+        "hash": "3771a4cf",
+        "encoded": "-%20%E2%9C%85%20Filters%20container%20verification%20(logs-filters)",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "ed9b67",
+        "hash": "bfe62e44",
+        "encoded": "-%20%E2%9C%85%20List%20container%20verification%20(logs-list)",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "ed9b67",
+        "hash": "5ab6feea",
+        "encoded": "-%20%E2%9C%85%20Both%20level%20and%20search%20filters%20applied%20simultaneously",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "ed9b67",
+        "hash": "c30177f2",
+        "encoded": "-%20%E2%9C%85%20Log%20components%20rendering%20separately%20(timestamp,%20level,%20message)",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "ed9b67",
+        "hash": "df6934d1",
+        "encoded": "-%20%E2%9C%85%20Multiple%20logs%20rendering%20in%20correct%20order",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "ed9b67",
+        "hash": "9d4f309c",
+        "encoded": "-%20%E2%9C%85%20Search%20filter%20reset%20when%20cleared",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "ed9b67",
+        "hash": "9b7318b7",
+        "encoded": "-%20%E2%9C%85%20User%20interactions%20(filter%20changes)",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "ed9b67",
+        "hash": "c4043046",
+        "encoded": "**Total%20Logs%20Module%20Tests**:%2026",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "ed9b67",
+        "hash": "40d13c3f",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "ed9b67",
+        "hash": "01d4b9b6",
+        "encoded": "##%20Test%20Features%20Implemented",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "ed9b67",
+        "hash": "e6dd1ab1",
+        "encoded": "###%20%E2%9C%85%20Comprehensive%20Component%20Testing",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "ed9b67",
+        "hash": "eb2142de",
+        "encoded": "-%20**Rendering%20Tests**:%20All%20components%20tested%20for%20correct%20rendering",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "ed9b67",
+        "hash": "2cb02d70",
+        "encoded": "-%20**User%20Interaction%20Tests**:%20Click%20events,%20form%20inputs,%20filter%20changes",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "ed9b67",
+        "hash": "2c627394",
+        "encoded": "-%20**Data%20Fetching%20Tests**:%20React%20Query%20integration%20with%20mocked%20API%20calls",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "ed9b67",
+        "hash": "8da54bcf",
+        "encoded": "-%20**Loading%20States**:%20All%20loading%20indicators%20tested",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "ed9b67",
+        "hash": "8f5790bc",
+        "encoded": "-%20**Error%20Handling**:%20API%20errors%20and%20edge%20cases%20covered",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "ed9b67",
+        "hash": "56f45eb8",
+        "encoded": "-%20**Navigation%20Tests**:%20React%20Router%20navigation%20and%20URL%20params",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "ed9b67",
+        "hash": "107c913c",
+        "encoded": "###%20%E2%9C%85%20Proper%20Mocking%20Strategy",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "ed9b67",
+        "hash": "fb01a84d",
+        "encoded": "-%20**Service%20Layer%20Mocks**:%20All%20API%20services%20mocked%20using%20Vitest",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "ed9b67",
+        "hash": "47b3412e",
+        "encoded": "-%20**React%20Query**:%20QueryClient%20configured%20for%20testing",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "ed9b67",
+        "hash": "15ea95a0",
+        "encoded": "-%20**React%20Router**:%20BrowserRouter%20and%20useParams%20mocked",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "ed9b67",
+        "hash": "51660ee3",
+        "encoded": "-%20**User%20Events**:%20User%20interactions%20simulated%20with%20@testing-library/user-event",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "ed9b67",
+        "hash": "76989cc4",
+        "encoded": "###%20%E2%9C%85%20Test%20Documentation",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "ed9b67",
+        "hash": "60f65f21",
+        "encoded": "-%20**Every%20Test%20Documented**:%20Each%20test%20has%20descriptive%20JSDoc%20comment",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "ed9b67",
+        "hash": "7a34678f",
+        "encoded": "-%20**Scenario%20Description**:%20Clear%20scenario%20for%20each%20test%20case",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "ed9b67",
+        "hash": "fc7d8e26",
+        "encoded": "-%20**Expected%20Behavior**:%20Expected%20outcomes%20documented",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "ed9b67",
+        "hash": "edf742de",
+        "encoded": "###%20%E2%9C%85%20Best%20Practices%20Followed",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "ed9b67",
+        "hash": "5f4d0a18",
+        "encoded": "-%20**AAA%20Pattern**:%20Arrange-Act-Assert%20structure",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "ed9b67",
+        "hash": "d805528b",
+        "encoded": "-%20**Descriptive%20Names**:%20Clear%20test%20names%20expressing%20intent",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "ed9b67",
+        "hash": "7e317ccd",
+        "encoded": "-%20**Independent%20Tests**:%20Each%20test%20runs%20independently",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "ed9b67",
+        "hash": "5e0d8463",
+        "encoded": "-%20**Proper%20Setup/Teardown**:%20beforeEach%20hooks%20for%20cleanup",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "ed9b67",
+        "hash": "ed2ab164",
+        "encoded": "-%20**Helper%20Functions**:%20Reusable%20renderWithProviders%20function",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "ed9b67",
+        "hash": "ce3f05dd",
+        "encoded": "-%20**Meaningful%20Assertions**:%20Specific%20assertions%20with%20clear%20intent",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "ed9b67",
+        "hash": "794e2494",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "ed9b67",
+        "hash": "3c2f6ecd",
+        "encoded": "##%20Running%20the%20Tests",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "ed9b67",
+        "hash": "8216a9c1",
+        "encoded": "###%20Prerequisites",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "ed9b67",
+        "hash": "82004b21",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "ed9b67",
+        "hash": "fdbd7cc8",
+        "encoded": "cd%20frontend",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "ed9b67",
+        "hash": "36c6cd62",
+        "encoded": "npm%20install",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "ed9b67",
+        "hash": "f2f91319",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "ed9b67",
+        "hash": "7745ac33",
+        "encoded": "###%20Run%20All%20Frontend%20Tests",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "ed9b67",
+        "hash": "ccbb4dd8",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "ed9b67",
+        "hash": "dd25c1ec",
+        "encoded": "npm%20test",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "ed9b67",
+        "hash": "eeaec860",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "ed9b67",
+        "hash": "7f2f2143",
+        "encoded": "###%20Run%20Tests%20in%20Watch%20Mode",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "ed9b67",
+        "hash": "3a1797e1",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "ed9b67",
+        "hash": "25147c24",
+        "encoded": "npm%20run%20test:ui",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "ed9b67",
+        "hash": "8ac787af",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "ed9b67",
+        "hash": "5b77684a",
+        "encoded": "###%20Run%20Tests%20with%20Coverage",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "ed9b67",
+        "hash": "47ccdd74",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "ed9b67",
+        "hash": "49277ad7",
+        "encoded": "npm%20run%20test:coverage",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "ed9b67",
+        "hash": "a07905f8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "ed9b67",
+        "hash": "17c6a121",
+        "encoded": "###%20Run%20Specific%20Test%20File",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "ed9b67",
+        "hash": "00e8f9c1",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "ed9b67",
+        "hash": "603ef4ec",
+        "encoded": "npm%20test%20ProjectsPage.test.jsx",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "ed9b67",
+        "hash": "e6ee5f2e",
+        "encoded": "npm%20test%20PipelinesPage.test.jsx",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "ed9b67",
+        "hash": "47653fac",
+        "encoded": "npm%20test%20DeploymentsPage.test.jsx",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "ed9b67",
+        "hash": "aaa5683e",
+        "encoded": "npm%20test%20LogsPage.test.jsx",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "ed9b67",
+        "hash": "5a250bf0",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "ed9b67",
+        "hash": "546c6724",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "ed9b67",
+        "hash": "d5b11b6e",
+        "encoded": "##%20Test%20File%20Structure",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "ed9b67",
+        "hash": "d612ec24",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "ed9b67",
+        "hash": "d994b881",
+        "encoded": "frontend/src/tests/",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "ed9b67",
+        "hash": "ac7e5317",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20setup.js%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Global%20test%20setup",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "ed9b67",
+        "hash": "8cc06bdb",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20ProjectsPage.test.jsx%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Projects%20list%20page%20tests%20(13%20tests)",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "ed9b67",
+        "hash": "e9636376",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20ProjectDetailPage.test.jsx%20%20%20%20%20%20%20%20%20#%20Project%20detail%20page%20tests%20(13%20tests)",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "ed9b67",
+        "hash": "502443ce",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20PipelinesPage.test.jsx%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Pipelines%20list%20page%20tests%20(16%20tests)",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "ed9b67",
+        "hash": "22176aca",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20PipelineDetailPage.test.jsx%20%20%20%20%20%20%20%20#%20Pipeline%20detail%20page%20tests%20(13%20tests)",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "ed9b67",
+        "hash": "31eae845",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20DeploymentsPage.test.jsx%20%20%20%20%20%20%20%20%20%20%20#%20Deployments%20list%20page%20tests%20(17%20tests)",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "ed9b67",
+        "hash": "f8d13ca5",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20DeploymentDetailPage.test.jsx%20%20%20%20%20%20#%20Deployment%20detail%20page%20tests%20(13%20tests)",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "ed9b67",
+        "hash": "85dfb759",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20LogsPage.test.jsx%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Logs%20dashboard%20page%20tests%20(26%20tests)",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "ed9b67",
+        "hash": "9dc20d9c",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20FRONTEND_TEST_SUITE_SUMMARY.md%20%20%20%20%20#%20This%20documentation%20file",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "ed9b67",
+        "hash": "61f18e25",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "ed9b67",
+        "hash": "4b1e8ded",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "ed9b67",
+        "hash": "d2a73b19",
+        "encoded": "##%20Test%20Coverage%20Goals",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "ed9b67",
+        "hash": "47d06db3",
+        "encoded": "###%20Current%20Implementation",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "ed9b67",
+        "hash": "ef2f53cc",
+        "encoded": "-%20%E2%9C%85%20**Component%20Rendering**:%20100%25%20coverage",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "ed9b67",
+        "hash": "145d8001",
+        "encoded": "-%20%E2%9C%85%20**User%20Interactions**:%20100%25%20coverage",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "ed9b67",
+        "hash": "194db89f",
+        "encoded": "-%20%E2%9C%85%20**API%20Integration**:%20100%25%20coverage",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "ed9b67",
+        "hash": "597a09c8",
+        "encoded": "-%20%E2%9C%85%20**Error%20Handling**:%20100%25%20coverage",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "ed9b67",
+        "hash": "6fdb88c0",
+        "encoded": "-%20%E2%9C%85%20**Edge%20Cases**:%20100%25%20coverage",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "ed9b67",
+        "hash": "2748150f",
+        "encoded": "###%20Expected%20Coverage%20Metrics",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "ed9b67",
+        "hash": "94cfd384",
+        "encoded": "-%20**Statements**:%2085%25+",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "ed9b67",
+        "hash": "8ffe1937",
+        "encoded": "-%20**Branches**:%2080%25+",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "ed9b67",
+        "hash": "dce82d44",
+        "encoded": "-%20**Functions**:%2085%25+",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "ed9b67",
+        "hash": "5a7954d2",
+        "encoded": "-%20**Lines**:%2085%25+",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "ed9b67",
+        "hash": "867a169b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "ed9b67",
+        "hash": "073b1a55",
+        "encoded": "##%20Common%20Test%20Patterns%20Used",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "ed9b67",
+        "hash": "7d390ac1",
+        "encoded": "###%201.%20Rendering%20with%20Providers",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "ed9b67",
+        "hash": "9382fb6e",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "ed9b67",
+        "hash": "db1b22fd",
+        "encoded": "const%20renderWithProviders%20=%20(component)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "ed9b67",
+        "hash": "bd779f25",
+        "encoded": "const%20queryClient%20=%20new%20QueryClient(%7B",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "ed9b67",
+        "hash": "3ca013ff",
+        "encoded": "defaultOptions:%20%7B",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "ed9b67",
+        "hash": "009ffc11",
+        "encoded": "queries:%20%7B",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "ed9b67",
+        "hash": "6a71405c",
+        "encoded": "retry:%20false,",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "ed9b67",
+        "hash": "5f16db43",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "ed9b67",
+        "hash": "0e932391",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "ed9b67",
+        "hash": "6df445e0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "ed9b67",
+        "hash": "43be98c6",
+        "encoded": "return%20render(",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "ed9b67",
+        "hash": "8ebe4a98",
+        "encoded": "%3CQueryClientProvider%20client=%7BqueryClient%7D%3E",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "ed9b67",
+        "hash": "01f81d72",
+        "encoded": "%3CBrowserRouter%3E%7Bcomponent%7D%3C/BrowserRouter%3E",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "ed9b67",
+        "hash": "78d08a35",
+        "encoded": "%3C/QueryClientProvider%3E",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "ed9b67",
+        "hash": "595cee9f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "ed9b67",
+        "hash": "e450964c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "ed9b67",
+        "hash": "a9c3f9f7",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "ed9b67",
+        "hash": "125b38dc",
+        "encoded": "###%202.%20Mocking%20Services",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "ed9b67",
+        "hash": "10833a92",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "ed9b67",
+        "hash": "807f8dd0",
+        "encoded": "vi.mock('../services/projectService',%20()%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "ed9b67",
+        "hash": "36882655",
+        "encoded": "projectService:%20%7B",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "ed9b67",
+        "hash": "95e0c308",
+        "encoded": "getProjects:%20vi.fn(),",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "ed9b67",
+        "hash": "b4d244ac",
+        "encoded": "getProjectById:%20vi.fn(),",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "ed9b67",
+        "hash": "f6b9ab19",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "ed9b67",
+        "hash": "bdd1ffbd",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "ed9b67",
+        "hash": "d82b9d3f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "ed9b67",
+        "hash": "ea1f5673",
+        "encoded": "###%203.%20Testing%20Async%20Data%20Fetching",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "ed9b67",
+        "hash": "12f725e0",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "ed9b67",
+        "hash": "74e1fcaa",
+        "encoded": "it('should%20render%20projects%20list%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "ed9b67",
+        "hash": "edb21a55",
+        "encoded": "const%20mockProjects%20=%20%7B%20data:%20%7B%20projects:%20%5B...%5D%20%7D%20%7D;",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "ed9b67",
+        "hash": "b304b69b",
+        "encoded": "projectService.getProjects.mockResolvedValue(mockProjects);",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "ed9b67",
+        "hash": "24ef36cd",
+        "encoded": "renderWithProviders(%3CProjectsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "ed9b67",
+        "hash": "17a1f556",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "ed9b67",
+        "hash": "54699216",
+        "encoded": "expect(screen.getByText('Project%20Alpha')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "ed9b67",
+        "hash": "b7b33df3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "ed9b67",
+        "hash": "f6640381",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "ed9b67",
+        "hash": "5858474a",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "ed9b67",
+        "hash": "33ec1d6a",
+        "encoded": "###%204.%20Testing%20User%20Interactions",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "ed9b67",
+        "hash": "2196411c",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "ed9b67",
+        "hash": "8fda928c",
+        "encoded": "it('should%20update%20filters%20when%20level%20dropdown%20changes',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "ed9b67",
+        "hash": "c06a3174",
+        "encoded": "const%20levelSelect%20=%20screen.getByRole('combobox');",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "ed9b67",
+        "hash": "7a0a1d9f",
+        "encoded": "fireEvent.change(levelSelect,%20%7B%20target:%20%7B%20value:%20'error'%20%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "ed9b67",
+        "hash": "21c2664a",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "ed9b67",
+        "hash": "e3f595aa",
+        "encoded": "expect(logsService.getLogs).toHaveBeenCalledWith(%7B%20level:%20'error',%20search:%20''%20%7D);",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "ed9b67",
+        "hash": "aedf8e19",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "ed9b67",
+        "hash": "68877d4f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "ed9b67",
+        "hash": "e0d7dc85",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "ed9b67",
+        "hash": "5c84a20b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "ed9b67",
+        "hash": "23338407",
+        "encoded": "##%20Known%20Considerations",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "ed9b67",
+        "hash": "d8add62d",
+        "encoded": "###%201.%20React%20Query%20Caching",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "ed9b67",
+        "hash": "7467d17e",
+        "encoded": "-%20**Issue**:%20React%20Query%20caches%20data%20between%20tests",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "ed9b67",
+        "hash": "cb308e84",
+        "encoded": "-%20**Solution**:%20New%20QueryClient%20instance%20created%20for%20each%20test%20with%20retry%20disabled",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "ed9b67",
+        "hash": "bc99b908",
+        "encoded": "###%202.%20Router%20Mocking",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "ed9b67",
+        "hash": "fc8d4269",
+        "encoded": "-%20**Issue**:%20useParams%20needs%20to%20be%20mocked%20for%20detail%20pages",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "ed9b67",
+        "hash": "5bec149d",
+        "encoded": "-%20**Solution**:%20Mock%20react-router-dom%20and%20control%20useParams%20return%20value",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "ed9b67",
+        "hash": "922e0627",
+        "encoded": "###%203.%20Async%20State%20Updates",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "ed9b67",
+        "hash": "adbd6a1c",
+        "encoded": "-%20**Issue**:%20React%20state%20updates%20are%20asynchronous",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "ed9b67",
+        "hash": "b8f2331e",
+        "encoded": "-%20**Solution**:%20Use%20waitFor()%20for%20all%20async%20assertions",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "ed9b67",
+        "hash": "b03c3bc9",
+        "encoded": "###%204.%20Console%20Errors",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "ed9b67",
+        "hash": "698031ce",
+        "encoded": "-%20**Issue**:%20React%20Query%20logs%20errors%20to%20console%20during%20error%20tests",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "ed9b67",
+        "hash": "8aa19dd0",
+        "encoded": "-%20**Solution**:%20Spy%20on%20console.error%20and%20restore%20after%20test",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "ed9b67",
+        "hash": "967273c1",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "ed9b67",
+        "hash": "d253713b",
+        "encoded": "##%20Test%20Quality%20Metrics",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "ed9b67",
+        "hash": "3152dc1c",
+        "encoded": "-%20%E2%9C%85%20**Documentation**:%20100%25%20of%20tests%20documented",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "ed9b67",
+        "hash": "34ce84d9",
+        "encoded": "-%20%E2%9C%85%20**Naming**:%20Descriptive%20test%20names%20following%20conventions",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "ed9b67",
+        "hash": "e3ef9d0e",
+        "encoded": "-%20%E2%9C%85%20**Independence**:%20Tests%20are%20independent%20and%20can%20run%20in%20any%20order",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "ed9b67",
+        "hash": "94a9c2f9",
+        "encoded": "-%20%E2%9C%85%20**Mocking**:%20External%20dependencies%20properly%20mocked",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "ed9b67",
+        "hash": "dd8eb7cb",
+        "encoded": "-%20%E2%9C%85%20**Assertions**:%20Meaningful%20assertions%20with%20proper%20error%20messages",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "ed9b67",
+        "hash": "74434d7a",
+        "encoded": "-%20%E2%9C%85%20**Coverage**:%20Happy%20paths,%20error%20cases,%20and%20edge%20cases%20covered",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "ed9b67",
+        "hash": "3bd09423",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "ed9b67",
+        "hash": "1d86459b",
+        "encoded": "##%20Integration%20with%20CI/CD",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "ed9b67",
+        "hash": "8614fe29",
+        "encoded": "###%20Recommended%20CI%20Pipeline%20Steps",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "ed9b67",
+        "hash": "90eb0433",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "ed9b67",
+        "hash": "c08b589e",
+        "encoded": "-%20name:%20Install%20Dependencies",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "ed9b67",
+        "hash": "b897891d",
+        "encoded": "run:%20cd%20frontend%20&&%20npm%20ci",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "ed9b67",
+        "hash": "a9d6618c",
+        "encoded": "-%20name:%20Run%20Tests",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "ed9b67",
+        "hash": "696151fc",
+        "encoded": "run:%20cd%20frontend%20&&%20npm%20test",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "ed9b67",
+        "hash": "ee4fe2d6",
+        "encoded": "-%20name:%20Generate%20Coverage%20Report",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "ed9b67",
+        "hash": "93f449e2",
+        "encoded": "run:%20cd%20frontend%20&&%20npm%20run%20test:coverage",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "ed9b67",
+        "hash": "31c44419",
+        "encoded": "-%20name:%20Upload%20Coverage",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "ed9b67",
+        "hash": "a83215a6",
+        "encoded": "uses:%20codecov/codecov-action@v3",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "ed9b67",
+        "hash": "a739b96d",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "ed9b67",
+        "hash": "26cdd744",
+        "encoded": "files:%20./frontend/coverage/lcov.info",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "ed9b67",
+        "hash": "5a8a99d9",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "ed9b67",
+        "hash": "9a83ddbf",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "ed9b67",
+        "hash": "a08a3864",
+        "encoded": "##%20Future%20Enhancements",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "ed9b67",
+        "hash": "028adf34",
+        "encoded": "###%20Potential%20Additions",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "ed9b67",
+        "hash": "70838dc1",
+        "encoded": "1.%20**E2E%20Tests**:%20Add%20Playwright%20or%20Cypress%20for%20end-to-end%20testing",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "ed9b67",
+        "hash": "1892f994",
+        "encoded": "2.%20**Visual%20Regression**:%20Add%20visual%20regression%20testing%20with%20Percy%20or%20Chromatic",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "ed9b67",
+        "hash": "c8429eb4",
+        "encoded": "3.%20**Performance%20Tests**:%20Add%20performance%20benchmarks%20for%20component%20rendering",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "ed9b67",
+        "hash": "cd96ce11",
+        "encoded": "4.%20**Accessibility%20Tests**:%20Add%20axe-core%20for%20automated%20accessibility%20testing",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "ed9b67",
+        "hash": "02d70971",
+        "encoded": "5.%20**Snapshot%20Tests**:%20Add%20snapshot%20tests%20for%20component%20output",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "ed9b67",
+        "hash": "6f281e18",
+        "encoded": "###%20Additional%20Test%20Scenarios",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "ed9b67",
+        "hash": "389a3fee",
+        "encoded": "1.%20**Authentication%20Flow**:%20Test%20protected%20routes%20and%20login/logout",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "ed9b67",
+        "hash": "67ee5018",
+        "encoded": "2.%20**Form%20Validation**:%20Test%20form%20submission%20and%20validation%20errors",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "ed9b67",
+        "hash": "052643c1",
+        "encoded": "3.%20**Real-time%20Updates**:%20Test%20WebSocket/SSE%20connections%20for%20logs%20streaming",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "ed9b67",
+        "hash": "11181f19",
+        "encoded": "4.%20**Pagination**:%20Test%20pagination%20controls%20and%20navigation",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "ed9b67",
+        "hash": "f8f7d3b4",
+        "encoded": "5.%20**Sorting**:%20Test%20table%20sorting%20functionality",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "ed9b67",
+        "hash": "f7aee1b7",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "ed9b67",
+        "hash": "95b39cf0",
+        "encoded": "##%20Conclusion",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "ed9b67",
+        "hash": "fb286af6",
+        "encoded": "A%20comprehensive%20test%20suite%20has%20been%20successfully%20created%20for%20all%20four%20frontend%20UI%20modules:",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "ed9b67",
+        "hash": "3209c3e3",
+        "encoded": "1.%20%E2%9C%85%20**Project%20Management%20Module**%20-%2026%20tests",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "ed9b67",
+        "hash": "9b6236d4",
+        "encoded": "2.%20%E2%9C%85%20**CI%20Pipeline%20Creation%20Module**%20-%2029%20tests",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "ed9b67",
+        "hash": "da9cf408",
+        "encoded": "3.%20%E2%9C%85%20**Deployment%20System%20Module**%20-%2030%20tests",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "ed9b67",
+        "hash": "dd24aec2",
+        "encoded": "4.%20%E2%9C%85%20**Logs%20Dashboard%20Module**%20-%2026%20tests",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "ed9b67",
+        "hash": "e0ef00a1",
+        "encoded": "**Total**:%20137%20test%20cases%20covering%20component%20rendering,%20user%20interactions,%20data%20fetching,%20loading%20states,%20error%20handling,%20and%20edge%20cases.",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "ed9b67",
+        "hash": "5a944509",
+        "encoded": "The%20test%20suite%20follows%20React%20testing%20best%20practices%20with:",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "ed9b67",
+        "hash": "2a29f61f",
+        "encoded": "-%20Proper%20mocking%20of%20API%20calls%20and%20React%20Query%20hooks",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "ed9b67",
+        "hash": "fb1563f8",
+        "encoded": "-%20Comprehensive%20coverage%20of%20user%20interactions",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "ed9b67",
+        "hash": "b7cca78f",
+        "encoded": "-%20Error%20handling%20and%20edge%20case%20testing",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "ed9b67",
+        "hash": "ace3dd80",
+        "encoded": "-%20Clear%20documentation%20for%20every%20test",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "ed9b67",
+        "hash": "a1c94436",
+        "encoded": "-%20Reusable%20test%20utilities%20and%20patterns",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "ed9b67",
+        "hash": "50b732d2",
+        "encoded": "All%20tests%20are%20ready%20to%20run%20and%20integrate%20into%20the%20CI/CD%20pipeline%20for%20continuous%20quality%20assurance.",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "ed9b67",
+        "hash": "71f3aad1",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "ed9b67",
+        "hash": "c4448c46",
+        "encoded": "##%20Support%20and%20Maintenance",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "ed9b67",
+        "hash": "60b5f7dc",
+        "encoded": "For%20questions%20or%20issues%20with%20the%20test%20suite:",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "ed9b67",
+        "hash": "7988f0bb",
+        "encoded": "1.%20Review%20this%20documentation",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "ed9b67",
+        "hash": "59b392e7",
+        "encoded": "2.%20Check%20individual%20test%20files%20for%20specific%20test%20scenarios",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "ed9b67",
+        "hash": "a2613a26",
+        "encoded": "3.%20Refer%20to%20Vitest%20and%20React%20Testing%20Library%20documentation",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "ed9b67",
+        "hash": "dc33b6b2",
+        "encoded": "4.%20Ensure%20all%20dependencies%20are%20installed%20correctly",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "ed9b67",
+        "hash": "08e09bb2",
+        "encoded": "**Last%20Updated**:%202026-05-25",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "ed9b67",
+        "hash": "36b89c65",
+        "encoded": "**Test%20Framework%20Version**:%20Vitest%201.1.3,%20React%20Testing%20Library%2014.1.2",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

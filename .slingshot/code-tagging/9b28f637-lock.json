@@ -1,0 +1,288 @@
+{
+  "backend\\src\\routes\\authRoutes.js": {
+    "filename": "authRoutes.js",
+    "path": "backend\\src\\routes\\authRoutes.js",
+    "version": "1.2",
+    "contextFile": "9b28f637-context.json",
+    "chunks": {
+      "ac6acb": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707785,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "4fbab39e",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:25 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ac6acb",
+        "hash": "0329f9d1",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "ac6acb",
+        "hash": "de5ebe26",
+        "encoded": "const%20%7B%20body%20%7D%20=%20require('express-validator');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ac6acb",
+        "hash": "30c28d5f",
+        "encoded": "const%20authController%20=%20require('../controllers/authController');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ac6acb",
+        "hash": "1e7ed5ba",
+        "encoded": "const%20authenticate%20=%20require('../middleware/authenticate');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ac6acb",
+        "hash": "df21e85c",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ac6acb",
+        "hash": "e711fe63",
+        "encoded": "router.post(",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ac6acb",
+        "hash": "a135d353",
+        "encoded": "'/register',",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ac6acb",
+        "hash": "b193f1bf",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ac6acb",
+        "hash": "c11df8a0",
+        "encoded": "body('email').isEmail().normalizeEmail().withMessage('Valid%20email%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ac6acb",
+        "hash": "a1139fbd",
+        "encoded": "body('password').isLength(%7B%20min:%208%20%7D).withMessage('Password%20must%20be%20at%20least%208%20characters'),",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ac6acb",
+        "hash": "8fcdd5c3",
+        "encoded": "body('name').notEmpty().trim().withMessage('Name%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ac6acb",
+        "hash": "6860d97d",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "ac6acb",
+        "hash": "61608786",
+        "encoded": "authController.register",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ac6acb",
+        "hash": "228115a3",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ac6acb",
+        "hash": "23feb052",
+        "encoded": "router.post(",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ac6acb",
+        "hash": "d780bf7f",
+        "encoded": "'/login',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ac6acb",
+        "hash": "8a2fbe0d",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ac6acb",
+        "hash": "0361188a",
+        "encoded": "body('email').isEmail().normalizeEmail().withMessage('Valid%20email%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ac6acb",
+        "hash": "55493380",
+        "encoded": "body('password').notEmpty().withMessage('Password%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ac6acb",
+        "hash": "c2fb41b9",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ac6acb",
+        "hash": "d8fda97b",
+        "encoded": "authController.login",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ac6acb",
+        "hash": "71b3974a",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ac6acb",
+        "hash": "65022ab3",
+        "encoded": "router.post('/refresh-token',%20authController.refreshToken);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ac6acb",
+        "hash": "d6b4a0d6",
+        "encoded": "router.post('/logout',%20authenticate,%20authController.logout);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ac6acb",
+        "hash": "08c2e395",
+        "encoded": "router.get('/me',%20authenticate,%20authController.getCurrentUser);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ac6acb",
+        "hash": "dac3fe87",
+        "encoded": "router.put(",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ac6acb",
+        "hash": "d04d6426",
+        "encoded": "'/profile',",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "ac6acb",
+        "hash": "ac8b7ad3",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ac6acb",
+        "hash": "cf39fff2",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ac6acb",
+        "hash": "77b2361d",
+        "encoded": "body('name').optional().notEmpty().trim(),",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ac6acb",
+        "hash": "6dbc98c1",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ac6acb",
+        "hash": "11ec557e",
+        "encoded": "authController.updateProfile",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "ac6acb",
+        "hash": "55587631",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ac6acb",
+        "hash": "1bf36a1d",
+        "encoded": "router.put(",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ac6acb",
+        "hash": "814c4ea1",
+        "encoded": "'/change-password',",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "ac6acb",
+        "hash": "a084c992",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ac6acb",
+        "hash": "40be3a36",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ac6acb",
+        "hash": "375b8724",
+        "encoded": "body('currentPassword').notEmpty().withMessage('Current%20password%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "ac6acb",
+        "hash": "2262664f",
+        "encoded": "body('newPassword').isLength(%7B%20min:%208%20%7D).withMessage('New%20password%20must%20be%20at%20least%208%20characters'),",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ac6acb",
+        "hash": "9a6eba75",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "ac6acb",
+        "hash": "9243a7e9",
+        "encoded": "authController.changePassword",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ac6acb",
+        "hash": "59f18b0f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "ac6acb",
+        "hash": "9d1374c6",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

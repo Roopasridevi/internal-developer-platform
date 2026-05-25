@@ -1,0 +1,66 @@
+{
+  "frontend\\src\\tests\\setup.js": {
+    "filename": "setup.js",
+    "path": "frontend\\src\\tests\\setup.js",
+    "version": "1.2",
+    "contextFile": "efa6cf77-context.json",
+    "chunks": {
+      "f58fb0": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708339,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "8d908c5f",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:39 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "f58fb0",
+        "hash": "c0131fa9",
+        "encoded": "import%20'@testing-library/jest-dom';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "f58fb0",
+        "hash": "af76d6cf",
+        "encoded": "import%20%7B%20cleanup%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "f58fb0",
+        "hash": "05680242",
+        "encoded": "import%20%7B%20afterEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "f58fb0",
+        "hash": "98ed1e0f",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "f58fb0",
+        "hash": "3e0f92dd",
+        "encoded": "cleanup();",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "f58fb0",
+        "hash": "022881cf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,600 @@
+{
+  ".gitignore": {
+    "filename": ".gitignore",
+    "path": ".gitignore",
+    "version": "1.2",
+    "contextFile": "b6459458-context.json",
+    "chunks": {
+      "181dcf": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707693,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "2f97cf3d",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:53 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "181dcf",
+        "hash": "78a5f81f",
+        "encoded": "#%20Dependencies",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "181dcf",
+        "hash": "e645e5bb",
+        "encoded": "node_modules/",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "181dcf",
+        "hash": "48cd6435",
+        "encoded": ".pnp",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "181dcf",
+        "hash": "8afb9bc5",
+        "encoded": ".pnp.js",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "181dcf",
+        "hash": "00d641a8",
+        "encoded": "#%20Testing",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "181dcf",
+        "hash": "216c6067",
+        "encoded": "coverage/",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "181dcf",
+        "hash": "ec5a7d4f",
+        "encoded": "*.lcov",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "181dcf",
+        "hash": "fd165057",
+        "encoded": ".nyc_output",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "181dcf",
+        "hash": "c827adac",
+        "encoded": "#%20Production",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "181dcf",
+        "hash": "c147e4c7",
+        "encoded": "build/",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "181dcf",
+        "hash": "56db6407",
+        "encoded": "dist/",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "181dcf",
+        "hash": "d7c093ba",
+        "encoded": ".next/",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "181dcf",
+        "hash": "37dacfd4",
+        "encoded": "out/",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "181dcf",
+        "hash": "09b3dc23",
+        "encoded": "#%20Environment%20variables",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "181dcf",
+        "hash": "682d2a8c",
+        "encoded": ".env",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "181dcf",
+        "hash": "a04b71d7",
+        "encoded": ".env.local",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "181dcf",
+        "hash": "ade89f87",
+        "encoded": ".env.development.local",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "181dcf",
+        "hash": "c67e95a7",
+        "encoded": ".env.test.local",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "181dcf",
+        "hash": "94636010",
+        "encoded": ".env.production.local",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "181dcf",
+        "hash": "0d8fc552",
+        "encoded": "#%20Logs",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "181dcf",
+        "hash": "7eaa5bd0",
+        "encoded": "logs/",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "181dcf",
+        "hash": "32b6a310",
+        "encoded": "*.log",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "181dcf",
+        "hash": "3fa6de24",
+        "encoded": "npm-debug.log*",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "181dcf",
+        "hash": "f3db24d2",
+        "encoded": "yarn-debug.log*",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "181dcf",
+        "hash": "af0e59e1",
+        "encoded": "yarn-error.log*",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "181dcf",
+        "hash": "0b717640",
+        "encoded": "lerna-debug.log*",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "181dcf",
+        "hash": "32e1baf0",
+        "encoded": "pnpm-debug.log*",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "181dcf",
+        "hash": "6773295c",
+        "encoded": "#%20Runtime%20data",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "181dcf",
+        "hash": "f296b537",
+        "encoded": "pids/",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "181dcf",
+        "hash": "72357e0e",
+        "encoded": "*.pid",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "181dcf",
+        "hash": "cb168c3c",
+        "encoded": "*.seed",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "181dcf",
+        "hash": "555034ca",
+        "encoded": "*.pid.lock",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "181dcf",
+        "hash": "fdd71115",
+        "encoded": "#%20Directory%20for%20instrumented%20libs",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "181dcf",
+        "hash": "e7d061a4",
+        "encoded": "lib-cov/",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "181dcf",
+        "hash": "f5656e10",
+        "encoded": "#%20Coverage%20directory",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "181dcf",
+        "hash": "46bb1827",
+        "encoded": "coverage/",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "181dcf",
+        "hash": "6a8d25f1",
+        "encoded": "*.lcov",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "181dcf",
+        "hash": "cf4e0398",
+        "encoded": "#%20Editor%20directories%20and%20files",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "181dcf",
+        "hash": "b0803017",
+        "encoded": ".idea/",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "181dcf",
+        "hash": "f4960c77",
+        "encoded": ".vscode/",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "181dcf",
+        "hash": "dad43aa1",
+        "encoded": "*.swp",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "181dcf",
+        "hash": "8c91d7ab",
+        "encoded": "*.swo",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "181dcf",
+        "hash": "f5a9619a",
+        "encoded": "*~",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "181dcf",
+        "hash": "e1626962",
+        "encoded": ".DS_Store",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "181dcf",
+        "hash": "c80ce996",
+        "encoded": "*.suo",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "181dcf",
+        "hash": "41961b6f",
+        "encoded": "*.ntvs*",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "181dcf",
+        "hash": "16c18ce0",
+        "encoded": "*.njsproj",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "181dcf",
+        "hash": "3547f813",
+        "encoded": "*.sln",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "181dcf",
+        "hash": "3e5f4e54",
+        "encoded": "*.sw?",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "181dcf",
+        "hash": "c2834ff8",
+        "encoded": "#%20OS",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "181dcf",
+        "hash": "eee214b4",
+        "encoded": "Thumbs.db",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "181dcf",
+        "hash": "3095e837",
+        "encoded": ".DS_Store",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "181dcf",
+        "hash": "2edb4eac",
+        "encoded": "#%20Optional%20npm%20cache%20directory",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "181dcf",
+        "hash": "b5a3ccb6",
+        "encoded": ".npm",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "181dcf",
+        "hash": "e7077fa8",
+        "encoded": "#%20Optional%20eslint%20cache",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "181dcf",
+        "hash": "0a34f3d3",
+        "encoded": ".eslintcache",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "181dcf",
+        "hash": "fe289a53",
+        "encoded": "#%20Optional%20stylelint%20cache",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "181dcf",
+        "hash": "77872a74",
+        "encoded": ".stylelintcache",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "181dcf",
+        "hash": "afe6ba95",
+        "encoded": "#%20Microbundle%20cache",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "181dcf",
+        "hash": "a53a7a4e",
+        "encoded": ".rpt2_cache/",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "181dcf",
+        "hash": "f2bca919",
+        "encoded": ".rts2_cache_cjs/",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "181dcf",
+        "hash": "3e3ba48f",
+        "encoded": ".rts2_cache_es/",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "181dcf",
+        "hash": "53e0e21e",
+        "encoded": ".rts2_cache_umd/",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "181dcf",
+        "hash": "b5c79b34",
+        "encoded": "#%20Optional%20REPL%20history",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "181dcf",
+        "hash": "95f186b7",
+        "encoded": ".node_repl_history",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "181dcf",
+        "hash": "6f6829b7",
+        "encoded": "#%20Output%20of%20'npm%20pack'",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "181dcf",
+        "hash": "ea3a154a",
+        "encoded": "*.tgz",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "181dcf",
+        "hash": "9f80712e",
+        "encoded": "#%20Yarn",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "181dcf",
+        "hash": "c42119a5",
+        "encoded": ".yarn-integrity",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "181dcf",
+        "hash": "d075a502",
+        "encoded": ".yarn/cache",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "181dcf",
+        "hash": "9c198072",
+        "encoded": ".yarn/unplugged",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "181dcf",
+        "hash": "a8b847d8",
+        "encoded": ".yarn/build-state.yml",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "181dcf",
+        "hash": "cf61d68d",
+        "encoded": ".yarn/install-state.gz",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "181dcf",
+        "hash": "3baf1972",
+        "encoded": ".pnp.*",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "181dcf",
+        "hash": "70d9a6eb",
+        "encoded": "#%20Database",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "181dcf",
+        "hash": "a61528e2",
+        "encoded": "*.sqlite",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "181dcf",
+        "hash": "503fe848",
+        "encoded": "*.sqlite3",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "181dcf",
+        "hash": "2b00b474",
+        "encoded": "*.db",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "181dcf",
+        "hash": "26000051",
+        "encoded": "#%20Temporary%20files",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "181dcf",
+        "hash": "bb24f57c",
+        "encoded": "tmp/",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "181dcf",
+        "hash": "4fc212e4",
+        "encoded": "temp/",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "181dcf",
+        "hash": "7b3c870b",
+        "encoded": "*.tmp",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "181dcf",
+        "hash": "a46c0cf8",
+        "encoded": "#%20Docker",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "181dcf",
+        "hash": "ad383ec4",
+        "encoded": ".dockerignore",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "181dcf",
+        "hash": "98a8aef7",
+        "encoded": "#%20Kubernetes",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "181dcf",
+        "hash": "5670f545",
+        "encoded": "*.kubeconfig",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "181dcf",
+        "hash": "4fb0ed58",
+        "encoded": "#%20Terraform",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "181dcf",
+        "hash": "8aad4c27",
+        "encoded": ".terraform/",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "181dcf",
+        "hash": "5bf1d774",
+        "encoded": "*.tfstate",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "181dcf",
+        "hash": "df54fd61",
+        "encoded": "*.tfstate.backup",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "181dcf",
+        "hash": "3071ba96",
+        "encoded": "#%20Secrets",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "181dcf",
+        "hash": "b552e4c0",
+        "encoded": "secrets/",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "181dcf",
+        "hash": "f130eb27",
+        "encoded": "*.pem",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "181dcf",
+        "hash": "a118ed17",
+        "encoded": "*.key",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "181dcf",
+        "hash": "dff34adb",
+        "encoded": "*.cert",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

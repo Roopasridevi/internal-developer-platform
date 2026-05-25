@@ -1,0 +1,210 @@
+{
+  "backend\\src\\routes\\pipelineRoutes.js": {
+    "filename": "pipelineRoutes.js",
+    "path": "backend\\src\\routes\\pipelineRoutes.js",
+    "version": "1.2",
+    "contextFile": "a2e42f88-context.json",
+    "chunks": {
+      "890d5d": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707784,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "1060fdfe",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:24 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "890d5d",
+        "hash": "0329f9d1",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "890d5d",
+        "hash": "de5ebe26",
+        "encoded": "const%20%7B%20body%20%7D%20=%20require('express-validator');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "890d5d",
+        "hash": "5dde523f",
+        "encoded": "const%20pipelineController%20=%20require('../controllers/pipelineController');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "890d5d",
+        "hash": "1e7ed5ba",
+        "encoded": "const%20authenticate%20=%20require('../middleware/authenticate');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "890d5d",
+        "hash": "df21e85c",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "890d5d",
+        "hash": "f485d2b4",
+        "encoded": "router.use(authenticate);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "890d5d",
+        "hash": "403bd677",
+        "encoded": "router.post(",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "890d5d",
+        "hash": "56c0ea63",
+        "encoded": "'/',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "890d5d",
+        "hash": "2cf4eafd",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "890d5d",
+        "hash": "301d056c",
+        "encoded": "body('name').notEmpty().trim().withMessage('Pipeline%20name%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "890d5d",
+        "hash": "f4bbf70e",
+        "encoded": "body('projectId').notEmpty().isUUID().withMessage('Valid%20project%20ID%20is%20required'),",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "890d5d",
+        "hash": "09f8ef5c",
+        "encoded": "body('config').isObject().withMessage('Pipeline%20config%20must%20be%20an%20object'),",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "890d5d",
+        "hash": "af9eeae9",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "890d5d",
+        "hash": "74adcc67",
+        "encoded": "pipelineController.createPipeline",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "890d5d",
+        "hash": "dfc04fa8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "890d5d",
+        "hash": "2345b549",
+        "encoded": "router.get('/',%20pipelineController.getPipelines);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "890d5d",
+        "hash": "cdf221b3",
+        "encoded": "router.get('/:id',%20pipelineController.getPipelineById);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "890d5d",
+        "hash": "fa6868a4",
+        "encoded": "router.put(",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "890d5d",
+        "hash": "1ae40b9d",
+        "encoded": "'/:id',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "890d5d",
+        "hash": "7eba141b",
+        "encoded": "%5B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "890d5d",
+        "hash": "39730953",
+        "encoded": "body('name').optional().notEmpty().trim(),",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "890d5d",
+        "hash": "812f6576",
+        "encoded": "body('config').optional().isObject(),",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "890d5d",
+        "hash": "b38da8ee",
+        "encoded": "body('status').optional().isIn(%5B'active',%20'inactive'%5D),",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "890d5d",
+        "hash": "a0328829",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "890d5d",
+        "hash": "6da037d7",
+        "encoded": "pipelineController.updatePipeline",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "890d5d",
+        "hash": "070912cb",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "890d5d",
+        "hash": "696eb5b7",
+        "encoded": "router.delete('/:id',%20pipelineController.deletePipeline);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "890d5d",
+        "hash": "7b65cf59",
+        "encoded": "router.post('/:id/execute',%20pipelineController.executePipeline);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "890d5d",
+        "hash": "1fb4bcef",
+        "encoded": "router.get('/:id/executions',%20pipelineController.getPipelineExecutions);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "890d5d",
+        "hash": "6ff56902",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

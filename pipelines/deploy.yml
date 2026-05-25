@@ -1,0 +1,119 @@
+name: Deployment Pipeline
+
+on:
+  workflow_run:
+    workflows: ["Build Pipeline", "Test Pipeline", "Quality Gate"]
+    types:
+      - completed
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success' && github.ref == 'refs/heads/develop'
+    environment:
+      name: staging
+      url: https://staging.idp.example.com
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+      
+      - name: Configure kubectl
+        run: |
+          echo "${{ secrets.KUBE_CONFIG_STAGING }}" | base64 -d > kubeconfig
+          export KUBECONFIG=kubeconfig
+      
+      - name: Deploy backend to staging
+        run: |
+          kubectl set image deployment/idp-backend \
+            idp-backend=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend:${{ github.sha }} \
+            -n staging
+          kubectl rollout status deployment/idp-backend -n staging
+      
+      - name: Deploy frontend to staging
+        run: |
+          kubectl set image deployment/idp-frontend \
+            idp-frontend=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-frontend:${{ github.sha }} \
+            -n staging
+          kubectl rollout status deployment/idp-frontend -n staging
+      
+      - name: Run smoke tests
+        run: |
+          npm run test:smoke -- --env=staging
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success' && github.ref == 'refs/heads/main'
+    environment:
+      name: production
+      url: https://idp.example.com
+    needs: []
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+      
+      - name: Configure kubectl
+        run: |
+          echo "${{ secrets.KUBE_CONFIG_PRODUCTION }}" | base64 -d > kubeconfig
+          export KUBECONFIG=kubeconfig
+      
+      - name: Create backup
+        run: |
+          kubectl get deployment idp-backend -n production -o yaml > backup-backend.yaml
+          kubectl get deployment idp-frontend -n production -o yaml > backup-frontend.yaml
+      
+      - name: Deploy backend to production
+        run: |
+          kubectl set image deployment/idp-backend \
+            idp-backend=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend:${{ github.sha }} \
+            -n production
+          kubectl rollout status deployment/idp-backend -n production --timeout=10m
+      
+      - name: Deploy frontend to production
+        run: |
+          kubectl set image deployment/idp-frontend \
+            idp-frontend=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-frontend:${{ github.sha }} \
+            -n production
+          kubectl rollout status deployment/idp-frontend -n production --timeout=10m
+      
+      - name: Run smoke tests
+        run: |
+          npm run test:smoke -- --env=production
+      
+      - name: Notify deployment
+        if: success()
+        uses: slackapi/slack-github-action@v1
+        with:
+          payload: |
+            {
+              "text": "Production deployment successful: ${{ github.sha }}"
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      
+      - name: Rollback on failure
+        if: failure()
+        run: |
+          kubectl apply -f backup-backend.yaml
+          kubectl apply -f backup-frontend.yaml
+          kubectl rollout status deployment/idp-backend -n production
+          kubectl rollout status deployment/idp-frontend -n production

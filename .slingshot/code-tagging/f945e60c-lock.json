@@ -1,0 +1,810 @@
+{
+  "backend\\src\\services\\pipelineService.js": {
+    "filename": "pipelineService.js",
+    "path": "backend\\src\\services\\pipelineService.js",
+    "version": "1.2",
+    "contextFile": "f945e60c-context.json",
+    "chunks": {
+      "3da17b": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707699,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "5921f32f",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:59 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "3da17b",
+        "hash": "96876547",
+        "encoded": "const%20%7B%20Pipeline,%20PipelineExecution,%20Project%20%7D%20=%20require('../models');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "3da17b",
+        "hash": "7e72567d",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../utils/errors');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "3da17b",
+        "hash": "bfb36d91",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "3da17b",
+        "hash": "2fec2883",
+        "encoded": "const%20ciRunnerClient%20=%20require('../utils/ciRunnerClient');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "3da17b",
+        "hash": "1e1b1482",
+        "encoded": "class%20PipelineService%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "3da17b",
+        "hash": "21957cf2",
+        "encoded": "async%20createPipeline(data,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "3da17b",
+        "hash": "244f868b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "3da17b",
+        "hash": "4d1068ec",
+        "encoded": "const%20pipeline%20=%20await%20Pipeline.create(%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "3da17b",
+        "hash": "4153e697",
+        "encoded": "...data,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "3da17b",
+        "hash": "c1744608",
+        "encoded": "createdBy:%20userId,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "3da17b",
+        "hash": "977b5845",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "3da17b",
+        "hash": "70287d6a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "3da17b",
+        "hash": "601df340",
+        "encoded": "return%20pipeline;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "3da17b",
+        "hash": "45839daf",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "3da17b",
+        "hash": "e5cc0c6e",
+        "encoded": "logger.error('Error%20creating%20pipeline:',%20error);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "3da17b",
+        "hash": "af5391a8",
+        "encoded": "throw%20new%20AppError('Failed%20to%20create%20pipeline',%20500);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "3da17b",
+        "hash": "76477189",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "3da17b",
+        "hash": "ee20bc2a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "3da17b",
+        "hash": "75ead0ca",
+        "encoded": "async%20getPipelines(%7B%20projectId,%20page,%20limit,%20userId%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "3da17b",
+        "hash": "e791df68",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "3da17b",
+        "hash": "3a8889dc",
+        "encoded": "const%20offset%20=%20(page%20-%201)%20*%20limit;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "3da17b",
+        "hash": "44f9a2dc",
+        "encoded": "const%20where%20=%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "3da17b",
+        "hash": "9832cdef",
+        "encoded": "if%20(projectId)%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "3da17b",
+        "hash": "07aabb58",
+        "encoded": "where.projectId%20=%20projectId;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "3da17b",
+        "hash": "a7947416",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "3da17b",
+        "hash": "7b7100f7",
+        "encoded": "const%20%7B%20rows,%20count%20%7D%20=%20await%20Pipeline.findAndCountAll(%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "3da17b",
+        "hash": "d0d75972",
+        "encoded": "where,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "3da17b",
+        "hash": "71affd9e",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "3da17b",
+        "hash": "d424e93d",
+        "encoded": "offset,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "3da17b",
+        "hash": "df0569d1",
+        "encoded": "include:%20%5B%7B%20model:%20Project%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "3da17b",
+        "hash": "8a9d6073",
+        "encoded": "order:%20%5B%5B'createdAt',%20'DESC'%5D%5D,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "3da17b",
+        "hash": "8c01c10e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "3da17b",
+        "hash": "365caf63",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "3da17b",
+        "hash": "6b009c7c",
+        "encoded": "pipelines:%20rows,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "3da17b",
+        "hash": "68b37dce",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "3da17b",
+        "hash": "cb829132",
+        "encoded": "total:%20count,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "3da17b",
+        "hash": "455726ec",
+        "encoded": "page,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "3da17b",
+        "hash": "f02a0d2f",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "3da17b",
+        "hash": "a5fb3611",
+        "encoded": "totalPages:%20Math.ceil(count%20/%20limit),",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "3da17b",
+        "hash": "82c8ca80",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "3da17b",
+        "hash": "d95efe69",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "3da17b",
+        "hash": "3d194968",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "3da17b",
+        "hash": "ca7ba31d",
+        "encoded": "logger.error('Error%20fetching%20pipelines:',%20error);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "3da17b",
+        "hash": "eb985046",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20pipelines',%20500);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "3da17b",
+        "hash": "0b4804f7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "3da17b",
+        "hash": "6a5bdc1a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "3da17b",
+        "hash": "4b701695",
+        "encoded": "async%20getPipelineById(pipelineId,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "3da17b",
+        "hash": "1990c546",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "3da17b",
+        "hash": "b405d2db",
+        "encoded": "const%20pipeline%20=%20await%20Pipeline.findByPk(pipelineId,%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "3da17b",
+        "hash": "5b1be536",
+        "encoded": "include:%20%5B%7B%20model:%20Project%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "3da17b",
+        "hash": "4f8dfc51",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "3da17b",
+        "hash": "c17047c9",
+        "encoded": "if%20(!pipeline)%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "3da17b",
+        "hash": "80c57b54",
+        "encoded": "throw%20new%20AppError('Pipeline%20not%20found',%20404);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "3da17b",
+        "hash": "42f7c135",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "3da17b",
+        "hash": "6c524626",
+        "encoded": "return%20pipeline;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "3da17b",
+        "hash": "f0716696",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "3da17b",
+        "hash": "c77589c9",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "3da17b",
+        "hash": "5d850fbf",
+        "encoded": "logger.error('Error%20fetching%20pipeline:',%20error);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "3da17b",
+        "hash": "50012502",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20pipeline',%20500);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "3da17b",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "3da17b",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "3da17b",
+        "hash": "252910e7",
+        "encoded": "async%20updatePipeline(pipelineId,%20data,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "3da17b",
+        "hash": "528f0c76",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "3da17b",
+        "hash": "ec3750b1",
+        "encoded": "const%20pipeline%20=%20await%20this.getPipelineById(pipelineId,%20userId);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "3da17b",
+        "hash": "042ed4d4",
+        "encoded": "await%20pipeline.update(data);",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "3da17b",
+        "hash": "bd0ee1ef",
+        "encoded": "return%20pipeline;",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "3da17b",
+        "hash": "2b1af8df",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "3da17b",
+        "hash": "c6d4ac23",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "3da17b",
+        "hash": "57e95ef5",
+        "encoded": "logger.error('Error%20updating%20pipeline:',%20error);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "3da17b",
+        "hash": "b7cd2096",
+        "encoded": "throw%20new%20AppError('Failed%20to%20update%20pipeline',%20500);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "3da17b",
+        "hash": "8aac2494",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "3da17b",
+        "hash": "a2f26355",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "3da17b",
+        "hash": "46811579",
+        "encoded": "async%20deletePipeline(pipelineId,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "3da17b",
+        "hash": "cc116f02",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "3da17b",
+        "hash": "27af09d8",
+        "encoded": "const%20pipeline%20=%20await%20this.getPipelineById(pipelineId,%20userId);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "3da17b",
+        "hash": "e79bb7a5",
+        "encoded": "await%20pipeline.destroy();",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "3da17b",
+        "hash": "8f30106f",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "3da17b",
+        "hash": "3fb7264e",
+        "encoded": "if%20(error%20instanceof%20AppError)%20throw%20error;",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "3da17b",
+        "hash": "50289b29",
+        "encoded": "logger.error('Error%20deleting%20pipeline:',%20error);",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "3da17b",
+        "hash": "ba0c87af",
+        "encoded": "throw%20new%20AppError('Failed%20to%20delete%20pipeline',%20500);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "3da17b",
+        "hash": "1a9d363f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "3da17b",
+        "hash": "70416dc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "3da17b",
+        "hash": "62157db4",
+        "encoded": "async%20executePipeline(pipelineId,%20params,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "3da17b",
+        "hash": "c1b873e0",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "3da17b",
+        "hash": "f207aebe",
+        "encoded": "const%20pipeline%20=%20await%20this.getPipelineById(pipelineId,%20userId);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "3da17b",
+        "hash": "f69f1e26",
+        "encoded": "const%20execution%20=%20await%20PipelineExecution.create(%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "3da17b",
+        "hash": "2aef482b",
+        "encoded": "pipelineId,",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "3da17b",
+        "hash": "2db79742",
+        "encoded": "triggeredBy:%20userId,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "3da17b",
+        "hash": "390618a4",
+        "encoded": "status:%20'running',",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "3da17b",
+        "hash": "33273cea",
+        "encoded": "parameters:%20params,",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "3da17b",
+        "hash": "530a7fe5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "3da17b",
+        "hash": "099d3fe5",
+        "encoded": "//%20Trigger%20CI%20runner",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "3da17b",
+        "hash": "b9db3170",
+        "encoded": "await%20ciRunnerClient.triggerPipeline(%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "3da17b",
+        "hash": "82ad46fe",
+        "encoded": "pipelineId,",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "3da17b",
+        "hash": "b8e722a6",
+        "encoded": "executionId:%20execution.id,",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "3da17b",
+        "hash": "15d6eea8",
+        "encoded": "config:%20pipeline.config,",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "3da17b",
+        "hash": "fc3a967c",
+        "encoded": "parameters:%20params,",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "3da17b",
+        "hash": "3cff1aec",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "3da17b",
+        "hash": "00ce8883",
+        "encoded": "return%20execution;",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "3da17b",
+        "hash": "f8d345e2",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "3da17b",
+        "hash": "22d26d17",
+        "encoded": "logger.error('Error%20executing%20pipeline:',%20error);",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "3da17b",
+        "hash": "4be7d8e3",
+        "encoded": "throw%20new%20AppError('Failed%20to%20execute%20pipeline',%20500);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "3da17b",
+        "hash": "2de22ffd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "3da17b",
+        "hash": "056477bc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "3da17b",
+        "hash": "cd022c31",
+        "encoded": "async%20getPipelineExecutions(pipelineId,%20%7B%20page,%20limit%20%7D,%20userId)%20%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "3da17b",
+        "hash": "4d162d07",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "3da17b",
+        "hash": "c785f041",
+        "encoded": "await%20this.getPipelineById(pipelineId,%20userId);",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "3da17b",
+        "hash": "1bfcf60d",
+        "encoded": "const%20offset%20=%20(page%20-%201)%20*%20limit;",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "3da17b",
+        "hash": "be54190d",
+        "encoded": "const%20%7B%20rows,%20count%20%7D%20=%20await%20PipelineExecution.findAndCountAll(%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "3da17b",
+        "hash": "7de2bc29",
+        "encoded": "where:%20%7B%20pipelineId%20%7D,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "3da17b",
+        "hash": "08289e18",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "3da17b",
+        "hash": "3e0ff2b5",
+        "encoded": "offset,",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "3da17b",
+        "hash": "dd3a6448",
+        "encoded": "order:%20%5B%5B'createdAt',%20'DESC'%5D%5D,",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "3da17b",
+        "hash": "a67eb14c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "3da17b",
+        "hash": "8941d806",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "3da17b",
+        "hash": "552a81c3",
+        "encoded": "executions:%20rows,",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "3da17b",
+        "hash": "86952306",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "3da17b",
+        "hash": "6382a850",
+        "encoded": "total:%20count,",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "3da17b",
+        "hash": "362a3719",
+        "encoded": "page,",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "3da17b",
+        "hash": "a1e4e6c6",
+        "encoded": "limit,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "3da17b",
+        "hash": "d3d7a797",
+        "encoded": "totalPages:%20Math.ceil(count%20/%20limit),",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "3da17b",
+        "hash": "795e3853",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "3da17b",
+        "hash": "8b5ef3b7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "3da17b",
+        "hash": "2a8776aa",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "3da17b",
+        "hash": "35e9b863",
+        "encoded": "logger.error('Error%20fetching%20pipeline%20executions:',%20error);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "3da17b",
+        "hash": "5bd42407",
+        "encoded": "throw%20new%20AppError('Failed%20to%20fetch%20pipeline%20executions',%20500);",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "3da17b",
+        "hash": "52c5d6be",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "3da17b",
+        "hash": "546cf1de",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "3da17b",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "3da17b",
+        "hash": "c6b04bd2",
+        "encoded": "module.exports%20=%20new%20PipelineService();",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,2202 @@
+{
+  "frontend\\src\\tests\\DeploymentsPage.test.jsx": {
+    "filename": "DeploymentsPage.test.jsx",
+    "path": "frontend\\src\\tests\\DeploymentsPage.test.jsx",
+    "version": "1.2",
+    "contextFile": "826dc5b7-context.json",
+    "chunks": {
+      "511fe5": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710024,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "e69e5432",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:23:44 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "511fe5",
+        "hash": "0884c150",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi,%20beforeEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "511fe5",
+        "hash": "654365ac",
+        "encoded": "import%20%7B%20render,%20screen,%20waitFor%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "511fe5",
+        "hash": "ebac6c92",
+        "encoded": "import%20%7B%20QueryClient,%20QueryClientProvider%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "511fe5",
+        "hash": "15cbde14",
+        "encoded": "import%20%7B%20BrowserRouter%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "511fe5",
+        "hash": "c5790937",
+        "encoded": "import%20DeploymentsPage%20from%20'../pages/deployments/DeploymentsPage';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "511fe5",
+        "hash": "3e624165",
+        "encoded": "import%20%7B%20deploymentService%20%7D%20from%20'../services/deploymentService';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "511fe5",
+        "hash": "edb0ac20",
+        "encoded": "//%20Mock%20the%20deployment%20service",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "511fe5",
+        "hash": "03ec674d",
+        "encoded": "vi.mock('../services/deploymentService',%20()%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "511fe5",
+        "hash": "1edfd40c",
+        "encoded": "deploymentService:%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "511fe5",
+        "hash": "9d549d2d",
+        "encoded": "getDeployments:%20vi.fn(),",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "511fe5",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "511fe5",
+        "hash": "e7260482",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "511fe5",
+        "hash": "e2275a4b",
+        "encoded": "//%20Helper%20function%20to%20render%20component%20with%20providers",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "511fe5",
+        "hash": "ad98002c",
+        "encoded": "const%20renderWithProviders%20=%20(component)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "511fe5",
+        "hash": "634a54a0",
+        "encoded": "const%20queryClient%20=%20new%20QueryClient(%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "511fe5",
+        "hash": "c44d4ba8",
+        "encoded": "defaultOptions:%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "511fe5",
+        "hash": "9cd78fcc",
+        "encoded": "queries:%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "511fe5",
+        "hash": "2eb93544",
+        "encoded": "retry:%20false,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "511fe5",
+        "hash": "7ce81970",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "511fe5",
+        "hash": "044c21b3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "511fe5",
+        "hash": "675df099",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "511fe5",
+        "hash": "dabd8656",
+        "encoded": "return%20render(",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "511fe5",
+        "hash": "62ce6dae",
+        "encoded": "%3CQueryClientProvider%20client=%7BqueryClient%7D%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "511fe5",
+        "hash": "ce93c9d2",
+        "encoded": "%3CBrowserRouter%3E%7Bcomponent%7D%3C/BrowserRouter%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "511fe5",
+        "hash": "ab7e1ba3",
+        "encoded": "%3C/QueryClientProvider%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "511fe5",
+        "hash": "037b4cf2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "511fe5",
+        "hash": "19b7cad3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "511fe5",
+        "hash": "2d7ae090",
+        "encoded": "describe('DeploymentsPage%20Component',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "511fe5",
+        "hash": "a62b59b8",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "511fe5",
+        "hash": "5bb6b362",
+        "encoded": "vi.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "511fe5",
+        "hash": "8522c245",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "511fe5",
+        "hash": "391bbb81",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "511fe5",
+        "hash": "1667dbaa",
+        "encoded": "*%20Test:%20Should%20display%20loading%20state%20while%20fetching%20deployments",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "511fe5",
+        "hash": "eca06564",
+        "encoded": "*%20Scenario:%20Component%20is%20mounted%20and%20data%20is%20being%20fetched",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "511fe5",
+        "hash": "b3b600e6",
+        "encoded": "*%20Expected:%20Loading%20indicator%20should%20be%20visible",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "511fe5",
+        "hash": "4059174a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "511fe5",
+        "hash": "7829db62",
+        "encoded": "it('should%20display%20loading%20state%20while%20fetching%20deployments',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "511fe5",
+        "hash": "b92ffc8b",
+        "encoded": "deploymentService.getDeployments.mockImplementation(",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "511fe5",
+        "hash": "a8e24174",
+        "encoded": "()%20=%3E%20new%20Promise(()%20=%3E%20%7B%7D)%20//%20Never%20resolves",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "511fe5",
+        "hash": "15b81b0c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "511fe5",
+        "hash": "2743b322",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "511fe5",
+        "hash": "aab97e02",
+        "encoded": "expect(screen.getByText('Loading...')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "511fe5",
+        "hash": "d7c2ec52",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "511fe5",
+        "hash": "09dfcb49",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "511fe5",
+        "hash": "f879e762",
+        "encoded": "*%20Test:%20Should%20render%20deployments%20list%20successfully",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "511fe5",
+        "hash": "59500ab7",
+        "encoded": "*%20Scenario:%20API%20returns%20a%20list%20of%20deployments",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "511fe5",
+        "hash": "87f9e3a6",
+        "encoded": "*%20Expected:%20All%20deployments%20should%20be%20displayed%20with%20correct%20information",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "511fe5",
+        "hash": "b02fb1f0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "511fe5",
+        "hash": "55e23a89",
+        "encoded": "it('should%20render%20deployments%20list%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "511fe5",
+        "hash": "0359e974",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "511fe5",
+        "hash": "39d0a0c4",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "511fe5",
+        "hash": "11256317",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "511fe5",
+        "hash": "112fbe68",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "511fe5",
+        "hash": "4dc42ccb",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "511fe5",
+        "hash": "a09f2f99",
+        "encoded": "environment:%20'production',",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "511fe5",
+        "hash": "8bbda384",
+        "encoded": "version:%20'v1.2.3',",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "511fe5",
+        "hash": "c58665e6",
+        "encoded": "status:%20'success',",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "511fe5",
+        "hash": "bc8c9bae",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "511fe5",
+        "hash": "9a197c72",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "511fe5",
+        "hash": "3e976373",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "511fe5",
+        "hash": "63624619",
+        "encoded": "environment:%20'staging',",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "511fe5",
+        "hash": "32ed0093",
+        "encoded": "version:%20'v1.2.4',",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "511fe5",
+        "hash": "3b59308f",
+        "encoded": "status:%20'pending',",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "511fe5",
+        "hash": "c1761422",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "511fe5",
+        "hash": "e2901add",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "511fe5",
+        "hash": "d1ed9091",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "511fe5",
+        "hash": "950f39fe",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "511fe5",
+        "hash": "0b0f7103",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "511fe5",
+        "hash": "62edc1c4",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "511fe5",
+        "hash": "5b7c6502",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "511fe5",
+        "hash": "55a75dbe",
+        "encoded": "expect(screen.getByText('production')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "511fe5",
+        "hash": "59dddc1b",
+        "encoded": "expect(screen.getByText('Version:%20v1.2.3')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "511fe5",
+        "hash": "db8dd69a",
+        "encoded": "expect(screen.getByText('staging')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "511fe5",
+        "hash": "a88fb1f2",
+        "encoded": "expect(screen.getByText('Version:%20v1.2.4')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "511fe5",
+        "hash": "6e8213bb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "511fe5",
+        "hash": "82716009",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "511fe5",
+        "hash": "5fea1916",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "511fe5",
+        "hash": "5507872e",
+        "encoded": "*%20Test:%20Should%20render%20page%20heading",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "511fe5",
+        "hash": "b68739ce",
+        "encoded": "*%20Scenario:%20Component%20is%20rendered",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "511fe5",
+        "hash": "4709f6bc",
+        "encoded": "*%20Expected:%20%22Deployments%22%20heading%20should%20be%20displayed",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "511fe5",
+        "hash": "14261a2c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "511fe5",
+        "hash": "c7555199",
+        "encoded": "it('should%20render%20page%20heading',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "511fe5",
+        "hash": "f9181c9f",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "511fe5",
+        "hash": "d700ac68",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "511fe5",
+        "hash": "5b757314",
+        "encoded": "deployments:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "511fe5",
+        "hash": "7711b20c",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "511fe5",
+        "hash": "b8973aaa",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "511fe5",
+        "hash": "e5fe7cc9",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "511fe5",
+        "hash": "a4019c19",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "511fe5",
+        "hash": "468bdca1",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "511fe5",
+        "hash": "52a74268",
+        "encoded": "expect(screen.getByRole('heading',%20%7B%20name:%20'Deployments'%20%7D)).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "511fe5",
+        "hash": "0bd6fda6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "511fe5",
+        "hash": "312eceeb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "511fe5",
+        "hash": "de3ac4ef",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "511fe5",
+        "hash": "0f66eb83",
+        "encoded": "*%20Test:%20Should%20display%20deployment%20status%20badges%20correctly",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "511fe5",
+        "hash": "f8accea9",
+        "encoded": "*%20Scenario:%20Deployments%20have%20different%20status%20values",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "511fe5",
+        "hash": "90488a98",
+        "encoded": "*%20Expected:%20Status%20badges%20should%20be%20rendered%20with%20correct%20classes",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "511fe5",
+        "hash": "1184eea6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "511fe5",
+        "hash": "f0d666cc",
+        "encoded": "it('should%20display%20deployment%20status%20badges%20correctly',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "511fe5",
+        "hash": "1727fcff",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "511fe5",
+        "hash": "a3065d2f",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "511fe5",
+        "hash": "a15b70a7",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "511fe5",
+        "hash": "d68c5ea7",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "511fe5",
+        "hash": "f8ab90d0",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "511fe5",
+        "hash": "e287f855",
+        "encoded": "environment:%20'production',",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "511fe5",
+        "hash": "0de40baa",
+        "encoded": "version:%20'v1.0.0',",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "511fe5",
+        "hash": "9c0833a7",
+        "encoded": "status:%20'success',",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "511fe5",
+        "hash": "7330c39c",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "511fe5",
+        "hash": "cbf4e142",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "511fe5",
+        "hash": "011b2694",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "511fe5",
+        "hash": "2d83411d",
+        "encoded": "environment:%20'staging',",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "511fe5",
+        "hash": "67e65213",
+        "encoded": "version:%20'v1.1.0',",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "511fe5",
+        "hash": "8d2d8066",
+        "encoded": "status:%20'failed',",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "511fe5",
+        "hash": "5df36d4f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "511fe5",
+        "hash": "ee30608c",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "511fe5",
+        "hash": "fd6b6ded",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "511fe5",
+        "hash": "f1d81ea5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "511fe5",
+        "hash": "4bd37303",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "511fe5",
+        "hash": "8e549450",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "511fe5",
+        "hash": "d0cc55d8",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "511fe5",
+        "hash": "ac74b6f5",
+        "encoded": "const%20statusBadges%20=%20container.querySelectorAll('.status-badge');",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "511fe5",
+        "hash": "e867d209",
+        "encoded": "expect(statusBadges).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "511fe5",
+        "hash": "f4a26a68",
+        "encoded": "expect(statusBadges%5B0%5D).toHaveClass('status-badge',%20'success');",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "511fe5",
+        "hash": "d92be8f1",
+        "encoded": "expect(statusBadges%5B1%5D).toHaveClass('status-badge',%20'failed');",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "511fe5",
+        "hash": "110dc275",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "511fe5",
+        "hash": "8fee1500",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "511fe5",
+        "hash": "31c52bf6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "511fe5",
+        "hash": "8dc560f8",
+        "encoded": "*%20Test:%20Should%20call%20getDeployments%20API%20on%20component%20mount",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "511fe5",
+        "hash": "cfdb8bdb",
+        "encoded": "*%20Scenario:%20Component%20is%20mounted",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "511fe5",
+        "hash": "aa5a6a9d",
+        "encoded": "*%20Expected:%20deploymentService.getDeployments%20should%20be%20called%20with%20empty%20params",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "511fe5",
+        "hash": "4bcf1620",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "511fe5",
+        "hash": "1fe108b9",
+        "encoded": "it('should%20call%20getDeployments%20API%20on%20component%20mount',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "511fe5",
+        "hash": "13a91af6",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "511fe5",
+        "hash": "26634334",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "511fe5",
+        "hash": "e1836285",
+        "encoded": "deployments:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "511fe5",
+        "hash": "6c52cdbc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "511fe5",
+        "hash": "e1948cf0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "511fe5",
+        "hash": "08b407a4",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "511fe5",
+        "hash": "db15b7c5",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "511fe5",
+        "hash": "fa26a675",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "511fe5",
+        "hash": "828dce0f",
+        "encoded": "expect(deploymentService.getDeployments).toHaveBeenCalledWith(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "511fe5",
+        "hash": "20920bf2",
+        "encoded": "expect(deploymentService.getDeployments).toHaveBeenCalledTimes(1);",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "511fe5",
+        "hash": "3d741aec",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "511fe5",
+        "hash": "cc284540",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "511fe5",
+        "hash": "0e45e54e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "511fe5",
+        "hash": "6659f094",
+        "encoded": "*%20Test:%20Should%20render%20empty%20state%20when%20no%20deployments%20exist",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "511fe5",
+        "hash": "71c1daee",
+        "encoded": "*%20Scenario:%20API%20returns%20empty%20deployments%20array",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "511fe5",
+        "hash": "109d3db6",
+        "encoded": "*%20Expected:%20No%20deployment%20cards%20should%20be%20rendered",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "511fe5",
+        "hash": "3503ba55",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "511fe5",
+        "hash": "06b7d56b",
+        "encoded": "it('should%20render%20empty%20state%20when%20no%20deployments%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "511fe5",
+        "hash": "79aff4ab",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "511fe5",
+        "hash": "85db6ea0",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "511fe5",
+        "hash": "910c8d81",
+        "encoded": "deployments:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "511fe5",
+        "hash": "8801a86b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "511fe5",
+        "hash": "271f5887",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "511fe5",
+        "hash": "934713ff",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "511fe5",
+        "hash": "30cdfccc",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "511fe5",
+        "hash": "ea475a7e",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "511fe5",
+        "hash": "921e3c57",
+        "encoded": "const%20deploymentCards%20=%20container.querySelectorAll('.deployment-card');",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "511fe5",
+        "hash": "1b79f63f",
+        "encoded": "expect(deploymentCards).toHaveLength(0);",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "511fe5",
+        "hash": "5076128d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "511fe5",
+        "hash": "e3fabb4a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "511fe5",
+        "hash": "39a27243",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "511fe5",
+        "hash": "aad2458b",
+        "encoded": "*%20Test:%20Should%20render%20multiple%20deployments",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "511fe5",
+        "hash": "dccf5179",
+        "encoded": "*%20Scenario:%20API%20returns%20multiple%20deployments",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "511fe5",
+        "hash": "e22e88f6",
+        "encoded": "*%20Expected:%20All%20deployments%20should%20be%20rendered%20as%20cards",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "511fe5",
+        "hash": "2cbc588f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "511fe5",
+        "hash": "6d512fb4",
+        "encoded": "it('should%20render%20multiple%20deployments',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "511fe5",
+        "hash": "5d99612c",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "511fe5",
+        "hash": "71c4d72b",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "511fe5",
+        "hash": "3c486ab6",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "511fe5",
+        "hash": "cea1fb0e",
+        "encoded": "%7B%20id:%201,%20environment:%20'dev',%20version:%20'v1.0.0',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "511fe5",
+        "hash": "816c702b",
+        "encoded": "%7B%20id:%202,%20environment:%20'staging',%20version:%20'v1.0.1',%20status:%20'pending'%20%7D,",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "511fe5",
+        "hash": "dfe94f77",
+        "encoded": "%7B%20id:%203,%20environment:%20'production',%20version:%20'v1.0.2',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "511fe5",
+        "hash": "d9206b43",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "511fe5",
+        "hash": "53b2e133",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "511fe5",
+        "hash": "311f6c0e",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "511fe5",
+        "hash": "985b4942",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "511fe5",
+        "hash": "cdcdbbd2",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "511fe5",
+        "hash": "71eff6a9",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "511fe5",
+        "hash": "46fd29b1",
+        "encoded": "const%20deploymentCards%20=%20container.querySelectorAll('.deployment-card');",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "511fe5",
+        "hash": "06564d72",
+        "encoded": "expect(deploymentCards).toHaveLength(3);",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "511fe5",
+        "hash": "9d2d0a1a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "511fe5",
+        "hash": "a7cd5066",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "511fe5",
+        "hash": "86200bf3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "511fe5",
+        "hash": "311684b2",
+        "encoded": "*%20Test:%20Should%20render%20environment%20names%20correctly",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "511fe5",
+        "hash": "1c2a4152",
+        "encoded": "*%20Scenario:%20Deployments%20have%20environment%20field",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "511fe5",
+        "hash": "fd734976",
+        "encoded": "*%20Expected:%20Each%20environment%20name%20should%20be%20displayed%20in%20h3%20heading",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "511fe5",
+        "hash": "f82721f2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "511fe5",
+        "hash": "a4d96b66",
+        "encoded": "it('should%20render%20environment%20names%20correctly',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "511fe5",
+        "hash": "3fe66096",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "511fe5",
+        "hash": "96f9116b",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "511fe5",
+        "hash": "5176cdec",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "511fe5",
+        "hash": "7d8ca6a6",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "511fe5",
+        "hash": "550876e6",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "511fe5",
+        "hash": "5e1787f9",
+        "encoded": "environment:%20'production',",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "511fe5",
+        "hash": "0b6bc069",
+        "encoded": "version:%20'v2.0.0',",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "511fe5",
+        "hash": "e9c90564",
+        "encoded": "status:%20'success',",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "511fe5",
+        "hash": "6f3f0ae0",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "511fe5",
+        "hash": "3134fb13",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "511fe5",
+        "hash": "8893d46f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "511fe5",
+        "hash": "4eda89a7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "511fe5",
+        "hash": "184dddb9",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "511fe5",
+        "hash": "3c66614d",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "511fe5",
+        "hash": "60e74ca3",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "511fe5",
+        "hash": "c10adb14",
+        "encoded": "const%20heading%20=%20screen.getByRole('heading',%20%7B%20name:%20'production',%20level:%203%20%7D);",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "511fe5",
+        "hash": "c6bf0bb2",
+        "encoded": "expect(heading).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "511fe5",
+        "hash": "1d3a12c5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "511fe5",
+        "hash": "ca965167",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "511fe5",
+        "hash": "afb4783c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "511fe5",
+        "hash": "c4469d23",
+        "encoded": "*%20Test:%20Should%20render%20version%20information%20correctly",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "511fe5",
+        "hash": "c96c6107",
+        "encoded": "*%20Scenario:%20Deployments%20have%20version%20field",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "511fe5",
+        "hash": "6b34387c",
+        "encoded": "*%20Expected:%20Each%20version%20should%20be%20displayed%20with%20%22Version:%22%20prefix",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "511fe5",
+        "hash": "1b780d22",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "511fe5",
+        "hash": "3056e0d4",
+        "encoded": "it('should%20render%20version%20information%20correctly',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "511fe5",
+        "hash": "8706dd59",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "511fe5",
+        "hash": "08542cf5",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "511fe5",
+        "hash": "68b6c769",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "511fe5",
+        "hash": "dedb21d5",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "511fe5",
+        "hash": "934e257e",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "511fe5",
+        "hash": "546af15b",
+        "encoded": "environment:%20'staging',",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "511fe5",
+        "hash": "387215b4",
+        "encoded": "version:%20'v3.5.2',",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "511fe5",
+        "hash": "062aa239",
+        "encoded": "status:%20'success',",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "511fe5",
+        "hash": "8af075d3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "511fe5",
+        "hash": "9e256703",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "511fe5",
+        "hash": "292968c8",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "511fe5",
+        "hash": "5e5bdf27",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "511fe5",
+        "hash": "779c7beb",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "511fe5",
+        "hash": "68b7798d",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "511fe5",
+        "hash": "f18a48eb",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "511fe5",
+        "hash": "61908cf3",
+        "encoded": "expect(screen.getByText('Version:%20v3.5.2')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "511fe5",
+        "hash": "1fece245",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "511fe5",
+        "hash": "36cccec1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "511fe5",
+        "hash": "bdac8d01",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "511fe5",
+        "hash": "6aabdddc",
+        "encoded": "*%20Test:%20Should%20handle%20API%20error%20gracefully",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "511fe5",
+        "hash": "aca4314f",
+        "encoded": "*%20Scenario:%20API%20call%20fails%20with%20an%20error",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "511fe5",
+        "hash": "fb845f5d",
+        "encoded": "*%20Expected:%20Component%20should%20not%20crash",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "511fe5",
+        "hash": "2e8daa88",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "511fe5",
+        "hash": "d42e7a54",
+        "encoded": "it('should%20handle%20API%20error%20gracefully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "511fe5",
+        "hash": "8294361f",
+        "encoded": "const%20consoleErrorSpy%20=%20vi.spyOn(console,%20'error').mockImplementation(()%20=%3E%20%7B%7D);",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "511fe5",
+        "hash": "7aa3aedd",
+        "encoded": "deploymentService.getDeployments.mockRejectedValue(new%20Error('API%20Error'));",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "511fe5",
+        "hash": "cc588248",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "511fe5",
+        "hash": "27dd830b",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "511fe5",
+        "hash": "7e85203c",
+        "encoded": "expect(screen.queryByText('Loading...')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "511fe5",
+        "hash": "1afabc1d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "511fe5",
+        "hash": "71baf21c",
+        "encoded": "consoleErrorSpy.mockRestore();",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "511fe5",
+        "hash": "d9c5af76",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "511fe5",
+        "hash": "0ba04628",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "511fe5",
+        "hash": "4fa7325a",
+        "encoded": "*%20Test:%20Should%20handle%20undefined%20or%20null%20data%20gracefully",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "511fe5",
+        "hash": "a3cc660e",
+        "encoded": "*%20Scenario:%20API%20returns%20undefined%20or%20null%20data",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "511fe5",
+        "hash": "bb9c63bc",
+        "encoded": "*%20Expected:%20Component%20should%20not%20crash",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "511fe5",
+        "hash": "4ccff22c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "511fe5",
+        "hash": "7ba69343",
+        "encoded": "it('should%20handle%20undefined%20or%20null%20data%20gracefully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "511fe5",
+        "hash": "1869954f",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(%7B%20data:%20null%20%7D);",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "511fe5",
+        "hash": "b3edbdbe",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "511fe5",
+        "hash": "e82b31fc",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "511fe5",
+        "hash": "a58ec399",
+        "encoded": "expect(screen.queryByText('Loading...')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "511fe5",
+        "hash": "fdf7551f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "511fe5",
+        "hash": "99aa9b21",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "511fe5",
+        "hash": "48418a1e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "511fe5",
+        "hash": "bb030d05",
+        "encoded": "*%20Test:%20Should%20render%20deployments-page%20container",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "511fe5",
+        "hash": "76bb418b",
+        "encoded": "*%20Scenario:%20Component%20is%20rendered",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "511fe5",
+        "hash": "aec30ef0",
+        "encoded": "*%20Expected:%20Main%20container%20should%20have%20'deployments-page'%20class",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "511fe5",
+        "hash": "aac69854",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "511fe5",
+        "hash": "5a572ae8",
+        "encoded": "it('should%20render%20deployments-page%20container',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "511fe5",
+        "hash": "8f2d873e",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "511fe5",
+        "hash": "8882bdc2",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "511fe5",
+        "hash": "ea4004cf",
+        "encoded": "deployments:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "511fe5",
+        "hash": "fd68cbd6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "511fe5",
+        "hash": "7a4f0490",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "511fe5",
+        "hash": "768d1fcf",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "511fe5",
+        "hash": "40cb6968",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "511fe5",
+        "hash": "f0888f42",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "511fe5",
+        "hash": "cd254c26",
+        "encoded": "const%20deploymentsPage%20=%20container.querySelector('.deployments-page');",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "511fe5",
+        "hash": "89d0f0c8",
+        "encoded": "expect(deploymentsPage).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "511fe5",
+        "hash": "86180112",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "511fe5",
+        "hash": "cdbc14c4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "511fe5",
+        "hash": "1825f18d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "511fe5",
+        "hash": "34cbb115",
+        "encoded": "*%20Test:%20Should%20render%20deployments-list%20container",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "511fe5",
+        "hash": "3ca4cfbe",
+        "encoded": "*%20Scenario:%20Component%20is%20rendered",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "511fe5",
+        "hash": "2c6dcf55",
+        "encoded": "*%20Expected:%20Deployments%20list%20container%20should%20be%20present",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "511fe5",
+        "hash": "aa188ccb",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "511fe5",
+        "hash": "7390e7aa",
+        "encoded": "it('should%20render%20deployments-list%20container',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "511fe5",
+        "hash": "af404301",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "511fe5",
+        "hash": "09e1e703",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "511fe5",
+        "hash": "8059de92",
+        "encoded": "deployments:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "511fe5",
+        "hash": "0dce7895",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "511fe5",
+        "hash": "d60f6840",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "511fe5",
+        "hash": "87e01164",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "511fe5",
+        "hash": "57c4352f",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "511fe5",
+        "hash": "52ed8755",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "511fe5",
+        "hash": "68fc341a",
+        "encoded": "const%20deploymentsList%20=%20container.querySelector('.deployments-list');",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "511fe5",
+        "hash": "e4f21dba",
+        "encoded": "expect(deploymentsList).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "511fe5",
+        "hash": "7579b8fb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "511fe5",
+        "hash": "7fa09f61",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "511fe5",
+        "hash": "47ea001e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "511fe5",
+        "hash": "71f942d5",
+        "encoded": "*%20Test:%20Should%20render%20different%20deployment%20statuses",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "511fe5",
+        "hash": "86f3269c",
+        "encoded": "*%20Scenario:%20Deployments%20have%20various%20status%20values",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "511fe5",
+        "hash": "3e044eef",
+        "encoded": "*%20Expected:%20All%20status%20values%20should%20be%20displayed%20correctly",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "511fe5",
+        "hash": "1884fe58",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "511fe5",
+        "hash": "a960c90d",
+        "encoded": "it('should%20render%20different%20deployment%20statuses',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "511fe5",
+        "hash": "406001f6",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "511fe5",
+        "hash": "72112fee",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "511fe5",
+        "hash": "e30b3e60",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "511fe5",
+        "hash": "5559e29b",
+        "encoded": "%7B%20id:%201,%20environment:%20'env1',%20version:%20'v1',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "511fe5",
+        "hash": "14976b9d",
+        "encoded": "%7B%20id:%202,%20environment:%20'env2',%20version:%20'v2',%20status:%20'pending'%20%7D,",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "511fe5",
+        "hash": "53eadde4",
+        "encoded": "%7B%20id:%203,%20environment:%20'env3',%20version:%20'v3',%20status:%20'failed'%20%7D,",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "511fe5",
+        "hash": "57ec8426",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "511fe5",
+        "hash": "f6b88b72",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "511fe5",
+        "hash": "7e2848ac",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "511fe5",
+        "hash": "31c92ac9",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "511fe5",
+        "hash": "88b7042f",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "511fe5",
+        "hash": "3cd82b7a",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "511fe5",
+        "hash": "3dacf85f",
+        "encoded": "expect(screen.getByText('success')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "511fe5",
+        "hash": "10969d12",
+        "encoded": "expect(screen.getByText('pending')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "511fe5",
+        "hash": "e9c5cf66",
+        "encoded": "expect(screen.getByText('failed')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "511fe5",
+        "hash": "d978a7cc",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "511fe5",
+        "hash": "161d5e07",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "511fe5",
+        "hash": "70564799",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "511fe5",
+        "hash": "4893115d",
+        "encoded": "*%20Test:%20Should%20render%20deployments%20in%20correct%20order",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "511fe5",
+        "hash": "7b8e1bbe",
+        "encoded": "*%20Scenario:%20API%20returns%20deployments%20in%20specific%20order",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "511fe5",
+        "hash": "20013aa3",
+        "encoded": "*%20Expected:%20Deployments%20should%20be%20rendered%20in%20the%20same%20order%20as%20received",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "511fe5",
+        "hash": "d671a10c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "511fe5",
+        "hash": "860bc51c",
+        "encoded": "it('should%20render%20deployments%20in%20correct%20order',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "511fe5",
+        "hash": "9ae525d0",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "511fe5",
+        "hash": "bc7eed1f",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "511fe5",
+        "hash": "ad82088d",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "511fe5",
+        "hash": "8fe85ee6",
+        "encoded": "%7B%20id:%201,%20environment:%20'First',%20version:%20'v1',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "511fe5",
+        "hash": "0899e5d8",
+        "encoded": "%7B%20id:%202,%20environment:%20'Second',%20version:%20'v2',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "511fe5",
+        "hash": "1c1a3218",
+        "encoded": "%7B%20id:%203,%20environment:%20'Third',%20version:%20'v3',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "511fe5",
+        "hash": "3a7bbafa",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "511fe5",
+        "hash": "d6a6afc3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "511fe5",
+        "hash": "a3b45f21",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "511fe5",
+        "hash": "81d7696f",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "511fe5",
+        "hash": "83f240c6",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "511fe5",
+        "hash": "238a2e4a",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "511fe5",
+        "hash": "08a15a88",
+        "encoded": "const%20headings%20=%20screen.getAllByRole('heading',%20%7B%20level:%203%20%7D);",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "511fe5",
+        "hash": "b080fa5e",
+        "encoded": "expect(headings%5B0%5D).toHaveTextContent('First');",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "511fe5",
+        "hash": "20cf73a7",
+        "encoded": "expect(headings%5B1%5D).toHaveTextContent('Second');",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "511fe5",
+        "hash": "69a4e6d5",
+        "encoded": "expect(headings%5B2%5D).toHaveTextContent('Third');",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "511fe5",
+        "hash": "fa60e89a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "511fe5",
+        "hash": "8afa7fbe",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "511fe5",
+        "hash": "65f65981",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "511fe5",
+        "hash": "8a00ed09",
+        "encoded": "*%20Test:%20Should%20handle%20deployments%20with%20missing%20fields",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "511fe5",
+        "hash": "722e7169",
+        "encoded": "*%20Scenario:%20Some%20deployments%20don't%20have%20all%20fields",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "511fe5",
+        "hash": "ae7de14d",
+        "encoded": "*%20Expected:%20Component%20should%20render%20without%20crashing",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "511fe5",
+        "hash": "fc649723",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "511fe5",
+        "hash": "ca18cf88",
+        "encoded": "it('should%20handle%20deployments%20with%20missing%20fields',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "511fe5",
+        "hash": "4e29bb7b",
+        "encoded": "const%20mockDeployments%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "511fe5",
+        "hash": "a59c97f3",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "511fe5",
+        "hash": "7f7a457a",
+        "encoded": "deployments:%20%5B",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "511fe5",
+        "hash": "618f96d4",
+        "encoded": "%7B%20id:%201,%20environment:%20'test'%20%7D,",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "511fe5",
+        "hash": "8a54da5a",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "511fe5",
+        "hash": "f270e587",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "511fe5",
+        "hash": "653f9dd0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "511fe5",
+        "hash": "8095d19d",
+        "encoded": "deploymentService.getDeployments.mockResolvedValue(mockDeployments);",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "511fe5",
+        "hash": "522b97d4",
+        "encoded": "renderWithProviders(%3CDeploymentsPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "511fe5",
+        "hash": "a092ebfa",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "511fe5",
+        "hash": "5de8dfd3",
+        "encoded": "expect(screen.getByText('test')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "511fe5",
+        "hash": "321569a9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "511fe5",
+        "hash": "23549d12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "511fe5",
+        "hash": "49cb4715",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

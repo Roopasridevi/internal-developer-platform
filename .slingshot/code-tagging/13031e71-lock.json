@@ -1,0 +1,2094 @@
+{
+  "frontend\\src\\tests\\ProjectDetailPage.test.jsx": {
+    "filename": "ProjectDetailPage.test.jsx",
+    "path": "frontend\\src\\tests\\ProjectDetailPage.test.jsx",
+    "version": "1.2",
+    "contextFile": "13031e71-context.json",
+    "chunks": {
+      "bf7867": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710021,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "fe050620",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:23:41 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "b59bd0": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710517,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "c82ca806",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:31:57 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "bf7867",
+        "hash": "0884c150",
+        "encoded": "import%20%7B%20describe,%20it,%20expect,%20vi,%20beforeEach%20%7D%20from%20'vitest';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "bf7867",
+        "hash": "654365ac",
+        "encoded": "import%20%7B%20render,%20screen,%20waitFor%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "bf7867",
+        "hash": "ebac6c92",
+        "encoded": "import%20%7B%20QueryClient,%20QueryClientProvider%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "bf7867",
+        "hash": "c24dd657",
+        "encoded": "import%20%7B%20BrowserRouter,%20Route,%20Routes%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "bf7867",
+        "hash": "74f3633d",
+        "encoded": "import%20ProjectDetailPage%20from%20'../pages/projects/ProjectDetailPage';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "bf7867",
+        "hash": "8d978f4e",
+        "encoded": "import%20%7B%20projectService%20%7D%20from%20'../services/projectService';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "bf7867",
+        "hash": "922e2618",
+        "encoded": "//%20Mock%20the%20project%20service",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "bf7867",
+        "hash": "6082571e",
+        "encoded": "vi.mock('../services/projectService',%20()%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "bf7867",
+        "hash": "3c5383b7",
+        "encoded": "projectService:%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "bf7867",
+        "hash": "17d28925",
+        "encoded": "getProjectById:%20vi.fn(),",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "bf7867",
+        "hash": "23312e7d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "bf7867",
+        "hash": "e7260482",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "bf7867",
+        "hash": "9dbd06b4",
+        "encoded": "//%20Mock%20useParams",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "bf7867",
+        "hash": "285329fa",
+        "encoded": "vi.mock('react-router-dom',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "bf7867",
+        "hash": "a5efcc3c",
+        "encoded": "const%20actual%20=%20await%20vi.importActual('react-router-dom');",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "bf7867",
+        "hash": "df157b4f",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "bf7867",
+        "hash": "b9d99228",
+        "encoded": "...actual,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "bf7867",
+        "hash": "8497ac31",
+        "encoded": "useParams:%20vi.fn(),",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "bf7867",
+        "hash": "d5064c2c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "bf7867",
+        "hash": "76a9f041",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "bf7867",
+        "hash": "700df6f5",
+        "encoded": "import%20%7B%20useParams%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "bf7867",
+        "hash": "00c34926",
+        "encoded": "//%20Helper%20function%20to%20render%20component%20with%20providers",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "bf7867",
+        "hash": "598cde2f",
+        "encoded": "const%20renderWithProviders%20=%20(component,%20%7B%20route%20=%20'/projects/1'%20%7D%20=%20%7B%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "bf7867",
+        "hash": "8be16cd6",
+        "encoded": "const%20queryClient%20=%20new%20QueryClient(%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "bf7867",
+        "hash": "8de66af5",
+        "encoded": "defaultOptions:%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "bf7867",
+        "hash": "01ba1cee",
+        "encoded": "queries:%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "bf7867",
+        "hash": "a05572ae",
+        "encoded": "retry:%20false,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "bf7867",
+        "hash": "2f2e8934",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "bf7867",
+        "hash": "82e603d7",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "bf7867",
+        "hash": "84faadb9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "bf7867",
+        "hash": "0027a93f",
+        "encoded": "window.history.pushState(%7B%7D,%20'Test%20page',%20route);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "bf7867",
+        "hash": "bd98ef24",
+        "encoded": "return%20render(",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "bf7867",
+        "hash": "284cf798",
+        "encoded": "%3CQueryClientProvider%20client=%7BqueryClient%7D%3E",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "bf7867",
+        "hash": "96aaaaae",
+        "encoded": "%3CBrowserRouter%3E%7Bcomponent%7D%3C/BrowserRouter%3E",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "bf7867",
+        "hash": "5e5bfe45",
+        "encoded": "%3C/QueryClientProvider%3E",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "bf7867",
+        "hash": "d4a3b1eb",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "bf7867",
+        "hash": "eb717fe2",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "bf7867",
+        "hash": "c0515667",
+        "encoded": "describe('ProjectDetailPage%20Component',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "bf7867",
+        "hash": "0211bf10",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "bf7867",
+        "hash": "bd612fb0",
+        "encoded": "vi.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "bf7867",
+        "hash": "6c3f165a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "bf7867",
+        "hash": "9c0519d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "bf7867",
+        "hash": "133a5bee",
+        "encoded": "*%20Test:%20Should%20display%20loading%20state%20while%20fetching%20project%20details",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "bf7867",
+        "hash": "1cc0fd64",
+        "encoded": "*%20Scenario:%20Component%20is%20mounted%20and%20data%20is%20being%20fetched",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "bf7867",
+        "hash": "4d4d23cc",
+        "encoded": "*%20Expected:%20Loading%20indicator%20should%20be%20visible",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "bf7867",
+        "hash": "b6b41ee9",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "bf7867",
+        "hash": "2d25c924",
+        "encoded": "it('should%20display%20loading%20state%20while%20fetching%20project%20details',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "bf7867",
+        "hash": "9dc2891d",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "bf7867",
+        "hash": "283d3b9e",
+        "encoded": "projectService.getProjectById.mockImplementation(",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "bf7867",
+        "hash": "53472665",
+        "encoded": "()%20=%3E%20new%20Promise(()%20=%3E%20%7B%7D)%20//%20Never%20resolves",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "bf7867",
+        "hash": "da701617",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "bf7867",
+        "hash": "1b40a194",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "bf7867",
+        "hash": "088b6fe1",
+        "encoded": "expect(screen.getByText('Loading...')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "bf7867",
+        "hash": "841a9c8c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "bf7867",
+        "hash": "c50c01c3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "bf7867",
+        "hash": "2698b15a",
+        "encoded": "*%20Test:%20Should%20render%20project%20details%20successfully",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "bf7867",
+        "hash": "a5e5b501",
+        "encoded": "*%20Scenario:%20API%20returns%20project%20data",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "bf7867",
+        "hash": "61874106",
+        "encoded": "*%20Expected:%20Project%20name,%20description,%20status,%20and%20repository%20URL%20should%20be%20displayed",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "bf7867",
+        "hash": "91b2d6df",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "bf7867",
+        "hash": "5dda8bb6",
+        "encoded": "it('should%20render%20project%20details%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "bf7867",
+        "hash": "afeede73",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "bf7867",
+        "hash": "b08b63c7",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "bf7867",
+        "hash": "6d56f6f8",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "bf7867",
+        "hash": "f33ec6e7",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "bf7867",
+        "hash": "8c39c9b0",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "bf7867",
+        "hash": "342f15c7",
+        "encoded": "description:%20'This%20is%20a%20test%20project',",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "bf7867",
+        "hash": "11857398",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "bf7867",
+        "hash": "a6064023",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "bf7867",
+        "hash": "ffe98c3c",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "bf7867",
+        "hash": "93e776f6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "bf7867",
+        "hash": "539dcc32",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "bf7867",
+        "hash": "9f2debcf",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "bf7867",
+        "hash": "fbb2ccaa",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "bf7867",
+        "hash": "df21a7fc",
+        "encoded": "expect(screen.getByText('Test%20Project')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "bf7867",
+        "hash": "f0bfba10",
+        "encoded": "expect(screen.getByText('This%20is%20a%20test%20project')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "bf7867",
+        "hash": "1ab5e22d",
+        "encoded": "expect(screen.getByText('active')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "bf7867",
+        "hash": "9895a5a3",
+        "encoded": "expect(screen.getByText('https://github.com/test/repo')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "bf7867",
+        "hash": "a8fc62b8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "bf7867",
+        "hash": "2f7a06b9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "bf7867",
+        "hash": "3240b014",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "bf7867",
+        "hash": "234a652d",
+        "encoded": "*%20Test:%20Should%20call%20getProjectById%20API%20with%20correct%20project%20ID",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "bf7867",
+        "hash": "3398c77c",
+        "encoded": "*%20Scenario:%20Component%20is%20mounted%20with%20project%20ID%20in%20URL%20params",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "bf7867",
+        "hash": "a151aa06",
+        "encoded": "*%20Expected:%20API%20should%20be%20called%20with%20the%20correct%20ID%20from%20URL%20params",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "bf7867",
+        "hash": "c07fdc3d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "bf7867",
+        "hash": "52135fb9",
+        "encoded": "it('should%20call%20getProjectById%20API%20with%20correct%20project%20ID',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "bf7867",
+        "hash": "394fb833",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'42'%20%7D);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "bf7867",
+        "hash": "231eacab",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "bf7867",
+        "hash": "3bda4986",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "bf7867",
+        "hash": "d3fa6432",
+        "encoded": "id:%2042,",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "bf7867",
+        "hash": "e3172251",
+        "encoded": "name:%20'Project%2042',",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "bf7867",
+        "hash": "9043b3b9",
+        "encoded": "description:%20'Description',",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "bf7867",
+        "hash": "d388e6f6",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "bf7867",
+        "hash": "37a81d4b",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "bf7867",
+        "hash": "90f09ac1",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "bf7867",
+        "hash": "eeef3628",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "bf7867",
+        "hash": "2d038d92",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "bf7867",
+        "hash": "635dc45c",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E,%20%7B%20route:%20'/projects/42'%20%7D);",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "bf7867",
+        "hash": "4c8f8677",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "bf7867",
+        "hash": "c96da31b",
+        "encoded": "expect(projectService.getProjectById).toHaveBeenCalledWith('42');",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "bf7867",
+        "hash": "deef01c8",
+        "encoded": "expect(projectService.getProjectById).toHaveBeenCalledTimes(1);",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "bf7867",
+        "hash": "da448ba5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "bf7867",
+        "hash": "c4a7e6ed",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "bf7867",
+        "hash": "b5d0264f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "bf7867",
+        "hash": "b1b5752a",
+        "encoded": "*%20Test:%20Should%20display%20project%20status%20in%20info%20section",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "bf7867",
+        "hash": "7cb97f3e",
+        "encoded": "*%20Scenario:%20Project%20data%20includes%20status%20field",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "bf7867",
+        "hash": "dd797929",
+        "encoded": "*%20Expected:%20Status%20should%20be%20displayed%20with%20%22Status:%22%20label",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "bf7867",
+        "hash": "e9fb4d6b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "bf7867",
+        "hash": "55e35ab6",
+        "encoded": "it('should%20display%20project%20status%20in%20info%20section',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "bf7867",
+        "hash": "977dd7aa",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "bf7867",
+        "hash": "11fcffbe",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "bf7867",
+        "hash": "b1e734c3",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "bf7867",
+        "hash": "b3827820",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "bf7867",
+        "hash": "f0a9c35c",
+        "encoded": "name:%20'Project',",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "bf7867",
+        "hash": "3ac4cd08",
+        "encoded": "description:%20'Description',",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "bf7867",
+        "hash": "37b34ac8",
+        "encoded": "status:%20'inactive',",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "bf7867",
+        "hash": "1038520c",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "bf7867",
+        "hash": "795e3853",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "bf7867",
+        "hash": "8b5ef3b7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "bf7867",
+        "hash": "a8ca69ed",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "bf7867",
+        "hash": "47c41ebb",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "bf7867",
+        "hash": "5084909b",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "bf7867",
+        "hash": "3766e1ae",
+        "encoded": "expect(screen.getByText('Status:')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "bf7867",
+        "hash": "e7c7a528",
+        "encoded": "expect(screen.getByText('inactive')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "bf7867",
+        "hash": "2f343238",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "bf7867",
+        "hash": "389a9b2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "bf7867",
+        "hash": "ae7ba39d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "bf7867",
+        "hash": "fa259668",
+        "encoded": "*%20Test:%20Should%20display%20repository%20URL%20in%20info%20section",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "bf7867",
+        "hash": "9a883e26",
+        "encoded": "*%20Scenario:%20Project%20data%20includes%20repositoryUrl%20field",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "bf7867",
+        "hash": "fd86dfed",
+        "encoded": "*%20Expected:%20Repository%20URL%20should%20be%20displayed%20with%20%22Repository:%22%20label",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "bf7867",
+        "hash": "eb789ece",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "bf7867",
+        "hash": "b2f91421",
+        "encoded": "it('should%20display%20repository%20URL%20in%20info%20section',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "bf7867",
+        "hash": "c5b1eed2",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "bf7867",
+        "hash": "1122967c",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "bf7867",
+        "hash": "c6b3adca",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "bf7867",
+        "hash": "960c63f4",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "bf7867",
+        "hash": "9db68bdf",
+        "encoded": "name:%20'Project',",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "bf7867",
+        "hash": "3c4327d2",
+        "encoded": "description:%20'Description',",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "bf7867",
+        "hash": "3e62fa00",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "bf7867",
+        "hash": "e4c53f48",
+        "encoded": "repositoryUrl:%20'https://gitlab.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "bf7867",
+        "hash": "3447ff34",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "bf7867",
+        "hash": "9cafcf01",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "bf7867",
+        "hash": "9eaef3f7",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "bf7867",
+        "hash": "5cedf85b",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "bf7867",
+        "hash": "651ef8d8",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "bf7867",
+        "hash": "1bc0077b",
+        "encoded": "expect(screen.getByText('Repository:')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "bf7867",
+        "hash": "02876cdc",
+        "encoded": "expect(screen.getByText('https://gitlab.com/test/repo')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "bf7867",
+        "hash": "9a650e63",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "bf7867",
+        "hash": "454f7868",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "bf7867",
+        "hash": "f18f0def",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "bf7867",
+        "hash": "7fc63b81",
+        "encoded": "*%20Test:%20Should%20handle%20API%20error%20gracefully",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "bf7867",
+        "hash": "4b6cc87e",
+        "encoded": "*%20Scenario:%20API%20call%20fails%20with%20an%20error",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "bf7867",
+        "hash": "68ca0cdb",
+        "encoded": "*%20Expected:%20Component%20should%20not%20crash",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "bf7867",
+        "hash": "f17a7911",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "bf7867",
+        "hash": "09ab2b9d",
+        "encoded": "it('should%20handle%20API%20error%20gracefully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "bf7867",
+        "hash": "11b903cf",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "bf7867",
+        "hash": "45b71425",
+        "encoded": "const%20consoleErrorSpy%20=%20vi.spyOn(console,%20'error').mockImplementation(()%20=%3E%20%7B%7D);",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "bf7867",
+        "hash": "965698cd",
+        "encoded": "projectService.getProjectById.mockRejectedValue(new%20Error('API%20Error'));",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "bf7867",
+        "hash": "f04d8046",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "bf7867",
+        "hash": "8b712ca0",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "bf7867",
+        "hash": "04c8b65e",
+        "encoded": "expect(screen.queryByText('Loading...')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "bf7867",
+        "hash": "8556aade",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "bf7867",
+        "hash": "2a8f91eb",
+        "encoded": "consoleErrorSpy.mockRestore();",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "bf7867",
+        "hash": "71cffccd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "bf7867",
+        "hash": "16e442a1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "bf7867",
+        "hash": "d9eb20c4",
+        "encoded": "*%20Test:%20Should%20handle%20undefined%20or%20null%20project%20data",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "bf7867",
+        "hash": "f50a220b",
+        "encoded": "*%20Scenario:%20API%20returns%20undefined%20or%20null%20data",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "bf7867",
+        "hash": "6db99644",
+        "encoded": "*%20Expected:%20Component%20should%20not%20crash%20and%20handle%20gracefully",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "bf7867",
+        "hash": "1bead71e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "bf7867",
+        "hash": "1abfd011",
+        "encoded": "it('should%20handle%20undefined%20or%20null%20project%20data',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "bf7867",
+        "hash": "9ebe5228",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "bf7867",
+        "hash": "f1337a2c",
+        "encoded": "projectService.getProjectById.mockResolvedValue(%7B%20data:%20null%20%7D);",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "bf7867",
+        "hash": "9da6aeb4",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "bf7867",
+        "hash": "2b43ca21",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "bf7867",
+        "hash": "830f61be",
+        "encoded": "expect(screen.queryByText('Loading...')).not.toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "bf7867",
+        "hash": "9d2d0a1a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "bf7867",
+        "hash": "a7cd5066",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "bf7867",
+        "hash": "86200bf3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "bf7867",
+        "hash": "58fe1d36",
+        "encoded": "*%20Test:%20Should%20render%20project%20info%20container",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "bf7867",
+        "hash": "5883275e",
+        "encoded": "*%20Scenario:%20Project%20data%20is%20loaded",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "bf7867",
+        "hash": "96876622",
+        "encoded": "*%20Expected:%20Project%20info%20section%20should%20be%20rendered%20with%20correct%20class",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "bf7867",
+        "hash": "f82721f2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "bf7867",
+        "hash": "1d4e9081",
+        "encoded": "it('should%20render%20project%20info%20container',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "bf7867",
+        "hash": "a93a34e0",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "bf7867",
+        "hash": "6bdaf7f8",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "bf7867",
+        "hash": "96cd4662",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "bf7867",
+        "hash": "550876e6",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "bf7867",
+        "hash": "7fd2a7a5",
+        "encoded": "name:%20'Project',",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "bf7867",
+        "hash": "b1e99211",
+        "encoded": "description:%20'Description',",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "bf7867",
+        "hash": "938f874c",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "bf7867",
+        "hash": "5a8d6716",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "bf7867",
+        "hash": "87bd1c81",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "bf7867",
+        "hash": "9fa20af7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "bf7867",
+        "hash": "7d495f64",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "bf7867",
+        "hash": "d3f80429",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "bf7867",
+        "hash": "632ad5ed",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "bf7867",
+        "hash": "daefd629",
+        "encoded": "const%20projectInfo%20=%20container.querySelector('.project-info');",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "bf7867",
+        "hash": "8d27f87f",
+        "encoded": "expect(projectInfo).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "bf7867",
+        "hash": "a0793c64",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "bf7867",
+        "hash": "1d3a12c5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "bf7867",
+        "hash": "9beb1094",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "bf7867",
+        "hash": "daedb425",
+        "encoded": "*%20Test:%20Should%20render%20project%20heading%20with%20correct%20name",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "bf7867",
+        "hash": "63879ec9",
+        "encoded": "*%20Scenario:%20Project%20data%20is%20loaded",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "bf7867",
+        "hash": "2b02c23c",
+        "encoded": "*%20Expected:%20H1%20heading%20should%20display%20project%20name",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "bf7867",
+        "hash": "3231225e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "bf7867",
+        "hash": "ac5b8c68",
+        "encoded": "it('should%20render%20project%20heading%20with%20correct%20name',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "bf7867",
+        "hash": "ce3890c4",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "bf7867",
+        "hash": "095034ca",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "bf7867",
+        "hash": "b103aec8",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "bf7867",
+        "hash": "3b215685",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "bf7867",
+        "hash": "a07892c3",
+        "encoded": "name:%20'My%20Awesome%20Project',",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "bf7867",
+        "hash": "389783b2",
+        "encoded": "description:%20'Description',",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "bf7867",
+        "hash": "5eca9b9e",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "bf7867",
+        "hash": "8041913f",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "bf7867",
+        "hash": "8af075d3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "bf7867",
+        "hash": "4a153a29",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "bf7867",
+        "hash": "f7c36dff",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "bf7867",
+        "hash": "00009e5c",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "bf7867",
+        "hash": "889a19b0",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "bf7867",
+        "hash": "ee0acb10",
+        "encoded": "const%20heading%20=%20screen.getByRole('heading',%20%7B%20level:%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "bf7867",
+        "hash": "e4e6d183",
+        "encoded": "expect(heading).toHaveTextContent('My%20Awesome%20Project');",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "bf7867",
+        "hash": "a4dd13bd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "bf7867",
+        "hash": "1fece245",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "bf7867",
+        "hash": "704d8234",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "bf7867",
+        "hash": "3649ebba",
+        "encoded": "*%20Test:%20Should%20handle%20missing%20optional%20fields%20gracefully",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "bf7867",
+        "hash": "f149444e",
+        "encoded": "*%20Scenario:%20Project%20data%20is%20missing%20optional%20fields%20like%20repositoryUrl",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "bf7867",
+        "hash": "023c2a03",
+        "encoded": "*%20Expected:%20Component%20should%20render%20without%20crashing",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "bf7867",
+        "hash": "834ad1a1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "bf7867",
+        "hash": "ee6209a4",
+        "encoded": "it('should%20handle%20missing%20optional%20fields%20gracefully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "bf7867",
+        "hash": "6446e6f6",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "bf7867",
+        "hash": "ae452190",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "bf7867",
+        "hash": "003ea2bf",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "bf7867",
+        "hash": "30e78a6a",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "bf7867",
+        "hash": "81801156",
+        "encoded": "name:%20'Minimal%20Project',",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "bf7867",
+        "hash": "3e0db4d0",
+        "encoded": "description:%20'Minimal%20description',",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "bf7867",
+        "hash": "8c17483f",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "bf7867",
+        "hash": "56275aee",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "bf7867",
+        "hash": "8d8df0e6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "bf7867",
+        "hash": "68b416fa",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "bf7867",
+        "hash": "c4ec812f",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "bf7867",
+        "hash": "75787610",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "bf7867",
+        "hash": "24faa7c6",
+        "encoded": "expect(screen.getByText('Minimal%20Project')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "bf7867",
+        "hash": "54574c85",
+        "encoded": "expect(screen.getByText('Minimal%20description')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "bf7867",
+        "hash": "72ca0ddf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "bf7867",
+        "hash": "5af0207f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "b59bd0",
+        "hash": "74c00468",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "b59bd0",
+        "hash": "78a16950",
+        "encoded": "*%20Test:%20Should%20update%20when%20route%20parameter%20changes",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "b59bd0",
+        "hash": "8ee2f522",
+        "encoded": "*%20Scenario:%20Component%20is%20already%20mounted%20and%20route%20parameter%20changes",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "b59bd0",
+        "hash": "c337eeec",
+        "encoded": "*%20Expected:%20API%20should%20be%20called%20again%20with%20new%20ID",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "b59bd0",
+        "hash": "ebacb129",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "b59bd0",
+        "hash": "81e841e8",
+        "encoded": "it('should%20update%20when%20route%20parameter%20changes',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "b59bd0",
+        "hash": "feeaa60a",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "b59bd0",
+        "hash": "1eae523d",
+        "encoded": "const%20mockProject1%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "b59bd0",
+        "hash": "1f2bfb81",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "b59bd0",
+        "hash": "7f814213",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "b59bd0",
+        "hash": "3707c7f2",
+        "encoded": "name:%20'Project%201',",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "b59bd0",
+        "hash": "c09c3f8f",
+        "encoded": "description:%20'First%20project',",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "b59bd0",
+        "hash": "3a027115",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "b59bd0",
+        "hash": "d90527eb",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo1',",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "b59bd0",
+        "hash": "01b8dd5c",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "b59bd0",
+        "hash": "88789481",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "b59bd0",
+        "hash": "a5299abb",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject1);",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "b59bd0",
+        "hash": "4af0058b",
+        "encoded": "renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "b59bd0",
+        "hash": "b8477b40",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "b59bd0",
+        "hash": "1ca24951",
+        "encoded": "expect(screen.getByText('Project%201')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "b59bd0",
+        "hash": "48a65f64",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "b59bd0",
+        "hash": "70a38d5e",
+        "encoded": "//%20Change%20the%20ID%20and%20verify%20API%20is%20called%20with%20new%20ID",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "b59bd0",
+        "hash": "397abaa1",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'2'%20%7D);",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "b59bd0",
+        "hash": "db8c3bd1",
+        "encoded": "const%20mockProject2%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "b59bd0",
+        "hash": "9d9d9f2d",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "b59bd0",
+        "hash": "3351bd27",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "b59bd0",
+        "hash": "92fdff5d",
+        "encoded": "name:%20'Project%202',",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "b59bd0",
+        "hash": "db921172",
+        "encoded": "description:%20'Second%20project',",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "b59bd0",
+        "hash": "8014fbfa",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "b59bd0",
+        "hash": "b80f34d5",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo2',",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "b59bd0",
+        "hash": "c8cb6341",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "b59bd0",
+        "hash": "de4f4ade",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "b59bd0",
+        "hash": "184d50c7",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject2);",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "b59bd0",
+        "hash": "b1edbb68",
+        "encoded": "//%20Verify%20that%20when%20component%20is%20remounted%20with%20new%20ID,%20API%20is%20called",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "b59bd0",
+        "hash": "793b8a00",
+        "encoded": "expect(projectService.getProjectById).toHaveBeenCalledWith('1');",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "b59bd0",
+        "hash": "b10148e5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "bf7867",
+        "hash": "8c735915",
+        "encoded": "*%20Test:%20Should%20update%20when%20route%20parameter%20changes",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "bf7867",
+        "hash": "cd2674bb",
+        "encoded": "*%20Scenario:%20Component%20is%20already%20mounted%20and%20route%20parameter%20changes",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "bf7867",
+        "hash": "7541e8ff",
+        "encoded": "*%20Expected:%20API%20should%20be%20called%20again%20with%20new%20ID",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "bf7867",
+        "hash": "5dea9b89",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "bf7867",
+        "hash": "43b86490",
+        "encoded": "it('should%20update%20when%20route%20parameter%20changes',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "bf7867",
+        "hash": "eab07f05",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "bf7867",
+        "hash": "21ef135d",
+        "encoded": "const%20mockProject1%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "bf7867",
+        "hash": "2e7db777",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "bf7867",
+        "hash": "4485427f",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "bf7867",
+        "hash": "106873f1",
+        "encoded": "name:%20'Project%201',",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "bf7867",
+        "hash": "e9d9afad",
+        "encoded": "description:%20'First%20project',",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "bf7867",
+        "hash": "ae724962",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "bf7867",
+        "hash": "395a2c73",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo1',",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "bf7867",
+        "hash": "f983face",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "bf7867",
+        "hash": "0080520b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "bf7867",
+        "hash": "b77ef0f9",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject1);",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "bf7867",
+        "hash": "f6205312",
+        "encoded": "const%20%7B%20rerender%20%7D%20=%20renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "bf7867",
+        "hash": "bfcefeac",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "bf7867",
+        "hash": "503f6bd6",
+        "encoded": "expect(screen.getByText('Project%201')).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "bf7867",
+        "hash": "f2793953",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "bf7867",
+        "hash": "4606c876",
+        "encoded": "//%20Change%20the%20ID",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "bf7867",
+        "hash": "d87b156d",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'2'%20%7D);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "bf7867",
+        "hash": "fbb73f6a",
+        "encoded": "const%20mockProject2%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "bf7867",
+        "hash": "363282d1",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "bf7867",
+        "hash": "3af6e012",
+        "encoded": "id:%202,",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "bf7867",
+        "hash": "216df503",
+        "encoded": "name:%20'Project%202',",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "bf7867",
+        "hash": "7fc9dd35",
+        "encoded": "description:%20'Second%20project',",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "bf7867",
+        "hash": "a10cbbea",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "bf7867",
+        "hash": "44e5e10e",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo2',",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "bf7867",
+        "hash": "fa23efea",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "bf7867",
+        "hash": "0b01e6e1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "bf7867",
+        "hash": "5059bb33",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject2);",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "bf7867",
+        "hash": "c4a9d3e3",
+        "encoded": "rerender(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "bf7867",
+        "hash": "5d1eadaa",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "bf7867",
+        "hash": "a6efc195",
+        "encoded": "expect(projectService.getProjectById).toHaveBeenCalledWith('2');",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "bf7867",
+        "hash": "8ecff7c5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "bf7867",
+        "hash": "df3c0b6d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "bf7867",
+        "hash": "21501659",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "bf7867",
+        "hash": "50c4a257",
+        "encoded": "*%20Test:%20Should%20render%20project%20detail%20container%20with%20correct%20class",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "bf7867",
+        "hash": "bae8bcf8",
+        "encoded": "*%20Scenario:%20Component%20is%20rendered",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "bf7867",
+        "hash": "94370d05",
+        "encoded": "*%20Expected:%20Main%20container%20should%20have%20'project-detail'%20class",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "bf7867",
+        "hash": "e7f69642",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "bf7867",
+        "hash": "46621a5d",
+        "encoded": "it('should%20render%20project%20detail%20container%20with%20correct%20class',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "bf7867",
+        "hash": "835a3391",
+        "encoded": "useParams.mockReturnValue(%7B%20id:%20'1'%20%7D);",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "bf7867",
+        "hash": "a9e14558",
+        "encoded": "const%20mockProject%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "bf7867",
+        "hash": "37bfc7db",
+        "encoded": "data:%20%7B",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "bf7867",
+        "hash": "977cfe94",
+        "encoded": "id:%201,",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "bf7867",
+        "hash": "0488e66c",
+        "encoded": "name:%20'Project',",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "bf7867",
+        "hash": "7619a274",
+        "encoded": "description:%20'Description',",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "bf7867",
+        "hash": "547ebbff",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "bf7867",
+        "hash": "f3e528e9",
+        "encoded": "repositoryUrl:%20'https://github.com/test/repo',",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "bf7867",
+        "hash": "2aa84b6a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "bf7867",
+        "hash": "e3c46768",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "bf7867",
+        "hash": "ff19bf91",
+        "encoded": "projectService.getProjectById.mockResolvedValue(mockProject);",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "bf7867",
+        "hash": "f78ec877",
+        "encoded": "const%20%7B%20container%20%7D%20=%20renderWithProviders(%3CProjectDetailPage%20/%3E);",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "bf7867",
+        "hash": "7cbdca71",
+        "encoded": "await%20waitFor(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "bf7867",
+        "hash": "c53c8704",
+        "encoded": "const%20projectDetail%20=%20container.querySelector('.project-detail');",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "bf7867",
+        "hash": "224891a2",
+        "encoded": "expect(projectDetail).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "bf7867",
+        "hash": "723d6da0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "bf7867",
+        "hash": "d2d1d1a8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "bf7867",
+        "hash": "be3f8e6f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

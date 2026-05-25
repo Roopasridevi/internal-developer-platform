@@ -1,0 +1,330 @@
+{
+  "backend\\src\\utils\\logger.js": {
+    "filename": "logger.js",
+    "path": "backend\\src\\utils\\logger.js",
+    "version": "1.2",
+    "contextFile": "28672aa5-context.json",
+    "chunks": {
+      "07f254": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "f8399a5b",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:46 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "07f254",
+        "hash": "52a22f68",
+        "encoded": "const%20winston%20=%20require('winston');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "07f254",
+        "hash": "f4634505",
+        "encoded": "const%20path%20=%20require('path');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "07f254",
+        "hash": "1489b63f",
+        "encoded": "const%20config%20=%20require('../config');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "07f254",
+        "hash": "c9308b13",
+        "encoded": "const%20logFormat%20=%20winston.format.combine(",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "07f254",
+        "hash": "86c539ac",
+        "encoded": "winston.format.timestamp(%7B%20format:%20'YYYY-MM-DD%20HH:mm:ss'%20%7D),",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "07f254",
+        "hash": "58bf40df",
+        "encoded": "winston.format.errors(%7B%20stack:%20true%20%7D),",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "07f254",
+        "hash": "765fb3cd",
+        "encoded": "winston.format.splat(),",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "07f254",
+        "hash": "c7a9c3b3",
+        "encoded": "winston.format.json()",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "07f254",
+        "hash": "17bc86d1",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "07f254",
+        "hash": "830463fa",
+        "encoded": "const%20consoleFormat%20=%20winston.format.combine(",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "07f254",
+        "hash": "c4a2e2be",
+        "encoded": "winston.format.colorize(),",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "07f254",
+        "hash": "1e6c6180",
+        "encoded": "winston.format.timestamp(%7B%20format:%20'YYYY-MM-DD%20HH:mm:ss'%20%7D),",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "07f254",
+        "hash": "8f0441e7",
+        "encoded": "winston.format.printf((%7B%20timestamp,%20level,%20message,%20...meta%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "07f254",
+        "hash": "061fd2a1",
+        "encoded": "let%20msg%20=%20%60$%7Btimestamp%7D%20%5B$%7Blevel%7D%5D:%20$%7Bmessage%7D%60;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "07f254",
+        "hash": "521e9168",
+        "encoded": "if%20(Object.keys(meta).length%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "07f254",
+        "hash": "f8b291bd",
+        "encoded": "msg%20+=%20%60%20$%7BJSON.stringify(meta)%7D%60;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "07f254",
+        "hash": "ee20bc2a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "07f254",
+        "hash": "3872e768",
+        "encoded": "return%20msg;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "07f254",
+        "hash": "8a11854b",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "07f254",
+        "hash": "05a8f1d5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "07f254",
+        "hash": "91080f40",
+        "encoded": "const%20transports%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "07f254",
+        "hash": "24618652",
+        "encoded": "new%20winston.transports.Console(%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "07f254",
+        "hash": "a6e239f4",
+        "encoded": "format:%20consoleFormat,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "07f254",
+        "hash": "175978fd",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "07f254",
+        "hash": "edd1441b",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "07f254",
+        "hash": "5fe117cf",
+        "encoded": "if%20(config.env%20!==%20'test')%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "07f254",
+        "hash": "e243040c",
+        "encoded": "transports.push(",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "07f254",
+        "hash": "ef14dd68",
+        "encoded": "new%20winston.transports.File(%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "07f254",
+        "hash": "96aaacd7",
+        "encoded": "filename:%20path.join(config.logging.filePath,%20'error.log'),",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "07f254",
+        "hash": "f8a01d77",
+        "encoded": "level:%20'error',",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "07f254",
+        "hash": "f11a01ef",
+        "encoded": "format:%20logFormat,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "07f254",
+        "hash": "8c8fb4ac",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "07f254",
+        "hash": "74b12e1e",
+        "encoded": "new%20winston.transports.File(%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "07f254",
+        "hash": "657238cd",
+        "encoded": "filename:%20path.join(config.logging.filePath,%20'combined.log'),",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "07f254",
+        "hash": "77eef69b",
+        "encoded": "format:%20logFormat,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "07f254",
+        "hash": "f76267be",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "07f254",
+        "hash": "f0f68145",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "07f254",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "07f254",
+        "hash": "ac88cd8f",
+        "encoded": "const%20logger%20=%20winston.createLogger(%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "07f254",
+        "hash": "e7f1b3a7",
+        "encoded": "level:%20config.logging.level,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "07f254",
+        "hash": "610fb31b",
+        "encoded": "format:%20logFormat,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "07f254",
+        "hash": "062d4799",
+        "encoded": "transports,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "07f254",
+        "hash": "934ee2fc",
+        "encoded": "exitOnError:%20false,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "07f254",
+        "hash": "0fc0ec26",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "07f254",
+        "hash": "2e8d7288",
+        "encoded": "logger.stream%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "07f254",
+        "hash": "9495e1a2",
+        "encoded": "write:%20(message)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "07f254",
+        "hash": "c4b33efc",
+        "encoded": "logger.info(message.trim());",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "07f254",
+        "hash": "0cbb9f72",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "07f254",
+        "hash": "60ce3341",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "07f254",
+        "hash": "01c2996c",
+        "encoded": "module.exports%20=%20logger;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

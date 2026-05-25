@@ -1,0 +1,48 @@
+{
+  "frontend\\.env.production": {
+    "filename": ".env.production",
+    "path": "frontend\\.env.production",
+    "version": "1.2",
+    "contextFile": "1ca4e9c2-context.json",
+    "chunks": {
+      "ed8785": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708087,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "e16f9d65",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:27 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ed8785",
+        "hash": "d81a761b",
+        "encoded": "VITE_API_URL=https://api.idp.example.com/api",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "ed8785",
+        "hash": "b29a9d71",
+        "encoded": "VITE_APP_NAME=Internal%20Developer%20Platform",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ed8785",
+        "hash": "b507baaf",
+        "encoded": "VITE_APP_VERSION=1.0.0",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

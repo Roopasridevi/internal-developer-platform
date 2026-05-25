@@ -1,0 +1,330 @@
+{
+  "package.json": {
+    "filename": "package.json",
+    "path": "package.json",
+    "version": "1.2",
+    "contextFile": "99d112f8-context.json",
+    "chunks": {
+      "d15ebf": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707694,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "cc8c4a3b",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:54 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "d15ebf",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "d15ebf",
+        "hash": "fa4f81f7",
+        "encoded": "%22name%22:%20%22idp-platform%22,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d15ebf",
+        "hash": "bde4980f",
+        "encoded": "%22version%22:%20%221.0.0%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "d15ebf",
+        "hash": "59ad168a",
+        "encoded": "%22description%22:%20%22Internal%20Developer%20Platform%20for%20project%20management,%20CI/CD,%20deployments,%20and%20logs%22,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "d15ebf",
+        "hash": "8e259162",
+        "encoded": "%22private%22:%20true,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "d15ebf",
+        "hash": "cb4c1249",
+        "encoded": "%22workspaces%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d15ebf",
+        "hash": "8faf458b",
+        "encoded": "%22backend%22,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d15ebf",
+        "hash": "3e0d0779",
+        "encoded": "%22frontend%22",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d15ebf",
+        "hash": "818ed0d6",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d15ebf",
+        "hash": "05065301",
+        "encoded": "%22scripts%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "d15ebf",
+        "hash": "fba06467",
+        "encoded": "%22install:all%22:%20%22npm%20install%20&&%20npm%20install%20--prefix%20backend%20&&%20npm%20install%20--prefix%20frontend%22,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "d15ebf",
+        "hash": "163d485c",
+        "encoded": "%22dev:backend%22:%20%22npm%20run%20dev%20--prefix%20backend%22,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d15ebf",
+        "hash": "68b17126",
+        "encoded": "%22dev:frontend%22:%20%22npm%20run%20dev%20--prefix%20frontend%22,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "d15ebf",
+        "hash": "790cb106",
+        "encoded": "%22dev%22:%20%22concurrently%20%5C%22npm%20run%20dev:backend%5C%22%20%5C%22npm%20run%20dev:frontend%5C%22%22,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "d15ebf",
+        "hash": "129bdee3",
+        "encoded": "%22build:backend%22:%20%22npm%20run%20build%20--prefix%20backend%22,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "d15ebf",
+        "hash": "0e6375a3",
+        "encoded": "%22build:frontend%22:%20%22npm%20run%20build%20--prefix%20frontend%22,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "d15ebf",
+        "hash": "acb6802e",
+        "encoded": "%22build%22:%20%22npm%20run%20build:backend%20&&%20npm%20run%20build:frontend%22,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "d15ebf",
+        "hash": "791a10a9",
+        "encoded": "%22test:backend%22:%20%22npm%20test%20--prefix%20backend%22,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "d15ebf",
+        "hash": "14898b9e",
+        "encoded": "%22test:frontend%22:%20%22npm%20test%20--prefix%20frontend%22,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "d15ebf",
+        "hash": "c903e0d4",
+        "encoded": "%22test%22:%20%22npm%20run%20test:backend%20&&%20npm%20run%20test:frontend%22,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "d15ebf",
+        "hash": "9e0deb77",
+        "encoded": "%22lint:backend%22:%20%22npm%20run%20lint%20--prefix%20backend%22,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "d15ebf",
+        "hash": "4fbdf5cd",
+        "encoded": "%22lint:frontend%22:%20%22npm%20run%20lint%20--prefix%20frontend%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "d15ebf",
+        "hash": "2fa33e3b",
+        "encoded": "%22lint%22:%20%22npm%20run%20lint:backend%20&&%20npm%20run%20lint:frontend%22,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "d15ebf",
+        "hash": "fee7d50f",
+        "encoded": "%22format%22:%20%22prettier%20--write%20%5C%22**/*.%7Bjs,jsx,ts,tsx,json,css,md,yml,yaml%7D%5C%22%22,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "d15ebf",
+        "hash": "7728211c",
+        "encoded": "%22prepare%22:%20%22husky%20install%22",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "d15ebf",
+        "hash": "642c1a07",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "d15ebf",
+        "hash": "bf3d03f0",
+        "encoded": "%22devDependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "d15ebf",
+        "hash": "cd7b4404",
+        "encoded": "%22concurrently%22:%20%22%5E8.2.2%22,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "d15ebf",
+        "hash": "a1de6fb7",
+        "encoded": "%22husky%22:%20%22%5E8.0.3%22,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "d15ebf",
+        "hash": "868ab0dd",
+        "encoded": "%22lint-staged%22:%20%22%5E15.2.0%22,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "d15ebf",
+        "hash": "53f95b92",
+        "encoded": "%22prettier%22:%20%22%5E3.1.1%22",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "d15ebf",
+        "hash": "2f2e8934",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "d15ebf",
+        "hash": "dad33857",
+        "encoded": "%22engines%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "d15ebf",
+        "hash": "1336cc82",
+        "encoded": "%22node%22:%20%22%3E=18.0.0%22,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "d15ebf",
+        "hash": "4a354d53",
+        "encoded": "%22npm%22:%20%22%3E=9.0.0%22",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "d15ebf",
+        "hash": "da1b69e9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "d15ebf",
+        "hash": "62282f20",
+        "encoded": "%22repository%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "d15ebf",
+        "hash": "4e726efc",
+        "encoded": "%22type%22:%20%22git%22,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "d15ebf",
+        "hash": "3908a184",
+        "encoded": "%22url%22:%20%22https://github.com/your-org/idp-platform.git%22",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "d15ebf",
+        "hash": "fe8033d3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "d15ebf",
+        "hash": "a85d0542",
+        "encoded": "%22keywords%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "d15ebf",
+        "hash": "1c361df3",
+        "encoded": "%22internal-developer-platform%22,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "d15ebf",
+        "hash": "8d55cbfd",
+        "encoded": "%22devops%22,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "d15ebf",
+        "hash": "80aed938",
+        "encoded": "%22ci-cd%22,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "d15ebf",
+        "hash": "0061f469",
+        "encoded": "%22deployment%22,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "d15ebf",
+        "hash": "f37ec06e",
+        "encoded": "%22project-management%22",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "d15ebf",
+        "hash": "69d98308",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "d15ebf",
+        "hash": "0d9979fd",
+        "encoded": "%22author%22:%20%22Platform%20Team%22,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "d15ebf",
+        "hash": "c9f4ef3f",
+        "encoded": "%22license%22:%20%22MIT%22",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "d15ebf",
+        "hash": "0b4804f7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

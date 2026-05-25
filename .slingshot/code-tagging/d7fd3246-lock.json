@@ -1,0 +1,2964 @@
+{
+  "backend\\tests\\unit\\services\\logsService.test.js": {
+    "filename": "logsService.test.js",
+    "path": "backend\\tests\\unit\\services\\logsService.test.js",
+    "version": "1.2",
+    "contextFile": "d7fd3246-context.json",
+    "chunks": {
+      "eab443": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779709014,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "09627e9d",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:06:54 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "eab443",
+        "hash": "f541e00d",
+        "encoded": "const%20logsService%20=%20require('../../../src/services/logsService');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "eab443",
+        "hash": "2864a17a",
+        "encoded": "const%20%7B%20Log,%20Deployment,%20Pipeline%20%7D%20=%20require('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "eab443",
+        "hash": "ab1cf49c",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../../../src/utils/errors');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "eab443",
+        "hash": "c18f35c3",
+        "encoded": "const%20%7B%20Op%20%7D%20=%20require('sequelize');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "eab443",
+        "hash": "384893a5",
+        "encoded": "const%20%7B%20EventEmitter%20%7D%20=%20require('events');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "eab443",
+        "hash": "30e92e56",
+        "encoded": "jest.mock('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "eab443",
+        "hash": "14901737",
+        "encoded": "jest.mock('../../../src/utils/logger');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "eab443",
+        "hash": "d6ad22e5",
+        "encoded": "describe('LogsService',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "eab443",
+        "hash": "4ec9bef2",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "eab443",
+        "hash": "6310a4d1",
+        "encoded": "jest.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "eab443",
+        "hash": "70287d6a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "eab443",
+        "hash": "4a921411",
+        "encoded": "describe('getLogs',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "eab443",
+        "hash": "014b98f0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "eab443",
+        "hash": "7a1db09d",
+        "encoded": "*%20Test:%20Should%20retrieve%20paginated%20logs",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "eab443",
+        "hash": "25030018",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20with%20pagination",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "eab443",
+        "hash": "19778410",
+        "encoded": "*%20Expected:%20Returns%20logs%20with%20pagination%20metadata",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "eab443",
+        "hash": "4b6c9127",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "eab443",
+        "hash": "c12db8b0",
+        "encoded": "it('should%20get%20logs%20with%20pagination',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "eab443",
+        "hash": "4fa21f6b",
+        "encoded": "const%20mockLogs%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "eab443",
+        "hash": "21969992",
+        "encoded": "%7B%20id:%20'log-1',%20message:%20'Log%20message%201',%20level:%20'info'%20%7D,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "eab443",
+        "hash": "e9615846",
+        "encoded": "%7B%20id:%20'log-2',%20message:%20'Log%20message%202',%20level:%20'error'%20%7D,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "eab443",
+        "hash": "26034ee0",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "eab443",
+        "hash": "a6971cdf",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "eab443",
+        "hash": "2020449c",
+        "encoded": "rows:%20mockLogs,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "eab443",
+        "hash": "ef72585a",
+        "encoded": "count:%202,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "eab443",
+        "hash": "69a835b5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "eab443",
+        "hash": "77f39f40",
+        "encoded": "const%20result%20=%20await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "eab443",
+        "hash": "8d607d4f",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "eab443",
+        "hash": "d61ce406",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "eab443",
+        "hash": "ea133fb3",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "eab443",
+        "hash": "8c01c10e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "eab443",
+        "hash": "40bc9b07",
+        "encoded": "expect(result).toEqual(%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "eab443",
+        "hash": "f5f8220c",
+        "encoded": "logs:%20mockLogs,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "eab443",
+        "hash": "68b37dce",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "eab443",
+        "hash": "3e633b0c",
+        "encoded": "total:%202,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "eab443",
+        "hash": "a6db2f99",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "eab443",
+        "hash": "c6d6ca26",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "eab443",
+        "hash": "580557f8",
+        "encoded": "totalPages:%201,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "eab443",
+        "hash": "82c8ca80",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "eab443",
+        "hash": "816d4a12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "eab443",
+        "hash": "905dac2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "eab443",
+        "hash": "eb0289d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "eab443",
+        "hash": "4846f534",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20project%20ID",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "eab443",
+        "hash": "0d4661fb",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20for%20a%20specific%20project",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "eab443",
+        "hash": "07f82864",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20project",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "eab443",
+        "hash": "d89601c8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "eab443",
+        "hash": "b7eb7a4c",
+        "encoded": "it('should%20filter%20logs%20by%20projectId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "eab443",
+        "hash": "05843d86",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "eab443",
+        "hash": "39337de8",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "eab443",
+        "hash": "b6a07725",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "eab443",
+        "hash": "a7e8e737",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "eab443",
+        "hash": "f4627bd4",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "eab443",
+        "hash": "ca294dfb",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "eab443",
+        "hash": "bd3360a5",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "eab443",
+        "hash": "44d27b4f",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "eab443",
+        "hash": "c6050472",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "eab443",
+        "hash": "da39c591",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "eab443",
+        "hash": "a027a3b2",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "eab443",
+        "hash": "92b3f05d",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "eab443",
+        "hash": "25289b80",
+        "encoded": "where:%20expect.objectContaining(%7B%20projectId:%20'project-123'%20%7D),",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "eab443",
+        "hash": "d78553d9",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "eab443",
+        "hash": "bfc72b08",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "eab443",
+        "hash": "80aa1e64",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "eab443",
+        "hash": "f1aac305",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "eab443",
+        "hash": "c51aea7b",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20deployment%20ID",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "eab443",
+        "hash": "d40874e8",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20for%20a%20specific%20deployment",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "eab443",
+        "hash": "a6e96d90",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20deployment",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "eab443",
+        "hash": "3391b297",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "eab443",
+        "hash": "4c1a6a61",
+        "encoded": "it('should%20filter%20logs%20by%20deploymentId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "eab443",
+        "hash": "fcaa6e3a",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "eab443",
+        "hash": "ea722038",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "eab443",
+        "hash": "f0019f93",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "eab443",
+        "hash": "afba082c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "eab443",
+        "hash": "8b0bc742",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "eab443",
+        "hash": "26275eee",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "eab443",
+        "hash": "d4b5226e",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "eab443",
+        "hash": "8e9ca75c",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "eab443",
+        "hash": "bd235029",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "eab443",
+        "hash": "cd46b899",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "eab443",
+        "hash": "022e6ddb",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "eab443",
+        "hash": "13d136a0",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "eab443",
+        "hash": "f500b12d",
+        "encoded": "where:%20expect.objectContaining(%7B%20deploymentId:%20'deployment-123'%20%7D),",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "eab443",
+        "hash": "b1a5c5c9",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "eab443",
+        "hash": "942f47db",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "eab443",
+        "hash": "904a972c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "eab443",
+        "hash": "87f5b5f6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "eab443",
+        "hash": "bfc7a632",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20pipeline%20ID",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "eab443",
+        "hash": "7c7445fd",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20for%20a%20specific%20pipeline%20execution",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "eab443",
+        "hash": "ed12075e",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20pipeline",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "eab443",
+        "hash": "ade6f48e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "eab443",
+        "hash": "ea12c9c4",
+        "encoded": "it('should%20filter%20logs%20by%20pipelineId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "eab443",
+        "hash": "4ee8626d",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "eab443",
+        "hash": "3ca46c55",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "eab443",
+        "hash": "3e639dbd",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "eab443",
+        "hash": "312eceeb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "eab443",
+        "hash": "98d224a7",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "eab443",
+        "hash": "6f656349",
+        "encoded": "pipelineId:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "eab443",
+        "hash": "edec5eec",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "eab443",
+        "hash": "7cf559a0",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "eab443",
+        "hash": "5cce4b46",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "eab443",
+        "hash": "f825b8cd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "eab443",
+        "hash": "df5d5d76",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "eab443",
+        "hash": "5b6d56e8",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "eab443",
+        "hash": "8e8d51d7",
+        "encoded": "where:%20expect.objectContaining(%7B%20pipelineId:%20'pipeline-123'%20%7D),",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "eab443",
+        "hash": "2f4a9577",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "eab443",
+        "hash": "112d3112",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "eab443",
+        "hash": "c4a7e6ed",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "eab443",
+        "hash": "b5d0264f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "eab443",
+        "hash": "8895fb15",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20level",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "eab443",
+        "hash": "aff34197",
+        "encoded": "*%20Scenario:%20User%20filters%20logs%20by%20severity%20level%20(e.g.,%20error)",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "eab443",
+        "hash": "9456d2c4",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20with%20specified%20level",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "eab443",
+        "hash": "e9fb4d6b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "eab443",
+        "hash": "7704666a",
+        "encoded": "it('should%20filter%20logs%20by%20level',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "eab443",
+        "hash": "8238abe2",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "eab443",
+        "hash": "b0078978",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "eab443",
+        "hash": "536bf89f",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "eab443",
+        "hash": "0901f992",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "eab443",
+        "hash": "e3a8d264",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "eab443",
+        "hash": "90afc693",
+        "encoded": "level:%20'error',",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "eab443",
+        "hash": "ed9fbfd4",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "eab443",
+        "hash": "087d2c9e",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "eab443",
+        "hash": "fd254c5f",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "eab443",
+        "hash": "2be22c18",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "eab443",
+        "hash": "f0902ba9",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "eab443",
+        "hash": "85c8dd5d",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "eab443",
+        "hash": "9a2512cc",
+        "encoded": "where:%20expect.objectContaining(%7B%20level:%20'error'%20%7D),",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "eab443",
+        "hash": "df741781",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "eab443",
+        "hash": "894c4a82",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "eab443",
+        "hash": "bd5f57a4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "eab443",
+        "hash": "948baf6b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "eab443",
+        "hash": "5947c7d0",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20search%20term",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "eab443",
+        "hash": "d372162b",
+        "encoded": "*%20Scenario:%20User%20searches%20logs%20by%20message%20content",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "eab443",
+        "hash": "33125642",
+        "encoded": "*%20Expected:%20Returns%20logs%20matching%20search%20term",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "eab443",
+        "hash": "b4d5b82c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "eab443",
+        "hash": "5b7e182c",
+        "encoded": "it('should%20filter%20logs%20by%20search%20term',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "eab443",
+        "hash": "ffaa6d6a",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "eab443",
+        "hash": "c35a4b9e",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "eab443",
+        "hash": "15cfe592",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "eab443",
+        "hash": "e1561d68",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "eab443",
+        "hash": "17453ff6",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "eab443",
+        "hash": "50d42ec7",
+        "encoded": "search:%20'error%20occurred',",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "eab443",
+        "hash": "bdd058aa",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "eab443",
+        "hash": "f6ec7de9",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "eab443",
+        "hash": "49c53f7c",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "eab443",
+        "hash": "0b5a7b18",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "eab443",
+        "hash": "643f9cbb",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "eab443",
+        "hash": "4b4e291c",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "eab443",
+        "hash": "d2026d04",
+        "encoded": "where:%20expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "eab443",
+        "hash": "2ab1e2c1",
+        "encoded": "message:%20%7B%20%5BOp.iLike%5D:%20'%25error%20occurred%25'%20%7D,",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "eab443",
+        "hash": "0529b842",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "eab443",
+        "hash": "99a5ccad",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "eab443",
+        "hash": "eb0d4c4b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "eab443",
+        "hash": "ff007662",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "eab443",
+        "hash": "d69cec1a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "eab443",
+        "hash": "b4e426cc",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20time%20range",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "eab443",
+        "hash": "fdcb6d70",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20within%20a%20specific%20time%20range",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "eab443",
+        "hash": "efb7c875",
+        "encoded": "*%20Expected:%20Returns%20logs%20between%20start%20and%20end%20time",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "eab443",
+        "hash": "c7de4cc1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "eab443",
+        "hash": "7e560c15",
+        "encoded": "it('should%20filter%20logs%20by%20time%20range',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "eab443",
+        "hash": "e9124661",
+        "encoded": "const%20startTime%20=%20'2024-01-01T00:00:00Z';",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "eab443",
+        "hash": "66bffbce",
+        "encoded": "const%20endTime%20=%20'2024-01-31T23:59:59Z';",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "eab443",
+        "hash": "83785345",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "eab443",
+        "hash": "e990ea93",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "eab443",
+        "hash": "746861bf",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "eab443",
+        "hash": "5076128d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "eab443",
+        "hash": "99d74370",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "eab443",
+        "hash": "b7bd8e48",
+        "encoded": "startTime,",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "eab443",
+        "hash": "f902236c",
+        "encoded": "endTime,",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "eab443",
+        "hash": "adf1c1a9",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "eab443",
+        "hash": "b2145987",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "eab443",
+        "hash": "cf7adb91",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "eab443",
+        "hash": "e2d50dfc",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "eab443",
+        "hash": "707ce8b4",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "eab443",
+        "hash": "b11bc70a",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "eab443",
+        "hash": "eb9fa8aa",
+        "encoded": "where:%20expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "eab443",
+        "hash": "3a6c31f5",
+        "encoded": "timestamp:%20%7B",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "eab443",
+        "hash": "5b572e44",
+        "encoded": "%5BOp.gte%5D:%20new%20Date(startTime),",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "eab443",
+        "hash": "5971b4dd",
+        "encoded": "%5BOp.lte%5D:%20new%20Date(endTime),",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "eab443",
+        "hash": "53b2e133",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "eab443",
+        "hash": "84ddfee7",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "eab443",
+        "hash": "b0c7c280",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "eab443",
+        "hash": "d6379833",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "eab443",
+        "hash": "b7c047e0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "eab443",
+        "hash": "8e0c5fa3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "eab443",
+        "hash": "e81aa631",
+        "encoded": "*%20Test:%20Should%20order%20logs%20by%20timestamp%20descending",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "eab443",
+        "hash": "4ec67f61",
+        "encoded": "*%20Scenario:%20User%20requests%20logs",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "eab443",
+        "hash": "7acd8aef",
+        "encoded": "*%20Expected:%20Logs%20are%20ordered%20from%20newest%20to%20oldest",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "eab443",
+        "hash": "1944cbc0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "eab443",
+        "hash": "9bc0a218",
+        "encoded": "it('should%20order%20logs%20by%20timestamp%20DESC',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "eab443",
+        "hash": "be37ff99",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "eab443",
+        "hash": "7ad7474d",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "eab443",
+        "hash": "c029735f",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "eab443",
+        "hash": "ad0fc85f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "eab443",
+        "hash": "a1d78c07",
+        "encoded": "await%20logsService.getLogs(%7B",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "eab443",
+        "hash": "23e7b94d",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "eab443",
+        "hash": "cd280663",
+        "encoded": "limit:%20100,",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "eab443",
+        "hash": "33322461",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "eab443",
+        "hash": "f698b7ce",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "eab443",
+        "hash": "d4277acf",
+        "encoded": "expect(Log.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "eab443",
+        "hash": "971131b3",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "eab443",
+        "hash": "72e1c1cc",
+        "encoded": "order:%20%5B%5B'timestamp',%20'DESC'%5D%5D,",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "eab443",
+        "hash": "596af960",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "eab443",
+        "hash": "afb1e777",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "eab443",
+        "hash": "e5825e4f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "eab443",
+        "hash": "c110fd36",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "eab443",
+        "hash": "eb9a0104",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20fetching%20logs",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "eab443",
+        "hash": "37541730",
+        "encoded": "*%20Scenario:%20Database%20query%20fails",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "eab443",
+        "hash": "7eccb153",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "eab443",
+        "hash": "39dd783a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "eab443",
+        "hash": "b67392e8",
+        "encoded": "it('should%20throw%20AppError%20when%20fetching%20logs%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "eab443",
+        "hash": "f0eae4f7",
+        "encoded": "Log.findAndCountAll%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "eab443",
+        "hash": "dc5831f9",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "eab443",
+        "hash": "8c18643b",
+        "encoded": "logsService.getLogs(%7B%20page:%201,%20limit:%20100,%20userId:%20'user-123'%20%7D)",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "eab443",
+        "hash": "85e67fd3",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "eab443",
+        "hash": "74cca6a4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "eab443",
+        "hash": "a5fb1411",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "eab443",
+        "hash": "ad4b0a40",
+        "encoded": "describe('streamLogs',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "eab443",
+        "hash": "51ee0a11",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "eab443",
+        "hash": "c8b9f898",
+        "encoded": "*%20Test:%20Should%20create%20a%20log%20stream%20for%20deployment",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "eab443",
+        "hash": "6bdacaa5",
+        "encoded": "*%20Scenario:%20User%20subscribes%20to%20real-time%20logs%20for%20a%20deployment",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "eab443",
+        "hash": "3842440f",
+        "encoded": "*%20Expected:%20Returns%20event%20emitter%20that%20receives%20deployment%20logs",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "eab443",
+        "hash": "3acf0456",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "eab443",
+        "hash": "da9a93bc",
+        "encoded": "it('should%20stream%20logs%20for%20deployment',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "eab443",
+        "hash": "1a0ace2c",
+        "encoded": "const%20stream%20=%20await%20logsService.streamLogs(%7B",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "eab443",
+        "hash": "712e5774",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "eab443",
+        "hash": "d6b17893",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "eab443",
+        "hash": "c57f914f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "eab443",
+        "hash": "86ff3dad",
+        "encoded": "expect(stream).toBeInstanceOf(EventEmitter);",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "eab443",
+        "hash": "555ca82b",
+        "encoded": "const%20mockLog%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "eab443",
+        "hash": "7b6841d3",
+        "encoded": "id:%20'log-1',",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "eab443",
+        "hash": "d81dae8e",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "eab443",
+        "hash": "07c1b0ee",
+        "encoded": "message:%20'Deployment%20started',",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "eab443",
+        "hash": "efb90119",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "eab443",
+        "hash": "ef86ecaf",
+        "encoded": "const%20dataHandler%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "eab443",
+        "hash": "638d0715",
+        "encoded": "stream.on('data',%20dataHandler);",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "eab443",
+        "hash": "f2e45a63",
+        "encoded": "//%20Simulate%20new%20log%20event",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "eab443",
+        "hash": "c46ac6b9",
+        "encoded": "logsService.logEmitter.emit('newLog',%20mockLog);",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "eab443",
+        "hash": "622a9986",
+        "encoded": "expect(dataHandler).toHaveBeenCalledWith(mockLog);",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "eab443",
+        "hash": "4e315c35",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "eab443",
+        "hash": "8a218cb0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "eab443",
+        "hash": "cea11cc0",
+        "encoded": "*%20Test:%20Should%20stream%20logs%20for%20pipeline",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "eab443",
+        "hash": "76b1eb13",
+        "encoded": "*%20Scenario:%20User%20subscribes%20to%20real-time%20logs%20for%20a%20pipeline%20execution",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "eab443",
+        "hash": "04c495ba",
+        "encoded": "*%20Expected:%20Returns%20event%20emitter%20that%20receives%20pipeline%20logs",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "eab443",
+        "hash": "eae9bb61",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "eab443",
+        "hash": "a7c5ffb6",
+        "encoded": "it('should%20stream%20logs%20for%20pipeline',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "eab443",
+        "hash": "1aae809d",
+        "encoded": "const%20stream%20=%20await%20logsService.streamLogs(%7B",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "eab443",
+        "hash": "f9c104cb",
+        "encoded": "pipelineId:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "eab443",
+        "hash": "bfac605e",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "eab443",
+        "hash": "45cc4ddb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "eab443",
+        "hash": "5b41d1bb",
+        "encoded": "const%20mockLog%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "eab443",
+        "hash": "374455b8",
+        "encoded": "id:%20'log-1',",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "eab443",
+        "hash": "e1007627",
+        "encoded": "pipelineId:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "eab443",
+        "hash": "64db6a28",
+        "encoded": "message:%20'Pipeline%20execution%20started',",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "eab443",
+        "hash": "07771ace",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "eab443",
+        "hash": "2dbc1460",
+        "encoded": "const%20dataHandler%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "eab443",
+        "hash": "44c55e60",
+        "encoded": "stream.on('data',%20dataHandler);",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "eab443",
+        "hash": "4f493d20",
+        "encoded": "logsService.logEmitter.emit('newLog',%20mockLog);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "eab443",
+        "hash": "ee5ba2d7",
+        "encoded": "expect(dataHandler).toHaveBeenCalledWith(mockLog);",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "eab443",
+        "hash": "9e550863",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "eab443",
+        "hash": "8eedf37f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "eab443",
+        "hash": "4731419f",
+        "encoded": "*%20Test:%20Should%20not%20emit%20logs%20from%20other%20deployments",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "eab443",
+        "hash": "30541a7d",
+        "encoded": "*%20Scenario:%20Multiple%20deployments%20are%20logging%20simultaneously",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "eab443",
+        "hash": "60917763",
+        "encoded": "*%20Expected:%20Stream%20only%20receives%20logs%20for%20subscribed%20deployment",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "eab443",
+        "hash": "7026700a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "eab443",
+        "hash": "db55068b",
+        "encoded": "it('should%20only%20emit%20logs%20for%20subscribed%20deployment',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "eab443",
+        "hash": "2af9700c",
+        "encoded": "const%20stream%20=%20await%20logsService.streamLogs(%7B",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "eab443",
+        "hash": "245ea73c",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "eab443",
+        "hash": "2515e409",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "eab443",
+        "hash": "62e07d3d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "eab443",
+        "hash": "7d692bfa",
+        "encoded": "const%20dataHandler%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "eab443",
+        "hash": "6161aee8",
+        "encoded": "stream.on('data',%20dataHandler);",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "eab443",
+        "hash": "41e2811e",
+        "encoded": "//%20Emit%20log%20for%20different%20deployment",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "eab443",
+        "hash": "8e04616b",
+        "encoded": "logsService.logEmitter.emit('newLog',%20%7B",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "eab443",
+        "hash": "ece856d9",
+        "encoded": "id:%20'log-1',",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "eab443",
+        "hash": "5aef32cc",
+        "encoded": "deploymentId:%20'deployment-456',",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "eab443",
+        "hash": "356417c2",
+        "encoded": "message:%20'Other%20deployment%20log',",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "eab443",
+        "hash": "2cd5f06d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "eab443",
+        "hash": "bd1948bf",
+        "encoded": "//%20Emit%20log%20for%20subscribed%20deployment",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "eab443",
+        "hash": "285ff755",
+        "encoded": "logsService.logEmitter.emit('newLog',%20%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "eab443",
+        "hash": "3d5140c1",
+        "encoded": "id:%20'log-2',",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "eab443",
+        "hash": "e347c2b7",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "eab443",
+        "hash": "884ce5a4",
+        "encoded": "message:%20'Subscribed%20deployment%20log',",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "eab443",
+        "hash": "cdbc14c4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "eab443",
+        "hash": "dc5a7ed8",
+        "encoded": "expect(dataHandler).toHaveBeenCalledTimes(1);",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "eab443",
+        "hash": "f065ba72",
+        "encoded": "expect(dataHandler).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "eab443",
+        "hash": "c2c84a94",
+        "encoded": "expect.objectContaining(%7B%20deploymentId:%20'deployment-123'%20%7D)",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "eab443",
+        "hash": "6f6b62c1",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "eab443",
+        "hash": "bcb65748",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "eab443",
+        "hash": "5b457f98",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "eab443",
+        "hash": "b9141fa6",
+        "encoded": "*%20Test:%20Should%20cleanup%20listener%20on%20stream%20close",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "eab443",
+        "hash": "f3b39777",
+        "encoded": "*%20Scenario:%20User%20closes%20the%20log%20stream",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "eab443",
+        "hash": "8de8da12",
+        "encoded": "*%20Expected:%20Event%20listener%20is%20removed",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "eab443",
+        "hash": "3bd52527",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "eab443",
+        "hash": "3124b7c4",
+        "encoded": "it('should%20cleanup%20listener%20on%20stream%20close',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "eab443",
+        "hash": "6878d0ff",
+        "encoded": "const%20stream%20=%20await%20logsService.streamLogs(%7B",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "eab443",
+        "hash": "c63b0b9e",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "eab443",
+        "hash": "26cf4ffe",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "eab443",
+        "hash": "68877d4f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "eab443",
+        "hash": "4c621e9b",
+        "encoded": "const%20initialListenerCount%20=%20logsService.logEmitter.listenerCount('newLog');",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "eab443",
+        "hash": "c7103226",
+        "encoded": "stream.emit('close');",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "eab443",
+        "hash": "29521ecb",
+        "encoded": "const%20finalListenerCount%20=%20logsService.logEmitter.listenerCount('newLog');",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "eab443",
+        "hash": "ee580f7d",
+        "encoded": "expect(finalListenerCount).toBeLessThan(initialListenerCount);",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "eab443",
+        "hash": "32b18531",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "eab443",
+        "hash": "144f5825",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "eab443",
+        "hash": "a1169ffe",
+        "encoded": "describe('getLogStats',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "eab443",
+        "hash": "1ef5f816",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "eab443",
+        "hash": "9db2c857",
+        "encoded": "*%20Test:%20Should%20retrieve%20log%20statistics%20grouped%20by%20level",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "eab443",
+        "hash": "196b53e9",
+        "encoded": "*%20Scenario:%20User%20requests%20log%20statistics%20for%20a%20project",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "eab443",
+        "hash": "8bd947e3",
+        "encoded": "*%20Expected:%20Returns%20count%20of%20logs%20grouped%20by%20severity%20level",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "eab443",
+        "hash": "311bacf5",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "eab443",
+        "hash": "ed3c1df1",
+        "encoded": "it('should%20get%20log%20stats%20grouped%20by%20level',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "eab443",
+        "hash": "8adb3c11",
+        "encoded": "const%20mockStats%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "eab443",
+        "hash": "5cc999c9",
+        "encoded": "%7B%20level:%20'info',%20count:%20150%20%7D,",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "eab443",
+        "hash": "658b7b98",
+        "encoded": "%7B%20level:%20'warn',%20count:%2025%20%7D,",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "eab443",
+        "hash": "de07c087",
+        "encoded": "%7B%20level:%20'error',%20count:%205%20%7D,",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "eab443",
+        "hash": "5429b56f",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "eab443",
+        "hash": "4744f425",
+        "encoded": "Log.findAll%20=%20jest.fn().mockResolvedValue(mockStats);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "eab443",
+        "hash": "e063eaf2",
+        "encoded": "const%20result%20=%20await%20logsService.getLogStats(%7B",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "eab443",
+        "hash": "54ff8c63",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "eab443",
+        "hash": "5de6a294",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "eab443",
+        "hash": "26ad98f1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "eab443",
+        "hash": "e31bfe43",
+        "encoded": "expect(result).toEqual(mockStats);",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "eab443",
+        "hash": "751218bb",
+        "encoded": "expect(Log.findAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "eab443",
+        "hash": "3d65b26b",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "eab443",
+        "hash": "9f0ec4ac",
+        "encoded": "where:%20%7B%20projectId:%20'project-123'%20%7D,",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "eab443",
+        "hash": "bfb7aa89",
+        "encoded": "group:%20%5B'level'%5D,",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "eab443",
+        "hash": "f2b9f1c3",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "eab443",
+        "hash": "11090dbe",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "eab443",
+        "hash": "211ee102",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "eab443",
+        "hash": "b517aa26",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "eab443",
+        "hash": "d80223f9",
+        "encoded": "*%20Test:%20Should%20filter%20stats%20by%20time%20range",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "eab443",
+        "hash": "ead240a2",
+        "encoded": "*%20Scenario:%20User%20requests%20log%20statistics%20for%20a%20specific%20period",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "eab443",
+        "hash": "c3b8bf37",
+        "encoded": "*%20Expected:%20Returns%20stats%20only%20for%20specified%20time%20range",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "eab443",
+        "hash": "4c2679e7",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "eab443",
+        "hash": "04f6628a",
+        "encoded": "it('should%20filter%20stats%20by%20time%20range',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "eab443",
+        "hash": "fdd1ebf3",
+        "encoded": "const%20startTime%20=%20'2024-01-01T00:00:00Z';",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "eab443",
+        "hash": "a0e4e113",
+        "encoded": "const%20endTime%20=%20'2024-01-31T23:59:59Z';",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "eab443",
+        "hash": "4c59225a",
+        "encoded": "Log.findAll%20=%20jest.fn().mockResolvedValue(%5B%5D);",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "eab443",
+        "hash": "4b892814",
+        "encoded": "await%20logsService.getLogStats(%7B",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "eab443",
+        "hash": "de2b9b8e",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "eab443",
+        "hash": "aebd6c74",
+        "encoded": "startTime,",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "eab443",
+        "hash": "ae159f11",
+        "encoded": "endTime,",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "eab443",
+        "hash": "3a2482cd",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "eab443",
+        "hash": "f9e319fd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "eab443",
+        "hash": "e8de8ae4",
+        "encoded": "expect(Log.findAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "eab443",
+        "hash": "40d86cd8",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "eab443",
+        "hash": "cb565bdd",
+        "encoded": "where:%20expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "eab443",
+        "hash": "94eab3fd",
+        "encoded": "timestamp:%20%7B",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "eab443",
+        "hash": "554b93a8",
+        "encoded": "%5BOp.gte%5D:%20new%20Date(startTime),",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "eab443",
+        "hash": "4a585f93",
+        "encoded": "%5BOp.lte%5D:%20new%20Date(endTime),",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "eab443",
+        "hash": "b215c87b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "eab443",
+        "hash": "da60f9e2",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "eab443",
+        "hash": "6293fab2",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "eab443",
+        "hash": "57014eaf",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "eab443",
+        "hash": "c223827c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "eab443",
+        "hash": "f6e1cd55",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "eab443",
+        "hash": "cf8dff87",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20fetching%20stats",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "eab443",
+        "hash": "903c78a7",
+        "encoded": "*%20Scenario:%20Database%20query%20fails",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "eab443",
+        "hash": "6370943e",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "eab443",
+        "hash": "61767409",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "eab443",
+        "hash": "1ad8cc1f",
+        "encoded": "it('should%20throw%20AppError%20when%20fetching%20stats%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "eab443",
+        "hash": "f77a7169",
+        "encoded": "Log.findAll%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "eab443",
+        "hash": "25b24536",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "eab443",
+        "hash": "9594fd40",
+        "encoded": "logsService.getLogStats(%7B%20projectId:%20'project-123',%20userId:%20'user-123'%20%7D)",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "eab443",
+        "hash": "3f66fe20",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "eab443",
+        "hash": "321569a9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "eab443",
+        "hash": "23549d12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "eab443",
+        "hash": "211b3f83",
+        "encoded": "describe('exportLogs',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "eab443",
+        "hash": "1dd1839f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "eab443",
+        "hash": "a90ab359",
+        "encoded": "*%20Test:%20Should%20export%20logs%20in%20JSON%20format",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "eab443",
+        "hash": "72a2a70b",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20as%20JSON",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "eab443",
+        "hash": "c4607ef1",
+        "encoded": "*%20Expected:%20Returns%20logs%20as%20formatted%20JSON%20string",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "eab443",
+        "hash": "48b54ca2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "eab443",
+        "hash": "8902b44f",
+        "encoded": "it('should%20export%20logs%20in%20JSON%20format',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "eab443",
+        "hash": "b2d69539",
+        "encoded": "const%20mockLogs%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "eab443",
+        "hash": "7239dee7",
+        "encoded": "%7B%20id:%20'log-1',%20message:%20'Log%201',%20level:%20'info',%20timestamp:%20new%20Date()%20%7D,",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "eab443",
+        "hash": "dd47fb05",
+        "encoded": "%7B%20id:%20'log-2',%20message:%20'Log%202',%20level:%20'error',%20timestamp:%20new%20Date()%20%7D,",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "eab443",
+        "hash": "09fa055b",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "eab443",
+        "hash": "8940ab52",
+        "encoded": "Log.findAll%20=%20jest.fn().mockResolvedValue(mockLogs);",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "eab443",
+        "hash": "e7f0aaa4",
+        "encoded": "const%20result%20=%20await%20logsService.exportLogs(%7B",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "eab443",
+        "hash": "debb6fce",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "eab443",
+        "hash": "e99e89ec",
+        "encoded": "format:%20'json',",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "eab443",
+        "hash": "f3d44b28",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "eab443",
+        "hash": "18211741",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "eab443",
+        "hash": "337e98b5",
+        "encoded": "expect(result).toBe(JSON.stringify(mockLogs,%20null,%202));",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "eab443",
+        "hash": "465755f0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "eab443",
+        "hash": "d28b74e3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "eab443",
+        "hash": "9bc7c66c",
+        "encoded": "*%20Test:%20Should%20export%20logs%20in%20text%20format",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "eab443",
+        "hash": "2d178df8",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20as%20plain%20text",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "eab443",
+        "hash": "d33d55ef",
+        "encoded": "*%20Expected:%20Returns%20logs%20as%20formatted%20text%20with%20timestamps",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "eab443",
+        "hash": "0c58016c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "eab443",
+        "hash": "b681ffee",
+        "encoded": "it('should%20export%20logs%20in%20text%20format',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "eab443",
+        "hash": "820c784b",
+        "encoded": "const%20timestamp1%20=%20new%20Date('2024-01-01T10:00:00Z');",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "eab443",
+        "hash": "3a3b73ad",
+        "encoded": "const%20timestamp2%20=%20new%20Date('2024-01-01T10:05:00Z');",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "eab443",
+        "hash": "2ed629ac",
+        "encoded": "const%20mockLogs%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "eab443",
+        "hash": "d96c6a1c",
+        "encoded": "%7B%20id:%20'log-1',%20message:%20'Log%201',%20level:%20'info',%20timestamp:%20timestamp1%20%7D,",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "eab443",
+        "hash": "144e04f5",
+        "encoded": "%7B%20id:%20'log-2',%20message:%20'Log%202',%20level:%20'error',%20timestamp:%20timestamp2%20%7D,",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "eab443",
+        "hash": "66016dc5",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "eab443",
+        "hash": "c47e9309",
+        "encoded": "Log.findAll%20=%20jest.fn().mockResolvedValue(mockLogs);",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "eab443",
+        "hash": "2d68849f",
+        "encoded": "const%20result%20=%20await%20logsService.exportLogs(%7B",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "eab443",
+        "hash": "2ce066c5",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "eab443",
+        "hash": "83c018db",
+        "encoded": "format:%20'text',",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "eab443",
+        "hash": "cea94950",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "eab443",
+        "hash": "d4e92da3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "eab443",
+        "hash": "f0fd05e6",
+        "encoded": "expect(result).toContain(%60%5B$%7Btimestamp1%7D%5D%20%5Binfo%5D%20Log%201%60);",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "eab443",
+        "hash": "24ca1e63",
+        "encoded": "expect(result).toContain(%60%5B$%7Btimestamp2%7D%5D%20%5Berror%5D%20Log%202%60);",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "eab443",
+        "hash": "7f8b631f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "eab443",
+        "hash": "b2f25c37",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "eab443",
+        "hash": "ca9ae586",
+        "encoded": "*%20Test:%20Should%20filter%20exported%20logs%20by%20deployment",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "eab443",
+        "hash": "ecbada22",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20for%20a%20specific%20deployment",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "eab443",
+        "hash": "cf8d905f",
+        "encoded": "*%20Expected:%20Only%20logs%20for%20that%20deployment%20are%20exported",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "eab443",
+        "hash": "b9be2e23",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "eab443",
+        "hash": "a140f236",
+        "encoded": "it('should%20filter%20exported%20logs%20by%20deploymentId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "eab443",
+        "hash": "e1636c0b",
+        "encoded": "Log.findAll%20=%20jest.fn().mockResolvedValue(%5B%5D);",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "eab443",
+        "hash": "075d124d",
+        "encoded": "await%20logsService.exportLogs(%7B",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "eab443",
+        "hash": "5c0318d2",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "eab443",
+        "hash": "01da9472",
+        "encoded": "format:%20'json',",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "eab443",
+        "hash": "ba33d7fb",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "eab443",
+        "hash": "bda68ef3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "eab443",
+        "hash": "34956744",
+        "encoded": "expect(Log.findAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "eab443",
+        "hash": "c70ae635",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "eab443",
+        "hash": "a7ff912e",
+        "encoded": "where:%20expect.objectContaining(%7B%20deploymentId:%20'deployment-123'%20%7D),",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "eab443",
+        "hash": "33a7f656",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "eab443",
+        "hash": "7f4a38fa",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "eab443",
+        "hash": "9ead606e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "eab443",
+        "hash": "a8c6483f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "eab443",
+        "hash": "73388e10",
+        "encoded": "*%20Test:%20Should%20order%20exported%20logs%20by%20timestamp%20ascending",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "eab443",
+        "hash": "92aa06d1",
+        "encoded": "*%20Scenario:%20User%20exports%20logs",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "eab443",
+        "hash": "34e543bc",
+        "encoded": "*%20Expected:%20Logs%20are%20ordered%20from%20oldest%20to%20newest",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "eab443",
+        "hash": "7595efa3",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "eab443",
+        "hash": "b03dd587",
+        "encoded": "it('should%20order%20exported%20logs%20by%20timestamp%20ASC',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "eab443",
+        "hash": "3325d823",
+        "encoded": "Log.findAll%20=%20jest.fn().mockResolvedValue(%5B%5D);",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "eab443",
+        "hash": "13e5e580",
+        "encoded": "await%20logsService.exportLogs(%7B",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "eab443",
+        "hash": "c02be6bd",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "eab443",
+        "hash": "37973aa6",
+        "encoded": "format:%20'json',",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "eab443",
+        "hash": "0168984a",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "eab443",
+        "hash": "e63fd1df",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "eab443",
+        "hash": "daf1ca96",
+        "encoded": "expect(Log.findAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "eab443",
+        "hash": "7aaec212",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "eab443",
+        "hash": "4a0b32b1",
+        "encoded": "order:%20%5B%5B'timestamp',%20'ASC'%5D%5D,",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "eab443",
+        "hash": "0002de94",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "eab443",
+        "hash": "53bcb0aa",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "eab443",
+        "hash": "53ea9533",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "eab443",
+        "hash": "69e44d6a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "eab443",
+        "hash": "15d2d55a",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20exporting%20logs",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "eab443",
+        "hash": "c5e301b6",
+        "encoded": "*%20Scenario:%20Database%20query%20fails",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "eab443",
+        "hash": "f7ea6cb8",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "eab443",
+        "hash": "bf7c4762",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "eab443",
+        "hash": "7931c014",
+        "encoded": "it('should%20throw%20AppError%20when%20exporting%20logs%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "eab443",
+        "hash": "026213db",
+        "encoded": "Log.findAll%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "eab443",
+        "hash": "eae1bf05",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "eab443",
+        "hash": "fc59e472",
+        "encoded": "logsService.exportLogs(%7B%20projectId:%20'project-123',%20format:%20'json',%20userId:%20'user-123'%20%7D)",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "eab443",
+        "hash": "2649b5b0",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "eab443",
+        "hash": "96bdd7a2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "eab443",
+        "hash": "5e6bf4f2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "eab443",
+        "hash": "d741d700",
+        "encoded": "describe('createLog',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "eab443",
+        "hash": "ae3bfcf1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "eab443",
+        "hash": "3f1fe866",
+        "encoded": "*%20Test:%20Should%20create%20a%20new%20log%20entry",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "eab443",
+        "hash": "478b6ea1",
+        "encoded": "*%20Scenario:%20System%20creates%20a%20log%20entry",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "eab443",
+        "hash": "d7b89849",
+        "encoded": "*%20Expected:%20Log%20is%20created%20and%20newLog%20event%20is%20emitted",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "eab443",
+        "hash": "8f36a26c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "eab443",
+        "hash": "f53ed0e4",
+        "encoded": "it('should%20create%20log%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "eab443",
+        "hash": "5a9f2be0",
+        "encoded": "const%20logData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "eab443",
+        "hash": "30d0cf20",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "eab443",
+        "hash": "4e9e6eed",
+        "encoded": "deploymentId:%20'deployment-123',",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "eab443",
+        "hash": "75e11138",
+        "encoded": "level:%20'info',",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "eab443",
+        "hash": "afe1186c",
+        "encoded": "message:%20'Deployment%20started',",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "eab443",
+        "hash": "33339217",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "eab443",
+        "hash": "2903dc1f",
+        "encoded": "const%20mockLog%20=%20%7B%20id:%20'log-123',%20...logData%20%7D;",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "eab443",
+        "hash": "edb02303",
+        "encoded": "Log.create%20=%20jest.fn().mockResolvedValue(mockLog);",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "eab443",
+        "hash": "ef2fa48b",
+        "encoded": "const%20emitSpy%20=%20jest.spyOn(logsService.logEmitter,%20'emit');",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "eab443",
+        "hash": "d3a3bd57",
+        "encoded": "const%20result%20=%20await%20logsService.createLog(logData);",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "eab443",
+        "hash": "1be1fb0b",
+        "encoded": "expect(result).toEqual(mockLog);",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "eab443",
+        "hash": "249365af",
+        "encoded": "expect(Log.create).toHaveBeenCalledWith(logData);",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "eab443",
+        "hash": "f8514cd2",
+        "encoded": "expect(emitSpy).toHaveBeenCalledWith('newLog',%20mockLog);",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "eab443",
+        "hash": "73546e66",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "eab443",
+        "hash": "bc723f9f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "eab443",
+        "hash": "4ff0fb04",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20creating%20log",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "eab443",
+        "hash": "76b9d292",
+        "encoded": "*%20Scenario:%20Database%20insert%20fails",
+        "prevChunkIds": []
+      },
+      "564": {
+        "chunkId": "eab443",
+        "hash": "17f45550",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "eab443",
+        "hash": "97d850aa",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "566": {
+        "chunkId": "eab443",
+        "hash": "e74e8073",
+        "encoded": "it('should%20throw%20AppError%20when%20creating%20log%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "eab443",
+        "hash": "a53d83d1",
+        "encoded": "Log.create%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "569": {
+        "chunkId": "eab443",
+        "hash": "d0026bd8",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "eab443",
+        "hash": "42b2ed2b",
+        "encoded": "logsService.createLog(%7B%20message:%20'Test%20log'%20%7D)",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "eab443",
+        "hash": "f5e82260",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "eab443",
+        "hash": "5624eaf3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "573": {
+        "chunkId": "eab443",
+        "hash": "c895b4c4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "eab443",
+        "hash": "7d5cebc8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

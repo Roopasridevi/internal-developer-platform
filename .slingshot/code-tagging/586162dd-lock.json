@@ -1,0 +1,750 @@
+{
+  "pipelines\\quality-gate.yml": {
+    "filename": "quality-gate.yml",
+    "path": "pipelines\\quality-gate.yml",
+    "version": "1.2",
+    "contextFile": "586162dd-context.json",
+    "chunks": {
+      "b527fd": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708332,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "a9704b6e",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:32 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "b527fd",
+        "hash": "dcdab608",
+        "encoded": "name:%20Quality%20Gate%20Pipeline",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "b527fd",
+        "hash": "8b0cac53",
+        "encoded": "on:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "b527fd",
+        "hash": "2964a980",
+        "encoded": "push:",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "b527fd",
+        "hash": "53e0edbb",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "b527fd",
+        "hash": "943101cb",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "b527fd",
+        "hash": "8145c774",
+        "encoded": "-%20develop",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "b527fd",
+        "hash": "6cd945e5",
+        "encoded": "pull_request:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "b527fd",
+        "hash": "2bb8c225",
+        "encoded": "branches:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "b527fd",
+        "hash": "030ca835",
+        "encoded": "-%20main",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "b527fd",
+        "hash": "e71c60c5",
+        "encoded": "-%20develop",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "b527fd",
+        "hash": "9007ec2e",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "b527fd",
+        "hash": "2a792b12",
+        "encoded": "NODE_VERSION:%20'18'",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "b527fd",
+        "hash": "ac409e36",
+        "encoded": "jobs:",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "b527fd",
+        "hash": "45e37dab",
+        "encoded": "code-quality:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "b527fd",
+        "hash": "385aaab0",
+        "encoded": "name:%20Code%20Quality%20Checks",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "b527fd",
+        "hash": "5f89f4a5",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "b527fd",
+        "hash": "ae7147e3",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "b527fd",
+        "hash": "fa081149",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "b527fd",
+        "hash": "3125953b",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "b527fd",
+        "hash": "9db094c9",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "b527fd",
+        "hash": "6a00addd",
+        "encoded": "fetch-depth:%200",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "b527fd",
+        "hash": "f546493e",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "b527fd",
+        "hash": "15dfc092",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "b527fd",
+        "hash": "bb413224",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "b527fd",
+        "hash": "10577ed8",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "b527fd",
+        "hash": "2faa3f63",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "b527fd",
+        "hash": "210b70f6",
+        "encoded": "run:%20npm%20install",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "b527fd",
+        "hash": "f9dc1dda",
+        "encoded": "-%20name:%20Run%20ESLint%20on%20backend",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "b527fd",
+        "hash": "f0e47ac1",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "b527fd",
+        "hash": "193c880c",
+        "encoded": "run:%20npm%20run%20lint",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "b527fd",
+        "hash": "4c7bd64f",
+        "encoded": "-%20name:%20Run%20ESLint%20on%20frontend",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "b527fd",
+        "hash": "f42e2ab4",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "b527fd",
+        "hash": "96f235e3",
+        "encoded": "run:%20npm%20run%20lint",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "b527fd",
+        "hash": "a751497c",
+        "encoded": "-%20name:%20Check%20code%20formatting",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "b527fd",
+        "hash": "c6e5ffcc",
+        "encoded": "run:%20npm%20run%20format%20--%20--check",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "b527fd",
+        "hash": "5c5d20ec",
+        "encoded": "security-scan:",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "b527fd",
+        "hash": "1344cb7a",
+        "encoded": "name:%20Security%20Scanning",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "b527fd",
+        "hash": "6dc1054e",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "b527fd",
+        "hash": "df9b99e8",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "b527fd",
+        "hash": "1ef9121a",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "b527fd",
+        "hash": "a3c40b10",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "b527fd",
+        "hash": "cfe61226",
+        "encoded": "-%20name:%20Run%20npm%20audit%20(backend)",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "b527fd",
+        "hash": "7d1b7178",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "b527fd",
+        "hash": "64e7b674",
+        "encoded": "run:%20npm%20audit%20--audit-level=moderate",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "b527fd",
+        "hash": "e1ce7ae7",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "b527fd",
+        "hash": "47c5287b",
+        "encoded": "-%20name:%20Run%20npm%20audit%20(frontend)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "b527fd",
+        "hash": "d9927f97",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "b527fd",
+        "hash": "d2e0bcc4",
+        "encoded": "run:%20npm%20audit%20--audit-level=moderate",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "b527fd",
+        "hash": "2851a5f4",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "b527fd",
+        "hash": "80340711",
+        "encoded": "-%20name:%20Run%20Snyk%20security%20scan",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "b527fd",
+        "hash": "532dc856",
+        "encoded": "uses:%20snyk/actions/node@master",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "b527fd",
+        "hash": "767cd3f4",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "b527fd",
+        "hash": "467d0054",
+        "encoded": "SNYK_TOKEN:%20$%7B%7B%20secrets.SNYK_TOKEN%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "b527fd",
+        "hash": "b4df1b2b",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "b527fd",
+        "hash": "d7ad63dd",
+        "encoded": "args:%20--severity-threshold=high",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "b527fd",
+        "hash": "19570718",
+        "encoded": "continue-on-error:%20true",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "b527fd",
+        "hash": "7d6d0276",
+        "encoded": "sonarqube:",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "b527fd",
+        "hash": "c6e13b20",
+        "encoded": "name:%20SonarQube%20Analysis",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "b527fd",
+        "hash": "1f5a4f39",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "b527fd",
+        "hash": "34d50908",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "b527fd",
+        "hash": "a17e8176",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "b527fd",
+        "hash": "75de172b",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "b527fd",
+        "hash": "68cbbba8",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "b527fd",
+        "hash": "b3cd4fdb",
+        "encoded": "fetch-depth:%200",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "b527fd",
+        "hash": "de54d4a8",
+        "encoded": "-%20name:%20SonarQube%20Scan",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "b527fd",
+        "hash": "4d90ed83",
+        "encoded": "uses:%20sonarsource/sonarqube-scan-action@master",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "b527fd",
+        "hash": "9d17d3e5",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "b527fd",
+        "hash": "4c46d82a",
+        "encoded": "SONAR_TOKEN:%20$%7B%7B%20secrets.SONAR_TOKEN%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "b527fd",
+        "hash": "3a7d1796",
+        "encoded": "SONAR_HOST_URL:%20$%7B%7B%20secrets.SONAR_HOST_URL%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "b527fd",
+        "hash": "2c3c5b75",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "b527fd",
+        "hash": "1e9e4290",
+        "encoded": "args:%20%3E",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "b527fd",
+        "hash": "66dc9d7d",
+        "encoded": "-Dsonar.projectKey=idp-platform",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "b527fd",
+        "hash": "976e1c14",
+        "encoded": "-Dsonar.sources=.",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "b527fd",
+        "hash": "4523de63",
+        "encoded": "-Dsonar.exclusions=**/node_modules/**,**/dist/**,**/coverage/**",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "b527fd",
+        "hash": "9d550dfe",
+        "encoded": "-Dsonar.javascript.lcov.reportPaths=backend/coverage/lcov.info,frontend/coverage/lcov.info",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "b527fd",
+        "hash": "a30c7141",
+        "encoded": "-%20name:%20SonarQube%20Quality%20Gate",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "b527fd",
+        "hash": "8063a213",
+        "encoded": "uses:%20sonarsource/sonarqube-quality-gate-action@master",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "b527fd",
+        "hash": "31fe2acf",
+        "encoded": "timeout-minutes:%205",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "b527fd",
+        "hash": "bbd75946",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "b527fd",
+        "hash": "17057dcb",
+        "encoded": "SONAR_TOKEN:%20$%7B%7B%20secrets.SONAR_TOKEN%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "b527fd",
+        "hash": "7f271878",
+        "encoded": "dependency-check:",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "b527fd",
+        "hash": "f4bf7e26",
+        "encoded": "name:%20Dependency%20Vulnerability%20Check",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "b527fd",
+        "hash": "d067b19b",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "b527fd",
+        "hash": "224fba0e",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "b527fd",
+        "hash": "d813b594",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "b527fd",
+        "hash": "8e488bf3",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "b527fd",
+        "hash": "4c96c929",
+        "encoded": "-%20name:%20Run%20OWASP%20Dependency%20Check",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "b527fd",
+        "hash": "a9f30e96",
+        "encoded": "uses:%20dependency-check/Dependency-Check_Action@main",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "b527fd",
+        "hash": "12966edc",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "b527fd",
+        "hash": "4329eca0",
+        "encoded": "project:%20'IDP%20Platform'",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "b527fd",
+        "hash": "f9b6fc37",
+        "encoded": "path:%20'.'",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "b527fd",
+        "hash": "0bd41d5e",
+        "encoded": "format:%20'HTML'",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "b527fd",
+        "hash": "07ff3e93",
+        "encoded": "-%20name:%20Upload%20dependency%20check%20results",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "b527fd",
+        "hash": "9cfd905f",
+        "encoded": "uses:%20actions/upload-artifact@v3",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "b527fd",
+        "hash": "38a87e41",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "b527fd",
+        "hash": "aca94e76",
+        "encoded": "name:%20dependency-check-report",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "b527fd",
+        "hash": "15f525c3",
+        "encoded": "path:%20reports",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "b527fd",
+        "hash": "2f931618",
+        "encoded": "coverage-check:",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "b527fd",
+        "hash": "dfa6d79d",
+        "encoded": "name:%20Coverage%20Threshold%20Check",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "b527fd",
+        "hash": "d541723a",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "b527fd",
+        "hash": "ffbf2038",
+        "encoded": "needs:%20%5Bcode-quality%5D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "b527fd",
+        "hash": "c7808792",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "b527fd",
+        "hash": "1a81dde8",
+        "encoded": "-%20name:%20Checkout%20code",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "b527fd",
+        "hash": "c75607d7",
+        "encoded": "uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "b527fd",
+        "hash": "c36c4e44",
+        "encoded": "-%20name:%20Setup%20Node.js",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "b527fd",
+        "hash": "febe9b43",
+        "encoded": "uses:%20actions/setup-node@v4",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "b527fd",
+        "hash": "8a2ac70f",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "b527fd",
+        "hash": "652cc792",
+        "encoded": "node-version:%20$%7B%7B%20env.NODE_VERSION%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "b527fd",
+        "hash": "99ca7939",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "b527fd",
+        "hash": "c57b7227",
+        "encoded": "run:%20npm%20install",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "b527fd",
+        "hash": "8e20a9f6",
+        "encoded": "-%20name:%20Check%20backend%20coverage",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "b527fd",
+        "hash": "8bf2b60a",
+        "encoded": "working-directory:%20./backend",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "b527fd",
+        "hash": "e7a9461a",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "b527fd",
+        "hash": "16b22f52",
+        "encoded": "npm%20test%20--%20--coverage",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "b527fd",
+        "hash": "24fd1bb4",
+        "encoded": "npx%20nyc%20check-coverage%20--lines%2070%20--functions%2070%20--branches%2070",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "b527fd",
+        "hash": "5f72184f",
+        "encoded": "-%20name:%20Check%20frontend%20coverage",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "b527fd",
+        "hash": "2b57fc39",
+        "encoded": "working-directory:%20./frontend",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "b527fd",
+        "hash": "89717a34",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "b527fd",
+        "hash": "87a4b742",
+        "encoded": "npm%20run%20test:coverage",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "b527fd",
+        "hash": "e9e1a84c",
+        "encoded": "npx%20nyc%20check-coverage%20--lines%2070%20--functions%2070%20--branches%2070",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

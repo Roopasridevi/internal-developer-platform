@@ -1,0 +1,96 @@
+{
+  "backend\\.env.development": {
+    "filename": ".env.development",
+    "path": "backend\\.env.development",
+    "version": "1.2",
+    "contextFile": "c89e8170-context.json",
+    "chunks": {
+      "58a8e7": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707695,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "e2a04b33",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:55 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "58a8e7",
+        "hash": "bcad2faf",
+        "encoded": "NODE_ENV=development",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "58a8e7",
+        "hash": "854d180b",
+        "encoded": "PORT=3000",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "58a8e7",
+        "hash": "3da23f6b",
+        "encoded": "HOST=localhost",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "58a8e7",
+        "hash": "c96b4992",
+        "encoded": "DB_HOST=localhost",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "58a8e7",
+        "hash": "ad4f98b6",
+        "encoded": "DB_PORT=5432",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "58a8e7",
+        "hash": "eb638dc2",
+        "encoded": "DB_NAME=idp_platform_dev",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "58a8e7",
+        "hash": "94c913af",
+        "encoded": "DB_USER=postgres",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "58a8e7",
+        "hash": "3efb447e",
+        "encoded": "DB_PASSWORD=postgres",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "58a8e7",
+        "hash": "9417f8a0",
+        "encoded": "JWT_SECRET=dev-jwt-secret-key",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "58a8e7",
+        "hash": "d82b2bbf",
+        "encoded": "CORS_ORIGIN=http://localhost:5173",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "58a8e7",
+        "hash": "41365d7d",
+        "encoded": "LOG_LEVEL=debug",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

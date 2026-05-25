@@ -1,0 +1,210 @@
+{
+  "frontend\\src\\utils\\constants.js": {
+    "filename": "constants.js",
+    "path": "frontend\\src\\utils\\constants.js",
+    "version": "1.2",
+    "contextFile": "ffc053ce-context.json",
+    "chunks": {
+      "044686": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708339,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "9b5bdaac",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:39 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "044686",
+        "hash": "cf8733a6",
+        "encoded": "export%20const%20PROJECT_STATUS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "044686",
+        "hash": "1c187e46",
+        "encoded": "ACTIVE:%20'active',",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "044686",
+        "hash": "cce4789b",
+        "encoded": "INACTIVE:%20'inactive',",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "044686",
+        "hash": "c39affc9",
+        "encoded": "ARCHIVED:%20'archived',",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "044686",
+        "hash": "d4e267fb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "044686",
+        "hash": "9b123020",
+        "encoded": "export%20const%20DEPLOYMENT_STATUS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "044686",
+        "hash": "9c278914",
+        "encoded": "PENDING:%20'pending',",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "044686",
+        "hash": "fd313ca7",
+        "encoded": "DEPLOYING:%20'deploying',",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "044686",
+        "hash": "bae8bd89",
+        "encoded": "DEPLOYED:%20'deployed',",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "044686",
+        "hash": "eec1e377",
+        "encoded": "FAILED:%20'failed',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "044686",
+        "hash": "05aa0f43",
+        "encoded": "ROLLED_BACK:%20'rolled_back',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "044686",
+        "hash": "088615cc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "044686",
+        "hash": "8c00855b",
+        "encoded": "export%20const%20PIPELINE_STATUS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "044686",
+        "hash": "23b42c91",
+        "encoded": "PENDING:%20'pending',",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "044686",
+        "hash": "9354d357",
+        "encoded": "RUNNING:%20'running',",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "044686",
+        "hash": "6171ad1c",
+        "encoded": "SUCCESS:%20'success',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "044686",
+        "hash": "7c542160",
+        "encoded": "FAILED:%20'failed',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "044686",
+        "hash": "4c6f9660",
+        "encoded": "CANCELLED:%20'cancelled',",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "044686",
+        "hash": "d5064c2c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "044686",
+        "hash": "deac3b2a",
+        "encoded": "export%20const%20LOG_LEVELS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "044686",
+        "hash": "08e6c51c",
+        "encoded": "INFO:%20'info',",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "044686",
+        "hash": "30f93024",
+        "encoded": "WARN:%20'warn',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "044686",
+        "hash": "ea911875",
+        "encoded": "ERROR:%20'error',",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "044686",
+        "hash": "7822e09a",
+        "encoded": "DEBUG:%20'debug',",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "044686",
+        "hash": "a3b06819",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "044686",
+        "hash": "c15a1c33",
+        "encoded": "export%20const%20ENVIRONMENTS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "044686",
+        "hash": "36de1de4",
+        "encoded": "DEVELOPMENT:%20'development',",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "044686",
+        "hash": "273b12c1",
+        "encoded": "STAGING:%20'staging',",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "044686",
+        "hash": "98c65625",
+        "encoded": "PRODUCTION:%20'production',",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "044686",
+        "hash": "ab7c01dc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

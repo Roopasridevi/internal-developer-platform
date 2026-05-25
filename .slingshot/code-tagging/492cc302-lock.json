@@ -1,0 +1,186 @@
+{
+  "frontend\\src\\hooks\\useDeployments.js": {
+    "filename": "useDeployments.js",
+    "path": "frontend\\src\\hooks\\useDeployments.js",
+    "version": "1.2",
+    "contextFile": "492cc302-context.json",
+    "chunks": {
+      "56b474": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708338,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "704b4dde",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:38 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "56b474",
+        "hash": "d152b66b",
+        "encoded": "import%20%7B%20useQuery,%20useMutation,%20useQueryClient%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "56b474",
+        "hash": "d6b14f59",
+        "encoded": "import%20%7B%20deploymentService%20%7D%20from%20'../services/deploymentService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "56b474",
+        "hash": "70bf4031",
+        "encoded": "export%20const%20useDeployments%20=%20(params%20=%20%7B%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "56b474",
+        "hash": "23cbe6f0",
+        "encoded": "return%20useQuery(%5B'deployments',%20params%5D,%20()%20=%3E%20deploymentService.getDeployments(params));",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "56b474",
+        "hash": "61e6c260",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "56b474",
+        "hash": "c47fe210",
+        "encoded": "export%20const%20useDeployment%20=%20(id)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "56b474",
+        "hash": "3ee2520b",
+        "encoded": "return%20useQuery(%5B'deployment',%20id%5D,%20()%20=%3E%20deploymentService.getDeploymentById(id),%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "56b474",
+        "hash": "355bc5e5",
+        "encoded": "enabled:%20!!id,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "56b474",
+        "hash": "2adb0b86",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "56b474",
+        "hash": "9658cd33",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "56b474",
+        "hash": "01afc763",
+        "encoded": "export%20const%20useCreateDeployment%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "56b474",
+        "hash": "66b1c918",
+        "encoded": "const%20queryClient%20=%20useQueryClient();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "56b474",
+        "hash": "9edd38ae",
+        "encoded": "return%20useMutation(deploymentService.createDeployment,%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "56b474",
+        "hash": "bf0766a3",
+        "encoded": "onSuccess:%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "56b474",
+        "hash": "30919938",
+        "encoded": "queryClient.invalidateQueries('deployments');",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "56b474",
+        "hash": "0b42153b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "56b474",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "56b474",
+        "hash": "3cf19c12",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "56b474",
+        "hash": "bb725d53",
+        "encoded": "export%20const%20useRollbackDeployment%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "56b474",
+        "hash": "ed00a26a",
+        "encoded": "const%20queryClient%20=%20useQueryClient();",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "56b474",
+        "hash": "67c0b93c",
+        "encoded": "return%20useMutation(deploymentService.rollbackDeployment,%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "56b474",
+        "hash": "67eb3088",
+        "encoded": "onSuccess:%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "56b474",
+        "hash": "c4cd9c88",
+        "encoded": "queryClient.invalidateQueries('deployments');",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "56b474",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "56b474",
+        "hash": "b991b7e1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "56b474",
+        "hash": "8080b9e9",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "backend\\src\\middleware\\notFoundHandler.js": {
+    "filename": "notFoundHandler.js",
+    "path": "backend\\src\\middleware\\notFoundHandler.js",
+    "version": "1.2",
+    "contextFile": "978d3cd5-context.json",
+    "chunks": {
+      "e883ab": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707865,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "338232b0",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:47:45 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e883ab",
+        "hash": "3a605a5d",
+        "encoded": "module.exports%20=%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e883ab",
+        "hash": "0036fec5",
+        "encoded": "res.status(404).json(%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e883ab",
+        "hash": "403b7e2a",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e883ab",
+        "hash": "12e0c7d9",
+        "encoded": "message:%20%60Route%20$%7Breq.originalUrl%7D%20not%20found%60,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e883ab",
+        "hash": "90c70183",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "e883ab",
+        "hash": "61e6c260",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  ".lintstagedrc.json": {
+    "filename": ".lintstagedrc.json",
+    "path": ".lintstagedrc.json",
+    "version": "1.2",
+    "contextFile": "39745f1f-context.json",
+    "chunks": {
+      "56617c": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707694,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "3374d025",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:54 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "56617c",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "56617c",
+        "hash": "3b940684",
+        "encoded": "%22*.%7Bjs,jsx,ts,tsx%7D%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "56617c",
+        "hash": "39849bb6",
+        "encoded": "%22eslint%20--fix%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "56617c",
+        "hash": "5d82147b",
+        "encoded": "%22prettier%20--write%22",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "56617c",
+        "hash": "0ecb9c98",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "56617c",
+        "hash": "bc5f4cc4",
+        "encoded": "%22*.%7Bjson,css,md,yml,yaml%7D%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "56617c",
+        "hash": "b5f068fa",
+        "encoded": "%22prettier%20--write%22",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "56617c",
+        "hash": "4494f58d",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "56617c",
+        "hash": "1c082ee4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

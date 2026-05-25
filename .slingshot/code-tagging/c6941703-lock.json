@@ -1,0 +1,2166 @@
+{
+  "backend\\tests\\integration\\logsRoutes.integration.test.js": {
+    "filename": "logsRoutes.integration.test.js",
+    "path": "backend\\tests\\integration\\logsRoutes.integration.test.js",
+    "version": "1.2",
+    "contextFile": "c6941703-context.json",
+    "chunks": {
+      "b90f45": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779710019,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "b429655f",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:23:39 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "b90f45",
+        "hash": "6cffc3b4",
+        "encoded": "const%20request%20=%20require('supertest');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "b90f45",
+        "hash": "f7180b0b",
+        "encoded": "const%20app%20=%20require('../../src/app');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "b90f45",
+        "hash": "bc37c8cb",
+        "encoded": "const%20%7B%20sequelize,%20Log,%20Project,%20Deployment,%20Pipeline,%20User%20%7D%20=%20require('../../src/models');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "b90f45",
+        "hash": "276655c5",
+        "encoded": "const%20jwt%20=%20require('jsonwebtoken');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "b90f45",
+        "hash": "02e90a8f",
+        "encoded": "describe('Logs%20Routes%20Integration%20Tests',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "b90f45",
+        "hash": "ef779baa",
+        "encoded": "let%20authToken;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "b90f45",
+        "hash": "cfce8722",
+        "encoded": "let%20testUser;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "b90f45",
+        "hash": "4c8e8333",
+        "encoded": "let%20testProject;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "b90f45",
+        "hash": "19cb8d1d",
+        "encoded": "let%20testDeployment;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "b90f45",
+        "hash": "d8a122b3",
+        "encoded": "let%20testPipeline;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "b90f45",
+        "hash": "48f08973",
+        "encoded": "beforeAll(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "b90f45",
+        "hash": "04eae9e9",
+        "encoded": "await%20sequelize.sync(%7B%20force:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "b90f45",
+        "hash": "f20f8e12",
+        "encoded": "testUser%20=%20await%20User.create(%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "b90f45",
+        "hash": "cb589a8c",
+        "encoded": "id:%20'test-user-123',",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "b90f45",
+        "hash": "a882f13b",
+        "encoded": "name:%20'Test%20User',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "b90f45",
+        "hash": "04f93b6e",
+        "encoded": "email:%20'test@example.com',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "b90f45",
+        "hash": "866ab19e",
+        "encoded": "password:%20'hashedpassword',",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "b90f45",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "b90f45",
+        "hash": "53d60ff6",
+        "encoded": "authToken%20=%20jwt.sign(",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "b90f45",
+        "hash": "f76912d9",
+        "encoded": "%7B%20id:%20testUser.id,%20email:%20testUser.email%20%7D,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "b90f45",
+        "hash": "75518783",
+        "encoded": "process.env.JWT_SECRET%20%7C%7C%20'test-secret',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "b90f45",
+        "hash": "29ed5035",
+        "encoded": "%7B%20expiresIn:%20'1h'%20%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "b90f45",
+        "hash": "5a1b898d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "b90f45",
+        "hash": "098b1a88",
+        "encoded": "testProject%20=%20await%20Project.create(%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "b90f45",
+        "hash": "5fb24e00",
+        "encoded": "id:%20'test-project-123',",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "b90f45",
+        "hash": "3f0f2311",
+        "encoded": "name:%20'Test%20Project',",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "b90f45",
+        "hash": "e14c07a2",
+        "encoded": "ownerId:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "b90f45",
+        "hash": "25c863d9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "b90f45",
+        "hash": "8db2a43d",
+        "encoded": "testDeployment%20=%20await%20Deployment.create(%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "b90f45",
+        "hash": "702928ab",
+        "encoded": "id:%20'test-deployment-123',",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "b90f45",
+        "hash": "8d054617",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "b90f45",
+        "hash": "2a6d382f",
+        "encoded": "environment:%20'production',",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "b90f45",
+        "hash": "03fe229f",
+        "encoded": "version:%20'v1.0.0',",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "b90f45",
+        "hash": "8c37a3be",
+        "encoded": "deployedBy:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "b90f45",
+        "hash": "0186a8b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "b90f45",
+        "hash": "3493f148",
+        "encoded": "testPipeline%20=%20await%20Pipeline.create(%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "b90f45",
+        "hash": "322c7bab",
+        "encoded": "id:%20'test-pipeline-123',",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "b90f45",
+        "hash": "53688f08",
+        "encoded": "name:%20'Test%20Pipeline',",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "b90f45",
+        "hash": "413deb28",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "b90f45",
+        "hash": "923673c9",
+        "encoded": "config:%20%7B%20steps:%20%5B%5D%20%7D,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "b90f45",
+        "hash": "7067025f",
+        "encoded": "createdBy:%20testUser.id,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "b90f45",
+        "hash": "0fc0ec26",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "b90f45",
+        "hash": "d7c2ec52",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "b90f45",
+        "hash": "750c4962",
+        "encoded": "afterAll(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "b90f45",
+        "hash": "727f5d87",
+        "encoded": "await%20sequelize.close();",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "b90f45",
+        "hash": "3287ea85",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "b90f45",
+        "hash": "5009bf2d",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "b90f45",
+        "hash": "adca8456",
+        "encoded": "await%20Log.destroy(%7B%20where:%20%7B%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "b90f45",
+        "hash": "a7e8e737",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "b90f45",
+        "hash": "87c24a14",
+        "encoded": "describe('GET%20/api/logs',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "b90f45",
+        "hash": "03b9cb4e",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "b90f45",
+        "hash": "d58dac1a",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "b90f45",
+        "hash": "c3c82883",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "b90f45",
+        "hash": "8692e484",
+        "encoded": "deploymentId:%20testDeployment.id,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "b90f45",
+        "hash": "68800db9",
+        "encoded": "level:%20'info',",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "b90f45",
+        "hash": "8256973e",
+        "encoded": "message:%20'Deployment%20started',",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "b90f45",
+        "hash": "8eb7525c",
+        "encoded": "timestamp:%20new%20Date('2024-01-01T10:00:00Z'),",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "b90f45",
+        "hash": "a36c1ae7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "b90f45",
+        "hash": "e588f718",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "b90f45",
+        "hash": "f231b437",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "b90f45",
+        "hash": "21dc0d8f",
+        "encoded": "deploymentId:%20testDeployment.id,",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "b90f45",
+        "hash": "7fd01843",
+        "encoded": "level:%20'error',",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "b90f45",
+        "hash": "592d1afe",
+        "encoded": "message:%20'Error%20occurred',",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "b90f45",
+        "hash": "389b1e70",
+        "encoded": "timestamp:%20new%20Date('2024-01-01T10:05:00Z'),",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "b90f45",
+        "hash": "6538520c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "b90f45",
+        "hash": "208c6719",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "b90f45",
+        "hash": "e0a32b8b",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "b90f45",
+        "hash": "839372e8",
+        "encoded": "pipelineId:%20testPipeline.id,",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "b90f45",
+        "hash": "415d65f9",
+        "encoded": "level:%20'info',",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "b90f45",
+        "hash": "c822f312",
+        "encoded": "message:%20'Pipeline%20execution%20started',",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "b90f45",
+        "hash": "d0c43303",
+        "encoded": "timestamp:%20new%20Date('2024-01-01T10:10:00Z'),",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "b90f45",
+        "hash": "fa0b9a5c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "b90f45",
+        "hash": "34456457",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "b90f45",
+        "hash": "0c8c5ee6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "b90f45",
+        "hash": "909f5c86",
+        "encoded": "*%20Test:%20Should%20retrieve%20all%20logs",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "b90f45",
+        "hash": "ce22f889",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20without%20filters",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "b90f45",
+        "hash": "e4b5627a",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20all%20logs",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "b90f45",
+        "hash": "2ab8700c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "b90f45",
+        "hash": "6e93993e",
+        "encoded": "it('should%20get%20all%20logs',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "b90f45",
+        "hash": "387ed7a4",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "b90f45",
+        "hash": "98b4325c",
+        "encoded": ".get('/api/logs')",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "b90f45",
+        "hash": "13e4d2f1",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "b90f45",
+        "hash": "a4d5e4e3",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "b90f45",
+        "hash": "d0392bec",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "b90f45",
+        "hash": "5389c54a",
+        "encoded": "expect(response.body.data.logs).toHaveLength(3);",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "b90f45",
+        "hash": "ca411631",
+        "encoded": "expect(response.body.data.pagination).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "b90f45",
+        "hash": "cb89ead6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "b90f45",
+        "hash": "a51d4938",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "b90f45",
+        "hash": "60f3233d",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20project%20ID",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "b90f45",
+        "hash": "3fb0b24c",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20for%20a%20specific%20project",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "b90f45",
+        "hash": "b7852b73",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20project",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "b90f45",
+        "hash": "e22a6724",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "b90f45",
+        "hash": "34ca2126",
+        "encoded": "it('should%20filter%20logs%20by%20projectId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "b90f45",
+        "hash": "a8661958",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "b90f45",
+        "hash": "1b5da821",
+        "encoded": ".get(%60/api/logs?projectId=$%7BtestProject.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "b90f45",
+        "hash": "9fdc3597",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "b90f45",
+        "hash": "98c05377",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "b90f45",
+        "hash": "1c83793a",
+        "encoded": "expect(response.body.data.logs.every(log%20=%3E%20log.projectId%20===%20testProject.id)).toBe(true);",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "b90f45",
+        "hash": "f825b8cd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "b90f45",
+        "hash": "713d3843",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "b90f45",
+        "hash": "cc53c26f",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20deployment%20ID",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "b90f45",
+        "hash": "47875d71",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20for%20a%20specific%20deployment",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "b90f45",
+        "hash": "4bfaad8a",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20deployment",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "b90f45",
+        "hash": "c5da5116",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "b90f45",
+        "hash": "0cd26c70",
+        "encoded": "it('should%20filter%20logs%20by%20deploymentId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "b90f45",
+        "hash": "c09e99d4",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "b90f45",
+        "hash": "6ab52f39",
+        "encoded": ".get(%60/api/logs?deploymentId=$%7BtestDeployment.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "b90f45",
+        "hash": "11e535d5",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "b90f45",
+        "hash": "14248665",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "b90f45",
+        "hash": "d216cd25",
+        "encoded": "expect(response.body.data.logs.every(log%20=%3E%20log.deploymentId%20===%20testDeployment.id)).toBe(true);",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "b90f45",
+        "hash": "1003cd91",
+        "encoded": "expect(response.body.data.logs).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "b90f45",
+        "hash": "a67eb14c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "b90f45",
+        "hash": "62e7f37b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "b90f45",
+        "hash": "28942f97",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20pipeline%20ID",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "b90f45",
+        "hash": "981f2977",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20for%20a%20specific%20pipeline",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "b90f45",
+        "hash": "edb5e2bd",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20pipeline",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "b90f45",
+        "hash": "fcf56963",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "b90f45",
+        "hash": "436742c6",
+        "encoded": "it('should%20filter%20logs%20by%20pipelineId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "b90f45",
+        "hash": "d8185c25",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "b90f45",
+        "hash": "3341c53f",
+        "encoded": ".get(%60/api/logs?pipelineId=$%7BtestPipeline.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "b90f45",
+        "hash": "825b608c",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "b90f45",
+        "hash": "16aa632f",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "b90f45",
+        "hash": "f15e9766",
+        "encoded": "expect(response.body.data.logs.every(log%20=%3E%20log.pipelineId%20===%20testPipeline.id)).toBe(true);",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "b90f45",
+        "hash": "a3b8eafe",
+        "encoded": "expect(response.body.data.logs).toHaveLength(1);",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "b90f45",
+        "hash": "8fee1500",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "b90f45",
+        "hash": "31c52bf6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "b90f45",
+        "hash": "64effab6",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20level",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "b90f45",
+        "hash": "69648336",
+        "encoded": "*%20Scenario:%20User%20filters%20logs%20by%20severity%20level",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "b90f45",
+        "hash": "2a774819",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20with%20specified%20level",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "b90f45",
+        "hash": "4bcf1620",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "b90f45",
+        "hash": "54ad50b8",
+        "encoded": "it('should%20filter%20logs%20by%20level',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "b90f45",
+        "hash": "610d618f",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "b90f45",
+        "hash": "3def2017",
+        "encoded": ".get('/api/logs?level=error')",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "b90f45",
+        "hash": "1910acbd",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "b90f45",
+        "hash": "f34799a0",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "b90f45",
+        "hash": "ac2139dc",
+        "encoded": "expect(response.body.data.logs.every(log%20=%3E%20log.level%20===%20'error')).toBe(true);",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "b90f45",
+        "hash": "3d6d4e46",
+        "encoded": "expect(response.body.data.logs).toHaveLength(1);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "b90f45",
+        "hash": "38fe35ae",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "b90f45",
+        "hash": "5f1c78c3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "b90f45",
+        "hash": "9ee58984",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20search%20term",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "b90f45",
+        "hash": "c3ddcbee",
+        "encoded": "*%20Scenario:%20User%20searches%20logs%20by%20message%20content",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "b90f45",
+        "hash": "a9477635",
+        "encoded": "*%20Expected:%20Returns%20logs%20matching%20search%20term",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "b90f45",
+        "hash": "905321a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "b90f45",
+        "hash": "415c649b",
+        "encoded": "it('should%20filter%20logs%20by%20search%20term',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "b90f45",
+        "hash": "0fe5cdb0",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "b90f45",
+        "hash": "06c6250a",
+        "encoded": ".get('/api/logs?search=error')",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "b90f45",
+        "hash": "f1f71ea6",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "b90f45",
+        "hash": "04694efc",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "b90f45",
+        "hash": "ee207adc",
+        "encoded": "expect(response.body.data.logs.length).toBeGreaterThan(0);",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "b90f45",
+        "hash": "ff007662",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "b90f45",
+        "hash": "d69cec1a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "b90f45",
+        "hash": "b4e426cc",
+        "encoded": "*%20Test:%20Should%20filter%20logs%20by%20time%20range",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "b90f45",
+        "hash": "fdcb6d70",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20within%20a%20specific%20time%20range",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "b90f45",
+        "hash": "efb7c875",
+        "encoded": "*%20Expected:%20Returns%20logs%20between%20start%20and%20end%20time",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "b90f45",
+        "hash": "c7de4cc1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "b90f45",
+        "hash": "7e560c15",
+        "encoded": "it('should%20filter%20logs%20by%20time%20range',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "b90f45",
+        "hash": "be76f415",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "b90f45",
+        "hash": "999b9a43",
+        "encoded": ".get('/api/logs?startTime=2024-01-01T10:00:00Z&endTime=2024-01-01T10:06:00Z')",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "b90f45",
+        "hash": "457ede89",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "b90f45",
+        "hash": "850ae5b4",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "b90f45",
+        "hash": "ffd048f9",
+        "encoded": "expect(response.body.data.logs).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "b90f45",
+        "hash": "5076128d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "b90f45",
+        "hash": "8b34b2b9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "b90f45",
+        "hash": "7e8cbd67",
+        "encoded": "*%20Test:%20Should%20support%20pagination",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "b90f45",
+        "hash": "636f3130",
+        "encoded": "*%20Scenario:%20User%20requests%20logs%20with%20pagination%20parameters",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "b90f45",
+        "hash": "de08b0fd",
+        "encoded": "*%20Expected:%20Returns%20paginated%20results",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "b90f45",
+        "hash": "95879fec",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "b90f45",
+        "hash": "65e8faf8",
+        "encoded": "it('should%20support%20pagination',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "b90f45",
+        "hash": "0fcf4a99",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "b90f45",
+        "hash": "4a387577",
+        "encoded": ".get('/api/logs?page=1&limit=2')",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "b90f45",
+        "hash": "54624b64",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "b90f45",
+        "hash": "43ed8344",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "b90f45",
+        "hash": "f8c1e195",
+        "encoded": "expect(response.body.data.logs).toHaveLength(2);",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "b90f45",
+        "hash": "30a5d998",
+        "encoded": "expect(response.body.data.pagination.limit).toBe(2);",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "b90f45",
+        "hash": "0a41df0e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "b90f45",
+        "hash": "317d9166",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "b90f45",
+        "hash": "71f036a1",
+        "encoded": "*%20Test:%20Should%20return%20401%20without%20authentication",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "b90f45",
+        "hash": "8db9f931",
+        "encoded": "*%20Scenario:%20Unauthenticated%20request%20to%20get%20logs",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "b90f45",
+        "hash": "9cf4887d",
+        "encoded": "*%20Expected:%20Returns%20401%20unauthorized",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "b90f45",
+        "hash": "694dd66b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "b90f45",
+        "hash": "bed3c8bc",
+        "encoded": "it('should%20return%20401%20without%20authentication',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "b90f45",
+        "hash": "0bf22797",
+        "encoded": "const%20response%20=%20await%20request(app).get('/api/logs');",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "b90f45",
+        "hash": "71ea63f7",
+        "encoded": "expect(response.status).toBe(401);",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "b90f45",
+        "hash": "9d2d0a1a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "b90f45",
+        "hash": "a7cd5066",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "b90f45",
+        "hash": "c22593fa",
+        "encoded": "describe('GET%20/api/logs/stream',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "b90f45",
+        "hash": "0da6a98d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "b90f45",
+        "hash": "1645ca60",
+        "encoded": "*%20Test:%20Should%20establish%20SSE%20connection%20for%20log%20streaming",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "b90f45",
+        "hash": "96821f1d",
+        "encoded": "*%20Scenario:%20User%20subscribes%20to%20real-time%20logs",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "b90f45",
+        "hash": "8f3f9543",
+        "encoded": "*%20Expected:%20Returns%20SSE%20headers%20and%20connection",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "b90f45",
+        "hash": "3e3b1a5c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "b90f45",
+        "hash": "e46aeeec",
+        "encoded": "it('should%20establish%20SSE%20connection',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "b90f45",
+        "hash": "9e5b6e26",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "b90f45",
+        "hash": "a8cdf16b",
+        "encoded": ".get(%60/api/logs/stream?deploymentId=$%7BtestDeployment.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "b90f45",
+        "hash": "63dbea26",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "b90f45",
+        "hash": "14b98c96",
+        "encoded": "expect(response.headers%5B'content-type'%5D).toContain('text/event-stream');",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "b90f45",
+        "hash": "74ee0e42",
+        "encoded": "expect(response.headers%5B'cache-control'%5D).toBe('no-cache');",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "b90f45",
+        "hash": "f9066f58",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "b90f45",
+        "hash": "acbb622b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "b90f45",
+        "hash": "875cc7a2",
+        "encoded": "*%20Test:%20Should%20require%20authentication%20for%20streaming",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "b90f45",
+        "hash": "5e9642bf",
+        "encoded": "*%20Scenario:%20Unauthenticated%20request%20to%20stream%20logs",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "b90f45",
+        "hash": "d2d4899d",
+        "encoded": "*%20Expected:%20Returns%20401%20unauthorized",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "b90f45",
+        "hash": "bc3d8ad6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "b90f45",
+        "hash": "c76cf6ca",
+        "encoded": "it('should%20return%20401%20without%20authentication',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "b90f45",
+        "hash": "a13a6dec",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "b90f45",
+        "hash": "2a01d73e",
+        "encoded": ".get(%60/api/logs/stream?deploymentId=$%7BtestDeployment.id%7D%60);",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "b90f45",
+        "hash": "c60a07d5",
+        "encoded": "expect(response.status).toBe(401);",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "b90f45",
+        "hash": "a0793c64",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "b90f45",
+        "hash": "1d3a12c5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "b90f45",
+        "hash": "21477ae2",
+        "encoded": "describe('GET%20/api/logs/stats',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "b90f45",
+        "hash": "15dc2186",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "b90f45",
+        "hash": "2f05db29",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "b90f45",
+        "hash": "7ed11b8a",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "b90f45",
+        "hash": "35138149",
+        "encoded": "level:%20'info',",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "b90f45",
+        "hash": "d37b328c",
+        "encoded": "message:%20'Info%20log%201',",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "b90f45",
+        "hash": "bb0de9d8",
+        "encoded": "timestamp:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "b90f45",
+        "hash": "85d1ceb3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "b90f45",
+        "hash": "c14b97f1",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "b90f45",
+        "hash": "1f13ed58",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "b90f45",
+        "hash": "701ceb04",
+        "encoded": "level:%20'info',",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "b90f45",
+        "hash": "a10865dd",
+        "encoded": "message:%20'Info%20log%202',",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "b90f45",
+        "hash": "41dd805d",
+        "encoded": "timestamp:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "b90f45",
+        "hash": "33cae8d4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "b90f45",
+        "hash": "c0a280a9",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "b90f45",
+        "hash": "78e56f0d",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "b90f45",
+        "hash": "1746b537",
+        "encoded": "level:%20'error',",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "b90f45",
+        "hash": "fa487da2",
+        "encoded": "message:%20'Error%20log',",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "b90f45",
+        "hash": "3da52115",
+        "encoded": "timestamp:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "b90f45",
+        "hash": "0876909a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "b90f45",
+        "hash": "eee6eabb",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "b90f45",
+        "hash": "5fb0a53e",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "b90f45",
+        "hash": "a3ae20a2",
+        "encoded": "level:%20'warn',",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "b90f45",
+        "hash": "5df96edd",
+        "encoded": "message:%20'Warning%20log',",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "b90f45",
+        "hash": "86e783bc",
+        "encoded": "timestamp:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "b90f45",
+        "hash": "5d44aaee",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "b90f45",
+        "hash": "74719792",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "b90f45",
+        "hash": "0489295e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "b90f45",
+        "hash": "90af7649",
+        "encoded": "*%20Test:%20Should%20retrieve%20log%20statistics",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "b90f45",
+        "hash": "facefcfd",
+        "encoded": "*%20Scenario:%20User%20requests%20log%20statistics%20for%20a%20project",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "b90f45",
+        "hash": "ec1bfc2b",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20stats%20grouped%20by%20level",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "b90f45",
+        "hash": "1b1afe80",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "b90f45",
+        "hash": "9bb5e12f",
+        "encoded": "it('should%20get%20log%20stats',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "b90f45",
+        "hash": "2464cac4",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "b90f45",
+        "hash": "960d1367",
+        "encoded": ".get(%60/api/logs/stats?projectId=$%7BtestProject.id%7D%60)",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "b90f45",
+        "hash": "49b91073",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "b90f45",
+        "hash": "7ed56610",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "b90f45",
+        "hash": "fa144e5a",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "b90f45",
+        "hash": "08ff69c1",
+        "encoded": "expect(Array.isArray(response.body.data)).toBe(true);",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "b90f45",
+        "hash": "3356f6bc",
+        "encoded": "expect(response.body.data.length).toBeGreaterThan(0);",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "b90f45",
+        "hash": "2f0b2e9f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "b90f45",
+        "hash": "20469a7a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "b90f45",
+        "hash": "3f11c4f9",
+        "encoded": "*%20Test:%20Should%20filter%20stats%20by%20time%20range",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "b90f45",
+        "hash": "69d76623",
+        "encoded": "*%20Scenario:%20User%20requests%20log%20statistics%20for%20a%20specific%20period",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "b90f45",
+        "hash": "3d5a3766",
+        "encoded": "*%20Expected:%20Returns%20stats%20only%20for%20specified%20time%20range",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "b90f45",
+        "hash": "ba67de7a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "b90f45",
+        "hash": "2d546142",
+        "encoded": "it('should%20filter%20stats%20by%20time%20range',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "b90f45",
+        "hash": "ef058eda",
+        "encoded": "const%20startTime%20=%20new%20Date(Date.now()%20-%203600000).toISOString();%20//%201%20hour%20ago",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "b90f45",
+        "hash": "106d2914",
+        "encoded": "const%20endTime%20=%20new%20Date().toISOString();",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "b90f45",
+        "hash": "f9cc0494",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "b90f45",
+        "hash": "19758571",
+        "encoded": ".get(%60/api/logs/stats?projectId=$%7BtestProject.id%7D&startTime=$%7BstartTime%7D&endTime=$%7BendTime%7D%60)",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "b90f45",
+        "hash": "6fca9e93",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "b90f45",
+        "hash": "8a1b6a80",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "b90f45",
+        "hash": "6167a5ec",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "b90f45",
+        "hash": "38400a4d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "b90f45",
+        "hash": "1064859e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "b90f45",
+        "hash": "b04eefc5",
+        "encoded": "*%20Test:%20Should%20return%20401%20without%20authentication",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "b90f45",
+        "hash": "8b19814f",
+        "encoded": "*%20Scenario:%20Unauthenticated%20request%20to%20get%20stats",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "b90f45",
+        "hash": "7449e619",
+        "encoded": "*%20Expected:%20Returns%20401%20unauthorized",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "b90f45",
+        "hash": "be754564",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "b90f45",
+        "hash": "aa29315e",
+        "encoded": "it('should%20return%20401%20without%20authentication',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "b90f45",
+        "hash": "35303014",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "b90f45",
+        "hash": "cdf7d551",
+        "encoded": ".get(%60/api/logs/stats?projectId=$%7BtestProject.id%7D%60);",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "b90f45",
+        "hash": "82355179",
+        "encoded": "expect(response.status).toBe(401);",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "b90f45",
+        "hash": "724ed14b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "b90f45",
+        "hash": "e4fd00d0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "b90f45",
+        "hash": "75b7c261",
+        "encoded": "describe('GET%20/api/logs/export',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "b90f45",
+        "hash": "7bf373dd",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "b90f45",
+        "hash": "cad9b269",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "b90f45",
+        "hash": "909a4ad5",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "b90f45",
+        "hash": "2e14f42d",
+        "encoded": "deploymentId:%20testDeployment.id,",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "b90f45",
+        "hash": "eabef950",
+        "encoded": "level:%20'info',",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "b90f45",
+        "hash": "7fa646f1",
+        "encoded": "message:%20'Export%20log%201',",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "b90f45",
+        "hash": "bd388db1",
+        "encoded": "timestamp:%20new%20Date('2024-01-01T10:00:00Z'),",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "b90f45",
+        "hash": "fe68959d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "b90f45",
+        "hash": "6319e248",
+        "encoded": "await%20Log.create(%7B",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "b90f45",
+        "hash": "d7832d4a",
+        "encoded": "projectId:%20testProject.id,",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "b90f45",
+        "hash": "79ca5ba7",
+        "encoded": "deploymentId:%20testDeployment.id,",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "b90f45",
+        "hash": "e3a9050d",
+        "encoded": "level:%20'error',",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "b90f45",
+        "hash": "626dfb6b",
+        "encoded": "message:%20'Export%20log%202',",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "b90f45",
+        "hash": "eec562b4",
+        "encoded": "timestamp:%20new%20Date('2024-01-01T10:05:00Z'),",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "b90f45",
+        "hash": "6ce19f75",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "b90f45",
+        "hash": "fd410a32",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "b90f45",
+        "hash": "dc67d559",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "b90f45",
+        "hash": "3ca2d4a0",
+        "encoded": "*%20Test:%20Should%20export%20logs%20in%20JSON%20format",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "b90f45",
+        "hash": "d65ff966",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20as%20JSON",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "b90f45",
+        "hash": "cb12b32c",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20JSON%20content",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "b90f45",
+        "hash": "ce56ae45",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "b90f45",
+        "hash": "e5678f99",
+        "encoded": "it('should%20export%20logs%20in%20JSON%20format',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "b90f45",
+        "hash": "ba734945",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "b90f45",
+        "hash": "47deb14d",
+        "encoded": ".get(%60/api/logs/export?projectId=$%7BtestProject.id%7D&format=json%60)",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "b90f45",
+        "hash": "81e68adc",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "b90f45",
+        "hash": "b12b400a",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "b90f45",
+        "hash": "69f7ddba",
+        "encoded": "expect(response.headers%5B'content-type'%5D).toContain('application/json');",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "b90f45",
+        "hash": "a0083a8d",
+        "encoded": "expect(response.headers%5B'content-disposition'%5D).toContain('attachment');",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "b90f45",
+        "hash": "32b18531",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "b90f45",
+        "hash": "cdb34576",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "b90f45",
+        "hash": "9cec8c12",
+        "encoded": "*%20Test:%20Should%20export%20logs%20in%20text%20format",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "b90f45",
+        "hash": "b55e570f",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20as%20plain%20text",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "b90f45",
+        "hash": "4f478693",
+        "encoded": "*%20Expected:%20Returns%20200%20with%20text%20content",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "b90f45",
+        "hash": "7e4934e6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "b90f45",
+        "hash": "ed0b12fe",
+        "encoded": "it('should%20export%20logs%20in%20text%20format',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "b90f45",
+        "hash": "95828199",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "b90f45",
+        "hash": "b8c1f371",
+        "encoded": ".get(%60/api/logs/export?projectId=$%7BtestProject.id%7D&format=text%60)",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "b90f45",
+        "hash": "54f9cb76",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "b90f45",
+        "hash": "c43aeed7",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "b90f45",
+        "hash": "d9c17418",
+        "encoded": "expect(response.headers%5B'content-type'%5D).toContain('text/plain');",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "b90f45",
+        "hash": "7e788657",
+        "encoded": "expect(response.headers%5B'content-disposition'%5D).toContain('attachment');",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "b90f45",
+        "hash": "85d7b277",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "b90f45",
+        "hash": "18073020",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "b90f45",
+        "hash": "ee24f528",
+        "encoded": "*%20Test:%20Should%20filter%20exported%20logs%20by%20deployment",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "b90f45",
+        "hash": "60ebe20a",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20for%20a%20specific%20deployment",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "b90f45",
+        "hash": "e1b06a18",
+        "encoded": "*%20Expected:%20Returns%20only%20logs%20for%20that%20deployment",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "b90f45",
+        "hash": "8fac9685",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "b90f45",
+        "hash": "dc816ed2",
+        "encoded": "it('should%20filter%20exported%20logs%20by%20deploymentId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "b90f45",
+        "hash": "a0783773",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "b90f45",
+        "hash": "3374e842",
+        "encoded": ".get(%60/api/logs/export?deploymentId=$%7BtestDeployment.id%7D&format=json%60)",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "b90f45",
+        "hash": "5966b844",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "b90f45",
+        "hash": "b6aac429",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "b90f45",
+        "hash": "c1155e6b",
+        "encoded": "const%20logs%20=%20JSON.parse(response.text);",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "b90f45",
+        "hash": "a4bcace3",
+        "encoded": "expect(logs.every(log%20=%3E%20log.deploymentId%20===%20testDeployment.id)).toBe(true);",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "b90f45",
+        "hash": "211ee102",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "b90f45",
+        "hash": "b517aa26",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "b90f45",
+        "hash": "90bf450e",
+        "encoded": "*%20Test:%20Should%20filter%20exported%20logs%20by%20time%20range",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "b90f45",
+        "hash": "e6a92464",
+        "encoded": "*%20Scenario:%20User%20exports%20logs%20within%20a%20specific%20time%20range",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "b90f45",
+        "hash": "dff57541",
+        "encoded": "*%20Expected:%20Returns%20logs%20between%20start%20and%20end%20time",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "b90f45",
+        "hash": "4c2679e7",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "b90f45",
+        "hash": "6c1f1609",
+        "encoded": "it('should%20filter%20exported%20logs%20by%20time%20range',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "b90f45",
+        "hash": "de27a33f",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "b90f45",
+        "hash": "3fb27f4e",
+        "encoded": ".get(%60/api/logs/export?projectId=$%7BtestProject.id%7D&startTime=2024-01-01T10:00:00Z&endTime=2024-01-01T10:03:00Z&format=json%60)",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "b90f45",
+        "hash": "b6ab0587",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60);",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "b90f45",
+        "hash": "370054e8",
+        "encoded": "expect(response.status).toBe(200);",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "b90f45",
+        "hash": "8ae76ed7",
+        "encoded": "const%20logs%20=%20JSON.parse(response.text);",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "b90f45",
+        "hash": "f90ad26b",
+        "encoded": "expect(logs).toHaveLength(1);",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "b90f45",
+        "hash": "180ce5da",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "b90f45",
+        "hash": "46d3b8f9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "b90f45",
+        "hash": "bfe92c0d",
+        "encoded": "*%20Test:%20Should%20return%20401%20without%20authentication",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "b90f45",
+        "hash": "16545e32",
+        "encoded": "*%20Scenario:%20Unauthenticated%20request%20to%20export%20logs",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "b90f45",
+        "hash": "5ba76f79",
+        "encoded": "*%20Expected:%20Returns%20401%20unauthorized",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "b90f45",
+        "hash": "76fd23e9",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "b90f45",
+        "hash": "f3fc44e1",
+        "encoded": "it('should%20return%20401%20without%20authentication',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "b90f45",
+        "hash": "7adacb62",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "b90f45",
+        "hash": "80ac6a2e",
+        "encoded": ".get(%60/api/logs/export?projectId=$%7BtestProject.id%7D%60);",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "b90f45",
+        "hash": "b0738f1e",
+        "encoded": "expect(response.status).toBe(401);",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "b90f45",
+        "hash": "be023d9a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "b90f45",
+        "hash": "8c7871c6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "b90f45",
+        "hash": "7675a516",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

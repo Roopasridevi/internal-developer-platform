@@ -1,0 +1,294 @@
+{
+  "backend\\src\\models\\Pipeline.js": {
+    "filename": "Pipeline.js",
+    "path": "backend\\src\\models\\Pipeline.js",
+    "version": "1.2",
+    "contextFile": "5de0957f-context.json",
+    "chunks": {
+      "25889d": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707782,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "226b6ac1",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:46:22 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "25889d",
+        "hash": "5961e53f",
+        "encoded": "module.exports%20=%20(sequelize,%20DataTypes)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "25889d",
+        "hash": "ab664ae1",
+        "encoded": "const%20Pipeline%20=%20sequelize.define('Pipeline',%20%7B",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "25889d",
+        "hash": "2314dffd",
+        "encoded": "id:%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "25889d",
+        "hash": "2f3801f3",
+        "encoded": "type:%20DataTypes.UUID,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "25889d",
+        "hash": "8a005a3c",
+        "encoded": "defaultValue:%20DataTypes.UUIDV4,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "25889d",
+        "hash": "e1ba023a",
+        "encoded": "primaryKey:%20true,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "25889d",
+        "hash": "4401be13",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "25889d",
+        "hash": "5a8159ba",
+        "encoded": "name:%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "25889d",
+        "hash": "140f5535",
+        "encoded": "type:%20DataTypes.STRING,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "25889d",
+        "hash": "6ec3da42",
+        "encoded": "allowNull:%20false,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "25889d",
+        "hash": "edd993f3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "25889d",
+        "hash": "50f0a6d7",
+        "encoded": "description:%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "25889d",
+        "hash": "bd463200",
+        "encoded": "type:%20DataTypes.TEXT,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "25889d",
+        "hash": "c162cffc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "25889d",
+        "hash": "d3900a02",
+        "encoded": "projectId:%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "25889d",
+        "hash": "f027f27a",
+        "encoded": "type:%20DataTypes.UUID,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "25889d",
+        "hash": "01d149bc",
+        "encoded": "allowNull:%20false,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "25889d",
+        "hash": "220c9b6d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "25889d",
+        "hash": "832dc0f0",
+        "encoded": "config:%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "25889d",
+        "hash": "1c944340",
+        "encoded": "type:%20DataTypes.JSONB,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "25889d",
+        "hash": "908e2a14",
+        "encoded": "allowNull:%20false,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "25889d",
+        "hash": "044c21b3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "25889d",
+        "hash": "074feb00",
+        "encoded": "status:%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "25889d",
+        "hash": "52e4186a",
+        "encoded": "type:%20DataTypes.ENUM('active',%20'inactive'),",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "25889d",
+        "hash": "f8b39dec",
+        "encoded": "defaultValue:%20'active',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "25889d",
+        "hash": "642c1a07",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "25889d",
+        "hash": "461004ff",
+        "encoded": "createdBy:%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "25889d",
+        "hash": "1ae252b2",
+        "encoded": "type:%20DataTypes.UUID,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "25889d",
+        "hash": "8fd7a4cb",
+        "encoded": "allowNull:%20false,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "25889d",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "25889d",
+        "hash": "838561af",
+        "encoded": "%7D,%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "25889d",
+        "hash": "56fc2abc",
+        "encoded": "tableName:%20'pipelines',",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "25889d",
+        "hash": "14d00669",
+        "encoded": "timestamps:%20true,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "25889d",
+        "hash": "84faadb9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "25889d",
+        "hash": "975adc78",
+        "encoded": "Pipeline.associate%20=%20(models)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "25889d",
+        "hash": "d8516abf",
+        "encoded": "Pipeline.belongsTo(models.Project,%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "25889d",
+        "hash": "9e9862ab",
+        "encoded": "foreignKey:%20'projectId',",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "25889d",
+        "hash": "3b202ec2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "25889d",
+        "hash": "5c1e4ddf",
+        "encoded": "Pipeline.hasMany(models.PipelineExecution,%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "25889d",
+        "hash": "8c65d481",
+        "encoded": "foreignKey:%20'pipelineId',",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "25889d",
+        "hash": "8636d221",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "25889d",
+        "hash": "eb717fe2",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "25889d",
+        "hash": "7d068b88",
+        "encoded": "return%20Pipeline;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "25889d",
+        "hash": "d95efe69",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

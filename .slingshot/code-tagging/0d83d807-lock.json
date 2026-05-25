@@ -1,0 +1,2544 @@
+{
+  "backend\\tests\\unit\\services\\pipelineService.test.js": {
+    "filename": "pipelineService.test.js",
+    "path": "backend\\tests\\unit\\services\\pipelineService.test.js",
+    "version": "1.2",
+    "contextFile": "0d83d807-context.json",
+    "chunks": {
+      "c577cc": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779709014,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "7b57a964",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 5:06:54 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c577cc",
+        "hash": "3ac3aa2d",
+        "encoded": "const%20pipelineService%20=%20require('../../../src/services/pipelineService');",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "c577cc",
+        "hash": "ce15c23c",
+        "encoded": "const%20%7B%20Pipeline,%20PipelineExecution,%20Project%20%7D%20=%20require('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c577cc",
+        "hash": "ab1cf49c",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../../../src/utils/errors');",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c577cc",
+        "hash": "8d9a2f5a",
+        "encoded": "const%20ciRunnerClient%20=%20require('../../../src/utils/ciRunnerClient');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c577cc",
+        "hash": "59aabc4e",
+        "encoded": "jest.mock('../../../src/models');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c577cc",
+        "hash": "1610901e",
+        "encoded": "jest.mock('../../../src/utils/logger');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c577cc",
+        "hash": "06254902",
+        "encoded": "jest.mock('../../../src/utils/ciRunnerClient');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "c577cc",
+        "hash": "b6f89556",
+        "encoded": "describe('PipelineService',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c577cc",
+        "hash": "4ec9bef2",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c577cc",
+        "hash": "6310a4d1",
+        "encoded": "jest.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c577cc",
+        "hash": "70287d6a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c577cc",
+        "hash": "29b9994a",
+        "encoded": "describe('createPipeline',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "c577cc",
+        "hash": "014b98f0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c577cc",
+        "hash": "1a818b4e",
+        "encoded": "*%20Test:%20Should%20successfully%20create%20a%20pipeline%20with%20valid%20data",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c577cc",
+        "hash": "7e2a10de",
+        "encoded": "*%20Scenario:%20User%20creates%20a%20new%20CI/CD%20pipeline",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c577cc",
+        "hash": "257a127b",
+        "encoded": "*%20Expected:%20Pipeline%20is%20created%20with%20active%20status",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c577cc",
+        "hash": "4b6c9127",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "c577cc",
+        "hash": "86c20224",
+        "encoded": "it('should%20create%20a%20pipeline%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c577cc",
+        "hash": "be1697cf",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "c577cc",
+        "hash": "ddb31e91",
+        "encoded": "id:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "c577cc",
+        "hash": "a664ecbc",
+        "encoded": "name:%20'Build%20Pipeline',",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "c577cc",
+        "hash": "f1e4da07",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "c577cc",
+        "hash": "45b9863f",
+        "encoded": "config:%20%7B%20steps:%20%5B'build',%20'test'%5D%20%7D,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "c577cc",
+        "hash": "381909c8",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "c577cc",
+        "hash": "0711a03f",
+        "encoded": "createdBy:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "c577cc",
+        "hash": "a107343b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "c577cc",
+        "hash": "f3e47a3c",
+        "encoded": "const%20pipelineData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "c577cc",
+        "hash": "175abb16",
+        "encoded": "name:%20'Build%20Pipeline',",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "c577cc",
+        "hash": "39a7688a",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "c577cc",
+        "hash": "172a48f2",
+        "encoded": "config:%20%7B%20steps:%20%5B'build',%20'test'%5D%20%7D,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "c577cc",
+        "hash": "b2fa52a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "c577cc",
+        "hash": "8a89c837",
+        "encoded": "Pipeline.create%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "c577cc",
+        "hash": "b10167c2",
+        "encoded": "const%20result%20=%20await%20pipelineService.createPipeline(pipelineData,%20'user-123');",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "c577cc",
+        "hash": "b3d15838",
+        "encoded": "expect(result).toEqual(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c577cc",
+        "hash": "978608be",
+        "encoded": "expect(Pipeline.create).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "c577cc",
+        "hash": "58b5aba5",
+        "encoded": "...pipelineData,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "c577cc",
+        "hash": "e9dfdfd0",
+        "encoded": "createdBy:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "c577cc",
+        "hash": "614ca3b4",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c577cc",
+        "hash": "816d4a12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c577cc",
+        "hash": "905dac2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c577cc",
+        "hash": "eb0289d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c577cc",
+        "hash": "1a0256e8",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20during%20pipeline%20creation",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c577cc",
+        "hash": "dbc82fcc",
+        "encoded": "*%20Scenario:%20Database%20throws%20an%20error",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c577cc",
+        "hash": "261d9533",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown%20with%20appropriate%20message",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "c577cc",
+        "hash": "d89601c8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c577cc",
+        "hash": "489b61ac",
+        "encoded": "it('should%20throw%20AppError%20when%20pipeline%20creation%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "c577cc",
+        "hash": "e72f0812",
+        "encoded": "Pipeline.create%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "c577cc",
+        "hash": "d2c895aa",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c577cc",
+        "hash": "1a257af5",
+        "encoded": "pipelineService.createPipeline(%7B%20name:%20'Test',%20config:%20%7B%7D%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "c577cc",
+        "hash": "24b000a3",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "c577cc",
+        "hash": "f155c041",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c577cc",
+        "hash": "4520ef94",
+        "encoded": "pipelineService.createPipeline(%7B%20name:%20'Test',%20config:%20%7B%7D%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "c577cc",
+        "hash": "d0fd8f2e",
+        "encoded": ").rejects.toThrow('Failed%20to%20create%20pipeline');",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c577cc",
+        "hash": "b54befcd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "c577cc",
+        "hash": "3f19ed05",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "c577cc",
+        "hash": "6e1718f7",
+        "encoded": "*%20Test:%20Should%20create%20pipeline%20with%20complex%20configuration",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "c577cc",
+        "hash": "b0f0a4fa",
+        "encoded": "*%20Scenario:%20User%20creates%20pipeline%20with%20detailed%20config",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "c577cc",
+        "hash": "ec8e98a2",
+        "encoded": "*%20Expected:%20Pipeline%20is%20created%20with%20full%20configuration",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "c577cc",
+        "hash": "6665b0da",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "c577cc",
+        "hash": "25384bec",
+        "encoded": "it('should%20create%20pipeline%20with%20complex%20configuration',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "c577cc",
+        "hash": "9521e55f",
+        "encoded": "const%20complexConfig%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "c577cc",
+        "hash": "db2a69ec",
+        "encoded": "steps:%20%5B'checkout',%20'build',%20'test',%20'deploy'%5D,",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "c577cc",
+        "hash": "b97ddf5e",
+        "encoded": "environment:%20%7B%20NODE_ENV:%20'production'%20%7D,",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "c577cc",
+        "hash": "123c0ad4",
+        "encoded": "triggers:%20%5B'push',%20'pull_request'%5D,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "c577cc",
+        "hash": "950f39fe",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "c577cc",
+        "hash": "a9b78921",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "c577cc",
+        "hash": "efd28cea",
+        "encoded": "id:%20'pipeline-456',",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "c577cc",
+        "hash": "c3517776",
+        "encoded": "name:%20'Complex%20Pipeline',",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "c577cc",
+        "hash": "af4ddf46",
+        "encoded": "config:%20complexConfig,",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "c577cc",
+        "hash": "2c8db7eb",
+        "encoded": "status:%20'active',",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "c577cc",
+        "hash": "93e776f6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "c577cc",
+        "hash": "a784fea9",
+        "encoded": "Pipeline.create%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "c577cc",
+        "hash": "e4db591e",
+        "encoded": "const%20result%20=%20await%20pipelineService.createPipeline(",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "c577cc",
+        "hash": "7091848f",
+        "encoded": "%7B%20name:%20'Complex%20Pipeline',%20projectId:%20'project-123',%20config:%20complexConfig%20%7D,",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "c577cc",
+        "hash": "0dcb1bac",
+        "encoded": "'user-123'",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "c577cc",
+        "hash": "fd7f7fe7",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "c577cc",
+        "hash": "5a94627a",
+        "encoded": "expect(result.config).toEqual(complexConfig);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "c577cc",
+        "hash": "131b33e4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "c577cc",
+        "hash": "a8fc62b8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "c577cc",
+        "hash": "341d94eb",
+        "encoded": "describe('getPipelines',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "c577cc",
+        "hash": "3240b014",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "c577cc",
+        "hash": "c1ba7ebb",
+        "encoded": "*%20Test:%20Should%20retrieve%20paginated%20pipelines",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "c577cc",
+        "hash": "4f7ef202",
+        "encoded": "*%20Scenario:%20User%20requests%20list%20of%20pipelines%20with%20pagination",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "c577cc",
+        "hash": "3575f251",
+        "encoded": "*%20Expected:%20Returns%20pipelines%20with%20pagination%20metadata",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "c577cc",
+        "hash": "c07fdc3d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "c577cc",
+        "hash": "d95f748c",
+        "encoded": "it('should%20get%20pipelines%20with%20pagination',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "c577cc",
+        "hash": "629a8eb6",
+        "encoded": "const%20mockPipelines%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "c577cc",
+        "hash": "76e6fc18",
+        "encoded": "%7B%20id:%20'pipeline-1',%20name:%20'Pipeline%201'%20%7D,",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "c577cc",
+        "hash": "efcdbf60",
+        "encoded": "%7B%20id:%20'pipeline-2',%20name:%20'Pipeline%202'%20%7D,",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "c577cc",
+        "hash": "cf105b4e",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "c577cc",
+        "hash": "e151c9d0",
+        "encoded": "Pipeline.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "c577cc",
+        "hash": "16777c38",
+        "encoded": "rows:%20mockPipelines,",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "c577cc",
+        "hash": "19738498",
+        "encoded": "count:%202,",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "c577cc",
+        "hash": "0bf9a8ad",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "c577cc",
+        "hash": "42342529",
+        "encoded": "const%20result%20=%20await%20pipelineService.getPipelines(%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "c577cc",
+        "hash": "e8b117d9",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "c577cc",
+        "hash": "99d185f6",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "c577cc",
+        "hash": "e699f59d",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "c577cc",
+        "hash": "38b220f2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "c577cc",
+        "hash": "59a5f2df",
+        "encoded": "expect(result).toEqual(%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "c577cc",
+        "hash": "6ac4f6ef",
+        "encoded": "pipelines:%20mockPipelines,",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "c577cc",
+        "hash": "b6e71bc9",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "c577cc",
+        "hash": "3481064f",
+        "encoded": "total:%202,",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "c577cc",
+        "hash": "1de98318",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "c577cc",
+        "hash": "ca7036a9",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "c577cc",
+        "hash": "ab4590ac",
+        "encoded": "totalPages:%201,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "c577cc",
+        "hash": "5cff675f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "c577cc",
+        "hash": "0e3ba760",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "c577cc",
+        "hash": "f9bbf6da",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "c577cc",
+        "hash": "8816435a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "c577cc",
+        "hash": "b1309d1a",
+        "encoded": "*%20Test:%20Should%20filter%20pipelines%20by%20project%20ID",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "c577cc",
+        "hash": "99b08f70",
+        "encoded": "*%20Scenario:%20User%20requests%20pipelines%20for%20a%20specific%20project",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "c577cc",
+        "hash": "cb7db4cf",
+        "encoded": "*%20Expected:%20Returns%20only%20pipelines%20for%20that%20project",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "c577cc",
+        "hash": "074ead2f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "c577cc",
+        "hash": "15902a9a",
+        "encoded": "it('should%20filter%20pipelines%20by%20projectId',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "c577cc",
+        "hash": "02b5801a",
+        "encoded": "Pipeline.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "c577cc",
+        "hash": "002a0994",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "c577cc",
+        "hash": "bd7ac905",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "c577cc",
+        "hash": "be209b17",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "c577cc",
+        "hash": "f9f71cab",
+        "encoded": "await%20pipelineService.getPipelines(%7B",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "c577cc",
+        "hash": "dcabadd4",
+        "encoded": "projectId:%20'project-123',",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "c577cc",
+        "hash": "98dc023e",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "c577cc",
+        "hash": "dd3820fa",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "c577cc",
+        "hash": "8ce893f0",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "c577cc",
+        "hash": "8fee1500",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "c577cc",
+        "hash": "58e8cbee",
+        "encoded": "expect(Pipeline.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "c577cc",
+        "hash": "a5087b60",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "c577cc",
+        "hash": "7ceec5a4",
+        "encoded": "where:%20%7B%20projectId:%20'project-123'%20%7D,",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "c577cc",
+        "hash": "3724e63c",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "c577cc",
+        "hash": "acad37c6",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "c577cc",
+        "hash": "e7e1c8d1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "c577cc",
+        "hash": "7c127ac5",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "c577cc",
+        "hash": "5bba6f52",
+        "encoded": "*%20Test:%20Should%20include%20project%20details%20in%20pipeline%20results",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "c577cc",
+        "hash": "31c73866",
+        "encoded": "*%20Scenario:%20User%20requests%20pipelines",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "c577cc",
+        "hash": "b75069a6",
+        "encoded": "*%20Expected:%20Each%20pipeline%20includes%20associated%20project%20data",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "c577cc",
+        "hash": "e0a6d8ff",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "c577cc",
+        "hash": "36eec3b6",
+        "encoded": "it('should%20include%20project%20details',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "c577cc",
+        "hash": "90aa3f6a",
+        "encoded": "Pipeline.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "c577cc",
+        "hash": "8dacb932",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "c577cc",
+        "hash": "437b1a1c",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "c577cc",
+        "hash": "0933da8b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "c577cc",
+        "hash": "80b47b09",
+        "encoded": "await%20pipelineService.getPipelines(%7B",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "c577cc",
+        "hash": "23498327",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "c577cc",
+        "hash": "0804f7c5",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "c577cc",
+        "hash": "d916bbcd",
+        "encoded": "userId:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "c577cc",
+        "hash": "4c5b7b1d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "c577cc",
+        "hash": "be9e6c0e",
+        "encoded": "expect(Pipeline.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "c577cc",
+        "hash": "e456cd1e",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "c577cc",
+        "hash": "2207e171",
+        "encoded": "include:%20%5B%7B%20model:%20Project%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "c577cc",
+        "hash": "2da6a5b9",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "c577cc",
+        "hash": "3e4aadc6",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "c577cc",
+        "hash": "33915446",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "c577cc",
+        "hash": "c40554e4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "c577cc",
+        "hash": "8a5ba317",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20when%20fetching%20pipelines",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "c577cc",
+        "hash": "9ed7a1c8",
+        "encoded": "*%20Scenario:%20Database%20query%20fails",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "c577cc",
+        "hash": "62c17815",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "c577cc",
+        "hash": "68078d53",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "c577cc",
+        "hash": "44c18c4d",
+        "encoded": "it('should%20throw%20AppError%20when%20fetching%20pipelines%20fails',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "c577cc",
+        "hash": "09d204e1",
+        "encoded": "Pipeline.findAndCountAll%20=%20jest.fn().mockRejectedValue(new%20Error('Database%20error'));",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "c577cc",
+        "hash": "d9cd669c",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "c577cc",
+        "hash": "f378296c",
+        "encoded": "pipelineService.getPipelines(%7B%20page:%201,%20limit:%2010,%20userId:%20'user-123'%20%7D)",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "c577cc",
+        "hash": "f4111c6e",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "c577cc",
+        "hash": "e3fabb4a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "c577cc",
+        "hash": "2b0ab22c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "c577cc",
+        "hash": "5b71b231",
+        "encoded": "describe('getPipelineById',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "c577cc",
+        "hash": "ea2e24ec",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "c577cc",
+        "hash": "301c62c6",
+        "encoded": "*%20Test:%20Should%20retrieve%20a%20pipeline%20by%20ID",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "c577cc",
+        "hash": "bb0f0bfe",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20specific%20pipeline",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "c577cc",
+        "hash": "da7749bc",
+        "encoded": "*%20Expected:%20Returns%20the%20pipeline%20with%20project%20details",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "c577cc",
+        "hash": "cfbba28c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "c577cc",
+        "hash": "553e10ee",
+        "encoded": "it('should%20get%20pipeline%20by%20id%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "c577cc",
+        "hash": "894798ad",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "c577cc",
+        "hash": "1dbf765a",
+        "encoded": "id:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "c577cc",
+        "hash": "8ef2eaf9",
+        "encoded": "name:%20'Test%20Pipeline',",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "c577cc",
+        "hash": "5768b311",
+        "encoded": "config:%20%7B%20steps:%20%5B'build'%5D%20%7D,",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "c577cc",
+        "hash": "dec5fbc4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "c577cc",
+        "hash": "c1fc73d1",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "c577cc",
+        "hash": "26ee6da0",
+        "encoded": "const%20result%20=%20await%20pipelineService.getPipelineById('pipeline-123',%20'user-123');",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "c577cc",
+        "hash": "6cd1d83d",
+        "encoded": "expect(result).toEqual(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "c577cc",
+        "hash": "7bcaa1a2",
+        "encoded": "expect(Pipeline.findByPk).toHaveBeenCalledWith('pipeline-123',%20%7B",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "c577cc",
+        "hash": "2a703bae",
+        "encoded": "include:%20%5B%7B%20model:%20Project%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "c577cc",
+        "hash": "0fb6c9cb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "c577cc",
+        "hash": "09766c03",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "c577cc",
+        "hash": "c46c00ca",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "c577cc",
+        "hash": "425bc77e",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20pipeline%20not%20found",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "c577cc",
+        "hash": "d524c94d",
+        "encoded": "*%20Scenario:%20User%20requests%20a%20non-existent%20pipeline",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "c577cc",
+        "hash": "cf8ce251",
+        "encoded": "*%20Expected:%20AppError%20with%20404%20status%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "c577cc",
+        "hash": "262ce696",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "c577cc",
+        "hash": "9cb38c3a",
+        "encoded": "it('should%20throw%20AppError%20when%20pipeline%20not%20found',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "c577cc",
+        "hash": "2caea6f6",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "c577cc",
+        "hash": "dd2592e1",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "c577cc",
+        "hash": "a917b49b",
+        "encoded": "pipelineService.getPipelineById('pipeline-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "c577cc",
+        "hash": "9ab872f6",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "c577cc",
+        "hash": "88af65ba",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "c577cc",
+        "hash": "66c195bf",
+        "encoded": "pipelineService.getPipelineById('pipeline-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "c577cc",
+        "hash": "c3169033",
+        "encoded": ").rejects.toThrow('Pipeline%20not%20found');",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "c577cc",
+        "hash": "64f7b5f2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "c577cc",
+        "hash": "f9066f58",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "c577cc",
+        "hash": "4cd8051c",
+        "encoded": "describe('updatePipeline',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "c577cc",
+        "hash": "bcd2af91",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "c577cc",
+        "hash": "a854c30c",
+        "encoded": "*%20Test:%20Should%20successfully%20update%20a%20pipeline",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "c577cc",
+        "hash": "054394a2",
+        "encoded": "*%20Scenario:%20User%20updates%20pipeline%20configuration",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "c577cc",
+        "hash": "324cd68b",
+        "encoded": "*%20Expected:%20Pipeline%20is%20updated%20and%20returned",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "c577cc",
+        "hash": "95b1a2fd",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "c577cc",
+        "hash": "1ab5619b",
+        "encoded": "it('should%20update%20pipeline%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "c577cc",
+        "hash": "7e49ac42",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "c577cc",
+        "hash": "d9e7c953",
+        "encoded": "id:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "c577cc",
+        "hash": "e6696987",
+        "encoded": "name:%20'Old%20Name',",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "c577cc",
+        "hash": "d92bfe0c",
+        "encoded": "update:%20jest.fn().mockResolvedValue(true),",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "c577cc",
+        "hash": "25ca5ae1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "c577cc",
+        "hash": "fb29358b",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "c577cc",
+        "hash": "c8d7358a",
+        "encoded": "const%20updateData%20=%20%7B%20name:%20'New%20Name',%20config:%20%7B%20steps:%20%5B'build',%20'test',%20'deploy'%5D%20%7D%20%7D;",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "c577cc",
+        "hash": "037a045d",
+        "encoded": "const%20result%20=%20await%20pipelineService.updatePipeline('pipeline-123',%20updateData,%20'user-123');",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "c577cc",
+        "hash": "487b540d",
+        "encoded": "expect(mockPipeline.update).toHaveBeenCalledWith(updateData);",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "c577cc",
+        "hash": "8274c3e0",
+        "encoded": "expect(result).toEqual(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "c577cc",
+        "hash": "85d1ceb3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "c577cc",
+        "hash": "b7d5f3b3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "c577cc",
+        "hash": "101ba3bc",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20updating%20non-existent%20pipeline",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "c577cc",
+        "hash": "7709ab22",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20update%20a%20pipeline%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "c577cc",
+        "hash": "7bbbbce0",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "c577cc",
+        "hash": "0bcda2f2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "c577cc",
+        "hash": "2bedcfa7",
+        "encoded": "it('should%20throw%20error%20when%20pipeline%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "c577cc",
+        "hash": "7fa9ccab",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "c577cc",
+        "hash": "5a15948a",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "c577cc",
+        "hash": "c7cdfc4a",
+        "encoded": "pipelineService.updatePipeline('pipeline-999',%20%7B%20name:%20'New'%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "c577cc",
+        "hash": "1e456f6b",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "c577cc",
+        "hash": "915a67d4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "c577cc",
+        "hash": "55efb841",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "c577cc",
+        "hash": "9564af37",
+        "encoded": "*%20Test:%20Should%20handle%20database%20errors%20during%20update",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "c577cc",
+        "hash": "8e40ac96",
+        "encoded": "*%20Scenario:%20Database%20update%20operation%20fails",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "c577cc",
+        "hash": "ba818aff",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "c577cc",
+        "hash": "d94008c8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "c577cc",
+        "hash": "81bb75d8",
+        "encoded": "it('should%20handle%20update%20errors',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "c577cc",
+        "hash": "d4da0744",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "c577cc",
+        "hash": "809663b5",
+        "encoded": "id:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "c577cc",
+        "hash": "f1e06e1f",
+        "encoded": "update:%20jest.fn().mockRejectedValue(new%20Error('Update%20failed')),",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "c577cc",
+        "hash": "63ae17e2",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "c577cc",
+        "hash": "e5dfb06c",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "c577cc",
+        "hash": "322ac13e",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "c577cc",
+        "hash": "911b5581",
+        "encoded": "pipelineService.updatePipeline('pipeline-123',%20%7B%20name:%20'New'%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "c577cc",
+        "hash": "58fb69cf",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "c577cc",
+        "hash": "b50c6539",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "c577cc",
+        "hash": "de663d24",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "c577cc",
+        "hash": "1ffdc58c",
+        "encoded": "describe('deletePipeline',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "c577cc",
+        "hash": "cf0585de",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "c577cc",
+        "hash": "76891ba1",
+        "encoded": "*%20Test:%20Should%20successfully%20delete%20a%20pipeline",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "c577cc",
+        "hash": "115eb3fc",
+        "encoded": "*%20Scenario:%20User%20deletes%20a%20pipeline",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "c577cc",
+        "hash": "26397141",
+        "encoded": "*%20Expected:%20Pipeline%20is%20deleted%20from%20database",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "c577cc",
+        "hash": "d2a0a149",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "c577cc",
+        "hash": "b44c1bb1",
+        "encoded": "it('should%20delete%20pipeline%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "c577cc",
+        "hash": "c79db50b",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "c577cc",
+        "hash": "bac8885f",
+        "encoded": "id:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "c577cc",
+        "hash": "966aeed0",
+        "encoded": "destroy:%20jest.fn().mockResolvedValue(true),",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "c577cc",
+        "hash": "c00cd1cb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "c577cc",
+        "hash": "c7d6037f",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "c577cc",
+        "hash": "79eb2e31",
+        "encoded": "await%20pipelineService.deletePipeline('pipeline-123',%20'user-123');",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "c577cc",
+        "hash": "1dd3d323",
+        "encoded": "expect(mockPipeline.destroy).toHaveBeenCalled();",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "c577cc",
+        "hash": "54c3b671",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "c577cc",
+        "hash": "9ea5a175",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "c577cc",
+        "hash": "aceaa10c",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20deleting%20non-existent%20pipeline",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "c577cc",
+        "hash": "27da9f7e",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20delete%20a%20pipeline%20that%20doesn't%20exist",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "c577cc",
+        "hash": "4baf8a63",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "c577cc",
+        "hash": "36edd010",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "c577cc",
+        "hash": "32787ff7",
+        "encoded": "it('should%20throw%20error%20when%20pipeline%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "c577cc",
+        "hash": "e7e80753",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "c577cc",
+        "hash": "b95f2f23",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "c577cc",
+        "hash": "a35240a3",
+        "encoded": "pipelineService.deletePipeline('pipeline-999',%20'user-123')",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "c577cc",
+        "hash": "6070f0ec",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "c577cc",
+        "hash": "9bcba08e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "c577cc",
+        "hash": "e4ffc3d6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "c577cc",
+        "hash": "ea540924",
+        "encoded": "describe('executePipeline',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "c577cc",
+        "hash": "4271a523",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "c577cc",
+        "hash": "4fd385b3",
+        "encoded": "*%20Test:%20Should%20successfully%20execute%20a%20pipeline",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "c577cc",
+        "hash": "bf30ae6d",
+        "encoded": "*%20Scenario:%20User%20triggers%20a%20pipeline%20execution",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "c577cc",
+        "hash": "0a785106",
+        "encoded": "*%20Expected:%20Pipeline%20execution%20is%20created%20and%20CI%20runner%20is%20triggered",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "c577cc",
+        "hash": "57ddfa51",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "c577cc",
+        "hash": "7a10295a",
+        "encoded": "it('should%20execute%20pipeline%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "c577cc",
+        "hash": "133b50ef",
+        "encoded": "const%20mockPipeline%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "c577cc",
+        "hash": "1c2d4d90",
+        "encoded": "id:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "c577cc",
+        "hash": "74de110e",
+        "encoded": "config:%20%7B%20steps:%20%5B'build',%20'test'%5D%20%7D,",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "c577cc",
+        "hash": "36aad8ab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "c577cc",
+        "hash": "86d2c840",
+        "encoded": "const%20mockExecution%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "c577cc",
+        "hash": "dbb95280",
+        "encoded": "id:%20'execution-123',",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "c577cc",
+        "hash": "9f8bc942",
+        "encoded": "pipelineId:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "c577cc",
+        "hash": "522ec013",
+        "encoded": "triggeredBy:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "c577cc",
+        "hash": "d58887c6",
+        "encoded": "status:%20'running',",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "c577cc",
+        "hash": "1429f3a4",
+        "encoded": "parameters:%20%7B%20branch:%20'main'%20%7D,",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "c577cc",
+        "hash": "de4f4ade",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "c577cc",
+        "hash": "a0dddca8",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "c577cc",
+        "hash": "72959d86",
+        "encoded": "PipelineExecution.create%20=%20jest.fn().mockResolvedValue(mockExecution);",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "c577cc",
+        "hash": "979a11a0",
+        "encoded": "ciRunnerClient.triggerPipeline%20=%20jest.fn().mockResolvedValue(%7B%20success:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "c577cc",
+        "hash": "03f0e43a",
+        "encoded": "const%20result%20=%20await%20pipelineService.executePipeline(",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "c577cc",
+        "hash": "d0ecf729",
+        "encoded": "'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "c577cc",
+        "hash": "7598f430",
+        "encoded": "%7B%20branch:%20'main'%20%7D,",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "c577cc",
+        "hash": "f5cd4734",
+        "encoded": "'user-123'",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "c577cc",
+        "hash": "136c4b1e",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "c577cc",
+        "hash": "beb9f43d",
+        "encoded": "expect(result).toEqual(mockExecution);",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "c577cc",
+        "hash": "6c5de96c",
+        "encoded": "expect(PipelineExecution.create).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "c577cc",
+        "hash": "ab900726",
+        "encoded": "pipelineId:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "c577cc",
+        "hash": "2e1d4c12",
+        "encoded": "triggeredBy:%20'user-123',",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "c577cc",
+        "hash": "e3ee4c55",
+        "encoded": "status:%20'running',",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "c577cc",
+        "hash": "1e8f3961",
+        "encoded": "parameters:%20%7B%20branch:%20'main'%20%7D,",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "c577cc",
+        "hash": "144f5825",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "c577cc",
+        "hash": "9dee7540",
+        "encoded": "expect(ciRunnerClient.triggerPipeline).toHaveBeenCalledWith(%7B",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "c577cc",
+        "hash": "5f41e9ba",
+        "encoded": "pipelineId:%20'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "c577cc",
+        "hash": "dc5dd83b",
+        "encoded": "executionId:%20'execution-123',",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "c577cc",
+        "hash": "d67d1ed6",
+        "encoded": "config:%20mockPipeline.config,",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "c577cc",
+        "hash": "b909eeed",
+        "encoded": "parameters:%20%7B%20branch:%20'main'%20%7D,",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "c577cc",
+        "hash": "3b0929ba",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "c577cc",
+        "hash": "86e5b01e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "c577cc",
+        "hash": "71cebd2e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "c577cc",
+        "hash": "e1378c7e",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20pipeline%20not%20found",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "c577cc",
+        "hash": "4405da63",
+        "encoded": "*%20Scenario:%20User%20tries%20to%20execute%20non-existent%20pipeline",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "c577cc",
+        "hash": "f3cd1615",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "c577cc",
+        "hash": "6703025b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "c577cc",
+        "hash": "3ca76271",
+        "encoded": "it('should%20throw%20error%20when%20pipeline%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "c577cc",
+        "hash": "77c85222",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "c577cc",
+        "hash": "a08f61de",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "c577cc",
+        "hash": "f820f4d1",
+        "encoded": "pipelineService.executePipeline('pipeline-999',%20%7B%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "c577cc",
+        "hash": "c8c86e20",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "c577cc",
+        "hash": "26ad98f1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "c577cc",
+        "hash": "bb8910e3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "c577cc",
+        "hash": "97a71212",
+        "encoded": "*%20Test:%20Should%20handle%20CI%20runner%20errors",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "c577cc",
+        "hash": "0fdaee76",
+        "encoded": "*%20Scenario:%20CI%20runner%20client%20fails%20to%20trigger%20pipeline",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "c577cc",
+        "hash": "d847dfdc",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "c577cc",
+        "hash": "4dbb2c6f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "c577cc",
+        "hash": "d83ad7e3",
+        "encoded": "it('should%20handle%20CI%20runner%20errors',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "c577cc",
+        "hash": "22418da0",
+        "encoded": "const%20mockPipeline%20=%20%7B%20id:%20'pipeline-123',%20config:%20%7B%7D%20%7D;",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "c577cc",
+        "hash": "48bc57ed",
+        "encoded": "const%20mockExecution%20=%20%7B%20id:%20'execution-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "c577cc",
+        "hash": "e4e0a53a",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "c577cc",
+        "hash": "3f255a4a",
+        "encoded": "PipelineExecution.create%20=%20jest.fn().mockResolvedValue(mockExecution);",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "c577cc",
+        "hash": "d282ee2e",
+        "encoded": "ciRunnerClient.triggerPipeline%20=%20jest.fn().mockRejectedValue(new%20Error('CI%20Runner%20failed'));",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "c577cc",
+        "hash": "90c2877a",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "c577cc",
+        "hash": "3fa3313a",
+        "encoded": "pipelineService.executePipeline('pipeline-123',%20%7B%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "c577cc",
+        "hash": "a220f702",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "c577cc",
+        "hash": "44dffeed",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "c577cc",
+        "hash": "886c03c7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "c577cc",
+        "hash": "adfe45ff",
+        "encoded": "*%20Test:%20Should%20execute%20pipeline%20without%20parameters",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "c577cc",
+        "hash": "d56291c7",
+        "encoded": "*%20Scenario:%20User%20triggers%20pipeline%20without%20additional%20parameters",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "c577cc",
+        "hash": "789fde23",
+        "encoded": "*%20Expected:%20Pipeline%20executes%20with%20empty%20parameters",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "c577cc",
+        "hash": "00e95a1c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "c577cc",
+        "hash": "d6e592cc",
+        "encoded": "it('should%20execute%20pipeline%20without%20parameters',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "c577cc",
+        "hash": "6ed2adb0",
+        "encoded": "const%20mockPipeline%20=%20%7B%20id:%20'pipeline-123',%20config:%20%7B%7D%20%7D;",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "c577cc",
+        "hash": "63345abd",
+        "encoded": "const%20mockExecution%20=%20%7B%20id:%20'execution-123',%20parameters:%20%7B%7D%20%7D;",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "c577cc",
+        "hash": "bc69a9f7",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "c577cc",
+        "hash": "cdf89fbb",
+        "encoded": "PipelineExecution.create%20=%20jest.fn().mockResolvedValue(mockExecution);",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "c577cc",
+        "hash": "a0d00696",
+        "encoded": "ciRunnerClient.triggerPipeline%20=%20jest.fn().mockResolvedValue(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "c577cc",
+        "hash": "519828a7",
+        "encoded": "const%20result%20=%20await%20pipelineService.executePipeline('pipeline-123',%20%7B%7D,%20'user-123');",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "c577cc",
+        "hash": "6347daf8",
+        "encoded": "expect(result).toEqual(mockExecution);",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "c577cc",
+        "hash": "be023d9a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "c577cc",
+        "hash": "8c7871c6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "c577cc",
+        "hash": "8a28a83e",
+        "encoded": "describe('getPipelineExecutions',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "c577cc",
+        "hash": "a7ad1584",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "c577cc",
+        "hash": "32c99e03",
+        "encoded": "*%20Test:%20Should%20retrieve%20pipeline%20executions%20with%20pagination",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "c577cc",
+        "hash": "d80ab40d",
+        "encoded": "*%20Scenario:%20User%20requests%20execution%20history%20for%20a%20pipeline",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "c577cc",
+        "hash": "28758b4f",
+        "encoded": "*%20Expected:%20Returns%20executions%20with%20pagination%20metadata",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "c577cc",
+        "hash": "0c626072",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "c577cc",
+        "hash": "0e9044e1",
+        "encoded": "it('should%20get%20pipeline%20executions%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "c577cc",
+        "hash": "7691aee1",
+        "encoded": "const%20mockPipeline%20=%20%7B%20id:%20'pipeline-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "c577cc",
+        "hash": "a70c238c",
+        "encoded": "const%20mockExecutions%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "c577cc",
+        "hash": "91012e73",
+        "encoded": "%7B%20id:%20'execution-1',%20status:%20'success'%20%7D,",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "c577cc",
+        "hash": "36bd9199",
+        "encoded": "%7B%20id:%20'execution-2',%20status:%20'running'%20%7D,",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "c577cc",
+        "hash": "5bebb6ad",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "c577cc",
+        "hash": "1e144cb3",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "c577cc",
+        "hash": "a8cdb3f9",
+        "encoded": "PipelineExecution.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "c577cc",
+        "hash": "922ba34c",
+        "encoded": "rows:%20mockExecutions,",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "c577cc",
+        "hash": "181bc35b",
+        "encoded": "count:%202,",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "c577cc",
+        "hash": "862b7356",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "c577cc",
+        "hash": "6e3bf251",
+        "encoded": "const%20result%20=%20await%20pipelineService.getPipelineExecutions(",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "c577cc",
+        "hash": "7158c527",
+        "encoded": "'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "c577cc",
+        "hash": "4192d1ed",
+        "encoded": "%7B%20page:%201,%20limit:%2010%20%7D,",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "c577cc",
+        "hash": "5a4cb63a",
+        "encoded": "'user-123'",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "c577cc",
+        "hash": "5a9443ff",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "c577cc",
+        "hash": "dc5bfb37",
+        "encoded": "expect(result).toEqual(%7B",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "c577cc",
+        "hash": "1f14fbf0",
+        "encoded": "executions:%20mockExecutions,",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "c577cc",
+        "hash": "0ce5ee17",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "c577cc",
+        "hash": "de672b5e",
+        "encoded": "total:%202,",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "c577cc",
+        "hash": "258f1b1e",
+        "encoded": "page:%201,",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "c577cc",
+        "hash": "e777fcec",
+        "encoded": "limit:%2010,",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "c577cc",
+        "hash": "461624ed",
+        "encoded": "totalPages:%201,",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "c577cc",
+        "hash": "86c88380",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "c577cc",
+        "hash": "db1bbf2e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "c577cc",
+        "hash": "18211741",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "c577cc",
+        "hash": "d79b1c45",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "c577cc",
+        "hash": "21195bf8",
+        "encoded": "*%20Test:%20Should%20throw%20error%20when%20pipeline%20not%20found",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "c577cc",
+        "hash": "106ba174",
+        "encoded": "*%20Scenario:%20User%20requests%20executions%20for%20non-existent%20pipeline",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "c577cc",
+        "hash": "7ed9e277",
+        "encoded": "*%20Expected:%20AppError%20is%20thrown",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "c577cc",
+        "hash": "283565a0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "c577cc",
+        "hash": "c4bc5860",
+        "encoded": "it('should%20throw%20error%20when%20pipeline%20does%20not%20exist',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "c577cc",
+        "hash": "37114692",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(null);",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "c577cc",
+        "hash": "61f88698",
+        "encoded": "await%20expect(",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "c577cc",
+        "hash": "8693c167",
+        "encoded": "pipelineService.getPipelineExecutions('pipeline-999',%20%7B%20page:%201,%20limit:%2010%20%7D,%20'user-123')",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "c577cc",
+        "hash": "1b49f16c",
+        "encoded": ").rejects.toThrow(AppError);",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "c577cc",
+        "hash": "15effac3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "c577cc",
+        "hash": "58d7cda9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "c577cc",
+        "hash": "d6fe2c54",
+        "encoded": "*%20Test:%20Should%20order%20executions%20by%20creation%20date%20descending",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "c577cc",
+        "hash": "c562f760",
+        "encoded": "*%20Scenario:%20User%20requests%20pipeline%20executions",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "c577cc",
+        "hash": "737ea6e4",
+        "encoded": "*%20Expected:%20Executions%20are%20ordered%20from%20newest%20to%20oldest",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "c577cc",
+        "hash": "4a77f4f3",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "c577cc",
+        "hash": "b030b6f9",
+        "encoded": "it('should%20order%20executions%20by%20createdAt%20DESC',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "c577cc",
+        "hash": "33e8cc7b",
+        "encoded": "const%20mockPipeline%20=%20%7B%20id:%20'pipeline-123'%20%7D;",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "c577cc",
+        "hash": "32da231a",
+        "encoded": "Pipeline.findByPk%20=%20jest.fn().mockResolvedValue(mockPipeline);",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "c577cc",
+        "hash": "519779d0",
+        "encoded": "PipelineExecution.findAndCountAll%20=%20jest.fn().mockResolvedValue(%7B",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "c577cc",
+        "hash": "bc3d6926",
+        "encoded": "rows:%20%5B%5D,",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "c577cc",
+        "hash": "00bb50a0",
+        "encoded": "count:%200,",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "c577cc",
+        "hash": "6989e009",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "c577cc",
+        "hash": "3ada8ec7",
+        "encoded": "await%20pipelineService.getPipelineExecutions(",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "c577cc",
+        "hash": "8d26665a",
+        "encoded": "'pipeline-123',",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "c577cc",
+        "hash": "9b4803db",
+        "encoded": "%7B%20page:%201,%20limit:%2010%20%7D,",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "c577cc",
+        "hash": "6848705b",
+        "encoded": "'user-123'",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "c577cc",
+        "hash": "9edadded",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "c577cc",
+        "hash": "f5d0a4e8",
+        "encoded": "expect(PipelineExecution.findAndCountAll).toHaveBeenCalledWith(",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "c577cc",
+        "hash": "6c745421",
+        "encoded": "expect.objectContaining(%7B",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "c577cc",
+        "hash": "7d90e8b8",
+        "encoded": "order:%20%5B%5B'createdAt',%20'DESC'%5D%5D,",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "c577cc",
+        "hash": "aff4ac80",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "c577cc",
+        "hash": "86008d75",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "c577cc",
+        "hash": "729b2bac",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "c577cc",
+        "hash": "9f6d9be9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "c577cc",
+        "hash": "e1b40244",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

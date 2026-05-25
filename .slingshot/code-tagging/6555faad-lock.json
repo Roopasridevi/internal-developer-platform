@@ -1,0 +1,306 @@
+{
+  "frontend\\package.json": {
+    "filename": "package.json",
+    "path": "frontend\\package.json",
+    "version": "1.2",
+    "contextFile": "6555faad-context.json",
+    "chunks": {
+      "271c02": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708086,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "f1894551",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:26 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "271c02",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "271c02",
+        "hash": "82c9f95e",
+        "encoded": "%22name%22:%20%22idp-frontend%22,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "271c02",
+        "hash": "bde4980f",
+        "encoded": "%22version%22:%20%221.0.0%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "271c02",
+        "hash": "6550ca9a",
+        "encoded": "%22description%22:%20%22Frontend%20for%20Internal%20Developer%20Platform%22,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "271c02",
+        "hash": "5a95088f",
+        "encoded": "%22type%22:%20%22module%22,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "271c02",
+        "hash": "f4278672",
+        "encoded": "%22scripts%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "271c02",
+        "hash": "d745c07d",
+        "encoded": "%22dev%22:%20%22vite%22,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "271c02",
+        "hash": "21d7b66c",
+        "encoded": "%22build%22:%20%22vite%20build%22,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "271c02",
+        "hash": "d316c1a9",
+        "encoded": "%22preview%22:%20%22vite%20preview%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "271c02",
+        "hash": "437e6512",
+        "encoded": "%22test%22:%20%22vitest%22,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "271c02",
+        "hash": "e4e39fe5",
+        "encoded": "%22test:ui%22:%20%22vitest%20--ui%22,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "271c02",
+        "hash": "0a3222b2",
+        "encoded": "%22test:coverage%22:%20%22vitest%20--coverage%22,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "271c02",
+        "hash": "703e2d40",
+        "encoded": "%22lint%22:%20%22eslint%20src%20--ext%20js,jsx%20--report-unused-disable-directives%20--max-warnings%200%22,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "271c02",
+        "hash": "72eda815",
+        "encoded": "%22lint:fix%22:%20%22eslint%20src%20--ext%20js,jsx%20--fix%22,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "271c02",
+        "hash": "42c429a3",
+        "encoded": "%22format%22:%20%22prettier%20--write%20%5C%22src/**/*.%7Bjs,jsx,css%7D%5C%22%22",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "271c02",
+        "hash": "e682a066",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "271c02",
+        "hash": "d3ed29ab",
+        "encoded": "%22dependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "271c02",
+        "hash": "e48d8ee2",
+        "encoded": "%22react%22:%20%22%5E18.2.0%22,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "271c02",
+        "hash": "fa106194",
+        "encoded": "%22react-dom%22:%20%22%5E18.2.0%22,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "271c02",
+        "hash": "58679e60",
+        "encoded": "%22react-router-dom%22:%20%22%5E6.21.1%22,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "271c02",
+        "hash": "2e55ab12",
+        "encoded": "%22axios%22:%20%22%5E1.6.5%22,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "271c02",
+        "hash": "1f783d40",
+        "encoded": "%22date-fns%22:%20%22%5E3.0.6%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "271c02",
+        "hash": "7dad3717",
+        "encoded": "%22react-query%22:%20%22%5E3.39.3%22,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "271c02",
+        "hash": "7440ed48",
+        "encoded": "%22zustand%22:%20%22%5E4.4.7%22",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "271c02",
+        "hash": "daa73354",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "271c02",
+        "hash": "52108664",
+        "encoded": "%22devDependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "271c02",
+        "hash": "63047650",
+        "encoded": "%22@types/react%22:%20%22%5E18.2.48%22,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "271c02",
+        "hash": "6cd56cc0",
+        "encoded": "%22@types/react-dom%22:%20%22%5E18.2.18%22,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "271c02",
+        "hash": "f1107b1c",
+        "encoded": "%22@vitejs/plugin-react%22:%20%22%5E4.2.1%22,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "271c02",
+        "hash": "ea2ae09c",
+        "encoded": "%22vite%22:%20%22%5E5.0.11%22,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "271c02",
+        "hash": "eb6bcf49",
+        "encoded": "%22vitest%22:%20%22%5E1.1.3%22,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "271c02",
+        "hash": "0aa27078",
+        "encoded": "%22@vitest/ui%22:%20%22%5E1.1.3%22,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "271c02",
+        "hash": "880c6a82",
+        "encoded": "%22@testing-library/react%22:%20%22%5E14.1.2%22,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "271c02",
+        "hash": "a8b624cb",
+        "encoded": "%22@testing-library/jest-dom%22:%20%22%5E6.2.0%22,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "271c02",
+        "hash": "6f242a39",
+        "encoded": "%22@testing-library/user-event%22:%20%22%5E14.5.2%22,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "271c02",
+        "hash": "add1ef74",
+        "encoded": "%22eslint%22:%20%22%5E8.56.0%22,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "271c02",
+        "hash": "38c6db1d",
+        "encoded": "%22eslint-config-react-app%22:%20%22%5E7.0.1%22,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "271c02",
+        "hash": "9cef1c1d",
+        "encoded": "%22eslint-plugin-react%22:%20%22%5E7.33.2%22,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "271c02",
+        "hash": "688bc0e7",
+        "encoded": "%22eslint-plugin-react-hooks%22:%20%22%5E4.6.0%22,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "271c02",
+        "hash": "95700375",
+        "encoded": "%22eslint-plugin-react-refresh%22:%20%22%5E0.4.5%22,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "271c02",
+        "hash": "489b687b",
+        "encoded": "%22prettier%22:%20%22%5E3.1.1%22",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "271c02",
+        "hash": "179b30c9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "271c02",
+        "hash": "0b32af76",
+        "encoded": "%22engines%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "271c02",
+        "hash": "6680ea10",
+        "encoded": "%22node%22:%20%22%3E=18.0.0%22",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "271c02",
+        "hash": "5046e502",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "271c02",
+        "hash": "8b687a61",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "frontend\\src\\pages\\projects\\ProjectsPage.jsx": {
+    "filename": "ProjectsPage.jsx",
+    "path": "frontend\\src\\pages\\projects\\ProjectsPage.jsx",
+    "version": "1.2",
+    "contextFile": "b9901afc-context.json",
+    "chunks": {
+      "1f75e0": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708334,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "be4e421e",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:34 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "1f75e0",
+        "hash": "6842b926",
+        "encoded": "import%20%7B%20useQuery%20%7D%20from%20'react-query';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "1f75e0",
+        "hash": "1cac8f6e",
+        "encoded": "import%20%7B%20Link%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "1f75e0",
+        "hash": "fce96b2b",
+        "encoded": "import%20%7B%20projectService%20%7D%20from%20'../../services/projectService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "1f75e0",
+        "hash": "3726670a",
+        "encoded": "import%20'./Projects.css';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "1f75e0",
+        "hash": "b121ce77",
+        "encoded": "const%20ProjectsPage%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "1f75e0",
+        "hash": "c801af34",
+        "encoded": "const%20%7B%20data,%20isLoading%20%7D%20=%20useQuery('projects',%20()%20=%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "1f75e0",
+        "hash": "68bd109c",
+        "encoded": "projectService.getProjects(%7B%7D)",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "1f75e0",
+        "hash": "f4ae6b5b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "1f75e0",
+        "hash": "5f574ba2",
+        "encoded": "if%20(isLoading)%20return%20%3Cdiv%3ELoading...%3C/div%3E;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "1f75e0",
+        "hash": "ad52ceed",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "1f75e0",
+        "hash": "ed7f3172",
+        "encoded": "%3Cdiv%20className=%22projects-page%22%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "1f75e0",
+        "hash": "03f38a72",
+        "encoded": "%3Cdiv%20className=%22page-header%22%3E",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "1f75e0",
+        "hash": "c962e799",
+        "encoded": "%3Ch1%3EProjects%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "1f75e0",
+        "hash": "03328889",
+        "encoded": "%3CLink%20to=%22/projects/new%22%20className=%22btn-primary%22%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "1f75e0",
+        "hash": "7659f99c",
+        "encoded": "Create%20Project",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "1f75e0",
+        "hash": "8b62b385",
+        "encoded": "%3C/Link%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "1f75e0",
+        "hash": "88236320",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "1f75e0",
+        "hash": "9589d2d3",
+        "encoded": "%3Cdiv%20className=%22projects-grid%22%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "1f75e0",
+        "hash": "eae69566",
+        "encoded": "%7Bdata?.data?.projects?.map((project)%20=%3E%20(",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "1f75e0",
+        "hash": "afe77e1a",
+        "encoded": "%3CLink%20key=%7Bproject.id%7D%20to=%7B%60/projects/$%7Bproject.id%7D%60%7D%20className=%22project-card%22%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "1f75e0",
+        "hash": "88bfa89f",
+        "encoded": "%3Ch3%3E%7Bproject.name%7D%3C/h3%3E",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "1f75e0",
+        "hash": "7acb5039",
+        "encoded": "%3Cp%3E%7Bproject.description%7D%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "1f75e0",
+        "hash": "bf552b4a",
+        "encoded": "%3Cspan%20className=%7B%60status-badge%20$%7Bproject.status%7D%60%7D%3E%7Bproject.status%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "1f75e0",
+        "hash": "55861a16",
+        "encoded": "%3C/Link%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "1f75e0",
+        "hash": "a98d34ef",
+        "encoded": "))%7D",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "1f75e0",
+        "hash": "2b48c446",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "1f75e0",
+        "hash": "ed147d0d",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "1f75e0",
+        "hash": "070912cb",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "1f75e0",
+        "hash": "252f0ed4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "1f75e0",
+        "hash": "03c86efd",
+        "encoded": "export%20default%20ProjectsPage;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

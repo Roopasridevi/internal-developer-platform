@@ -1,0 +1,90 @@
+{
+  "frontend\\src\\utils\\formatDate.js": {
+    "filename": "formatDate.js",
+    "path": "frontend\\src\\utils\\formatDate.js",
+    "version": "1.2",
+    "contextFile": "999c18d6-context.json",
+    "chunks": {
+      "c039ba": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708338,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "6bf0b73b",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:38 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c039ba",
+        "hash": "06afdd8b",
+        "encoded": "import%20%7B%20format,%20formatDistance%20%7D%20from%20'date-fns';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c039ba",
+        "hash": "9a6134c4",
+        "encoded": "export%20const%20formatDate%20=%20(date)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c039ba",
+        "hash": "e1c48bd2",
+        "encoded": "return%20format(new%20Date(date),%20'MMM%20dd,%20yyyy%20HH:mm');",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "c039ba",
+        "hash": "d4e267fb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c039ba",
+        "hash": "a208dec5",
+        "encoded": "export%20const%20formatRelativeTime%20=%20(date)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c039ba",
+        "hash": "7fd3eb03",
+        "encoded": "return%20formatDistance(new%20Date(date),%20new%20Date(),%20%7B%20addSuffix:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c039ba",
+        "hash": "af89cfeb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c039ba",
+        "hash": "6b1f01e6",
+        "encoded": "export%20const%20formatShortDate%20=%20(date)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c039ba",
+        "hash": "ef9dd854",
+        "encoded": "return%20format(new%20Date(date),%20'MMM%20dd,%20yyyy');",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c039ba",
+        "hash": "088615cc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

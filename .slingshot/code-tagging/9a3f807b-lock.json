@@ -1,0 +1,378 @@
+{
+  "frontend\\src\\pages\\projects\\Projects.css": {
+    "filename": "Projects.css",
+    "path": "frontend\\src\\pages\\projects\\Projects.css",
+    "version": "1.2",
+    "contextFile": "9a3f807b-context.json",
+    "chunks": {
+      "9e18dc": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708337,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "30aaf63b",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:55:37 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9e18dc",
+        "hash": "44116f40",
+        "encoded": ".projects-page%20%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9e18dc",
+        "hash": "74a9f099",
+        "encoded": "max-width:%201400px;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9e18dc",
+        "hash": "f070220d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9e18dc",
+        "hash": "82394774",
+        "encoded": ".page-header%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9e18dc",
+        "hash": "d67382a7",
+        "encoded": "display:%20flex;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9e18dc",
+        "hash": "6b4912a6",
+        "encoded": "justify-content:%20space-between;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9e18dc",
+        "hash": "12a1922d",
+        "encoded": "align-items:%20center;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "9e18dc",
+        "hash": "05cc6a1d",
+        "encoded": "margin-bottom:%20var(--spacing-xl);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9e18dc",
+        "hash": "2ce165fa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "9e18dc",
+        "hash": "eb39f5c0",
+        "encoded": ".page-header%20h1%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9e18dc",
+        "hash": "6a790b59",
+        "encoded": "color:%20var(--color-text);",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9e18dc",
+        "hash": "e683dcf7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9e18dc",
+        "hash": "41ec9856",
+        "encoded": ".projects-grid%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9e18dc",
+        "hash": "f8afc0a3",
+        "encoded": "display:%20grid;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9e18dc",
+        "hash": "2ba850aa",
+        "encoded": "grid-template-columns:%20repeat(auto-fill,%20minmax(300px,%201fr));",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "9e18dc",
+        "hash": "b9ebe0de",
+        "encoded": "gap:%20var(--spacing-lg);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "9e18dc",
+        "hash": "ee39c532",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "9e18dc",
+        "hash": "acf31dad",
+        "encoded": ".project-card%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "9e18dc",
+        "hash": "032ef520",
+        "encoded": "padding:%20var(--spacing-lg);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "9e18dc",
+        "hash": "bd637ce9",
+        "encoded": "background-color:%20var(--color-bg);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "9e18dc",
+        "hash": "bf6e74f0",
+        "encoded": "border:%201px%20solid%20var(--color-border);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "9e18dc",
+        "hash": "5e6393d5",
+        "encoded": "border-radius:%20var(--border-radius-lg);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "9e18dc",
+        "hash": "3456ec58",
+        "encoded": "box-shadow:%20var(--shadow-sm);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "9e18dc",
+        "hash": "29ce7de3",
+        "encoded": "transition:%20all%20var(--transition-fast);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "9e18dc",
+        "hash": "fe7e3726",
+        "encoded": "text-decoration:%20none;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "9e18dc",
+        "hash": "adfddf67",
+        "encoded": "color:%20inherit;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "9e18dc",
+        "hash": "10048d2c",
+        "encoded": "display:%20block;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "9e18dc",
+        "hash": "43353d17",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "9e18dc",
+        "hash": "f73eb44e",
+        "encoded": ".project-card:hover%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "9e18dc",
+        "hash": "153ccd49",
+        "encoded": "box-shadow:%20var(--shadow-md);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "9e18dc",
+        "hash": "090b0f17",
+        "encoded": "transform:%20translateY(-2px);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "9e18dc",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "9e18dc",
+        "hash": "1d724942",
+        "encoded": ".project-card%20h3%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "9e18dc",
+        "hash": "75391b3c",
+        "encoded": "margin-bottom:%20var(--spacing-sm);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "9e18dc",
+        "hash": "98cc4701",
+        "encoded": "color:%20var(--color-text);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "9e18dc",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "9e18dc",
+        "hash": "77ad7e9c",
+        "encoded": ".project-card%20p%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "9e18dc",
+        "hash": "9cb1a1da",
+        "encoded": "color:%20var(--color-text-secondary);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "9e18dc",
+        "hash": "cbe48131",
+        "encoded": "font-size:%200.875rem;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "9e18dc",
+        "hash": "3206119b",
+        "encoded": "margin-bottom:%20var(--spacing-md);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "9e18dc",
+        "hash": "57c5213d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "9e18dc",
+        "hash": "d5c29efe",
+        "encoded": ".project-detail%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "9e18dc",
+        "hash": "70aa85e9",
+        "encoded": "max-width:%20800px;",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "9e18dc",
+        "hash": "38b604dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "9e18dc",
+        "hash": "4547d371",
+        "encoded": ".project-detail%20h1%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "9e18dc",
+        "hash": "4d0e5121",
+        "encoded": "margin-bottom:%20var(--spacing-lg);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "9e18dc",
+        "hash": "2ef1d392",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "9e18dc",
+        "hash": "6a589b04",
+        "encoded": ".project-info%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "9e18dc",
+        "hash": "306c275e",
+        "encoded": "display:%20flex;",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "9e18dc",
+        "hash": "e0752346",
+        "encoded": "flex-direction:%20column;",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "9e18dc",
+        "hash": "0402f04a",
+        "encoded": "gap:%20var(--spacing-md);",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "9e18dc",
+        "hash": "eff1bfe1",
+        "encoded": "margin-top:%20var(--spacing-xl);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "9e18dc",
+        "hash": "646a8e84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "9e18dc",
+        "hash": "c82992f6",
+        "encoded": ".project-info%20div%20%7B",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "9e18dc",
+        "hash": "c9901e64",
+        "encoded": "padding:%20var(--spacing-md);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "9e18dc",
+        "hash": "895f0b6b",
+        "encoded": "background-color:%20var(--color-bg-secondary);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "9e18dc",
+        "hash": "f3ba2113",
+        "encoded": "border-radius:%20var(--border-radius-md);",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "9e18dc",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

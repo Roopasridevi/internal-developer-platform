@@ -1,0 +1,252 @@
+{
+  "backend\\.env.example": {
+    "filename": ".env.example",
+    "path": "backend\\.env.example",
+    "version": "1.2",
+    "contextFile": "f7ff1edc-context.json",
+    "chunks": {
+      "03798e": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707695,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "5fc224ba",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:55 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "03798e",
+        "hash": "2604e791",
+        "encoded": "#%20Server%20Configuration",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "03798e",
+        "hash": "4cdb2e41",
+        "encoded": "NODE_ENV=development",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "03798e",
+        "hash": "c98fc7d5",
+        "encoded": "PORT=3000",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "03798e",
+        "hash": "a34014ac",
+        "encoded": "HOST=localhost",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "03798e",
+        "hash": "28458edb",
+        "encoded": "#%20Database%20Configuration",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "03798e",
+        "hash": "4897c952",
+        "encoded": "DB_HOST=localhost",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "03798e",
+        "hash": "f18c38b3",
+        "encoded": "DB_PORT=5432",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "03798e",
+        "hash": "63dec2d3",
+        "encoded": "DB_NAME=idp_platform",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "03798e",
+        "hash": "b3dad356",
+        "encoded": "DB_USER=postgres",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "03798e",
+        "hash": "a297f570",
+        "encoded": "DB_PASSWORD=postgres",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "03798e",
+        "hash": "865496e0",
+        "encoded": "DB_DIALECT=postgres",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "03798e",
+        "hash": "680d6529",
+        "encoded": "#%20JWT%20Configuration",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "03798e",
+        "hash": "faa7e725",
+        "encoded": "JWT_SECRET=your-super-secret-jwt-key-change-this-in-production",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "03798e",
+        "hash": "8584619c",
+        "encoded": "JWT_EXPIRES_IN=24h",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "03798e",
+        "hash": "462c7af1",
+        "encoded": "JWT_REFRESH_SECRET=your-refresh-token-secret",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "03798e",
+        "hash": "c421f1f3",
+        "encoded": "JWT_REFRESH_EXPIRES_IN=7d",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "03798e",
+        "hash": "4cb27891",
+        "encoded": "#%20CORS%20Configuration",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "03798e",
+        "hash": "b9083f3c",
+        "encoded": "CORS_ORIGIN=http://localhost:5173",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "03798e",
+        "hash": "37e47b51",
+        "encoded": "#%20Rate%20Limiting",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "03798e",
+        "hash": "5753c3aa",
+        "encoded": "RATE_LIMIT_WINDOW_MS=900000",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "03798e",
+        "hash": "96357d8d",
+        "encoded": "RATE_LIMIT_MAX_REQUESTS=100",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "03798e",
+        "hash": "31ada431",
+        "encoded": "#%20Logging",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "03798e",
+        "hash": "a0f73e65",
+        "encoded": "LOG_LEVEL=info",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "03798e",
+        "hash": "e1f495d8",
+        "encoded": "LOG_FILE_PATH=./logs",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "03798e",
+        "hash": "a78bed28",
+        "encoded": "#%20External%20Services",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "03798e",
+        "hash": "2f79b193",
+        "encoded": "GIT_PROVIDER_API_URL=https://api.github.com",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "03798e",
+        "hash": "d06a0036",
+        "encoded": "GIT_PROVIDER_TOKEN=",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "03798e",
+        "hash": "f2eced1d",
+        "encoded": "#%20CI/CD%20Configuration",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "03798e",
+        "hash": "0b36ba55",
+        "encoded": "CI_RUNNER_URL=",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "03798e",
+        "hash": "1cf1e6c2",
+        "encoded": "CI_RUNNER_TOKEN=",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "03798e",
+        "hash": "4112d5a4",
+        "encoded": "#%20Deployment%20Configuration",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "03798e",
+        "hash": "7ebe522e",
+        "encoded": "DEPLOYMENT_NAMESPACE=default",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "03798e",
+        "hash": "a99aea69",
+        "encoded": "KUBERNETES_API_URL=",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "03798e",
+        "hash": "96fe739a",
+        "encoded": "KUBERNETES_TOKEN=",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "03798e",
+        "hash": "dbc643ab",
+        "encoded": "#%20Monitoring",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "03798e",
+        "hash": "987c1471",
+        "encoded": "METRICS_ENABLED=true",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "03798e",
+        "hash": "343bd99e",
+        "encoded": "METRICS_PORT=9090",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "backend\\package.json": {
+    "filename": "package.json",
+    "path": "backend\\package.json",
+    "version": "1.2",
+    "contextFile": "dd8f354c-context.json",
+    "chunks": {
+      "11266c": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707695,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "5c1e39d7",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:55 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "11266c",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "11266c",
+        "hash": "7a455802",
+        "encoded": "%22name%22:%20%22idp-backend%22,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "11266c",
+        "hash": "bde4980f",
+        "encoded": "%22version%22:%20%221.0.0%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "11266c",
+        "hash": "59f31b7f",
+        "encoded": "%22description%22:%20%22Backend%20API%20for%20Internal%20Developer%20Platform%22,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "11266c",
+        "hash": "da1f2399",
+        "encoded": "%22main%22:%20%22src/app.js%22,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "11266c",
+        "hash": "f4278672",
+        "encoded": "%22scripts%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "11266c",
+        "hash": "86d61f36",
+        "encoded": "%22start%22:%20%22node%20src/app.js%22,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "11266c",
+        "hash": "54221f81",
+        "encoded": "%22dev%22:%20%22nodemon%20src/app.js%22,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "11266c",
+        "hash": "ac04e5a3",
+        "encoded": "%22build%22:%20%22echo%20'No%20build%20step%20required%20for%20Node.js'%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "11266c",
+        "hash": "d3b0d0fa",
+        "encoded": "%22test%22:%20%22jest%20--coverage%22,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "11266c",
+        "hash": "e0a525b7",
+        "encoded": "%22test:watch%22:%20%22jest%20--watch%22,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "11266c",
+        "hash": "a14cceb6",
+        "encoded": "%22test:unit%22:%20%22jest%20--testPathPattern=tests/unit%22,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "11266c",
+        "hash": "0abc0b45",
+        "encoded": "%22test:integration%22:%20%22jest%20--testPathPattern=tests/integration%22,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "11266c",
+        "hash": "b457fecf",
+        "encoded": "%22lint%22:%20%22eslint%20src/**/*.js%22,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "11266c",
+        "hash": "1aface32",
+        "encoded": "%22lint:fix%22:%20%22eslint%20src/**/*.js%20--fix%22,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "11266c",
+        "hash": "928979c9",
+        "encoded": "%22migrate%22:%20%22sequelize-cli%20db:migrate%22,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "11266c",
+        "hash": "0c6ed42c",
+        "encoded": "%22migrate:undo%22:%20%22sequelize-cli%20db:migrate:undo%22,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "11266c",
+        "hash": "28001db0",
+        "encoded": "%22seed%22:%20%22sequelize-cli%20db:seed:all%22",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "11266c",
+        "hash": "1cba0cb6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "11266c",
+        "hash": "2ba9ce1e",
+        "encoded": "%22dependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "11266c",
+        "hash": "18942dec",
+        "encoded": "%22express%22:%20%22%5E4.18.2%22,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "11266c",
+        "hash": "6d0edcb8",
+        "encoded": "%22dotenv%22:%20%22%5E16.3.1%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "11266c",
+        "hash": "66131d3a",
+        "encoded": "%22cors%22:%20%22%5E2.8.5%22,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "11266c",
+        "hash": "b4a1c151",
+        "encoded": "%22helmet%22:%20%22%5E7.1.0%22,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "11266c",
+        "hash": "352ea75e",
+        "encoded": "%22morgan%22:%20%22%5E1.10.0%22,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "11266c",
+        "hash": "00b053ca",
+        "encoded": "%22compression%22:%20%22%5E1.7.4%22,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "11266c",
+        "hash": "47d9d05d",
+        "encoded": "%22express-rate-limit%22:%20%22%5E7.1.5%22,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "11266c",
+        "hash": "8d220778",
+        "encoded": "%22express-validator%22:%20%22%5E7.0.1%22,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "11266c",
+        "hash": "3e44669a",
+        "encoded": "%22joi%22:%20%22%5E17.11.0%22,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "11266c",
+        "hash": "f876d7a8",
+        "encoded": "%22jsonwebtoken%22:%20%22%5E9.0.2%22,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "11266c",
+        "hash": "530a0f9e",
+        "encoded": "%22bcryptjs%22:%20%22%5E2.4.3%22,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "11266c",
+        "hash": "e6af5ea5",
+        "encoded": "%22pg%22:%20%22%5E8.11.3%22,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "11266c",
+        "hash": "b6732440",
+        "encoded": "%22pg-hstore%22:%20%22%5E2.3.4%22,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "11266c",
+        "hash": "f8e89136",
+        "encoded": "%22sequelize%22:%20%22%5E6.35.2%22,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "11266c",
+        "hash": "1dd069ec",
+        "encoded": "%22winston%22:%20%22%5E3.11.0%22,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "11266c",
+        "hash": "787a6a59",
+        "encoded": "%22axios%22:%20%22%5E1.6.5%22,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "11266c",
+        "hash": "b85c8bba",
+        "encoded": "%22uuid%22:%20%22%5E9.0.1%22,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "11266c",
+        "hash": "6985eddf",
+        "encoded": "%22date-fns%22:%20%22%5E3.0.6%22",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "11266c",
+        "hash": "ca75e77a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "11266c",
+        "hash": "c04e0456",
+        "encoded": "%22devDependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "11266c",
+        "hash": "6d155c66",
+        "encoded": "%22nodemon%22:%20%22%5E3.0.2%22,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "11266c",
+        "hash": "d387c91b",
+        "encoded": "%22eslint%22:%20%22%5E8.56.0%22,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "11266c",
+        "hash": "ca1bd77a",
+        "encoded": "%22eslint-config-airbnb-base%22:%20%22%5E15.0.0%22,",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "11266c",
+        "hash": "b4370b58",
+        "encoded": "%22eslint-plugin-import%22:%20%22%5E2.29.1%22,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "11266c",
+        "hash": "9dd26310",
+        "encoded": "%22jest%22:%20%22%5E29.7.0%22,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "11266c",
+        "hash": "85392f24",
+        "encoded": "%22supertest%22:%20%22%5E6.3.3%22,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "11266c",
+        "hash": "eb466d81",
+        "encoded": "%22sequelize-cli%22:%20%22%5E6.6.2%22",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "11266c",
+        "hash": "951483ff",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "11266c",
+        "hash": "89d61c9e",
+        "encoded": "%22engines%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "11266c",
+        "hash": "2c1d0594",
+        "encoded": "%22node%22:%20%22%3E=18.0.0%22",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "11266c",
+        "hash": "41dd60dc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "11266c",
+        "hash": "e3771d33",
+        "encoded": "%22keywords%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "11266c",
+        "hash": "3a560473",
+        "encoded": "%22api%22,",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "11266c",
+        "hash": "850ae71c",
+        "encoded": "%22backend%22,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "11266c",
+        "hash": "ba55d767",
+        "encoded": "%22express%22,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "11266c",
+        "hash": "3a643c9a",
+        "encoded": "%22nodejs%22",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "11266c",
+        "hash": "b39f27f2",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "11266c",
+        "hash": "50927b6a",
+        "encoded": "%22author%22:%20%22Platform%20Team%22,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "11266c",
+        "hash": "f892b527",
+        "encoded": "%22license%22:%20%22MIT%22",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "11266c",
+        "hash": "309dd352",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

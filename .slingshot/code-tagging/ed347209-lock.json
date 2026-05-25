@@ -1,0 +1,186 @@
+{
+  "frontend\\src\\contexts\\ThemeContext.jsx": {
+    "filename": "ThemeContext.jsx",
+    "path": "frontend\\src\\contexts\\ThemeContext.jsx",
+    "version": "1.2",
+    "contextFile": "ed347209-context.json",
+    "chunks": {
+      "8fae13": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779708089,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "9173c85c",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:51:29 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8fae13",
+        "hash": "4008bf0c",
+        "encoded": "import%20%7B%20createContext,%20useContext,%20useState,%20useEffect%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8fae13",
+        "hash": "d83ee5e6",
+        "encoded": "const%20ThemeContext%20=%20createContext(null);",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8fae13",
+        "hash": "dced9ef7",
+        "encoded": "export%20const%20useTheme%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8fae13",
+        "hash": "1dc8a443",
+        "encoded": "const%20context%20=%20useContext(ThemeContext);",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8fae13",
+        "hash": "0699e6b6",
+        "encoded": "if%20(!context)%20%7B",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8fae13",
+        "hash": "de9ab593",
+        "encoded": "throw%20new%20Error('useTheme%20must%20be%20used%20within%20ThemeProvider');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8fae13",
+        "hash": "1c082ee4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8fae13",
+        "hash": "2dc4a39b",
+        "encoded": "return%20context;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8fae13",
+        "hash": "483280e4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8fae13",
+        "hash": "0ab2f19f",
+        "encoded": "export%20const%20ThemeProvider%20=%20(%7B%20children%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8fae13",
+        "hash": "f83cac71",
+        "encoded": "const%20%5Btheme,%20setTheme%5D%20=%20useState(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8fae13",
+        "hash": "7fbb4e99",
+        "encoded": "return%20localStorage.getItem('theme')%20%7C%7C%20'light';",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8fae13",
+        "hash": "7abc93a1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8fae13",
+        "hash": "61093c27",
+        "encoded": "useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8fae13",
+        "hash": "ecf7cc36",
+        "encoded": "document.documentElement.setAttribute('data-theme',%20theme);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8fae13",
+        "hash": "ff153975",
+        "encoded": "localStorage.setItem('theme',%20theme);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8fae13",
+        "hash": "f8686d4e",
+        "encoded": "%7D,%20%5Btheme%5D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "8fae13",
+        "hash": "1d4be0f5",
+        "encoded": "const%20toggleTheme%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8fae13",
+        "hash": "3dae63bd",
+        "encoded": "setTheme((prev)%20=%3E%20(prev%20===%20'light'%20?%20'dark'%20:%20'light'));",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8fae13",
+        "hash": "9eb29d7f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "8fae13",
+        "hash": "3e2ca670",
+        "encoded": "const%20value%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8fae13",
+        "hash": "ad234d2c",
+        "encoded": "theme,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "8fae13",
+        "hash": "81bc6242",
+        "encoded": "toggleTheme,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "8fae13",
+        "hash": "19b7cad3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "8fae13",
+        "hash": "b90ada24",
+        "encoded": "return%20%3CThemeContext.Provider%20value=%7Bvalue%7D%3E%7Bchildren%7D%3C/ThemeContext.Provider%3E;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "8fae13",
+        "hash": "252f0ed4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "backend\\.env.production": {
+    "filename": ".env.production",
+    "path": "backend\\.env.production",
+    "version": "1.2",
+    "contextFile": "1e7732de-context.json",
+    "chunks": {
+      "a7b993": {
+        "user": "Roopa Chaganti",
+        "model": "gpt-4.1",
+        "timestamp": 1779707695,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "2806e598"
+        },
+        "hash": "b78ccd12",
+        "messageId": "system_985114b0-5829-11f1-b796-41405aef1242",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Roopa Chaganti\n- **model**: gpt-4.1\n- **timestamp**: 5/25/2026, 4:44:55 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a7b993",
+        "hash": "a78a98b5",
+        "encoded": "NODE_ENV=production",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "a7b993",
+        "hash": "854d180b",
+        "encoded": "PORT=3000",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "a7b993",
+        "hash": "014c3ce8",
+        "encoded": "HOST=0.0.0.0",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "a7b993",
+        "hash": "3d53c4cc",
+        "encoded": "DB_HOST=",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "a7b993",
+        "hash": "ad4f98b6",
+        "encoded": "DB_PORT=5432",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "a7b993",
+        "hash": "8423075b",
+        "encoded": "DB_NAME=idp_platform_prod",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a7b993",
+        "hash": "1271a6dd",
+        "encoded": "DB_USER=",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "a7b993",
+        "hash": "6a5c27e4",
+        "encoded": "DB_PASSWORD=",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a7b993",
+        "hash": "81e57843",
+        "encoded": "JWT_SECRET=",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "a7b993",
+        "hash": "07ab2ecf",
+        "encoded": "CORS_ORIGIN=",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "a7b993",
+        "hash": "4cf02b38",
+        "encoded": "LOG_LEVEL=error",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "a7b993",
+        "hash": "f8bb041d",
+        "encoded": "METRICS_ENABLED=true",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
