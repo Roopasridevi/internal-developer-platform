@@ -1,3 +1,6 @@
-public static void main {
+public class  {
     // hi
+        public boolean test(){
+
         }
+ }
